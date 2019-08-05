@@ -1,0 +1,8 @@
+ne_spiritualist_enclave_government = {
+}
+
+ne_machine_enclave_government = {
+}
+
+ne_slaver_enclave_government = {
+}

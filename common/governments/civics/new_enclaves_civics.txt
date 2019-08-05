@@ -1,0 +1,8 @@
+civic_priesthood_of_the_cycle = {
+}
+
+civic_autonomous_node = {
+}
+
+civic_slave_merchants = {
+}
