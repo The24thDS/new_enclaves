@@ -1,44 +1,44 @@
 # Spiritualist Enclave
 gov_ne_spiritualist = {
-  ruler_title = RT_PROPHETS_SUCCESSOR
+	ruler_title = RT_PROPHETS_SUCCESSOR
 
-  should_force_rename = yes
+	should_force_rename = yes
 
-  possible = {
-    has_valid_civic = civic_priesthood_of_the_cycle
-  }
+	possible = {
+		has_valid_civic = civic_priesthood_of_the_cycle
+	}
 
-  weight = {
-    base = 10000
-  }
+	weight = {
+		base = 10000
+	}
 }
 
 # Machine Enclave
 gov_ne_machine = {
-  ruler_title = RT_PRIME_CONSCIOUSNESS
+	ruler_title = RT_PRIME_CONSCIOUSNESS
 
-  should_force_rename = yes
+	should_force_rename = yes
 
-  possible = {
-    has_valid_civic = civic_autonomous_node
-  }
+	possible = {
+		has_valid_civic = civic_autonomous_node
+	}
 
-  weight = {
-    base = 10000
-  }
+	weight = {
+		base = 10000
+	}
 }
 
 # Slaver enclave
 gov_ne_slaver = {
-  ruler_title = RT_LIBERATOR
+	ruler_title = RT_LIBERATOR
 
-  should_force_rename = yes
+	should_force_rename = yes
 
-  possible = {
-    has_valid_civic = civic_slave_merchants
-  }
+	possible = {
+		has_valid_civic = civic_slave_merchants
+	}
 
-  weight = {
-    base = 10000
-  }
+	weight = {
+		base = 10000
+	}
 }
