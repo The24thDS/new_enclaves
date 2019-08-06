@@ -1,0 +1,45 @@
+namespace = ne
+
+# ne.1: New Enclave Yearly Border Opinion
+event = {
+  id = ne.10
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_country = {
+      limit = { is_country_type = ne_enclave }
+      country_event = { id = ne.11 }
+    }
+  }
+}
+
+country_event = {
+  id = ne.11
+  hide_window = yes
+  is_triggered_only = yes
+
+  immediate = {
+    every_owned_fleet = {
+      limit = {
+        exists = solar_system
+        solar_system = {
+          exists = space_owner
+          space_owner = {
+            is_country_type = default
+          }
+        }
+      }
+      solar_system = {
+        space_owner = {
+          root = {
+            add_trust = {
+              who = prev
+              amount = 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

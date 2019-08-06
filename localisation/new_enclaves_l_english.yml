@@ -1,1 +1,27 @@
-l_english:
+﻿l_english:
+  ne_enclave: "Enclave"
+  ### Governments ###
+  # Spiritualists
+  civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
+  civic_priesthood_of_the_cycle_desc: ""
+  gov_ne_spiritualist: "Spiritualist Enclave"
+  gov_ne_spiritualist_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
+  ne_spiritualist_government: "Spiritualist Enclave"
+  ne_spiritualist_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
+  RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
+  # Machines
+  civic_autonomous_node: "Autonomous Node"
+  civic_autonomous_node_desc: ""
+  gov_ne_machine: "Machine Enclave"
+  gov_ne_machine_desc: ""
+  ne_machine_government: "Machine Enclave"
+  ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
+  RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
+  # Slavers
+  civic_slave_merchants: "Slave Merchants"
+  civic_slave_merchants_desc: ""
+  gov_ne_slaver: "Slaver Enclave"
+  gov_ne_slaver_desc: ""
+  ne_slaver_government: "Slaver Enclave"
+  ne_slaver_government_desc: "A collective of slave hunters and traders from across the galaxy."
+  RT_LIBERATOR: "Liberator"

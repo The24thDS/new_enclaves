@@ -24,7 +24,7 @@ ne_spiritualist_init = {
   flags = { ne_spiritualist_system ne_enclave }
 
   planet = {
-    name = "NAME_NE_Harbinger"
+    name = "NAME_NEESP_Star"
     class = star
     orbit_distance = 0
     orbit_angle = 1
@@ -44,7 +44,7 @@ ne_spiritualist_init = {
           traits = random
         }
         create_country = {
-          name = "NAME_Prophets_of_the_Shroud"
+          name = "NAME_NEESP_Country"
           type = ne_enclave
           authority = "auth_oligarchic"
           civics =  {
@@ -78,13 +78,13 @@ ne_spiritualist_init = {
           set_graphical_culture = mammalian_01
           save_global_event_target_as = ne_spiritualist_country
           create_fleet = {
-            name = "NAME_Great_Temple"
+            name = "NAME_NEESP_Fleet"
             settings = { spawn_debris = no }
             effect = {
               set_owner_prev
               create_ship = {
                 name = random
-                design = "NAME_NE_Spiritutalist_Station"
+                design = "NAME_NEESP_Station"
                 graphical_culture = prev
               }
               set_location = {
@@ -111,7 +111,7 @@ ne_spiritualist_init = {
   }
 
   planet = {
-    name = "NAME_NE_Blessed"
+    name = "NAME_NEESP_Planet_1"
     class = "pc_shrouded"
     orbit_distance = 30
     orbit_angle = 355
@@ -120,7 +120,7 @@ ne_spiritualist_init = {
   }
 
   planet = {
-    name = "NAME_NE_Sanctified"
+    name = "NAME_NEESP_Planet_2"
     class = "pc_shielded"
     orbit_distance = 30
     orbit_angle = 350
@@ -129,8 +129,8 @@ ne_spiritualist_init = {
   }
 
   planet = {
-    name = "NAME_NE_Rejected"
-    class = "pc_nuked"
+    name = "NAME_NEESP_Planet_3"
+    class = "pc_broken"
     orbit_distance = 30
     orbit_angle = 345
     size = 15
