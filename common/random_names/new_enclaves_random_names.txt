@@ -1,5 +1,64 @@
+### NEW ENCLAVES
+
+empire_name_parts_list = {
+  key = "ne_spiritualist_names"
+  parts = {
+    "Spiritualist Enclave" = 10
+  }
+}
+
+empire_name_parts_list = {
+  key = "ne_machine_names"
+  parts = {
+    "Machine Enclave" = 10
+  }
+}
+
+empire_name_parts_list = {
+  key = "ne_slaver_names"
+  parts = {
+    "Slaver Enclave" = 10
+  }
+}
+
 # Spiritualists
+empire_name_format = {
+  random_weight = {
+    factor = 0
+    modifier = {
+      add = 100
+      is_country_type = ne_enclave
+      has_government = gov_ne_spiritualist
+    }
+  }
+  format = "format.ne_spiritualist.1"
+  noun = "<ne_spiritualist_names>"
+}
 
 # Machines
+empire_name_format = {
+  random_weight = {
+    factor = 0
+    modifier = {
+      add = 100
+      is_country_type = ne_enclave
+      has_government = gov_ne_machine
+    }
+  }
+  format = "format.ne_machine.1"
+  noun = "<ne_machine_names>"
+}
 
 # Slavers
+empire_name_format = {
+  random_weight = {
+    factor = 0
+    modifier = {
+      add = 100
+      is_country_type = ne_enclave
+      has_government = gov_ne_slaver
+    }
+  }
+  format = "format.ne_slaver.1"
+  noun = "<ne_slaver_names>"
+}
