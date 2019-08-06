@@ -1,1 +1,84 @@
 namespace = neesp
+
+# neesp.10: Port
+country_event = {
+	id = neesp.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = neesp.11 }
+		}
+	}
+}
+
+# neesp.11: Spiritualist Enclave introduction
+country_event = {
+	id = neesp.11
+	title = neesp.11.name
+
+	desc = {
+		text = neesp.11a.desc
+		trigger = {
+			NOT = { has_country_flag = ne_spiritualist_intro }
+		}
+	}
+	desc = {
+		text = neesp.11b.desc
+		trigger = { has_country_flag = ne_spiritualist_intro }
+	}
+
+	diplomatic = yes
+	custom_gui = "ne_spiritualist_window"
+
+	picture_event_data = {
+		portrait = from
+		room = ne_spiritualist_room
+	}
+
+	is_triggered_only = yes
+
+	after = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = ne_spiritualist_intro }
+			}
+			set_country_flag = ne_spiritualist_intro
+		}
+	}
+
+	option = {
+		name = neesp.11.a
+		custom_gui = "ne_spiritualist_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "ne_spiritualist_option"
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_spiritualist_option"
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+}
