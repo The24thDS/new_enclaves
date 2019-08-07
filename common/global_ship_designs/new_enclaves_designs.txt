@@ -1,4 +1,4 @@
-# Enclave Station
+# Espiritualist Enclave Station
 ship_design = {
 	name = "NAME_NEESP_Enclave_Station"
 	ship_size = enclave_station
