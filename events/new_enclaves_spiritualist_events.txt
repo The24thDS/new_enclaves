@@ -29,11 +29,11 @@ country_event = {
 	}
 
 	diplomatic = yes
-	custom_gui = "ne_spiritualist_window"
+	custom_gui = "enclave_curator_window"
 
 	picture_event_data = {
 		portrait = from
-		room = ne_spiritualist_room
+		room = enclave_curator_room
 	}
 
 	is_triggered_only = yes
@@ -49,7 +49,7 @@ country_event = {
 
 	option = {
 		name = neesp.11.a
-		custom_gui = "ne_spiritualist_option"
+		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -61,7 +61,7 @@ country_event = {
 
 	option = {
 		name = SCUM
-		custom_gui = "ne_spiritualist_option"
+		custom_gui = "enclave_curator_option"
 		trigger = {
 			has_valid_civic = civic_fanatic_purifiers
 		}
@@ -69,7 +69,7 @@ country_event = {
 
 	option = {
 		name = TASTY
-		custom_gui = "enclave_spiritualist_option"
+		custom_gui = "enclave_curator_option"
 		trigger = {
 			has_valid_civic = civic_hive_devouring_swarm
 		}
@@ -82,3 +82,9 @@ country_event = {
 		}
 	}
 }
+
+# Start looking at leviathans.500
+
+# menus
+
+# destruction

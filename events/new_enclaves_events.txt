@@ -185,7 +185,7 @@ country_event = {
 				resource = influence
 				value = @tier1influencecontactxenophile
 				min = @tier1influencecontactmin
-				max = tier1influencecontactmax
+				max = @tier1influencecontactmax
 			}
 		}
 		else = {
@@ -201,7 +201,7 @@ country_event = {
 				limit = {
 					from = { has_country_flag = ne_spiritualist_country }
 				}
-				from = { country_event = { id = ne.101 } } # Port
+				from = { country_event = { id = ne.1000 } } # Port
 				break = yes
 			}
 		}
@@ -235,6 +235,114 @@ country_event = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+}
+
+# ne.15:Communicaton Established
+country_event = {
+	id = ne.15
+	title = ne.15.name
+	desc = ne.15.desc
+	picture = GFX_evt_throne_room
+	show_sound = event_radio_chatter
+
+	is_triggered_only = yes
+
+	immediate = { establish_communications_no_message = FromFrom }
+
+	after = {
+		if = {
+			limit = {
+				OR = {
+					is_xenophile = yes
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontactxenophile
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+		}
+		else = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontact
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					FromFrom = {
+						has_country_flag = ne_espiritualist_country
+					}
+				}
+				FromFrom = { country_event = { id = neesp.10 } }
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	option = {
+		name = TASTY
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+}
+
+# ne.16: New Enclaves Communication Spread
+country_event = {
+	id = ne.16
+	hide_window = yes
+
+	trigger = {
+		is_country_type = ne_enclave
+		any_relation = {
+			is_country_type = default
+			any_relation = {
+				is_country_type = default
+				NOT = { has_communications = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 80
+	}
+
+	immediate = {
+		random_relation = {
+			limit = {
+				any_relation = {
+					is_country_type = default
+					NOT = { has_communications = ROOT }
+				}
+			}
+			random_relation = {
+				limit = {
+					is_country_type = default
+					NOT = { has_communications = ROOT }
+				}
+				root = { establish_communications_no_message = prev }
+				country_event = { id = ne.14 }
 			}
 		}
 	}

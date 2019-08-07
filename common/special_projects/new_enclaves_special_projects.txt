@@ -26,7 +26,7 @@ special_project = {
 
 	on_success = {
 		owner = {
-			country_event = { id = #what's the id? }
+			country_event = { id = ne.15 }
 		}
 	}
 

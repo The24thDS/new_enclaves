@@ -25,3 +25,6 @@
   ne_slaver_government: "Slaver Enclave"
   ne_slaver_government_desc: "A collective of slave hunters and traders from across the galaxy."
   RT_LIBERATOR: "Liberator"
+  ### Misc ###
+  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
+  INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"

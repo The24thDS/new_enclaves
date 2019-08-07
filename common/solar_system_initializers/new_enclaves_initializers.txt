@@ -81,10 +81,10 @@ ne_spiritualist_init = {
 						name = "NAME_NEESP_Fleet"
 						settings = { spawn_debris = no }
 						effect = {
-							set_owner_prev
-							create_ship = {
+							set_owner = prev
+								create_ship = {
 								name = random
-								design = "NAME_NEESP_Station"
+								design = "NAME_NEESP_Enclave_Station"
 								graphical_culture = prev
 							}
 							set_location = {
@@ -113,8 +113,8 @@ ne_spiritualist_init = {
 	planet = {
 		name = "NAME_NEESP_Planet_1"
 		class = "pc_shrouded"
-		orbit_distance = 30
-		orbit_angle = 355
+		orbit_distance = 40
+		orbit_angle = 44
 		size = 25
 		has_ring = no
 	}
@@ -122,8 +122,8 @@ ne_spiritualist_init = {
 	planet = {
 		name = "NAME_NEESP_Planet_2"
 		class = "pc_shielded"
-		orbit_distance = 30
-		orbit_angle = 350
+		orbit_distance = 40
+		orbit_angle = -5
 		size = 20
 		has_ring = no
 	}
@@ -131,8 +131,8 @@ ne_spiritualist_init = {
 	planet = {
 		name = "NAME_NEESP_Planet_3"
 		class = "pc_broken"
-		orbit_distance = 30
-		orbit_angle = 345
+		orbit_distance = 40
+		orbit_angle = -5
 		size = 15
 		has_ring = no
 	}
