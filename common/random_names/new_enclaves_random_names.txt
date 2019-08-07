@@ -1,7 +1,7 @@
 ### NEW ENCLAVES
 
 empire_name_parts_list = {
-	key = "ne_spiritualist_names"
+	key = "ne_shroud_names"
 	parts = {
 		"Spiritualist Enclave" = 10
 	}
@@ -28,11 +28,11 @@ empire_name_format = {
 		modifier = {
 			add = 100
 			is_country_type = ne_enclave
-			has_government = gov_ne_spiritualist
+			has_government = gov_ne_shroud
 		}
 	}
-	format = "format.ne_spiritualist.1"
-	noun = "<ne_spiritualist_names>"
+	format = "format.ne_shroud.1"
+	noun = "<ne_shroud_names>"
 }
 
 # Machines

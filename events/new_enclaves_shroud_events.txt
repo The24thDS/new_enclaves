@@ -1,0 +1,197 @@
+namespace = neshr
+
+# neshr.10: Port
+country_event = {
+	id = neshr.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = neshr.11 }
+		}
+	}
+}
+
+# neshr.11: Spiritualist Enclave introduction
+country_event = {
+	id = neshr.11
+	title = neshr.11.name
+
+	desc = {
+		text = neshr.11a.desc
+		trigger = {
+			NOT = { has_country_flag = ne_shroud_intro }
+		}
+	}
+	desc = {
+		text = neshr.11b.desc
+		trigger = { has_country_flag = ne_shroud_intro }
+	}
+
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_curator_room
+	}
+
+	is_triggered_only = yes
+
+	after = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = ne_shroud_intro }
+			}
+			set_country_flag = ne_shroud_intro
+		}
+	}
+
+	option = {
+		name = neshr.11.a
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+}
+
+# Shroud's Children Main Menu (Initial)
+country_event = {
+	id = neshr.100
+	title = neshr.100.name
+	desc = neshr.100a.desc
+	desc = neshr.100b.desc
+	desc = neshr.100c.desc
+	desc = neshr.100d.desc
+	desc = neshr.100e.desc
+	desc = neshr.100f.desc
+	desc = neshr.100g.desc
+	desc = neshr.100h.desc
+	desc = neshr.100i.desc
+	desc = neshr.100j.desc
+	desc = neshr.100k.desc
+	desc = neshr.100l.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = from
+		room  = enclave_curator_room
+	}
+
+	trigger = {
+		from = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_shroud_country
+		}
+		NOT = { has_country_flag = ne_shroud_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ne_shroud }
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+		From = { save_event_target_as = ne_shroud }
+	}
+
+	afer = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	# Option 1: Preach across our worlds
+	option = {
+		name = neshr.100.a
+		custom_gui = "enclave_curator_option"
+	}
+
+	# Option 2: Organize Religious Festivals
+	option = {
+		name = neshr.100.b
+	}
+
+	# Option 3: Found Shrine
+	option = {
+		name = neshr.100.c
+	}
+
+	# Option 4: Request Saintly Help
+	option = {
+		name = neshr.100.d
+	}
+
+	# Option 5: Corrupted Avatar
+	option = {
+		name = neshr.100.e
+	}
+
+	# Option 6: End
+	option = {
+		name = neshr.100.f
+	}
+}
+
+
+# Start looking at leviathans.500
+
+# menus
+
+# destruction

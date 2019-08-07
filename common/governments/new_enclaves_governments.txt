@@ -1,5 +1,5 @@
 # Spiritualist Enclave
-gov_ne_spiritualist = {
+gov_ne_shroud = {
 	ruler_title = RT_PROPHETS_SUCCESSOR
 
 	should_force_rename = yes

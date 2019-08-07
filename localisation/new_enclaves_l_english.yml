@@ -4,10 +4,10 @@
   # Spiritualists
   civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
   civic_priesthood_of_the_cycle_desc: ""
-  gov_ne_spiritualist: "Spiritualist Enclave"
-  gov_ne_spiritualist_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
-  ne_spiritualist_government: "Spiritualist Enclave"
-  ne_spiritualist_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
+  gov_ne_shroud: "Shroud Enclave"
+  gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
+  ne_shroud_government: "Spiritualist Enclave"
+  ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
   # Machines
   civic_autonomous_node: "Autonomous Node"

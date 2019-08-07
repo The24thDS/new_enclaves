@@ -2,7 +2,7 @@
 
 ### NEW ENCLAVES ###
 # Spiritualists
-ne_spiritualist_init = {
+ne_shroud_init = {
 	class = sc_black_hole
 	usage = misc_system_init
 
@@ -21,10 +21,10 @@ ne_spiritualist_init = {
 	max_instances = 1
 	spawn_chance = 100
 
-	flags = { ne_spiritualist_system ne_enclave }
+	flags = { ne_shroud_system ne_enclave }
 
 	planet = {
-		name = "NAME_NEESP_Star"
+		name = "NAME_NESHR_Star"
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
@@ -35,7 +35,7 @@ ne_spiritualist_init = {
 		init_effect = {
 			if = {
 				limit = {
-					NOT = { exists = event_target:ne_spiritualist_country }
+					NOT = { exists = event_target:ne_shroud_country }
 				}
 				create_species = {
 					name = random
@@ -44,7 +44,7 @@ ne_spiritualist_init = {
 					traits = random
 				}
 				create_country = {
-					name = "NAME_NEESP_Country"
+					name = "NAME_NESHR_Country"
 					type = ne_enclave
 					authority = "auth_oligarchic"
 					civics =	{
@@ -54,7 +54,7 @@ ne_spiritualist_init = {
 					flag = {
 						icon = {
 							category = "enclaves"
-							file = "ne_flag_spiritualist.dds"
+							file = "ne_flag_shroud.dds"
 						}
 						background= {
 							category = "backgrounds"
@@ -74,17 +74,17 @@ ne_spiritualist_init = {
 					ignore_initial_colony_error = yes
 				}
 				last_created_country = {
-					set_country_flag = ne_spiritualist_country
+					set_country_flag = ne_shroud_country
 					set_graphical_culture = mammalian_01
-					save_global_event_target_as = ne_spiritualist_country
+					save_global_event_target_as = ne_shroud_country
 					create_fleet = {
-						name = "NAME_NEESP_Fleet"
+						name = "NAME_NESHR_Fleet"
 						settings = { spawn_debris = no }
 						effect = {
 							set_owner = prev
 								create_ship = {
 								name = random
-								design = "NAME_NEESP_Enclave_Station"
+								design = "NAME_NESHR_Enclave_Station"
 								graphical_culture = prev
 							}
 							set_location = {
@@ -111,7 +111,7 @@ ne_spiritualist_init = {
 	}
 
 	planet = {
-		name = "NAME_NEESP_Planet_1"
+		name = "NAME_NESHR_Planet_1"
 		class = "pc_shrouded"
 		orbit_distance = 40
 		orbit_angle = 44
@@ -120,7 +120,7 @@ ne_spiritualist_init = {
 	}
 
 	planet = {
-		name = "NAME_NEESP_Planet_2"
+		name = "NAME_NESHR_Planet_2"
 		class = "pc_shielded"
 		orbit_distance = 40
 		orbit_angle = -5
@@ -129,7 +129,7 @@ ne_spiritualist_init = {
 	}
 
 	planet = {
-		name = "NAME_NEESP_Planet_3"
+		name = "NAME_NESHR_Planet_3"
 		class = "pc_broken"
 		orbit_distance = 40
 		orbit_angle = -5

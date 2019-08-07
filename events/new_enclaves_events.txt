@@ -199,7 +199,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					from = { has_country_flag = ne_spiritualist_country }
+					from = { has_country_flag = ne_shroud_country }
 				}
 				from = { country_event = { id = ne.1000 } } # Port
 				break = yes
@@ -281,7 +281,7 @@ country_event = {
 						has_country_flag = ne_espiritualist_country
 					}
 				}
-				FromFrom = { country_event = { id = neesp.10 } }
+				FromFrom = { country_event = { id = neshr.10 } }
 			}
 		}
 	}
