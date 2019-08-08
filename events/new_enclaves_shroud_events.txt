@@ -161,31 +161,99 @@ country_event = {
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
+		trigger = { is_genocidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.a.alreadypreaching
+				NOT = { has_modifier = shroud_childrens_preaching }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.110 }
+		}
 	}
 
 	# Option 2: Organize Religious Festivals
 	option = {
 		name = neshr.100.b
+		custom_gui = "enclave_curator_option"
+		trigger = { is_genocidal = no }
+		hidden_effect = {
+			country_event = { id = neshr.120 }
+		}
 	}
 
-	# Option 3: Found Shrine
+	# Option 3: Request Saintly Help
 	option = {
 		name = neshr.100.c
+		custom_gui = "enclave_curator_option"
+		trigger = { is_genocidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.c.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = leviathans.100.c.alreadyrecruited
+				NOT = {
+					any_owned_leader = { has_trait = leader_trait_saint }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.130 }
+		}
 	}
 
-	# Option 4: Request Saintly Help
+	# Option 4: Found Shrine
 	option = {
 		name = neshr.100.d
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			is_genocidal = no
+			NOT = {
+				event_target:ne_shroud = { has_country_flag = shrine@root }
+			}
+			any_system_within_border = {
+				has_star_flag = ne_enclave
+				any_ship_in_system = {
+					exists = owner
+					owner = {
+						is_same_value = event_target:ne_shroud
+					}
+				}
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.d.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.140 }
+		}
 	}
 
-	# Option 5: Corrupted Avatar
+	# Option 6: End communications
 	option = {
 		name = neshr.100.e
-	}
-
-	# Option 6: End
-	option = {
-		name = neshr.100.f
+		default_hide_option = yes
+		custom_gui = "enclave_curator_option"
+		trigger = { is_genocidal = no }
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
 	}
 }
 

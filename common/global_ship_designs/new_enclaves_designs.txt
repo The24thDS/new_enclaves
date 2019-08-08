@@ -1,4 +1,4 @@
-# Espiritualist Enclave Station
+# Shroud Enclave Station
 ship_design = {
 	name = "NAME_NESHR_Enclave_Station"
 	ship_size = enclave_station
