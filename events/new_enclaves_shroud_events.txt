@@ -157,7 +157,7 @@ country_event = {
 		}
 	}
 
-	# Option 1: Preach across our worlds
+	# Option 1: Preach across our worlds (neshr.110)
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
@@ -173,7 +173,7 @@ country_event = {
 		}
 	}
 
-	# Option 2: Organize Religious Festivals
+	# Option 2: Organize Religious Festivals (neshr.120)
 	option = {
 		name = neshr.100.b
 		custom_gui = "enclave_curator_option"
@@ -183,7 +183,7 @@ country_event = {
 		}
 	}
 
-	# Option 3: Request Saintly Help
+	# Option 3: Request Saintly Help (neshr.130)
 	option = {
 		name = neshr.100.c
 		custom_gui = "enclave_curator_option"
@@ -210,7 +210,7 @@ country_event = {
 		}
 	}
 
-	# Option 4: Found Shrine
+	# Option 4: Found Shrine (neshr.140)
 	option = {
 		name = neshr.100.d
 		custom_gui = "enclave_curator_option"
@@ -245,7 +245,7 @@ country_event = {
 		}
 	}
 
-	# Option 6: End communications
+	# Option 5: End communications
 	option = {
 		name = neshr.100.e
 		default_hide_option = yes
@@ -257,8 +257,344 @@ country_event = {
 	}
 }
 
+# neshr.101: Shroud Enclave Main Menu
+country_event = {
+	id = neshr.101
+	title = neshr.100
+	desc = neshr.100a.desc
+	desc = neshr.100b.desc
+	desc = neshr.100c.desc
+	desc = neshr.100d.desc
+	desc = neshr.100e.desc
+	desc = neshr.100f.desc
+	desc = neshr.100g.desc
+	desc = neshr.100h.desc
+	desc = neshr.100i.desc
+	desc = neshr.100j.desc
+	desc = neshr.100k.desc
+	desc = neshr.100l.desc
 
-# Start looking at leviathans.500
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_curator_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = ne_shroud_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	# Option 1: Preach across our worlds (neshr.110)
+	option = {
+		name = neshr.100.a
+		custom_gui = "enclave_curator_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.a.alreadypreaching
+				NOT = { has_modifier = shroud_childrens_preaching }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.110 }
+		}
+	}
+
+	# Option 2: Organize Religious Festivals (neshr.120)
+	option = {
+		name = neshr.100.b
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = neshr.120 }
+		}
+	}
+
+	# Option 3: Request Saintly Help (neshr.130)
+	option = {
+		name = neshr.100.c
+		custom_gui = "enclave_curator_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.c.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = leviathans.100.c.alreadyrecruited
+				NOT = {
+					any_owned_leader = { has_trait = leader_trait_saint }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.130 }
+		}
+	}
+
+	# Option 4: Found Shrine (neshr.140)
+	option = {
+		name = neshr.100.d
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			any_system_within_border = {
+				has_star_flag = ne_enclave
+				any_ship_in_system = {
+					exists = owner
+					owner = {
+						is_same_value = event_target:ne_shroud
+					}
+				}
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.d.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.140 }
+		}
+	}
+
+	# Option 5: End communications
+	option = {
+		name = neshr.100.e
+		default_hide_option = yes
+		custom_gui = "enclave_curator_option"
+		trigger = { is_genocidal = no }
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+}
+
+# neshr.110: Preach across our worlds
+country_event = {
+	id = neshr.110
+	title = neshr.110.name
+	desc = neshr.110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shroud_childrens_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud
+			add_trust = {
+				who = root
+				amount = 20
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 61
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shroud_childrens_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud
+			add_trust = {
+				who = root
+				amount = 20
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shroud_childrens_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud
+			add_trust = {
+				who = root
+				amount = 20
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shroud_childrens_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud
+			add_trust = {
+				who = root
+				amount = 20
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shroud_childrens_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud
+			add_trust = {
+				who = root
+				amount = 20
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = neshr.110.back
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# Sign off
+	option = {
+		name = neshr.110.off
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
+	}
+}
 
 # menus
 

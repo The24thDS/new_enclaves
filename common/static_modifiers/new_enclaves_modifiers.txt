@@ -1,4 +1,9 @@
-# Spiritualists
+## Shroud's Children
+
+# Shroud's Children Preaching
+shroud_childrens_preaching = {
+	pop_ethic_spiritualist_attraction_mult = 0.50
+}
 
 # Machines
 
