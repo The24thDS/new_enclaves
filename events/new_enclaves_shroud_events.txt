@@ -165,7 +165,7 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.a.alreadypreaching
-				NOT = { has_modifier = shroud_childrens_preaching }
+				NOT = { has_modifier = shrouds_children_preaching }
 			}
 		}
 		hidden_effect = {
@@ -247,7 +247,7 @@ country_event = {
 
 	# Option 5: End communications
 	option = {
-		name = neshr.100.e
+		name = neshr.100.end
 		default_hide_option = yes
 		custom_gui = "enclave_curator_option"
 		trigger = { is_genocidal = no }
@@ -304,7 +304,7 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.a.alreadypreaching
-				NOT = { has_modifier = shroud_childrens_preaching }
+				NOT = { has_modifier = shrouds_children_preaching }
 			}
 		}
 		hidden_effect = {
@@ -347,40 +347,9 @@ country_event = {
 		}
 	}
 
-	# Option 4: Found Shrine (neshr.140)
-	option = {
-		name = neshr.100.d
-		custom_gui = "enclave_curator_option"
-		trigger = {
-			any_system_within_border = {
-				has_star_flag = ne_enclave
-				any_ship_in_system = {
-					exists = owner
-					owner = {
-						is_same_value = event_target:ne_shroud
-					}
-				}
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = neshr.100.d.opinion
-				event_target:ne_shroud = {
-					trust = {
-						who = root
-						value >= 50
-					}
-				}
-			}
-		}
-		hidden_effect = {
-			country_event = { id = neshr.140 }
-		}
-	}
-
 	# Option 5: End communications
 	option = {
-		name = neshr.100.e
+		name = neshr.100.end
 		default_hide_option = yes
 		custom_gui = "enclave_curator_option"
 		trigger = { is_genocidal = no }
@@ -429,7 +398,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shroud_childrens_preaching
+			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
@@ -463,7 +432,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shroud_childrens_preaching
+			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
@@ -497,7 +466,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shroud_childrens_preaching
+			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
@@ -531,7 +500,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shroud_childrens_preaching
+			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
@@ -562,7 +531,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shroud_childrens_preaching
+			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
@@ -588,14 +557,86 @@ country_event = {
 		}
 	}
 
-	# Sign off
+	# End
 	option = {
-		name = neshr.110.off
+		name = neshr.110.end
 		custom_gui = "enclave_curator_option"
 		default_hide_option = yes
 	}
 }
 
-# menus
+# neshr.111: Continue preaching?
+country_event = {
+	id - neshr.111
+	title = neshr.111.name
+	desc = neshr.111.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_curator_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_shroud }
+		exists = event_target:ne_shroud
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_shroud
+			flag = ne_shroud_trade
+		}
+	}
+
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+
+}
+
+# neshr.120: Organize Religious Festivals
+
+country_event = {
+	id = neshr.120
+}
+
+# neshr.130: Request Saintly Help
+
+country_event = {
+	id = neshr.130
+}
 
 # destruction
