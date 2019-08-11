@@ -2,4 +2,8 @@ on_monthly_pulse = {
 }
 
 on_custom_diplomacy = {
+	events = {
+		id = neshr.100
+		id = neshr.905
+	}
 }

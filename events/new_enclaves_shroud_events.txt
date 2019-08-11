@@ -124,7 +124,7 @@ country_event = {
 		From = { save_event_target_as = ne_shroud }
 	}
 
-	afer = {
+	after = {
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -178,6 +178,17 @@ country_event = {
 		name = neshr.100.b
 		custom_gui = "enclave_curator_option"
 		trigger = { is_genocidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.b.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = Root
+						value >= 30
+					}
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = neshr.120 }
 		}
@@ -210,42 +221,7 @@ country_event = {
 		}
 	}
 
-	# Option 4: Found Shrine (neshr.140)
-	option = {
-		name = neshr.100.d
-		custom_gui = "enclave_curator_option"
-		trigger = {
-			is_genocidal = no
-			NOT = {
-				event_target:ne_shroud = { has_country_flag = shrine@root }
-			}
-			any_system_within_border = {
-				has_star_flag = ne_enclave
-				any_ship_in_system = {
-					exists = owner
-					owner = {
-						is_same_value = event_target:ne_shroud
-					}
-				}
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = neshr.100.d.opinion
-				event_target:ne_shroud = {
-					trust = {
-						who = root
-						value >= 50
-					}
-				}
-			}
-		}
-		hidden_effect = {
-			country_event = { id = neshr.140 }
-		}
-	}
-
-	# Option 5: End communications
+	# End communications
 	option = {
 		name = neshr.100.end
 		default_hide_option = yes
@@ -316,6 +292,17 @@ country_event = {
 	option = {
 		name = neshr.100.b
 		custom_gui = "enclave_curator_option"
+		allowv = {
+			custom_tooltip = {
+				fail_text = neshr.120.b.opinion
+				event_target:ne_shroud ={
+					trust = {
+						who = Root
+						value >= 30
+					}
+				}
+			}
+		}
 		hidden_effect = {
 			country_event = { id = neshr.120 }
 		}
@@ -347,7 +334,7 @@ country_event = {
 		}
 	}
 
-	# Option 5: End communications
+	# End communications
 	option = {
 		name = neshr.100.end
 		default_hide_option = yes
@@ -402,44 +389,11 @@ country_event = {
 			days = 3600
 		}
 		hidden_effect = {
-			event_target:ne_shroud
-			add_trust = {
-				who = root
-				amount = 20
-			}
-			set_relation_flag = {
-				who = event_target:ne_shroud
-				flag = ne_shroud_trade
-			}
-			country_event = { id = neshr.111 days = 3600 }
-		}
-	}
-
-	option = {
-		name = neshr.110.a
-		response_text = neshr.110.a.reply
-		custom_gui = "enclave_curator_option"
-		trigger = {
-			num_pops > 61
-			num_pops < 121
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_shroud }
-			}
-		}
-		add_resource = { energy = -1000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = shrouds_children_preaching
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_shroud
-			add_trust = {
-				who = root
-				amount = 20
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
@@ -458,22 +412,23 @@ country_event = {
 			num_pops < 181
 		}
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
+			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -3000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
-			event_target:ne_shroud
-			add_trust = {
-				who = root
-				amount = 20
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
@@ -492,22 +447,23 @@ country_event = {
 			num_pops < 241
 		}
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
+			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -4000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
-			event_target:ne_shroud
-			add_trust = {
-				who = root
-				amount = 20
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
@@ -521,24 +477,25 @@ country_event = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
 		custom_gui = "enclave_curator_option"
-		trigger = { num_pops > 240 }
+		trigger = {	num_pops > 240 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
+			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -5000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = shrouds_children_preaching
 			days = 3600
 		}
 		hidden_effect = {
-			event_target:ne_shroud
-			add_trust = {
-				who = root
-				amount = 20
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
@@ -567,7 +524,7 @@ country_event = {
 
 # neshr.111: Continue preaching?
 country_event = {
-	id - neshr.111
+	id = neshr.111
 	title = neshr.111.name
 	desc = neshr.111.desc
 
@@ -624,19 +581,714 @@ country_event = {
 		}
 	}
 
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
 
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 4000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+
+	# End
+	option = {
+		name = neshr.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
+	}
 }
 
 # neshr.120: Organize Religious Festivals
-
 country_event = {
 	id = neshr.120
+	title = neshr.120.name
+	desc = neshr.120.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	custom_gui_option = "enclave_curator_option"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_artist_room
+	}
+
+	trigger = {
+		event_target:ne_shroud = {
+			trust = {
+				who = Root
+				value >= 30
+			}
+		}
+	}
+
+	option = {
+		name = DEAL
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion15
+		add_modifier = {
+			modifier = ne_shroud_festival
+			days = 1800
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 15
+				}
+				set_relation_flag = {
+					who = event_target:ne_shroud
+					flag = ne_shroud_trade
+				}
+			}
+		}
+	}
 }
 
-# neshr.130: Request Saintly Help
-
+# neshr.130: Request Saintly Guidance
 country_event = {
 	id = neshr.130
+	title = neshr.130.name
+	desc = neshr.130.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+		event_target:ne_shroud = {
+			owner_species = { save_event_target_as = ne_shroud_species }
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = neshr.130.a
+		response_text = neshr.130.a.reply
+		custom_gui = "enclave_curator_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		hidden_effect = {
+			set_country_flag = ne_shroud_saint_recruited
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+		random_list = {
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_shroud_species
+					name = "NAME_Saint_Ennoir"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 41
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_shroud_species
+					name = "NAME_Blessed_Ienois"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 45
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_shroud_species
+					name = "NAME_Hallowed_Lognill"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 43
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_shroud_species
+					name = "NAME_Apostle_Ziesa"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 47
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_shroud_species
+					name = "NAME_Kkronquts_The_Paragon"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 42
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_shroud_species
+					name = "NAME_Angel_Iriels"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 43
+				}
+			}
+		}
+	}
 }
 
-# destruction
+# neshr.900: Sroud's Children destroyed (HIDDEN)
+event = {
+	id = neshr.900
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = ne_enclave
+		has_country_flag = ne_shroud_country
+		FromFrom = {
+			is_ship_size = enclave_station
+		}
+	}
+
+	immediate = {
+		FromFrom = {
+			solar_system = { save_event_target_as = ne_shroud_system }
+		}
+		From = {
+			country_event = { id = neshr.901 }
+			save_event_target_as = ne_shroud_destroyer
+		}
+		every_country = {
+			limit = {
+				has_communications = Root
+				NOT = { is_country_type = event_target:ne_shroud_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = neshr.902 }
+		}
+	}
+}
+
+# neshr.901: Shroud's Children Destroyed (Destroyer)
+country_event = {
+	id = neshr.901
+	title = neshr.901.name
+	desc = neshr.901.desc
+	picture = GFX_evt_space_debris
+	location = event_target:ne_shroud_system
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_ne_shroud
+		if {
+			limit = {
+				has_modifier = shrouds_children_preaching
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+			}
+			remove_modifier = shrouds_children_preaching
+			remove_relation_flag = {
+				who = From
+				flag = ne_shroud_trade
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		add_resource = {
+			unity = 3000
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			medium_artifact_reward = yes
+		}
+	}
+}
+
+# neshr.902: Shroud's Children Destroyed
+country_event = {
+	id = neshr.902
+	title = neshr.902.name
+	desc = {
+		text = neshr.902.a.desc
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+			}
+			has_communications = event_target:ne_shroud_destroyer
+		}
+	}
+	desc = {
+		text = neshr.902.b.desc
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+			}
+			NOT = { has_communications = event_target:ne_shroud }
+		}
+	}
+	desc = {
+		text = neshr.902.c.desc
+		trigger = {
+			has_relation_flag = {
+				who = From
+				flag = ne_shroud_trade
+			}
+			From = {
+				count_owned_ships = {
+					limit = is_ship_size = enclave_station
+					count < 1
+				}
+			}
+			has_communications = event_target:ne_shroud_destroyer
+		}
+	}
+	desc = {
+		text = neshr.902.d.desc
+		trigger = {
+			has_relation_flag = {
+				who = From
+				flag = ne_shroud_trade
+			}
+			From = {
+				count_owned_ships = {
+					limit = { is_ship_size = enclave_station }
+					count < 1
+				}
+			}
+			NOT = { has_communications = event_target:ne_shroud_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:ne_shroud_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = shrouds_children_preaching
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+				From = {
+					count_owned_ships = {
+						limit = { is_ship_size = enclave_station }
+						count < 1
+					}
+				}
+			}
+			remove_modifier = shrouds_children_preaching
+		}
+		if = {
+			limit = {
+				has_modifier = ne_shroud_festival
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+				From = {
+					count_owned_ships = {
+						limit = { is_ship_size = enclave_station }
+						count < 1
+					}
+				}
+			}
+			remove_modifier = ne_shroud_festival
+		}
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+				From = {
+					count_owned_ships = {
+						limit = { is_ship_size = enclave_station }
+						count < 1
+					}
+				}
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_shroud_destroyer
+				modifier = opinion_destroyed_ne_shroud_trade
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_trade
+					}
+				}
+				is_ai = yes
+				is_materialist = no
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_shroud_destroyer
+				modifier = opinion_destroyed_ne_shroud
+			}
+		}
+	}
+
+	option = {
+		name = neshr.902.a
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade
+				}
+			}
+		}
+	}
+	option = {
+		name = neshr.902.b
+		trigger = {
+			has_relation_flag = {
+				who = From
+				flag = ne_shroud_trade
+			}
+			From = {
+				count_owned_ships = {
+					limit = { is_ship_size = enclave_station }
+					count < 1
+				}
+			}
+		}
+		hidden_effect = {
+			remove_relation_flag = {
+				who = From
+				flag = ne_shroud_trade
+			}
+		}
+	}
+}
+
+# neshr.903: Attacked Shroud's Children
+country_event = {
+	id = neshr.903
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		From = { has_country_flag = ne_shroud_country }
+	}
+
+	immediate = {
+		From = {
+			save_event_target_as = ne_shroud
+			add_trust = {
+				who = Root
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_ne_shroud
+		if = {
+			limit = {
+				OR = {
+					has_modifier = shrouds_children_preaching
+					has_modifier = ne_shroud_festival
+				}
+			}
+			if = {
+				limit = { has_modifier = shrouds_children_preaching }
+				remove_modifier = shrouds_children_preaching
+			}
+			if = {
+				limit = { has_modifier = ne_shroud_festival }
+				remove_modifier = ne_shroud_festival
+			}
+			country_event = { id = neshr.904}
+		}
+	}
+}
+
+# neshr.904: Attacked Shroud's Children - Agreements terminated
+country_event = {
+	id = neshr.904
+	title = neshr.100.name
+	desc = neshr.904.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_curator_room
+	}
+
+	option = {
+		name = neshr.904.a
+		custom_gui = "enclave_curator_option"
+	}
+}
+
+# Attacked Shroud's Children - Refuses Communications
+country_event = {
+	id = neshr.905
+	title = neshr.905.name
+	desc = neshr.905a.desc
+	desc = neshr.905b.desc
+	desc = neshr.905c.desc
+	desc = neshr.905d.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_curator_room
+	}
+
+	trigger = {
+		From = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_shroud_country
+		}
+		has_country_flag = attacked_curators
+		NOT = { has_country_flag = ne_shroud_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+		From = { save_event_target_as = ne_shroud }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = neshr.905.a
+		custom_gui = "enclave_curator_option"
+		trigger = { is_genocidal = no }
+		default_hide_option = yes
+	}
+}

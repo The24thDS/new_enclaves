@@ -230,13 +230,7 @@ country_event = {
 
 	option = {
 		name = ne.14.a
-		trigger = {
-			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
-			}
-		}
+		trigger = { is_genocidal = no }
 	}
 }
 
@@ -278,7 +272,7 @@ country_event = {
 			if = {
 				limit = {
 					FromFrom = {
-						has_country_flag = ne_espiritualist_country
+						has_country_flag = ne_shroud_country
 					}
 				}
 				FromFrom = { country_event = { id = neshr.10 } }
@@ -305,6 +299,11 @@ country_event = {
 		trigger = {
 			has_valid_civic = civic_machine_terminator
 		}
+	}
+
+	option = {
+		name = ne.15.a
+		trigger = { is_genocidal = no }
 	}
 }
 
