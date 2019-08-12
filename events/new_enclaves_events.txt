@@ -199,9 +199,14 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					from = { has_country_flag = ne_shroud_country }
+					From = { has_country_flag = ne_shroud_country }
 				}
-				from = { country_event = { id = ne.1000 } } # Port
+				From = { country_event = { id = neshr.10 } } # Port
+				break = yes
+			}
+			if = {
+				limit = { From = { has_country_flag = ne_machine_country } }
+				From = { country_event = { id = nemac.10 } }
 				break = yes
 			}
 		}
@@ -234,7 +239,7 @@ country_event = {
 	}
 }
 
-# ne.15:Communicaton Established
+# ne.15:Communication Established
 country_event = {
 	id = ne.15
 	title = ne.15.name
@@ -276,6 +281,14 @@ country_event = {
 					}
 				}
 				FromFrom = { country_event = { id = neshr.10 } }
+			}
+			if = {
+				limit = {
+					FromFrom = {
+						has_country_flag = ne_machine_country
+					}
+				}
+				FromFrom = { country_event = { id = nemac.10 } }
 			}
 		}
 	}

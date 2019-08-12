@@ -52,9 +52,10 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_machine_terminator
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
 			}
 		}
 	}
@@ -62,24 +63,35 @@ country_event = {
 	option = {
 		name = SCUM
 		custom_gui = "enclave_curator_option"
-		trigger = {
-			has_valid_civic = civic_fanatic_purifiers
-		}
+		trigger = {	has_valid_civic = civic_fanatic_purifiers }
 	}
 
 	option = {
 		name = TASTY
 		custom_gui = "enclave_curator_option"
-		trigger = {
-			has_valid_civic = civic_hive_devouring_swarm
-		}
+		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
 	}
 
 	option = {
 		name = EXTERMINATE
+		trigger = {	has_valid_civic = civic_machine_terminator }
+	}
+
+	option = {
+		name = neshr.10.materialist
+		custom_gui = "enclave_curator_option"
 		trigger = {
-			has_valid_civic = civic_machine_terminator
+			OR = {
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+			}
 		}
+	}
+
+	option = {
+		name = neshr.10.hive
+		custom_gui = "enclave_curator_option"
+		trigger = { has_authority = auth_hive_mind }
 	}
 }
 
@@ -157,11 +169,41 @@ country_event = {
 		}
 	}
 
+	option = {
+		name = neshr.10.materialist
+		trigger = {
+			OR = {
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = neshr.10.hive
+		trigger = { has_authority = auth_hive_mind }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
 	# Option 1: Preach across our worlds (neshr.110)
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
-		trigger = { is_genocidal = no }
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.a.alreadypreaching
@@ -177,7 +219,14 @@ country_event = {
 	option = {
 		name = neshr.100.b
 		custom_gui = "enclave_curator_option"
-		trigger = { is_genocidal = no }
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.b.opinion
@@ -198,7 +247,14 @@ country_event = {
 	option = {
 		name = neshr.100.c
 		custom_gui = "enclave_curator_option"
-		trigger = { is_genocidal = no }
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.c.opinion
@@ -226,7 +282,14 @@ country_event = {
 		name = neshr.100.end
 		default_hide_option = yes
 		custom_gui = "enclave_curator_option"
-		trigger = { is_genocidal = no }
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -339,7 +402,6 @@ country_event = {
 		name = neshr.100.end
 		default_hide_option = yes
 		custom_gui = "enclave_curator_option"
-		trigger = { is_genocidal = no }
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -1122,7 +1184,13 @@ country_event = {
 					}
 				}
 				is_ai = yes
-				is_materialist = no
+				OR = {
+					NOR = {
+						is_materialist = yes
+						has_authority = auth_machine_intelligence
+						has_authority = auth_hive_mind
+					}
+				}
 			}
 			add_opinion_modifier = {
 				who = event_target:ne_shroud_destroyer
@@ -1279,16 +1347,38 @@ country_event = {
 
 	option = {
 		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = neshr.10.materialist
 		trigger = {
-			has_valid_civic = civic_machine_terminator
+			OR = {
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+			}
 		}
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = neshr.10.hive
+		trigger = { has_authority = auth_hive_mind }
 		custom_gui = "enclave_curator_option"
 	}
 
 	option = {
 		name = neshr.905.a
 		custom_gui = "enclave_curator_option"
-		trigger = { is_genocidal = no }
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
 		default_hide_option = yes
 	}
 }

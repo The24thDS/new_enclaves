@@ -1,1 +1,1341 @@
 namespace = nemac
+
+# nemac.10: Port
+country_event = {
+	id = nemac.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = nemac.11 }
+		}
+	}
+}
+
+# nemac.11: Prime Machines introduction
+country_event = {
+	id = nemac.11
+	title = nemac.11.name
+
+	desc = {
+		text = nemac.11a.desc
+		trigger = {
+			NOT = { has_country_flag = ne_machine_intro }
+		}
+	}
+	desc = {
+		text = nemac.11b.desc
+		trigger = { has_country_flag = ne_machine_intro }
+	}
+
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_curator_room
+	}
+
+	is_triggered_only = yes
+
+	after = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = ne_machine_intro }
+			}
+			set_country_flag = ne_machine_intro
+		}
+	}
+
+	option = {
+		name = nemac.11.a
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_spiritualist = yes
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_curator_option"
+		trigger = {	has_valid_civic = civic_fanatic_purifiers }
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_curator_option"
+		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {	has_valid_civic = civic_machine_terminator }
+	}
+
+	option = {
+		name = nemac.10.spiritualist
+		custom_gui = "enclave_curator_option"
+		trigger = {	is_spiritualist = yes }
+	}
+}
+
+# Prime Machines Main Menu (Initial)
+country_event = {
+	id = nemac.100
+	title = nemac.100.name
+	desc = nemac.100a.desc
+	desc = nemac.100b.desc
+	desc = nemac.100c.desc
+	desc = nemac.100d.desc
+	desc = nemac.100e.desc
+	desc = nemac.100f.desc
+	desc = nemac.100g.desc
+	desc = nemac.100h.desc
+	desc = nemac.100i.desc
+	desc = nemac.100j.desc
+	desc = nemac.100k.desc
+	desc = nemac.100l.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = from
+		room  = enclave_curator_room
+	}
+
+	trigger = {
+		from = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_machine_country
+		}
+		NOT = { has_country_flag = ne_machine_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ne_machine }
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+		From = { save_event_target_as = ne_machine }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nemac.10.spiritualist
+		trigger = { is_spiritualist = yes }
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	# Option 1: Help us with our machines (nemac.110)
+	option = {
+		name = nemac.100.a
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_spiritualist = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.a.alreadyhelping
+				NOT = { has_modifier = prime_machines_expertise }
+				}
+			custom_tooltip = {
+				fail_text = nemac.100.a.robotsoutlawed
+				NOT = { has_policy_flag = robots_outlawed }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.110 }
+		}
+	}
+
+	# Option 2: Request Governor (nemac.120)
+	option = {
+		name = nemac.100.b
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_spiritualist = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.b.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nemac.100.b.alreadyrecruited
+				NOT = {
+					any_owned_leader = { has_trait = leader_prime_machine }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.120 }
+		}
+	}
+
+	# Option 3: Teach Us (nemac.130)
+	option = {
+		name = nemac.100.c
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_spiritualist = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.c.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = root
+						value >= 80
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = leviathans.100.c.alreadyteached
+				NOR = {
+					has_tech_option = tech_prime_machines_secrets
+					has_technology = tech_prime_machines_secrets
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.130 }
+		}
+	}
+
+	# End communications
+	option = {
+		name = nemac.100.end
+		default_hide_option = yes
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_spiritualist = yes
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+}
+
+# nemac.101: Prime Machines Main Menu
+country_event = {
+	id = nemac.101
+	title = nemac.100
+	desc = nemac.100a.desc
+	desc = nemac.100b.desc
+	desc = nemac.100c.desc
+	desc = nemac.100d.desc
+	desc = nemac.100e.desc
+	desc = nemac.100f.desc
+	desc = nemac.100g.desc
+	desc = nemac.100h.desc
+	desc = nemac.100i.desc
+	desc = nemac.100j.desc
+	desc = nemac.100k.desc
+	desc = nemac.100l.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_curator_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = ne_machine_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	# Option 1: Preach across our worlds (nemac.110)
+	option = {
+		name = nemac.100.a
+		custom_gui = "enclave_curator_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.a.alreadypreaching
+				NOT = { has_modifier = machines_children_preaching }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.110 }
+		}
+	}
+
+	# Option 2: Organize Religious Festivals (nemac.120)
+	option = {
+		name = nemac.100.b
+		custom_gui = "enclave_curator_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.b.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = Root
+						value >= 30
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.120 }
+		}
+	}
+
+	# Option 3: Request Saintly Help (nemac.130)
+	option = {
+		name = nemac.100.c
+		custom_gui = "enclave_curator_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.c.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = leviathans.100.c.alreadyrecruited
+				NOT = {
+					any_owned_leader = { has_trait = leader_trait_saint }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.130 }
+		}
+	}
+
+	# End communications
+	option = {
+		name = nemac.100.end
+		default_hide_option = yes
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+}
+
+# nemac.110: Preach across our worlds
+country_event = {
+	id = nemac.110
+	title = nemac.110.name
+	desc = nemac.110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nemac.110.a
+		response_text = nemac.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.110.a
+		response_text = nemac.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -3000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.110.a
+		response_text = nemac.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 4000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -4000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.110.a
+		response_text = nemac.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {	num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -5000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = nemac.110.back
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = nemac.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nemac.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
+	}
+}
+
+# nemac.111: Continue preaching?
+country_event = {
+	id = nemac.111
+	title = nemac.111.name
+	desc = nemac.111.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_curator_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_machine }
+		exists = event_target:ne_machine
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_machine
+			flag = ne_machine_trade
+		}
+	}
+
+	option = {
+		name = nemac.111.a
+		response_text = nemac.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.111.a
+		response_text = nemac.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.111.a
+		response_text = nemac.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.111.a
+		response_text = nemac.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 4000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	option = {
+		name = nemac.111.a
+		response_text = nemac.111.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = { num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = machines_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
+
+	# End
+	option = {
+		name = nemac.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
+	}
+}
+
+# nemac.120: Organize Religious Festivals
+country_event = {
+	id = nemac.120
+	title = nemac.120.name
+	desc = nemac.120.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	custom_gui_option = "enclave_curator_option"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_artist_room
+	}
+
+	trigger = {
+		event_target:ne_machine = {
+			trust = {
+				who = Root
+				value >= 30
+			}
+		}
+	}
+
+	option = {
+		name = DEAL
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion15
+		add_modifier = {
+			modifier = ne_machine_festival
+			days = 1800
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 15
+				}
+				set_relation_flag = {
+					who = event_target:ne_machine
+					flag = ne_machine_trade
+				}
+			}
+		}
+	}
+}
+
+# nemac.130: Request Saintly Guidance
+country_event = {
+	id = nemac.130
+	title = nemac.130.name
+	desc = nemac.130.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_curator_room
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+		event_target:ne_machine = {
+			owner_species = { save_event_target_as = ne_machine_species }
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nemac.130.a
+		response_text = nemac.130.a.reply
+		custom_gui = "enclave_curator_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		hidden_effect = {
+			set_country_flag = ne_machine_saint_recruited
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+		random_list = {
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Saint_Ennoir"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 41
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Blessed_Ienois"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 45
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Hallowed_Lognill"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 43
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Apostle_Ziesa"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 47
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Kkronquts_The_Paragon"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 42
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Angel_Iriels"
+					skill = 5
+					traits = {
+						trait = leader_trait_saint
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 43
+				}
+			}
+		}
+	}
+}
+
+# nemac.900: Sroud's Children destroyed (HIDDEN)
+event = {
+	id = nemac.900
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = ne_enclave
+		has_country_flag = ne_machine_country
+		FromFrom = {
+			is_ship_size = enclave_station
+		}
+	}
+
+	immediate = {
+		FromFrom = {
+			solar_system = { save_event_target_as = ne_machine_system }
+		}
+		From = {
+			country_event = { id = nemac.901 }
+			save_event_target_as = ne_machine_destroyer
+		}
+		every_country = {
+			limit = {
+				has_communications = Root
+				NOT = { is_country = event_target:ne_machine_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = nemac.902 }
+		}
+	}
+}
+
+# nemac.901: Prime Machines Destroyed (Destroyer)
+country_event = {
+	id = nemac.901
+	title = nemac.901.name
+	desc = nemac.901.desc
+	picture = GFX_evt_space_debris
+	location = event_target:ne_machine_system
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_ne_machine
+		if = {
+			limit = {
+				has_modifier = machines_children_preaching
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+			}
+			remove_modifier = machines_children_preaching
+			remove_relation_flag = {
+				who = From
+				flag = ne_machine_trade
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		add_resource = {
+			unity = 3000
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			medium_artifact_reward = yes
+		}
+	}
+}
+
+# nemac.902: Prime Machines Destroyed
+country_event = {
+	id = nemac.902
+	title = nemac.902.name
+	desc = {
+		text = nemac.902.a.desc
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+			}
+			has_communications = event_target:ne_machine_destroyer
+		}
+	}
+	desc = {
+		text = nemac.902.b.desc
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+			}
+			NOT = { has_communications = event_target:ne_machine }
+		}
+	}
+	desc = {
+		text = nemac.902.c.desc
+		trigger = {
+			has_relation_flag = {
+				who = From
+				flag = ne_machine_trade
+			}
+			From = {
+				count_owned_ships = {
+					limit = { is_ship_size = enclave_station }
+					count < 1
+				}
+			}
+			has_communications = event_target:ne_machine_destroyer
+		}
+	}
+	desc = {
+		text = nemac.902.d.desc
+		trigger = {
+			has_relation_flag = {
+				who = From
+				flag = ne_machine_trade
+			}
+			From = {
+				count_owned_ships = {
+					limit = { is_ship_size = enclave_station }
+					count < 1
+				}
+			}
+			NOT = { has_communications = event_target:ne_machine_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:ne_machine_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = machines_children_preaching
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+				From = {
+					count_owned_ships = {
+						limit = { is_ship_size = enclave_station }
+						count < 1
+					}
+				}
+			}
+			remove_modifier = machines_children_preaching
+		}
+		if = {
+			limit = {
+				has_modifier = ne_machine_festival
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+				From = {
+					count_owned_ships = {
+						limit = { is_ship_size = enclave_station }
+						count < 1
+					}
+				}
+			}
+			remove_modifier = ne_machine_festival
+		}
+		if = {
+			limit = {
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+				From = {
+					count_owned_ships = {
+						limit = { is_ship_size = enclave_station }
+						count < 1
+					}
+				}
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_machine_destroyer
+				modifier = opinion_destroyed_ne_machine_trade
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_relation_flag = {
+						who = From
+						flag = ne_machine_trade
+					}
+				}
+				is_ai = yes
+				is_spiritualist = no
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_machine_destroyer
+				modifier = opinion_destroyed_ne_machine
+			}
+		}
+	}
+
+	option = {
+		name = nemac.902.a
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+			}
+		}
+	}
+	option = {
+		name = nemac.902.b
+		trigger = {
+			has_relation_flag = {
+				who = From
+				flag = ne_machine_trade
+			}
+			From = {
+				count_owned_ships = {
+					limit = { is_ship_size = enclave_station }
+					count < 1
+				}
+			}
+		}
+		hidden_effect = {
+			remove_relation_flag = {
+				who = From
+				flag = ne_machine_trade
+			}
+		}
+	}
+}
+
+# nemac.903: Attacked Prime Machines
+country_event = {
+	id = nemac.903
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		From = { has_country_flag = ne_machine_country }
+	}
+
+	immediate = {
+		From = {
+			save_event_target_as = ne_machine
+			add_trust = {
+				who = Root
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_ne_machine
+		if = {
+			limit = {
+				OR = {
+					has_modifier = machines_children_preaching
+					has_modifier = ne_machine_festival
+				}
+			}
+			if = {
+				limit = { has_modifier = machines_children_preaching }
+				remove_modifier = machines_children_preaching
+			}
+			if = {
+				limit = { has_modifier = ne_machine_festival }
+				remove_modifier = ne_machine_festival
+			}
+			country_event = { id = nemac.904}
+		}
+	}
+}
+
+# nemac.904: Attacked Prime Machines - Agreements terminated
+country_event = {
+	id = nemac.904
+	title = nemac.100.name
+	desc = nemac.904.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_curator_room
+	}
+
+	option = {
+		name = nemac.904.a
+		custom_gui = "enclave_curator_option"
+	}
+}
+
+# Attacked Prime Machines - Refuses Communications
+country_event = {
+	id = nemac.905
+	title = nemac.905.name
+	desc = nemac.905a.desc
+	desc = nemac.905b.desc
+	desc = nemac.905c.desc
+	desc = nemac.905d.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_curator_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_curator_room
+	}
+
+	trigger = {
+		From = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_machine_country
+		}
+		has_country_flag = attacked_curators
+		NOT = { has_country_flag = ne_machine_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+		From = { save_event_target_as = ne_machine }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = nemac.10.spiritualist
+		trigger = { is_spiritualist = yes }
+		custom_gui = "enclave_curator_option"
+	}
+
+	option = {
+		name = nemac.905.a
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_spiritualist = yes
+			}
+		}
+		default_hide_option = yes
+	}
+}

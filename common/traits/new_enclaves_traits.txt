@@ -15,4 +15,17 @@ leader_trait_saint = {
 
 # Machines (leaders)
 
+leader_prime_machine = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_learning_algorithms.dds"
+	modifier = {
+		planet_jobs_robotic_produces_mult = 0.10
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
 # Slavers (leaders and custom slaves)

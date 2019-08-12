@@ -9,6 +9,9 @@ ne_shroud_festival = {
 	planet_stability_add = 5
 }
 
-# Machines
+# Prime Machines
+
+prime_machines_expertise = {
+}
 
 # Slavers
