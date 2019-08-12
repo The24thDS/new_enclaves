@@ -114,7 +114,7 @@ ne_shroud_init = {
 		name = "NAME_NESHR_Planet_1"
 		class = "pc_shrouded"
 		orbit_distance = 40
-		orbit_angle = 44
+		orbit_angle = 90
 		size = 25
 		has_ring = no
 	}
@@ -123,7 +123,7 @@ ne_shroud_init = {
 		name = "NAME_NESHR_Planet_2"
 		class = "pc_shielded"
 		orbit_distance = 40
-		orbit_angle = -5
+		orbit_angle = 2
 		size = 20
 		has_ring = no
 	}
@@ -132,7 +132,7 @@ ne_shroud_init = {
 		name = "NAME_NESHR_Planet_3"
 		class = "pc_broken"
 		orbit_distance = 40
-		orbit_angle = -5
+		orbit_angle = 2
 		size = 15
 		has_ring = no
 	}
