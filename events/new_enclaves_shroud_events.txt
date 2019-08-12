@@ -12,7 +12,7 @@ country_event = {
 	}
 }
 
-# neshr.11: Spiritualist Enclave introduction
+# neshr.11: Shroud's Children introduction
 country_event = {
 	id = neshr.11
 	title = neshr.11.name
@@ -233,7 +233,7 @@ country_event = {
 	}
 }
 
-# neshr.101: Shroud Enclave Main Menu
+# neshr.101: Shroud's Children Main Menu
 country_event = {
 	id = neshr.101
 	title = neshr.100
@@ -292,10 +292,10 @@ country_event = {
 	option = {
 		name = neshr.100.b
 		custom_gui = "enclave_curator_option"
-		allowv = {
+		allow = {
 			custom_tooltip = {
-				fail_text = neshr.120.b.opinion
-				event_target:ne_shroud ={
+				fail_text = neshr.100.b.opinion
+				event_target:ne_shroud = {
 					trust = {
 						who = Root
 						value >= 30
@@ -946,7 +946,7 @@ event = {
 		every_country = {
 			limit = {
 				has_communications = Root
-				NOT = { is_country_type = event_target:ne_shroud_destroyer }
+				NOT = { is_country = event_target:ne_shroud_destroyer }
 				is_country_type = default
 			}
 			country_event = { id = neshr.902 }
@@ -967,7 +967,7 @@ country_event = {
 
 	immediate = {
 		set_country_flag = destroyed_ne_shroud
-		if {
+		if = {
 			limit = {
 				has_modifier = shrouds_children_preaching
 				has_relation_flag = {
@@ -1032,7 +1032,7 @@ country_event = {
 			}
 			From = {
 				count_owned_ships = {
-					limit = is_ship_size = enclave_station
+					limit = { is_ship_size = enclave_station }
 					count < 1
 				}
 			}
