@@ -1,9 +1,14 @@
 ﻿l_default:
-  # Spiritualists
+  # Shroud Enclave
   NAME_NESHR_Star: "Harbinger"
   NAME_NESHR_Country: "Shroud's Children"
   NAME_NESHR_Fleet: "Great Temple"
-  NAME_NESHR_Enclave_Station: "Spiritualist Enclave Station"
+  NAME_NESHR_Enclave_Station: "Shroud Enclave Station"
   NAME_NESHR_Planet_1: "Blessed"
   NAME_NESHR_Planet_2: "Sanctified"
   NAME_NESHR_Planet_3: "Rejected"
+  # Machine Enclave
+  NAME_NEMAC_Star: "Core"
+  NAME_NEMAC_Country: "Prime Machines"
+  NAME_NEMAC_Fleet: "Interface"
+  NAME_NEMAC_Enclave_Station: "Machine Enclave Station"

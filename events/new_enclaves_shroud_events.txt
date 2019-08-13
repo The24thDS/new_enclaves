@@ -861,10 +861,6 @@ country_event = {
 					who = Root
 					amount = 15
 				}
-				set_relation_flag = {
-					who = event_target:ne_shroud
-					flag = ne_shroud_trade
-				}
 			}
 		}
 	}

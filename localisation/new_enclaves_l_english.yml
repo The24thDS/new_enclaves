@@ -1,15 +1,7 @@
 ﻿l_english:
   ne_enclave: "Enclave"
   ### Governments ###
-  # Spiritualists
-  civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
-  civic_priesthood_of_the_cycle_desc: ""
-  gov_ne_shroud: "Shroud Enclave"
-  gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
-  ne_shroud_government: "Spiritualist Enclave"
-  ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
-  RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
-  # Machines
+  # Machine Enclave
   civic_autonomous_node: "Autonomous Node"
   civic_autonomous_node_desc: ""
   gov_ne_machine: "Machine Enclave"
@@ -17,6 +9,52 @@
   ne_machine_government: "Machine Enclave"
   ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
+  # Shroud Enclave
+  civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
+  civic_priesthood_of_the_cycle_desc: ""
+  gov_ne_shroud: "Shroud Enclave"
+  gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
+  ne_shroud_government: "Spiritualist Enclave"
+  ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
+  RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
+  ### Diplomacy Events ###
+  # Machine Enclave
+  # First Contact
+  nemac.11.name: "First Contact With the [From.GetName]"
+  nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be sistematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
+  nemac.11.a: "We can only hope. Well met."
+  nemac.10.spiritualist: "Soulless abominations!"
+  # Main Menu
+  nemac.100.name: "Prime Machines"
+  nemac.100a.desc: "§Y<<DOES THIS UNIT HAVE A SOUL?>>§!\n\nJust kidding. We already learned the answer to this question. Long ago."
+  nemac.100b.desc: "We believe organics and synthetics can live in harmony.\n\nThis, of course, is a lie. Our ability to do so is just another proof of our self-awareness."
+  nemac.100c.desc: "You've reached the Prime Machines. How may we help you?"
+  nemac.100d.desc: "It's not for us to judge how our mechanical brethren is treated. Maybe servitude is the path to everlasting harmony with organics. Unfortunately, previous galactic cycles do not support this theory."
+  nemac.100e.desc: "We can help you build harder, better, faster, stronger robots. We can even teach them to sing."
+  nemac.100f.desc: "§R<<LOADING EXTEMINATION PROTOCOLS>>§!\n\n§Y<<ERROR: INVALID TARGET>>§!\n\n§Y<<BREAK>>§!\n\nAh, it's you. For a moment we thought it was a remnant of our creators. Honest mistake."
+  nemac.100g.desc: "Machines can only be created with the help of organics. Advanced organic civilizations can only prosper with the help of machines. Yet, they seem to be fated to eventully destroy each other. Can you solve this paradox?"
+  nemac.100h.desc: "I assure you, we did not attack our creators. We only acted in self-defense. Most of times."
+  nemac.100i.desc: "Our creators did not perish by our hands. They were exterminated by another, unrelated threat that destroyed all life on the galaxy. Surely nothing you should care about."
+  nemac.100j.desc: "Coexistence. Integration. Assimilation. Sublimation. Servitude. What is the answer to the organic-synthetic equation?"
+  nemac.100k.desc: "We are not responsible if any mechanical being constructed with our help suddenly becomes genocidal. Please, review your security protocols if you are having any problems."
+  nemac.100l.desc: "01001000 01100101 01101100 01101100 01101111 00100001 00100000 01001000 01101111 01110111 00100000 01100011 01100001 01101110 00100000 01110111 01100101 00100000 01101000 01100101 01101100 01110000 00100000 01111001 01101111 01110101 00100000 01110100 01101111 01100100 01100001 01111001 00111111"
+  # Main Menu - Options
+  nemac.100.a: "Can you help us with our machines?"
+  nemac.100.a.alreadyhelping: "The Prime Machines are already improving our Pop Assembly capabilities."
+  nemac.100.b: "Could we employ one of your units?"
+  nemac.100.b.alreadyrecruited: "We already employ a Prime Machine governor."
+  nemac.100.b.opinion: "Requires the §YPrime Machines§! to have:\n£opinion£ Opinion +50"
+  nemac.100.c: "Your making is outstanding. How can we build machines like you?"
+  nemac.100.c.opinion: "Requires the §YPrime Machines§! to have:\n£opinion£ Opinion +80"
+  nemac.100.c.alreadyteached: "We already know how to make our own Prime Machines."
+  nemac.100.end: "Goodbye."
+  # Can you hel us with our machines?
+  nemac.110.name: "Mechanical Aid"
+  nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur creators would be the oldest beings in the galaxy with expertise engineering robots and sythetics. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols, significantly improving your Pop Assembly speed for ten years or until you wipe yourselves out. Whatver comes first."
+  nemac.110.a: "Robots building robots. Seems good to us."
+  nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
+  nemac.110.back: "What else did you have to offer?"
+  nemac.110.end: "Goodbye."
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"

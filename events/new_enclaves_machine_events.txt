@@ -16,17 +16,7 @@ country_event = {
 country_event = {
 	id = nemac.11
 	title = nemac.11.name
-
-	desc = {
-		text = nemac.11a.desc
-		trigger = {
-			NOT = { has_country_flag = ne_machine_intro }
-		}
-	}
-	desc = {
-		text = nemac.11b.desc
-		trigger = { has_country_flag = ne_machine_intro }
-	}
+	desc = nemac.11.desc
 
 	diplomatic = yes
 	custom_gui = "enclave_curator_window"
@@ -38,21 +28,13 @@ country_event = {
 
 	is_triggered_only = yes
 
-	after = {
-		if = {
-			limit = {
-				NOT = { has_country_flag = ne_machine_intro }
-			}
-			set_country_flag = ne_machine_intro
-		}
-	}
-
 	option = {
 		name = nemac.11.a
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				is_genocidal = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
 		}
@@ -68,11 +50,6 @@ country_event = {
 		name = TASTY
 		custom_gui = "enclave_curator_option"
 		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
-	}
-
-	option = {
-		name = EXTERMINATE
-		trigger = {	has_valid_civic = civic_machine_terminator }
 	}
 
 	option = {
@@ -137,7 +114,6 @@ country_event = {
 			remove_country_flag = ne_machine_diplomacy_engaged
 		}
 	}
-
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
@@ -146,16 +122,6 @@ country_event = {
 			remove_country_flag = ne_machine_diplomacy_engaged
 		}
 	}
-
-	option = {
-		name = EXTERMINATE
-		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_curator_option"
-		hidden_effect = {
-			remove_country_flag = ne_machine_diplomacy_engaged
-		}
-	}
-
 	option = {
 		name = nemac.10.spiritualist
 		trigger = { is_spiritualist = yes }
@@ -171,7 +137,8 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				is_genocidal = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
 		}
@@ -180,10 +147,7 @@ country_event = {
 				fail_text = nemac.100.a.alreadyhelping
 				NOT = { has_modifier = prime_machines_expertise }
 				}
-			custom_tooltip = {
-				fail_text = nemac.100.a.robotsoutlawed
-				NOT = { has_policy_flag = robots_outlawed }
-			}
+			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.110 }
@@ -196,7 +160,8 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				is_genocidal = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
 		}
@@ -216,6 +181,7 @@ country_event = {
 					any_owned_leader = { has_trait = leader_prime_machine }
 				}
 			}
+			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.120 }
@@ -228,7 +194,8 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				is_genocidal = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
 		}
@@ -243,12 +210,13 @@ country_event = {
 				}
 			}
 			custom_tooltip = {
-				fail_text = leviathans.100.c.alreadyteached
+				fail_text = nemac.100.c.alreadyteached
 				NOR = {
 					has_tech_option = tech_prime_machines_secrets
 					has_technology = tech_prime_machines_secrets
 				}
 			}
+			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.130 }
@@ -262,7 +230,8 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				is_genocidal = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
 		}
@@ -321,10 +290,7 @@ country_event = {
 				fail_text = nemac.100.a.alreadyhelping
 				NOT = { has_modifier = prime_machines_expertise }
 				}
-			custom_tooltip = {
-				fail_text = nemac.100.a.robotsoutlawed
-				NOT = { has_policy_flag = robots_outlawed }
-			}
+			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.110 }
@@ -351,6 +317,7 @@ country_event = {
 					any_owned_leader = { has_trait = leader_prime_machine }
 				}
 			}
+			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.120 }
@@ -378,6 +345,7 @@ country_event = {
 					has_technology = tech_prime_machines_secrets
 				}
 			}
+			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.130 }
@@ -1286,12 +1254,6 @@ country_event = {
 	}
 
 	option = {
-		name = EXTERMINATE
-		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_curator_option"
-	}
-
-	option = {
 		name = nemac.10.spiritualist
 		trigger = { is_spiritualist = yes }
 		custom_gui = "enclave_curator_option"
@@ -1302,7 +1264,8 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
-				is_genocidal = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
 		}

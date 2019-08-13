@@ -169,8 +169,8 @@ country_event = {
 # ne.14: New Enclave Establishes Communications
 country_event = {
 	id = ne.14
-	title = ne.14.name
-	desc = ne.14.desc
+	title = leviathans.98.name
+	desc = leviathans.98.desc
 	picture = GFX_evt_throne_room
 	show_sound = event_radio_chatter
 
@@ -234,16 +234,16 @@ country_event = {
 	}
 
 	option = {
-		name = ne.14.a
+		name = leviathans.98.a
 		trigger = { is_genocidal = no }
 	}
 }
 
-# ne.15:Communication Established
+# ne.15: Communications Established
 country_event = {
 	id = ne.15
-	title = ne.15.name
-	desc = ne.15.desc
+	title = leviathans.99.name
+	desc = leviathans.99.desc
 	picture = GFX_evt_throne_room
 	show_sound = event_radio_chatter
 
@@ -254,9 +254,7 @@ country_event = {
 	after = {
 		if = {
 			limit = {
-				OR = {
-					is_xenophile = yes
-				}
+				is_xenophile = yes
 			}
 			add_monthly_resource_mult = {
 				resource = influence
@@ -281,6 +279,7 @@ country_event = {
 					}
 				}
 				FromFrom = { country_event = { id = neshr.10 } }
+				break = yes
 			}
 			if = {
 				limit = {
@@ -289,6 +288,7 @@ country_event = {
 					}
 				}
 				FromFrom = { country_event = { id = nemac.10 } }
+				break = yes
 			}
 		}
 	}
@@ -315,7 +315,7 @@ country_event = {
 	}
 
 	option = {
-		name = ne.15.a
+		name = leviathans.98.a
 		trigger = { is_genocidal = no }
 	}
 }
