@@ -41,7 +41,10 @@ ne_shroud_init = {
 					name = random
 					class = random_non_machine
 					portrait = random
-					traits = random
+					traits = {
+						trait = trait_psionic
+						trait = trait_venerable
+					}
 				}
 				create_country = {
 					name = "NAME_NESHR_Country"
@@ -177,7 +180,10 @@ ne_machine_init = {
 					name = random
 					class = "MACHINE"
 					portrait = random
-					traits = random
+					traits = {
+						trait = trait_robot_sapient_machine
+						trait = trait_robot_emotion_emulators
+					}
 				}
 				create_country = {
 					name = "NAME_NEMAC_Country"

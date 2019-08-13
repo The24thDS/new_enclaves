@@ -19,14 +19,3 @@ civic_autonomous_node = {
 	random_weight = { base = 5 }
 	modifier = {}
 }
-
-civic_slave_merchants = {
-	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_agrarian_idyll.dds"
-	potential = {
-		country_type = { value = ne_enclave }
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-	}
-	random_weight = { base = 5 }
-	modifier = {}
-}

@@ -119,7 +119,7 @@ country_event = {
 
 	picture_event_data = {
 		portrait = from
-		room  = enclave_curator_room
+		room = enclave_curator_room
 	}
 
 	trigger = {
@@ -299,7 +299,7 @@ country_event = {
 # neshr.101: Shroud's Children Main Menu
 country_event = {
 	id = neshr.101
-	title = neshr.100
+	title = neshr.100.name
 	desc = neshr.100a.desc
 	desc = neshr.100b.desc
 	desc = neshr.100c.desc
@@ -464,7 +464,40 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -2000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_preaching
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
@@ -499,7 +532,6 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
@@ -534,7 +566,6 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
@@ -642,7 +673,6 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
@@ -677,7 +707,6 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
@@ -712,7 +741,6 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
@@ -747,7 +775,6 @@ country_event = {
 			country_event = { id = neshr.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
@@ -782,7 +809,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.110.end
+		name = neshr.111.end
 		custom_gui = "enclave_curator_option"
 		default_hide_option = yes
 	}
@@ -793,29 +820,34 @@ country_event = {
 	id = neshr.120
 	title = neshr.120.name
 	desc = neshr.120.desc
+
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = "enclave_curator_window"
-	custom_gui_option = "enclave_curator_option"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_artist_room
+		room = enclave_curator_room
 	}
 
-	trigger = {
-		event_target:ne_shroud = {
-			trust = {
-				who = Root
-				value >= 30
-			}
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
 	}
 
 	option = {
 		name = DEAL
+		custom_gui = "enclave_curator_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT =  { has_country_flag = attacked_ne_shroud }
+			}
 		}
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion15
@@ -835,6 +867,22 @@ country_event = {
 				}
 			}
 		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = neshr.110.back
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = neshr.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
 	}
 }
 
@@ -979,6 +1027,22 @@ country_event = {
 				}
 			}
 		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = neshr.110.back
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = neshr.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
 	}
 }
 
@@ -1233,7 +1297,7 @@ country_event = {
 	}
 }
 
-# neshr.903: Attacked Shroud's Children
+# neshr.903: Attacked Shroud's Children (Hidden)
 country_event = {
 	id = neshr.903
 	hide_window = yes
@@ -1318,7 +1382,7 @@ country_event = {
 			is_country_type = ne_enclave
 			has_country_flag = ne_shroud_country
 		}
-		has_country_flag = attacked_curators
+		has_country_flag = attacked_ne_shroud
 		NOT = { has_country_flag = ne_shroud_diplomacy_engaged }
 	}
 

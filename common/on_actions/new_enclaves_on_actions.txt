@@ -1,4 +1,7 @@
 on_monthly_pulse = {
+	events = {
+		ne.10
+	}
 }
 
 on_custom_diplomacy = {
@@ -7,5 +10,27 @@ on_custom_diplomacy = {
 		neshr.905
 		nemac.100
 		nemac.905
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		neshr.903
+		nemac.903
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		neshr.900
+		nemac.900
 	}
 }

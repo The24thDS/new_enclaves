@@ -106,7 +106,7 @@ country_event = {
 
 	picture_event_data = {
 		portrait = from
-		room  = enclave_curator_room
+		room = enclave_curator_room
 	}
 
 	trigger = {
@@ -275,7 +275,7 @@ country_event = {
 # nemac.101: Prime Machines Main Menu
 country_event = {
 	id = nemac.101
-	title = nemac.100
+	title = nemac.100.name
 	desc = nemac.100a.desc
 	desc = nemac.100b.desc
 	desc = nemac.100c.desc
@@ -312,14 +312,18 @@ country_event = {
 		}
 	}
 
-	# Option 1: Preach across our worlds (nemac.110)
+	# Option 1: Help us with our machines (nemac.110)
 	option = {
 		name = nemac.100.a
 		custom_gui = "enclave_curator_option"
 		allow = {
 			custom_tooltip = {
-				fail_text = nemac.100.a.alreadypreaching
-				NOT = { has_modifier = machines_children_preaching }
+				fail_text = nemac.100.a.alreadyhelping
+				NOT = { has_modifier = prime_machines_expertise }
+				}
+			custom_tooltip = {
+				fail_text = nemac.100.a.robotsoutlawed
+				NOT = { has_policy_flag = robots_outlawed }
 			}
 		}
 		hidden_effect = {
@@ -327,7 +331,7 @@ country_event = {
 		}
 	}
 
-	# Option 2: Organize Religious Festivals (nemac.120)
+	# Option 2: Request Governor (nemac.120)
 	option = {
 		name = nemac.100.b
 		custom_gui = "enclave_curator_option"
@@ -337,8 +341,14 @@ country_event = {
 				event_target:ne_machine = {
 					trust = {
 						who = Root
-						value >= 30
+						value >= 50
 					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nemac.100.b.alreadyrecruited
+				NOT = {
+					any_owned_leader = { has_trait = leader_prime_machine }
 				}
 			}
 		}
@@ -347,7 +357,7 @@ country_event = {
 		}
 	}
 
-	# Option 3: Request Saintly Help (nemac.130)
+	# Option 3: Teach Us (nemac.130)
 	option = {
 		name = nemac.100.c
 		custom_gui = "enclave_curator_option"
@@ -357,14 +367,15 @@ country_event = {
 				event_target:ne_machine = {
 					trust = {
 						who = root
-						value >= 50
+						value >= 80
 					}
 				}
 			}
 			custom_tooltip = {
-				fail_text = leviathans.100.c.alreadyrecruited
-				NOT = {
-					any_owned_leader = { has_trait = leader_trait_saint }
+				fail_text = leviathans.100.c.alreadyteached
+				NOR = {
+					has_tech_option = tech_prime_machines_secrets
+					has_technology = tech_prime_machines_secrets
 				}
 			}
 		}
@@ -384,7 +395,7 @@ country_event = {
 	}
 }
 
-# nemac.110: Preach across our worlds
+# nemac.110: Help us with our machines
 country_event = {
 	id = nemac.110
 	title = nemac.110.name
@@ -423,7 +434,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -440,7 +451,40 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
+	option = {
+		name = nemac.110.a
+		response_text = nemac.110.a.reply
+		custom_gui = "enclave_curator_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -2000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = prime_machines_expertise
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade
+			}
+			country_event = { id = nemac.111 days = 3600 }
+		}
+	}
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
@@ -458,7 +502,7 @@ country_event = {
 		add_resource = { energy = -3000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -475,7 +519,6 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
@@ -493,7 +536,7 @@ country_event = {
 		add_resource = { energy = -4000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -510,7 +553,6 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
@@ -525,7 +567,7 @@ country_event = {
 		add_resource = { energy = -5000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -560,7 +602,7 @@ country_event = {
 	}
 }
 
-# nemac.111: Continue preaching?
+# nemac.111: Continue helping?
 country_event = {
 	id = nemac.111
 	title = nemac.111.name
@@ -601,7 +643,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -618,7 +660,6 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
@@ -636,7 +677,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -653,7 +694,6 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
@@ -671,7 +711,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -688,7 +728,6 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
@@ -706,7 +745,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -723,7 +762,6 @@ country_event = {
 			country_event = { id = nemac.111 days = 3600 }
 		}
 	}
-
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
@@ -738,7 +776,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = machines_children_preaching
+			modifier = prime_machines_expertise
 			days = 3600
 		}
 		hidden_effect = {
@@ -758,63 +796,101 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.110.end
+		name = nemac.111.end
 		custom_gui = "enclave_curator_option"
 		default_hide_option = yes
 	}
 }
 
-# nemac.120: Organize Religious Festivals
+# nemac.120: Recruit governor
 country_event = {
 	id = nemac.120
 	title = nemac.120.name
 	desc = nemac.120.desc
+
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = "enclave_curator_window"
-	custom_gui_option = "enclave_curator_option"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
 		room = enclave_artist_room
 	}
 
-	trigger = {
-		event_target:ne_machine = {
-			trust = {
-				who = Root
-				value >= 30
-			}
-		}
-	}
-
+	# Hire Governor
 	option = {
-		name = DEAL
+		name = nemac.120.a
+		response_text = nemac.120.a.reply
+		custom_gui = "enclave_curator_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
 		}
 		add_resource = { energy = -1000 }
-		custom_tooltip = opinion15
-		add_modifier = {
-			modifier = ne_machine_festival
-			days = 1800
-		}
+		custom_tooltip = opinion20
 		hidden_effect = {
+			set_country_flag = ne_machine_prime_machine_recruited
 			event_target:ne_machine = {
 				add_trust = {
 					who = Root
-					amount = 15
+					amount = 20
 				}
-				set_relation_flag = {
-					who = event_target:ne_machine
-					flag = ne_machine_trade
+			}
+		}
+		random_list = {
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_Unity_01"
+					skill = 5
+					traits = {
+						trait = leader_prime_machine
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 0
+				}
+			}
+			20 = {
+				create_leader = {
+					class = governor
+					species = event_target:ne_machine_species
+					name = "NAME_e_elevated_to_ir_plus_one"
+					skill = 5
+					traits = {
+						trait = leader_prime_machine
+					}
+					event_leader = yes # prevents this leader from leading factions and winning elections
+				}
+				last_created_leader = {
+					set_age = 0
 				}
 			}
 		}
 	}
+
+	# Back to Main Menu
+	option = {
+		name = nemac.110.back
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = nemac.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nemac.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
+	}
 }
 
-# nemac.130: Request Saintly Guidance
+# nemac.130: Teach Us
 country_event = {
 	id = nemac.130
 	title = nemac.130.name
@@ -831,9 +907,6 @@ country_event = {
 
 	immediate = {
 		set_country_flag = ne_machine_diplomacy_engaged
-		event_target:ne_machine = {
-			owner_species = { save_event_target_as = ne_machine_species }
-		}
 	}
 
 	after = {
@@ -847,15 +920,16 @@ country_event = {
 		response_text = nemac.130.a.reply
 		custom_gui = "enclave_curator_option"
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
+			resource_stockpile_compare = { resource = energy value >= 10000 }
+			has_policy_flag = ai_full_rights
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -10000 }
 		custom_tooltip = opinion20
+		add_research_option = tech_prime_machines_secrets
 		hidden_effect = {
-			set_country_flag = ne_machine_saint_recruited
 			event_target:ne_machine = {
 				add_trust = {
 					who = Root
@@ -863,102 +937,26 @@ country_event = {
 				}
 			}
 		}
-		random_list = {
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Saint_Ennoir"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
-					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 41
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Blessed_Ienois"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
-					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 45
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Hallowed_Lognill"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
-					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 43
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Apostle_Ziesa"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
-					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 47
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Kkronquts_The_Paragon"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
-					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 42
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Angel_Iriels"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
-					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 43
-				}
-			}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = nemac.110.back
+		custom_gui = "enclave_curator_option"
+		hidden_effect = {
+			country_event = { id = nemac.101 }
 		}
+	}
+
+	# End
+	option = {
+		name = nemac.110.end
+		custom_gui = "enclave_curator_option"
+		default_hide_option = yes
 	}
 }
 
-# nemac.900: Sroud's Children destroyed (HIDDEN)
+# nemac.900: Prime Machines destroyed (HIDDEN)
 event = {
 	id = nemac.900
 	hide_window = yes
@@ -1007,13 +1005,13 @@ country_event = {
 		set_country_flag = destroyed_ne_machine
 		if = {
 			limit = {
-				has_modifier = machines_children_preaching
+				has_modifier = prime_machines_expertise
 				has_relation_flag = {
 					who = From
 					flag = ne_machine_trade
 				}
 			}
-			remove_modifier = machines_children_preaching
+			remove_modifier = prime_machines_expertise
 			remove_relation_flag = {
 				who = From
 				flag = ne_machine_trade
@@ -1102,7 +1100,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_modifier = machines_children_preaching
+				has_modifier = prime_machines_expertise
 				has_relation_flag = {
 					who = From
 					flag = ne_machine_trade
@@ -1114,23 +1112,7 @@ country_event = {
 					}
 				}
 			}
-			remove_modifier = machines_children_preaching
-		}
-		if = {
-			limit = {
-				has_modifier = ne_machine_festival
-				has_relation_flag = {
-					who = From
-					flag = ne_machine_trade
-				}
-				From = {
-					count_owned_ships = {
-						limit = { is_ship_size = enclave_station }
-						count < 1
-					}
-				}
-			}
-			remove_modifier = ne_machine_festival
+			remove_modifier = prime_machines_expertise
 		}
 		if = {
 			limit = {
@@ -1203,7 +1185,7 @@ country_event = {
 	}
 }
 
-# nemac.903: Attacked Prime Machines
+# nemac.903: Attacked Prime Machines (Hidden)
 country_event = {
 	id = nemac.903
 	hide_window = yes
@@ -1224,20 +1206,8 @@ country_event = {
 		}
 		set_country_flag = attacked_ne_machine
 		if = {
-			limit = {
-				OR = {
-					has_modifier = machines_children_preaching
-					has_modifier = ne_machine_festival
-				}
-			}
-			if = {
-				limit = { has_modifier = machines_children_preaching }
-				remove_modifier = machines_children_preaching
-			}
-			if = {
-				limit = { has_modifier = ne_machine_festival }
-				remove_modifier = ne_machine_festival
-			}
+			limit = { has_modifier = prime_machines_expertise }
+			remove_modifier = prime_machines_expertise
 			country_event = { id = nemac.904}
 		}
 	}
@@ -1288,7 +1258,7 @@ country_event = {
 			is_country_type = ne_enclave
 			has_country_flag = ne_machine_country
 		}
-		has_country_flag = attacked_curators
+		has_country_flag = attacked_ne_machine
 		NOT = { has_country_flag = ne_machine_diplomacy_engaged }
 	}
 

@@ -18,7 +18,7 @@ leader_trait_saint = {
 leader_prime_machine = {
 	cost = 0
 	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_robot_learning_algorithms.dds"
+	icon = "gfx/interface/icons/traits/trait_robot_learning_algorithms.dds"
 	modifier = {
 		planet_jobs_robotic_produces_mult = 0.10
 	}
@@ -28,4 +28,21 @@ leader_prime_machine = {
 	randomized = no
 }
 
-# Slavers (leaders and custom slaves)
+trait_robot_sapient_machine = {
+	cost = 4
+	icon = "gfx/interface/icons/traits/trait_robot_learning_algorithms.dds"
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_prime_machines_secrets
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+
+	modifier = {
+		planet_jobs_produces_mult = 0.10
+	}
+}

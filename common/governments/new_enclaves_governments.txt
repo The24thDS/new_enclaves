@@ -27,18 +27,3 @@ gov_ne_machine = {
 		base = 10000
 	}
 }
-
-# Slaver enclave
-gov_ne_slaver = {
-	ruler_title = RT_LIBERATOR
-
-	should_force_rename = yes
-
-	possible = {
-		has_valid_civic = civic_slave_merchants
-	}
-
-	weight = {
-		base = 10000
-	}
-}

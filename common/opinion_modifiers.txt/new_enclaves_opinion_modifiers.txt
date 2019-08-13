@@ -1,0 +1,39 @@
+opinion_destroyed_ne_machine = {
+	opinion = {
+		base = -15
+	}
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_destroyed_ne_machine_trade = {
+	opinion = {
+		base = -30
+	}
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_destroyed_ne_shroud = {
+	opinion = {
+		base = -15
+	}
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_destroyed_ne_shroud_trade = {
+	opinion = {
+		base = -30
+	}
+
+	decay = {
+		base = 2
+	}
+}

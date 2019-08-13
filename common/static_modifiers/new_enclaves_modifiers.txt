@@ -13,5 +13,3 @@ ne_shroud_festival = {
 
 prime_machines_expertise = {
 }
-
-# Slavers

@@ -17,14 +17,6 @@
   ne_machine_government: "Machine Enclave"
   ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
-  # Slavers
-  civic_slave_merchants: "Slave Merchants"
-  civic_slave_merchants_desc: ""
-  gov_ne_slaver: "Slaver Enclave"
-  gov_ne_slaver_desc: ""
-  ne_slaver_government: "Slaver Enclave"
-  ne_slaver_government_desc: "A collective of slave hunters and traders from across the galaxy."
-  RT_LIBERATOR: "Liberator"
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
