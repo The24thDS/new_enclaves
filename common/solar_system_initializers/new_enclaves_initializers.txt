@@ -2,6 +2,8 @@
 
 ### NEW ENCLAVES ###
 
+# Hive: Dark Green, turquoise, circle
+
 # Machine Enclave
 ne_machine_init = {
 	class = sc_pulsar
