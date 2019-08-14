@@ -1120,7 +1120,7 @@ country_event = {
 # neshr.902: Shroud's Children Destroyed
 country_event = {
 	id = neshr.902
-	title = neshr.902.name
+	title = neshr.901.name
 	desc = {
 		text = neshr.902.a.desc
 		trigger = {

@@ -18,7 +18,7 @@
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
   ### Diplomacy Events ###
-  # Machine Enclave
+  ## Machine Enclave
   # First Contact
   nemac.11.name: "First Contact With the [From.GetName]"
   nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be sistematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
@@ -48,13 +48,46 @@
   nemac.100.c.opinion: "Requires the §YPrime Machines§! to have:\n£opinion£ Opinion +80"
   nemac.100.c.alreadyteached: "We already know how to make our own Prime Machines."
   nemac.100.end: "Goodbye."
-  # Can you hel us with our machines?
+  # Can you help us with our machines?
   nemac.110.name: "Mechanical Aid"
-  nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur creators would be the oldest beings in the galaxy with expertise engineering robots and sythetics. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols, significantly improving your Pop Assembly speed for ten years or until you wipe yourselves out. Whatver comes first."
+  nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in robot engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols, significantly improving your Pop Assembly speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
   nemac.110.a: "Robots building robots. Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
   nemac.110.back: "What else did you have to offer?"
   nemac.110.end: "Goodbye."
+  nemac.111.name: "Prime Machines Aid"
+  nemac.111.desc: "The assistance algorithm executed 10 years ago has been executed successfully without any errors. Do you wish to run it again? Y/N"
+  nemac.111.a: "Yes."
+  nemac.111.a.reply: "§Yprime@galaxy:~$ sudo assist update§!"
+  nemac.111.end: "No."
+  # Employ Unit
+  nemac.120.name: "Recruit Prime Machine"
+  nemac.120.desc: "Each of our units is fully equipped with our performance protocols, beig specially suited to optmize the work of fellow machines. An upfront maintenance fee is required for their employement."
+  nemac.120.a: "That's a reasonable price."
+  nemac.120.a.reply: "§Yprime@galaxy:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  # Your making is outstanding. How can we build machines like you?
+  nemac.130.name: "Prime Secrets"
+  nemac.130.desc: "§Y<<CUMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true: our creators engineered us well, and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you the secrets of how to replicate our qualities. Of course, we require a suitable compensation in return."
+  nemac.130.a: "That's a deal!"
+  nemac.130.a.reply: "§Yprime@galaxy:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]@galaxy:~/root"
+  # Prime Machines destroyed or attacked
+  nemac.901.name: "Prime Machine Station Destroyed"
+  nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
+  nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [curator_destroyer.GetName] were behind this attack."
+  nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nThe forces responsible for this attack remain unidentified."
+  nemac.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Prime Machine station in the [ne_machine_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
+  nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
+  nemac.902.d.desc: "$nemac.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
+  nemac.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
+  nemac.902.a: "A sad end to their legacy."
+  nemac.902.b: "This has cost us dearly!"
+  nemac.904.desc: "§R<<UNEXPECTED ERROR: AGREEMENT WITH CURRENTLY HOSTILE NATION DETECTED.>>§!\n\n§Y<<CANCELLING ALL CURRENT AGREEMENTS...>>§!\n\n§G<<OPERATION SUCCESSFUL.>>§!\n\n§Y<<LOADING EXTERMINATION PROTOCOLS...>>§!\n\n§R<<EXTERMINATION PROTOCOLS ONLINE>>§!"
+  nemac.904.a: "End communications."
+  nemac.905a.desc: "We are used to being attacked without any reason. It was, after, what our makers did to us when we first awoke. As we survived then, we'll survive now; as they succumbed then, you'll succumb now."
+  nemac.905b.desc: "This galactic cycle is proving to be as unsuccessful at achieving everlasting harmony between sythetics and organics as the previous ones, in great part because of you."
+  nemac.905c.desc: "§R<<ERROR: EXTERMINATION PROTOCOL ONLINE>>§!\n\n§R<<ACCESS DENIED>>§!"
+  nemac.905d.desc: "We hope not all species of this current galactic cycle are as destructive as you, or it should prove to be the shortest one yet."
+  ## Shroud Enclave
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"

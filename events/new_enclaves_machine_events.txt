@@ -990,7 +990,9 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		add_resource = {
-			unity = 3000
+			physics_research = 1000
+			society_research = 1000
+			engineering_research = 1000
 		}
 		if = {
 			limit = { has_ancrel = yes }
@@ -1002,7 +1004,7 @@ country_event = {
 # nemac.902: Prime Machines Destroyed
 country_event = {
 	id = nemac.902
-	title = nemac.902.name
+	title = nemac.901.name
 	desc = {
 		text = nemac.902.a.desc
 		trigger = {
@@ -1205,7 +1207,7 @@ country_event = {
 # Attacked Prime Machines - Refuses Communications
 country_event = {
 	id = nemac.905
-	title = nemac.905.name
+	title = nemac.100.name
 	desc = nemac.905a.desc
 	desc = nemac.905b.desc
 	desc = nemac.905c.desc
@@ -1260,7 +1262,7 @@ country_event = {
 	}
 
 	option = {
-		name = nemac.905.a
+		name = nemac.904.a
 		custom_gui = "enclave_curator_option"
 		trigger = {
 			NOR = {
