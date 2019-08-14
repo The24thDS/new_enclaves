@@ -131,7 +131,7 @@ country_event = {
 		}
 	}
 
-	# Option 1: Help us with our machines (nemac.110)
+	# Option 1: Can you help our engineers? (nemac.110)
 	option = {
 		name = nemac.100.a
 		custom_gui = "enclave_curator_option"
@@ -147,7 +147,6 @@ country_event = {
 				fail_text = nemac.100.a.alreadyhelping
 				NOT = { has_modifier = prime_machines_expertise }
 				}
-			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.110 }
@@ -188,7 +187,7 @@ country_event = {
 		}
 	}
 
-	# Option 3: Teach Us (nemac.130)
+	# Option 3: You are outstanding automata. How can we build machines like you? (nemac.130)
 	option = {
 		name = nemac.100.c
 		custom_gui = "enclave_curator_option"
@@ -281,7 +280,7 @@ country_event = {
 		}
 	}
 
-	# Option 1: Help us with our machines (nemac.110)
+	# Option 1: Can you help our engineers? (nemac.110)
 	option = {
 		name = nemac.100.a
 		custom_gui = "enclave_curator_option"
@@ -290,14 +289,13 @@ country_event = {
 				fail_text = nemac.100.a.alreadyhelping
 				NOT = { has_modifier = prime_machines_expertise }
 				}
-			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.110 }
 		}
 	}
 
-	# Option 2: Request Governor (nemac.120)
+	# Option 2: Could we employ one of your units? (nemac.120)
 	option = {
 		name = nemac.100.b
 		custom_gui = "enclave_curator_option"
@@ -324,7 +322,7 @@ country_event = {
 		}
 	}
 
-	# Option 3: Teach Us (nemac.130)
+	# Option 3: You are outstanding automata. How can we build machines like you? (nemac.130)
 	option = {
 		name = nemac.100.c
 		custom_gui = "enclave_curator_option"
@@ -363,7 +361,7 @@ country_event = {
 	}
 }
 
-# nemac.110: Help us with our machines
+# nemac.110: Can you help our engineers
 country_event = {
 	id = nemac.110
 	title = nemac.110.name
@@ -827,7 +825,7 @@ country_event = {
 				create_leader = {
 					class = governor
 					species = event_target:ne_machine_species
-					name = "NAME_e_elevated_to_ir_plus_one"
+					name = "NAME_EIRPLUSONE"
 					skill = 5
 					traits = {
 						trait = leader_prime_machine

@@ -12,4 +12,5 @@ ne_shroud_festival = {
 # Prime Machines
 
 prime_machines_expertise = {
+	country_engineering_tech_research_speed = 0.15
 }
