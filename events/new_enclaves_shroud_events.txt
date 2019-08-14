@@ -16,17 +16,7 @@ country_event = {
 country_event = {
 	id = neshr.11
 	title = neshr.11.name
-
-	desc = {
-		text = neshr.11a.desc
-		trigger = {
-			NOT = { has_country_flag = ne_shroud_intro }
-		}
-	}
-	desc = {
-		text = neshr.11b.desc
-		trigger = { has_country_flag = ne_shroud_intro }
-	}
+	desc = neshr.11a.desc
 
 	diplomatic = yes
 	custom_gui = "enclave_curator_window"
@@ -37,15 +27,6 @@ country_event = {
 	}
 
 	is_triggered_only = yes
-
-	after = {
-		if = {
-			limit = {
-				NOT = { has_country_flag = ne_shroud_intro }
-			}
-			set_country_flag = ne_shroud_intro
-		}
-	}
 
 	option = {
 		name = neshr.11.a
@@ -65,18 +46,15 @@ country_event = {
 		custom_gui = "enclave_curator_option"
 		trigger = {	has_valid_civic = civic_fanatic_purifiers }
 	}
-
 	option = {
 		name = TASTY
 		custom_gui = "enclave_curator_option"
 		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
 	}
-
 	option = {
 		name = EXTERMINATE
 		trigger = {	has_valid_civic = civic_machine_terminator }
 	}
-
 	option = {
 		name = neshr.10.materialist
 		custom_gui = "enclave_curator_option"
@@ -87,7 +65,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = neshr.10.hive
 		custom_gui = "enclave_curator_option"
