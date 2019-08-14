@@ -230,8 +230,8 @@ ne_shroud_init = {
 							file = "stripes.dds"
 						}
 						colors={
-							"purple"
-							"dark_blue"
+							"indigo"
+							"burgundy"
 							"null"
 							"null"
 						}
