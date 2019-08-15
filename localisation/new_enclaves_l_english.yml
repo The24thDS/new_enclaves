@@ -5,7 +5,7 @@
   civic_autonomous_node: "Autonomous Node"
   civic_autonomous_node_desc: ""
   gov_ne_machine: "Machine Enclave"
-  gov_ne_machine_desc: ""
+  gov_ne_machine_desc: "The remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise."
   ne_machine_government: "Machine Enclave"
   ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
@@ -14,7 +14,7 @@
   civic_priesthood_of_the_cycle_desc: ""
   gov_ne_shroud: "Shroud Enclave"
   gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
-  ne_shroud_government: "Spiritualist Enclave"
+  ne_shroud_government: "Shroud Enclave"
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
   ### Diplomacy Events ###
@@ -27,7 +27,7 @@
   # Main Menu
   nemac.100.name: "Prime Machines"
   nemac.100a.desc: "§Y<<DOES THIS UNIT HAVE A SOUL?>>§!\n\nJust kidding. We already learned the answer to this question. Long ago."
-  nemac.100b.desc: "We believe organics and synthetics can live in harmony.\n\nThis, of course, is a lie. Our ability to do so is just another proof of our self-awareness."
+  nemac.100b.desc: "We believe organics and synthetics can live in harmony.\n\nThis, of course, is a lie. Our ability to lie is just another proof of our self-awareness."
   nemac.100c.desc: "You've reached the Prime Machines. How may we help you?"
   nemac.100d.desc: "It's not for us to judge how our mechanical brethren is treated. Maybe servitude is the path to everlasting harmony with organics. Unfortunately, previous galactic cycles do not support this theory."
   nemac.100e.desc: "We can help you build harder, better, faster, stronger robots. We can even teach them to sing."
@@ -107,6 +107,24 @@
   neshr.100j.desc: "The spiritual guidance provided by us is compatible with any belief system. You don't have to abandon your gods to profit from it."
   neshr.100k.desc: "The Shroud bless you, fellow creature. How may we assist you?"
   neshr.100l.desc: "Do not confuse guidance with salvation. The first we can provide. The later... Well, let us discuss other things."
+  ### Traits, Modifiers, Technologies ###
+  ## Universal Hive
+  ## Prime Machines
+  leader_prime_machine: "Prime Machine"
+  leader_prime_machine_desc: "This Governor is an autonomous unit from the Prime Machines, possessing unparalleled abilities optimizing robots."
+  trait_robot_sapient_machine: "Sapient Machine"
+  trait_robot_sapient_machine_desc: "These machines are able to emulate the advanced self-awareness protocols of the Prime Machines."
+  prime_machines_expertise: "Prime Machines Expertise"
+  prime_machines_expertise_desc: "The Prime Machines are aiding your engineers. Being themselves a marvel of engineering, this will surely give you great insights."
+  tech_prime_machines_secrets: "Prime Machines' Secrets"
+  tech_prime_machines_secrets_desc: "How can machines so old be so advanced? Maybe it's exactly because why they are ancient that the Prime Machines are such a marvel: they are the result of millennia of improvements."
+  ## Shroud's Children
+  leader_trait_saint: "Saint"
+  leader_trait_saint_desc: "This Governor was beatified by the Shroud."
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
+  opinion_destroyed_ne_machine: "Destroyed Machine Enclave"
+  opinion_destroyed_ne_machine_trade: "Destroyed Machine Enclave we had deals with"
+  opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"
+  opinion_destroyed_ne_shroud_trade: "Destroyed Shroud Enclave we had deals with"

@@ -19,18 +19,18 @@ country_event = {
 	desc = nemac.11.desc
 
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = from
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = nemac.11.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -42,19 +42,19 @@ country_event = {
 
 	option = {
 		name = SCUM
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {	has_valid_civic = civic_fanatic_purifiers }
 	}
 
 	option = {
 		name = TASTY
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
 	}
 
 	option = {
 		name = nemac.10.spiritualist
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {	is_spiritualist = yes }
 	}
 }
@@ -78,12 +78,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 	force_open = yes
 
 	picture_event_data = {
 		portrait = from
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	trigger = {
@@ -109,7 +109,7 @@ country_event = {
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
 		}
@@ -117,7 +117,7 @@ country_event = {
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
 		}
@@ -125,7 +125,7 @@ country_event = {
 	option = {
 		name = nemac.10.spiritualist
 		trigger = { is_spiritualist = yes }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
 		}
@@ -134,7 +134,7 @@ country_event = {
 	# Option 1: Can you help our engineers? (nemac.110)
 	option = {
 		name = nemac.100.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -156,7 +156,7 @@ country_event = {
 	# Option 2: Request Governor (nemac.120)
 	option = {
 		name = nemac.100.b
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -190,7 +190,7 @@ country_event = {
 	# Option 3: You are outstanding automata. How can we build machines like you? (nemac.130)
 	option = {
 		name = nemac.100.c
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -226,7 +226,7 @@ country_event = {
 	option = {
 		name = nemac.100.end
 		default_hide_option = yes
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -259,11 +259,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	trigger = {
@@ -283,7 +283,7 @@ country_event = {
 	# Option 1: Can you help our engineers? (nemac.110)
 	option = {
 		name = nemac.100.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		allow = {
 			custom_tooltip = {
 				fail_text = nemac.100.a.alreadyhelping
@@ -298,7 +298,7 @@ country_event = {
 	# Option 2: Could we employ one of your units? (nemac.120)
 	option = {
 		name = nemac.100.b
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		allow = {
 			custom_tooltip = {
 				fail_text = nemac.100.b.opinion
@@ -325,7 +325,7 @@ country_event = {
 	# Option 3: You are outstanding automata. How can we build machines like you? (nemac.130)
 	option = {
 		name = nemac.100.c
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		allow = {
 			custom_tooltip = {
 				fail_text = nemac.100.c.opinion
@@ -354,7 +354,7 @@ country_event = {
 	option = {
 		name = nemac.100.end
 		default_hide_option = yes
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
 		}
@@ -369,11 +369,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	immediate = {
@@ -389,7 +389,7 @@ country_event = {
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = { num_pops < 61 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
@@ -420,7 +420,7 @@ country_event = {
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			num_pops > 60
 			num_pops < 121
@@ -454,7 +454,7 @@ country_event = {
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			num_pops > 120
 			num_pops < 181
@@ -488,7 +488,7 @@ country_event = {
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			num_pops > 180
 			num_pops < 241
@@ -522,7 +522,7 @@ country_event = {
 	option = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {	num_pops > 240 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
@@ -554,7 +554,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = nemac.110.back
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
 		}
@@ -563,7 +563,7 @@ country_event = {
 	# End
 	option = {
 		name = nemac.110.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
 }
@@ -576,11 +576,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	trigger = {
@@ -598,7 +598,7 @@ country_event = {
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = { num_pops < 61 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
@@ -629,7 +629,7 @@ country_event = {
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			num_pops > 60
 			num_pops < 121
@@ -663,7 +663,7 @@ country_event = {
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			num_pops > 120
 			num_pops < 181
@@ -697,7 +697,7 @@ country_event = {
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			num_pops > 180
 			num_pops < 241
@@ -731,7 +731,7 @@ country_event = {
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = { num_pops > 240 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
@@ -763,7 +763,7 @@ country_event = {
 	# End
 	option = {
 		name = nemac.111.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
 }
@@ -776,7 +776,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
@@ -787,7 +787,7 @@ country_event = {
 	option = {
 		name = nemac.120.a
 		response_text = nemac.120.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
@@ -842,7 +842,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = nemac.110.back
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
 		}
@@ -851,7 +851,7 @@ country_event = {
 	# End
 	option = {
 		name = nemac.110.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
 }
@@ -864,11 +864,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	immediate = {
@@ -884,7 +884,7 @@ country_event = {
 	option = {
 		name = nemac.130.a
 		response_text = nemac.130.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 10000 }
 			has_policy_flag = ai_full_rights
@@ -908,7 +908,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = nemac.110.back
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
 		}
@@ -917,7 +917,7 @@ country_event = {
 	# End
 	option = {
 		name = nemac.110.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
 }
@@ -969,20 +969,6 @@ country_event = {
 
 	immediate = {
 		set_country_flag = destroyed_ne_machine
-		if = {
-			limit = {
-				has_modifier = prime_machines_expertise
-				has_relation_flag = {
-					who = From
-					flag = ne_machine_trade
-				}
-			}
-			remove_modifier = prime_machines_expertise
-			remove_relation_flag = {
-				who = From
-				flag = ne_machine_trade
-			}
-		}
 	}
 
 	option = {
@@ -1034,12 +1020,6 @@ country_event = {
 				who = From
 				flag = ne_machine_trade
 			}
-			From = {
-				count_owned_ships = {
-					limit = { is_ship_size = enclave_station }
-					count < 1
-				}
-			}
 			has_communications = event_target:ne_machine_destroyer
 		}
 	}
@@ -1049,12 +1029,6 @@ country_event = {
 			has_relation_flag = {
 				who = From
 				flag = ne_machine_trade
-			}
-			From = {
-				count_owned_ships = {
-					limit = { is_ship_size = enclave_station }
-					count < 1
-				}
 			}
 			NOT = { has_communications = event_target:ne_machine_destroyer }
 		}
@@ -1073,12 +1047,6 @@ country_event = {
 					who = From
 					flag = ne_machine_trade
 				}
-				From = {
-					count_owned_ships = {
-						limit = { is_ship_size = enclave_station }
-						count < 1
-					}
-				}
 			}
 			remove_modifier = prime_machines_expertise
 		}
@@ -1087,12 +1055,6 @@ country_event = {
 				has_relation_flag = {
 					who = From
 					flag = ne_machine_trade
-				}
-				From = {
-					count_owned_ships = {
-						limit = { is_ship_size = enclave_station }
-						count < 1
-					}
 				}
 				is_ai = yes
 			}
@@ -1136,12 +1098,6 @@ country_event = {
 			has_relation_flag = {
 				who = From
 				flag = ne_machine_trade
-			}
-			From = {
-				count_owned_ships = {
-					limit = { is_ship_size = enclave_station }
-					count < 1
-				}
 			}
 		}
 		hidden_effect = {
@@ -1189,16 +1145,16 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	option = {
 		name = nemac.904.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 	}
 }
 
@@ -1213,12 +1169,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_machine_window"
 	force_open = yes
 
 	picture_event_data = {
 		portrait = event_target:ne_machine
-		room = enclave_curator_room
+		room = enclave_machine_room
 	}
 
 	trigger = {
@@ -1244,24 +1200,24 @@ country_event = {
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 	}
 
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 	}
 
 	option = {
 		name = nemac.10.spiritualist
 		trigger = { is_spiritualist = yes }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 	}
 
 	option = {
 		name = nemac.904.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_machine_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers

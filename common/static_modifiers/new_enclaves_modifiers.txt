@@ -1,16 +1,20 @@
-## Shroud's Children
+### Universal Hive ###
 
-# Shroud's Children Preaching
-shrouds_children_preaching = {
-	pop_ethic_spiritualist_attraction_mult = 0.50
-}
+### Prime Machines ###
 
-ne_shroud_festival = {
-	planet_stability_add = 5
-}
-
-# Prime Machines
-
+# Prime Machines Expertise
 prime_machines_expertise = {
 	country_engineering_tech_research_speed = 0.15
+}
+
+### Shroud's Children ###
+
+# Shroud's Children Guidance
+shrouds_children_guidance = {
+	country_physics_tech_research_speed = 0.15
+}
+
+# Shroud's Children Preaching
+ne_shroud_festival = {
+	pop_ethic_spiritualist_attraction_mult = 0.50
 }

@@ -169,7 +169,7 @@ country_event = {
 		}
 	}
 
-	# Option 1: Preach across our worlds (neshr.110)
+	# Option 1: Help us understand other levels of existance. (neshr.110)
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
@@ -183,8 +183,8 @@ country_event = {
 		}
 		allow = {
 			custom_tooltip = {
-				fail_text = neshr.100.a.alreadypreaching
-				NOT = { has_modifier = shrouds_children_preaching }
+				fail_text = neshr.100.a.alreadyhelping
+				NOT = { has_modifier = shrouds_children_guidance }
 			}
 		}
 		hidden_effect = {
@@ -213,6 +213,10 @@ country_event = {
 						value >= 30
 					}
 				}
+			}
+			custom_tooltip = {
+				fail_text = neshr.100.b.alreadyhired
+				NOT = { has_modifier = ne_shroud_festival }
 			}
 		}
 		hidden_effect = {
@@ -313,14 +317,14 @@ country_event = {
 		}
 	}
 
-	# Option 1: Preach across our worlds (neshr.110)
+	# Option 1: Help us understand other levels of existance. (neshr.110)
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
 		allow = {
 			custom_tooltip = {
-				fail_text = neshr.100.a.alreadypreaching
-				NOT = { has_modifier = shrouds_children_preaching }
+				fail_text = neshr.100.a.alreadyhelping
+				NOT = { has_modifier = shrouds_children_guidance }
 			}
 		}
 		hidden_effect = {
@@ -341,6 +345,10 @@ country_event = {
 						value >= 30
 					}
 				}
+			}
+			custom_tooltip = {
+				fail_text = neshr.100.b.alreadyhired
+				NOT = { has_modifier = ne_shroud_festival }
 			}
 		}
 		hidden_effect = {
@@ -385,7 +393,7 @@ country_event = {
 	}
 }
 
-# neshr.110: Preach across our worlds
+# neshr.110: Help us understand other levels of existance.
 country_event = {
 	id = neshr.110
 	title = neshr.110.name
@@ -424,7 +432,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -436,7 +444,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -458,7 +466,7 @@ country_event = {
 		add_resource = { energy = -2000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -470,7 +478,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -492,7 +500,7 @@ country_event = {
 		add_resource = { energy = -3000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -504,7 +512,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -526,7 +534,7 @@ country_event = {
 		add_resource = { energy = -4000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -538,7 +546,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -557,7 +565,7 @@ country_event = {
 		add_resource = { energy = -5000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -569,7 +577,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -633,7 +641,7 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -645,7 +653,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -664,10 +672,10 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -2000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -679,7 +687,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -698,10 +706,10 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -3000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -713,7 +721,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -732,10 +740,10 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -4000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -747,7 +755,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -763,10 +771,10 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -5000 }
 		custom_tooltip = opinion20
 		add_modifier = {
-			modifier = shrouds_children_preaching
+			modifier = shrouds_children_guidance
 			days = 3600
 		}
 		hidden_effect = {
@@ -778,7 +786,7 @@ country_event = {
 			}
 			set_relation_flag = {
 				who = event_target:ne_shroud
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
 			}
 			country_event = { id = neshr.111 days = 3600 }
 		}
@@ -830,9 +838,14 @@ country_event = {
 		custom_tooltip = opinion15
 		add_modifier = {
 			modifier = ne_shroud_festival
-			days = 1800
+			days = 3600
 		}
 		hidden_effect = {
+			set_timed_relation_flag = {
+				flag = ne_shroud_festival_hired
+				who = event_target:ne_shroud
+				days = 3600
+			}
 			event_target:ne_shroud = {
 				add_trust = {
 					who = Root
@@ -1019,7 +1032,7 @@ country_event = {
 	}
 }
 
-# neshr.900: Sroud's Children destroyed (HIDDEN)
+# neshr.900: Shroud's Children destroyed (HIDDEN) (called by on_ship_destroyed_victim)
 event = {
 	id = neshr.900
 	hide_window = yes
@@ -1066,20 +1079,6 @@ country_event = {
 
 	immediate = {
 		set_country_flag = destroyed_ne_shroud
-		if = {
-			limit = {
-				has_modifier = shrouds_children_preaching
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_trade
-				}
-			}
-			remove_modifier = shrouds_children_preaching
-			remove_relation_flag = {
-				who = From
-				flag = ne_shroud_trade
-			}
-		}
 	}
 
 	option = {
@@ -1101,10 +1100,14 @@ country_event = {
 	desc = {
 		text = neshr.902.a.desc
 		trigger = {
-			NOT = {
+			NOR = {
 				has_relation_flag = {
 					who = From
-					flag = ne_shroud_trade
+					flag = ne_shroud_guidance_hired
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
 				}
 			}
 			has_communications = event_target:ne_shroud_destroyer
@@ -1113,10 +1116,14 @@ country_event = {
 	desc = {
 		text = neshr.902.b.desc
 		trigger = {
-			NOT = {
+			NOR = {
 				has_relation_flag = {
 					who = From
-					flag = ne_shroud_trade
+					flag = ne_shroud_guidance_hired
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
 				}
 			}
 			NOT = { has_communications = event_target:ne_shroud }
@@ -1125,14 +1132,14 @@ country_event = {
 	desc = {
 		text = neshr.902.c.desc
 		trigger = {
-			has_relation_flag = {
-				who = From
-				flag = ne_shroud_trade
-			}
-			From = {
-				count_owned_ships = {
-					limit = { is_ship_size = enclave_station }
-					count < 1
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_guidance_hired
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
 				}
 			}
 			has_communications = event_target:ne_shroud_destroyer
@@ -1141,14 +1148,14 @@ country_event = {
 	desc = {
 		text = neshr.902.d.desc
 		trigger = {
-			has_relation_flag = {
-				who = From
-				flag = ne_shroud_trade
-			}
-			From = {
-				count_owned_ships = {
-					limit = { is_ship_size = enclave_station }
-					count < 1
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_guidance_hired
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
 				}
 			}
 			NOT = { has_communications = event_target:ne_shroud_destroyer }
@@ -1163,46 +1170,34 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_modifier = shrouds_children_preaching
+				has_modifier = shrouds_children_guidance
 				has_relation_flag = {
 					who = From
-					flag = ne_shroud_trade
-				}
-				From = {
-					count_owned_ships = {
-						limit = { is_ship_size = enclave_station }
-						count < 1
-					}
+					flag = ne_shroud_guidance_hired
 				}
 			}
-			remove_modifier = shrouds_children_preaching
+			remove_modifier = shrouds_children_guidance
 		}
 		if = {
 			limit = {
 				has_modifier = ne_shroud_festival
 				has_relation_flag = {
 					who = From
-					flag = ne_shroud_trade
-				}
-				From = {
-					count_owned_ships = {
-						limit = { is_ship_size = enclave_station }
-						count < 1
-					}
+					flag = ne_shroud_festival_hired
 				}
 			}
 			remove_modifier = ne_shroud_festival
 		}
 		if = {
 			limit = {
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_trade
-				}
-				From = {
-					count_owned_ships = {
-						limit = { is_ship_size = enclave_station }
-						count < 1
+				OR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_guidance_hired
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_festival_hired
 					}
 				}
 				is_ai = yes
@@ -1214,19 +1209,21 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_relation_flag = {
 						who = From
-						flag = ne_shroud_trade
+						flag = ne_shroud_guidance_hired
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_festival_hired
 					}
 				}
 				is_ai = yes
-				OR = {
-					NOR = {
-						is_materialist = yes
-						has_authority = auth_machine_intelligence
-						has_authority = auth_hive_mind
-					}
+				NOR = {
+					is_materialist = yes
+					has_authority = auth_machine_intelligence
+					has_authority = auth_hive_mind
 				}
 			}
 			add_opinion_modifier = {
@@ -1239,10 +1236,14 @@ country_event = {
 	option = {
 		name = neshr.902.a
 		trigger = {
-			NOT = {
+			NOR = {
 				has_relation_flag = {
 					who = From
-					flag = ne_shroud_trade
+					flag = ne_shroud_guidance_hired
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
 				}
 			}
 		}
@@ -1250,21 +1251,25 @@ country_event = {
 	option = {
 		name = neshr.902.b
 		trigger = {
-			has_relation_flag = {
-				who = From
-				flag = ne_shroud_trade
-			}
-			From = {
-				count_owned_ships = {
-					limit = { is_ship_size = enclave_station }
-					count < 1
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_guidance_hired
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
 				}
 			}
 		}
 		hidden_effect = {
 			remove_relation_flag = {
 				who = From
-				flag = ne_shroud_trade
+				flag = ne_shroud_guidance_hired
+			}
+			remove_relation_flag = {
+				who = From
+				flag = ne_shroud_festival_hired
 			}
 		}
 	}
@@ -1293,13 +1298,13 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_modifier = shrouds_children_preaching
+					has_modifier = shrouds_children_guidance
 					has_modifier = ne_shroud_festival
 				}
 			}
 			if = {
-				limit = { has_modifier = shrouds_children_preaching }
-				remove_modifier = shrouds_children_preaching
+				limit = { has_modifier = shrouds_children_guidance }
+				remove_modifier = shrouds_children_guidance
 			}
 			if = {
 				limit = { has_modifier = ne_shroud_festival }
