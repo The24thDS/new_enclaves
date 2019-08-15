@@ -169,7 +169,7 @@ country_event = {
 		}
 	}
 
-	# Option 1: Help us understand other levels of existance. (neshr.110)
+	# Option 1: What can your guidance offer us? (neshr.110)
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
@@ -183,7 +183,7 @@ country_event = {
 		}
 		allow = {
 			custom_tooltip = {
-				fail_text = neshr.100.a.alreadyhelping
+				fail_text = neshr.100.a.alreadyguiding
 				NOT = { has_modifier = shrouds_children_guidance }
 			}
 		}
@@ -317,13 +317,13 @@ country_event = {
 		}
 	}
 
-	# Option 1: Help us understand other levels of existance. (neshr.110)
+	# Option 1: What can your guidance offer us? (neshr.110)
 	option = {
 		name = neshr.100.a
 		custom_gui = "enclave_curator_option"
 		allow = {
 			custom_tooltip = {
-				fail_text = neshr.100.a.alreadyhelping
+				fail_text = neshr.100.a.alreadyguiding
 				NOT = { has_modifier = shrouds_children_guidance }
 			}
 		}
@@ -393,7 +393,7 @@ country_event = {
 	}
 }
 
-# neshr.110: Help us understand other levels of existance.
+# neshr.110: What can your guidance offer us?
 country_event = {
 	id = neshr.110
 	title = neshr.110.name
@@ -594,13 +594,13 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.110.end
+		name = neshr.100.end
 		custom_gui = "enclave_curator_option"
 		default_hide_option = yes
 	}
 }
 
-# neshr.111: Continue preaching?
+# neshr.111: Continue guiding?
 country_event = {
 	id = neshr.111
 	title = neshr.111.name
@@ -872,7 +872,7 @@ country_event = {
 	}
 }
 
-# neshr.130: Request Saintly Guidance
+# neshr.130: Request Saintly Help
 country_event = {
 	id = neshr.130
 	title = neshr.130.name
@@ -1084,7 +1084,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		add_resource = {
-			unity = 3000
+			physics_research = 3000
 		}
 		if = {
 			limit = { has_ancrel = yes }
@@ -1339,7 +1339,7 @@ country_event = {
 # Attacked Shroud's Children - Refuses Communications
 country_event = {
 	id = neshr.905
-	title = neshr.905.name
+	title = neshr.100.name
 	desc = neshr.905a.desc
 	desc = neshr.905b.desc
 	desc = neshr.905c.desc
