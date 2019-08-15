@@ -1,6 +1,14 @@
 ﻿l_english:
   ne_enclave: "Enclave"
   ### Governments ###
+  # Hive Enclave
+  civic_ancient_hive: "Ancient Hive"
+  civic_ancient_hive_desc: "Ancient Hive"
+  gov_ne_hive: "Hive Enclave"
+  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
+  ne_hive_government: "Hive Enclave"
+  ne_hive_government: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
+  RT_AWAKENED: "Awakened"
   # Machine Enclave
   civic_autonomous_node: "Autonomous Node"
   civic_autonomous_node_desc: ""
@@ -18,6 +26,59 @@
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
   ### Diplomacy Events ###
+  ## Hive Enclave
+  # First Contact
+  nehiv.11.name: "First Contact With the [From.GetName]"
+  nehiv.11.desc: "We are the Universal Hive. And so are you. And so is everything.\n\nMillenia ago, we've came to a simple realization: the whole galaxy, nay, the whole universe is a single entity. We are all part of a cosmic organism and must strive to work together.\n\nSince then, we have been aiding other races to live in harmony - at least for a while, until they eventually die out. Only when we are all together in a single ethereal consciousness will we finally be able to rest."
+  nehiv.11.a: "Well met."
+  # Main Menu
+  nehiv.100.name: "Universal Hive"
+  nehiv.100a.desc: "We strive to serve the universe. You are part of the universe. Ergo, we are here to serve you."
+  nehiv.100b.desc: "Even when our minds where linked together, we where still alone. Only when we discovered the galactic consciosuness that permeates all we escaped this state of solitude."
+  nehiv.100c.desc: "Your body is made up of billions of individual cells working in unison. What if we, complex, sentient beings, are no more than the cells of the galaxy?"
+  nehiv.100d.desc: "You've reached the Universal Hive. Or, better yet, a particular facet of it. How may we help you?"
+  nehiv.100e.desc: "We are all one hive."
+  nehiv.100f.desc: "The universe is as alive as you and me. Even more so."
+  nehiv.100g.desc: "We don't live in the universe. It's the universe lives inside all of us and we are an integral part of it."
+  nehiv.100h.desc: "To help you is to help the universe. So let us help you."
+  nehiv.100i.desc: "We pose no danger to your sense of individuality. We are aware of the usefulness of this illusion. As long as we all live in harmony serving the universe, we can work together."
+  # Main Menu - Options
+  nehiv.100.a: "Can you help our sociologists?"
+  nehiv.100.a.alreadyhelping: "The Universal Hive is already boosting our Society Research."
+  nehiv.100.b: "We are interested in your... "conformity" techniques."
+  nehiv.100.b.opinion: "Requires the §YUniversal Hive§! to have:\n£opinion£ Opinion +50"
+  nehiv.100.b.alreadyhired: "We're already using the Consensus Pheromones provided by the Universal Hive."
+  nehiv.100.end: "Gooodbye."
+  # Sociology help
+  nehiv.110.name: "Sociological Assistance"
+  nehiv.110.desc: "We are compelled to. The better you understand to live in harmony, the better is the universe served.\n\nSuch assistance, notwithstanding, is done willingly but not for free. Our continued existance is of fundamental importance and, as such, we require a small donation."
+  nehiv.110.a: "You'll have it."
+  nehiv.110.a.reply: "Wonderful. All for the good off the Universal Being."
+  nehiv.110.back: "What else did you have to offer?"
+  nehiv.111.name: "Universal Hive Assistance"
+  nehiv.111.desc: "The collaboration between our sociologists in the last 10 years was very fruitful, bringing happiness to the Universal Being. Should we renew our agreement?"
+  nehiv.111.a: "Yes."
+  nehiv.111.a.reply: "I'm sure the Universal Being is pleased. And so will be you."
+  nehiv.111.end: "Not now."
+  # Consensus pheromones
+  nehiv.120.name: "Consensus Pheromones"
+  nehiv.120.desc: ""Conformity techiniques"? What a strange name. We have no such things.\n\nWe do, however, have what we call "consensus pheromones". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require a fee to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ -5000§!"
+  nehiv.120.a: "A small cost."
+  nehiv.120.a.reply: "You have no idea how small."
+  # Aggresion
+  nehiv.901.name: "Universal Hive Station Destroyed"
+  nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
+  nehiv.902.a.desc: "$nehiv.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_hive_destroyer.GetName] were behind this attack."
+  nehiv.902.b.desc: "$nehiv.902.ab.desc.start$\n\nThe forces responsible for this attack remain unidentified."
+  nehiv.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Prime Machine station in the [ne_hive_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
+  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ by forces loyal to the [ne_hive_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
+  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
+  nehiv.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
+  nehiv.902.a: "A sad end to their legacy."
+  nehiv.902.b: "This has cost us dearly!"
+  nehiv.904.desc: "Every complex being has to deal with canceriginous agents that work for its own destruction. The Universal Being is no exception.\n\nWe'll not feed the cancer that's corrupting the universe. All agreements we once had are now null and void."
+  nehiv.904.a: "End communications."
+  nehiv.905a.desc: "We are all one with the universe. You are but carerous cells that didn't realize that."
   ## Machine Enclave
   # First Contact
   nemac.11.name: "First Contact With the [From.GetName]"
@@ -54,7 +115,7 @@
   nemac.110.a: "Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
   nemac.110.back: "What else did you have to offer?"
-  nemac.110.end: "Goodbye."
+  nemac.100.end: "Goodbye."
   nemac.111.name: "Prime Machines Aid"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Yes."
@@ -145,6 +206,7 @@
   neshr.902.a: "A sad end to their legacy."
   neshr.902.b: "This has cost us dearly!"
   neshr.904.desc: "It has come to our attention that some members of our order have been martyred by your hands. We truthfully thank you for conceding us this honor.\n\nNotwithstanding, we are obliged to interrupt any prior arrangements or accords we had in place. Suicide is a quite different thing from martyrdom, even though they may have similar results."
+  neshr.904.a: "End communications."
   neshr.905a.desc: "We are ready to return to the Shroud. Are you ready to sustain its wrath?"
   neshr.905b.desc: "We are sad you couldn't accept our truths, fellow creature."
   neshr.905c.desc: "Physical reality is but an illusion. Have you come to free us from it?"
@@ -163,9 +225,15 @@
   ## Shroud's Children
   leader_trait_saint: "Saint"
   leader_trait_saint_desc: "This Governor was beatified by the Shroud."
+  shrouds_children_guidance: "Shroud's Children Guidance"
+  shrouds_children_guidance_desc: "The Shroud's Children gave us access to their ancient archives. Although much of the material is arcane in nature, it's also rich in knowledge about this physical reality."
+  ne_shroud_festival: "Religious Festivals"
+  ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
+  opinion_destroyed_ne_machine: "Destroyed Hive Enclave"
+  opinion_destroyed_ne_machine_trade: "Destroyed Hive Enclave we had deals with"
   opinion_destroyed_ne_machine: "Destroyed Machine Enclave"
   opinion_destroyed_ne_machine_trade: "Destroyed Machine Enclave we had deals with"
   opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"

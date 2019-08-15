@@ -1,11 +1,11 @@
-# Spiritualist Enclave
-gov_ne_shroud = {
-	ruler_title = RT_PROPHETS_SUCCESSOR
+# Hive Enclave
+gov_ne_hive = {
+	ruler_title = RT_AWAKENED
 
 	should_force_rename = yes
 
 	possible = {
-		has_valid_civic = civic_priesthood_of_the_cycle
+		has_valid_civic = civic_ancient_hive
 	}
 
 	weight = {
@@ -21,6 +21,21 @@ gov_ne_machine = {
 
 	possible = {
 		has_valid_civic = civic_autonomous_node
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+# Spiritualist Enclave
+gov_ne_shroud = {
+	ruler_title = RT_PROPHETS_SUCCESSOR
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_priesthood_of_the_cycle
 	}
 
 	weight = {

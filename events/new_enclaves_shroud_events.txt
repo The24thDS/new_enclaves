@@ -16,21 +16,21 @@ country_event = {
 country_event = {
 	id = neshr.11
 	title = neshr.11.name
-	desc = neshr.11a.desc
+	desc = neshr.11.desc
 
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = from
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = neshr.11.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			NOR = {
 				is_genocidal = yes
@@ -43,12 +43,12 @@ country_event = {
 
 	option = {
 		name = SCUM
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {	has_valid_civic = civic_fanatic_purifiers }
 	}
 	option = {
 		name = TASTY
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
 	}
 	option = {
@@ -57,7 +57,7 @@ country_event = {
 	}
 	option = {
 		name = neshr.10.materialist
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			OR = {
 				is_materialist = yes
@@ -67,7 +67,7 @@ country_event = {
 	}
 	option = {
 		name = neshr.10.hive
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = { has_authority = auth_hive_mind }
 	}
 }
@@ -91,12 +91,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 	force_open = yes
 
 	picture_event_data = {
 		portrait = from
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	trigger = {
@@ -122,7 +122,7 @@ country_event = {
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -131,7 +131,7 @@ country_event = {
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -140,7 +140,7 @@ country_event = {
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -154,7 +154,7 @@ country_event = {
 				has_authority = auth_machine_intelligence
 			}
 		}
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -163,7 +163,7 @@ country_event = {
 	option = {
 		name = neshr.10.hive
 		trigger = { has_authority = auth_hive_mind }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -172,7 +172,7 @@ country_event = {
 	# Option 1: What can your guidance offer us? (neshr.110)
 	option = {
 		name = neshr.100.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			NOR = {
 				is_genocidal = yes
@@ -195,7 +195,7 @@ country_event = {
 	# Option 2: Organize Religious Festivals (neshr.120)
 	option = {
 		name = neshr.100.b
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			NOR = {
 				is_genocidal = yes
@@ -227,7 +227,7 @@ country_event = {
 	# Option 3: Request Saintly Help (neshr.130)
 	option = {
 		name = neshr.100.c
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			NOR = {
 				is_genocidal = yes
@@ -262,7 +262,7 @@ country_event = {
 	option = {
 		name = neshr.100.end
 		default_hide_option = yes
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			NOR = {
 				is_genocidal = yes
@@ -296,11 +296,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	trigger = {
@@ -320,7 +320,7 @@ country_event = {
 	# Option 1: What can your guidance offer us? (neshr.110)
 	option = {
 		name = neshr.100.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.a.alreadyguiding
@@ -335,7 +335,7 @@ country_event = {
 	# Option 2: Organize Religious Festivals (neshr.120)
 	option = {
 		name = neshr.100.b
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.b.opinion
@@ -359,7 +359,7 @@ country_event = {
 	# Option 3: Request Saintly Help (neshr.130)
 	option = {
 		name = neshr.100.c
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		allow = {
 			custom_tooltip = {
 				fail_text = neshr.100.c.opinion
@@ -386,7 +386,7 @@ country_event = {
 	option = {
 		name = neshr.100.end
 		default_hide_option = yes
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
 		}
@@ -401,11 +401,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	immediate = {
@@ -421,7 +421,7 @@ country_event = {
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = { num_pops < 61 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
@@ -452,7 +452,7 @@ country_event = {
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			num_pops > 60
 			num_pops < 121
@@ -486,7 +486,7 @@ country_event = {
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			num_pops > 120
 			num_pops < 181
@@ -520,7 +520,7 @@ country_event = {
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			num_pops > 180
 			num_pops < 241
@@ -554,7 +554,7 @@ country_event = {
 	option = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {	num_pops > 240 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
@@ -586,7 +586,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = neshr.110.back
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
 		}
@@ -595,7 +595,7 @@ country_event = {
 	# End
 	option = {
 		name = neshr.100.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
 }
@@ -608,11 +608,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	trigger = {
@@ -630,7 +630,7 @@ country_event = {
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = { num_pops < 61 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
@@ -661,7 +661,7 @@ country_event = {
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			num_pops > 60
 			num_pops < 121
@@ -695,7 +695,7 @@ country_event = {
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			num_pops > 120
 			num_pops < 181
@@ -729,7 +729,7 @@ country_event = {
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			num_pops > 180
 			num_pops < 241
@@ -763,7 +763,7 @@ country_event = {
 	option = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		trigger = { num_pops > 240 }
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
@@ -795,7 +795,7 @@ country_event = {
 	# End
 	option = {
 		name = neshr.111.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
 }
@@ -808,11 +808,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	immediate = {
@@ -827,7 +827,7 @@ country_event = {
 
 	option = {
 		name = DEAL
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
@@ -858,7 +858,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = neshr.110.back
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
 		}
@@ -867,7 +867,7 @@ country_event = {
 	# End
 	option = {
 		name = neshr.110.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
 }
@@ -880,11 +880,11 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	immediate = {
@@ -903,7 +903,7 @@ country_event = {
 	option = {
 		name = neshr.130.a
 		response_text = neshr.130.a.reply
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
@@ -913,7 +913,6 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		hidden_effect = {
-			set_country_flag = ne_shroud_saint_recruited
 			event_target:ne_shroud = {
 				add_trust = {
 					who = Root
@@ -1018,7 +1017,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = neshr.110.back
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
 		}
@@ -1027,7 +1026,7 @@ country_event = {
 	# End
 	option = {
 		name = neshr.110.end
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
 }
@@ -1323,16 +1322,16 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	option = {
 		name = neshr.904.a
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 	}
 }
 
@@ -1347,12 +1346,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_curator_window"
+	custom_gui = "enclave_shroud_window"
 	force_open = yes
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
-		room = enclave_curator_room
+		room = enclave_shroud_room
 	}
 
 	trigger = {
@@ -1378,19 +1377,19 @@ country_event = {
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 	}
 
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 	}
 
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 	}
 
 	option = {
@@ -1401,18 +1400,18 @@ country_event = {
 				has_authority = auth_machine_intelligence
 			}
 		}
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 	}
 
 	option = {
 		name = neshr.10.hive
 		trigger = { has_authority = auth_hive_mind }
-		custom_gui = "enclave_curator_option"
+		custom_gui = "enclave_shroud_option"
 	}
 
 	option = {
-		name = neshr.905.a
-		custom_gui = "enclave_curator_option"
+		name = neshr.904.a
+		custom_gui = "enclave_shroud_option"
 		trigger = {
 			NOR = {
 				is_genocidal = yes

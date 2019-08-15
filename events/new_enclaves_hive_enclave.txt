@@ -1,1 +1,1097 @@
 namespace = nehiv
+
+# nehiv.10: Port
+country_event = {
+	id = nehiv.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = nehiv.11 }
+		}
+	}
+}
+
+# nehiv.11: Universal Hive introduction
+country_event = {
+	id = nehiv.11
+	title = nehiv.11.name
+	desc = nehiv.11.desc
+
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_hive_room
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = nehiv.11.a
+		custom_gui = "enclave_hive_option"
+		trigger = {	is_genocidal = no }
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_hive_option"
+		trigger = {	has_valid_civic = civic_fanatic_purifiers }
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_hive_option"
+		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
+	}
+
+	option = {
+		name = EXTERMINATE
+		custom_gui = "enclave_hive_option"
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}
+
+# Universal Hive Main Menu (Initial)
+country_event = {
+	id = nehiv.100
+	title = nehiv.100.name
+	desc = nehiv.100a.desc
+	desc = nehiv.100b.desc
+	desc = nehiv.100c.desc
+	desc = nehiv.100d.desc
+	desc = nehiv.100e.desc
+	desc = nehiv.100f.desc
+	desc = nehiv.100g.desc
+	desc = nehiv.100h.desc
+	desc = nehiv.100i.desc
+	desc = nehiv.100j.desc
+	desc = nehiv.100k.desc
+	desc = nehiv.100l.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_hive_room
+	}
+
+	trigger = {
+		from = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_hive_country
+		}
+		NOT = { has_country_flag = ne_hive_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ne_hive }
+	}
+
+	immediate = {
+		set_country_flag = ne_hive_diplomacy_engaged
+		From = { save_event_target_as = ne_hive }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+
+	# Option 1: Can you help our sociologists? (nehiv.110)
+	option = {
+		name = nehiv.100.a
+		custom_gui = "enclave_hive_option"
+		trigger = { is_genocidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = nehiv.100.a.alreadyhelping
+				NOT = { has_modifier = universal_hive_collaboration }
+				}
+		}
+		hidden_effect = {
+			country_event = { id = nehiv.110 }
+		}
+	}
+
+	# Option 2: We are interested in your... "conformity" techniques. (nehiv.120)
+	option = {
+		name = nehiv.100.b
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			is_genocidal = no
+			any_owned_pop = {
+				is_organic_species = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nehiv.100.b.opinion
+				event_target:ne_hive = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nehiv.100.b.alreadyhired
+				NOT = { has_modifier = ne_hive_consensus_pheromones }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nehiv.120 }
+		}
+	}
+
+	# End communications
+	option = {
+		name = nehiv.100.end
+		default_hide_option = yes
+		custom_gui = "enclave_hive_option"
+		trigger = { is_genocidal = no }
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+}
+
+# nehiv.101: Universal Hive Main Menu
+country_event = {
+	id = nehiv.101
+	title = nehiv.100.name
+	desc = nehiv.100a.desc
+	desc = nehiv.100b.desc
+	desc = nehiv.100c.desc
+	desc = nehiv.100d.desc
+	desc = nehiv.100e.desc
+	desc = nehiv.100f.desc
+	desc = nehiv.100g.desc
+	desc = nehiv.100h.desc
+	desc = nehiv.100i.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = ne_hive_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_hive_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+
+	# Option 1: Can you help our sociologists? (nehiv.110)
+	option = {
+		name = nehiv.100.a
+		custom_gui = "enclave_hive_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = nehiv.100.a.alreadyhelping
+				NOT = { has_modifier = universal_hive_collaboration }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nehiv.110 }
+		}
+	}
+
+	# Option 2: We are interested in your... "conformity" techniques. (nehiv.120)
+	option = {
+		name = nehiv.100.b
+		custom_gui = "enclave_hive_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = nehiv.100.b.opinion
+				event_target:ne_hive = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nehiv.100.b.alreadyhired
+				NOT = { has_modifier = ne_hive_consensus_pheromones }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nehiv.120 }
+		}
+	}
+
+	# End communications
+	option = {
+		name = nehiv.100.end
+		default_hide_option = yes
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+}
+
+# nehiv.110: Can you help our sociologists
+country_event = {
+	id = nehiv.110
+	title = nehiv.110.name
+	desc = nehiv.110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	immediate = {
+		set_country_flag = ne_hive_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -2000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -3000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 4000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -4000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {	num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -5000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = nehiv.110.back
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			country_event = { id = nehiv.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nehiv.100.end
+		custom_gui = "enclave_hive_option"
+		default_hide_option = yes
+	}
+}
+
+# nehiv.111: Continue helping?
+country_event = {
+	id = nehiv.111
+	title = nehiv.111.name
+	desc = nehiv.111.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_hive }
+		exists = event_target:ne_hive
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_hive
+			flag = ne_hive_collaboration
+		}
+	}
+
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = { num_pops < 61 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -2000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -3000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 4000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -4000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = { num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -5000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+
+	# End
+	option = {
+		name = nehiv.111.end
+		custom_gui = "enclave_hive_option"
+		default_hide_option = yes
+	}
+}
+
+# nehiv.120: We are interested in your... "conformity" techniques.
+country_event = {
+	id = nehiv.120
+	title = nehiv.120.name
+	desc = nehiv.120.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_artist_room
+	}
+
+	# Consensus pheromones
+	option = {
+		name = nehiv.120.a
+		response_text = nehiv.120.a.reply
+		custom_gui = "enclave_hive_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -5000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = ne_hive_consensus_pheromones
+			days = 3600
+		}
+		hidden_effect = {
+			set_timed_relation_flag = {
+				flag = ne_hive_consensus_pheromones_purchased
+				who = event_target:ne_hive
+				days = 3600
+			}
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = nehiv.110.back
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			country_event = { id = nehiv.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nehiv.100.end
+		custom_gui = "enclave_hive_option"
+		default_hide_option = yes
+	}
+}
+
+# nehiv.900: Universal Hive destroyed (HIDDEN)
+event = {
+	id = nehiv.900
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = ne_enclave
+		has_country_flag = ne_hive_country
+		FromFrom = {
+			is_ship_size = enclave_station
+		}
+	}
+
+	immediate = {
+		FromFrom = {
+			solar_system = { save_event_target_as = ne_hive_system }
+		}
+		From = {
+			country_event = { id = nehiv.901 }
+			save_event_target_as = ne_hive_destroyer
+		}
+		every_country = {
+			limit = {
+				has_communications = Root
+				NOT = { is_country = event_target:ne_hive_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = nehiv.902 }
+		}
+	}
+}
+
+# nehiv.901: Universal Hive Destroyed (Destroyer)
+country_event = {
+	id = nehiv.901
+	title = nehiv.901.name
+	desc = nehiv.901.desc
+	picture = GFX_evt_space_debris
+	location = event_target:ne_hive_system
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_ne_hive
+	}
+
+	option = {
+		name = EXCELLENT
+		add_resource = {
+			engineering_research = 3000
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			medium_artifact_reward = yes
+		}
+	}
+}
+
+# nehiv.902: Universal Hive Destroyed
+country_event = {
+	id = nehiv.902
+	title = nehiv.901.name
+	desc = {
+		text = nehiv.902.a.desc
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+			has_communications = event_target:ne_hive_destroyer
+		}
+	}
+	desc = {
+		text = nehiv.902.b.desc
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+			NOT = { has_communications = event_target:ne_hive }
+		}
+	}
+	desc = {
+		text = nehiv.902.c.desc
+		trigger = {
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+			has_communications = event_target:ne_hive_destroyer
+		}
+	}
+	desc = {
+		text = nehiv.902.d.desc
+		trigger = {
+			NOT = {
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+			NOT = { has_communications = event_target:ne_hive_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:ne_hive_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = universal_hive_collaboration
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+			}
+			remove_modifier = universal_hive_collaboration
+		}
+		if = {
+			limit = {
+				has_modifier = ne_hive_consensus_pheromones
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+			remove_modifier = ne_hive_consensus_pheromones
+		}
+		if = {
+			limit = {
+				OR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_hive_collaboration
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_hive_consensus_pheromones
+					}
+				}
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_hive_destroyer
+				modifier = opinion_destroyed_ne_hive_trade
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_hive_collaboration
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_hive_consensus_pheromones_purchased
+					}
+				}
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_hive_destroyer
+				modifier = opinion_destroyed_ne_hive
+			}
+		}
+	}
+
+	option = {
+		name = nehiv.902.a
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+		}
+	}
+	option = {
+		name = nehiv.902.b
+		trigger = {
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_collaboration
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_hive_consensus_pheromones_purchased
+				}
+			}
+		}
+		hidden_effect = {
+			remove_relation_flag = {
+				who = From
+				flag = ne_hive_collaboration
+			}
+			remove_relation_flag = {
+				who = From
+				flag = ne_hive_consensus_pheromones_purchased
+			}
+		}
+	}
+}
+
+# nehiv.903: Attacked Universal Hive (Hidden)
+country_event = {
+	id = nehiv.903
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		From = { has_country_flag = ne_hive_country }
+	}
+
+	immediate = {
+		From = {
+			save_event_target_as = ne_hive
+			add_trust = {
+				who = Root
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_ne_hive
+		if = {
+			limit = {
+				OR = {
+					has_modifier = universal_hive_collaboration
+					has_modifier = ne_hive_consensus_pheromones
+				}
+			}
+			remove_modifier = universal_hive_collaboration
+			remove_modifier = ne_hive_consensus_pheromones
+			country_event = { id = nehiv.904}
+		}
+	}
+}
+
+# nehiv.904: Attacked Universal Hive - Agreements terminated
+country_event = {
+	id = nehiv.904
+	title = nehiv.100.name
+	desc = nehiv.904.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	option = {
+		name = nehiv.904.a
+		custom_gui = "enclave_hive_option"
+	}
+}
+
+# Attacked Universal Hive - Refuses Communications
+country_event = {
+	id = nehiv.905
+	title = nehiv.100.name
+	desc = nehiv.905a.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	trigger = {
+		From = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_hive_country
+		}
+		has_country_flag = attacked_ne_hive
+		NOT = { has_country_flag = ne_hive_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_hive_diplomacy_engaged
+		From = { save_event_target_as = ne_hive }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_hive_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_hive_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_hive_option"
+	}
+
+	option = {
+		name = nehiv.904.a
+		custom_gui = "enclave_hive_option"
+		trigger = { is_genocidal = no }
+		default_hide_option = yes
+	}
+}

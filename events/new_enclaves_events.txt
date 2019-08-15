@@ -198,15 +198,20 @@ country_event = {
 		}
 		hidden_effect = {
 			if = {
-				limit = {
-					From = { has_country_flag = ne_shroud_country }
-				}
-				From = { country_event = { id = neshr.10 } } # Port
+				limit = { From = { has_country_flag = ne_hive_country } }
+				From = { country_event = { id = nehiv.10 } }
 				break = yes
 			}
 			if = {
 				limit = { From = { has_country_flag = ne_machine_country } }
 				From = { country_event = { id = nemac.10 } }
+				break = yes
+			}
+			if = {
+				limit = {
+					From = { has_country_flag = ne_shroud_country }
+				}
+				From = { country_event = { id = neshr.10 } } # Port
 				break = yes
 			}
 		}
@@ -275,10 +280,10 @@ country_event = {
 			if = {
 				limit = {
 					FromFrom = {
-						has_country_flag = ne_shroud_country
+						has_country_flag = ne_machine_country
 					}
 				}
-				FromFrom = { country_event = { id = neshr.10 } }
+				FromFrom = { country_event = { id = nehiv.10 } }
 				break = yes
 			}
 			if = {
@@ -288,6 +293,15 @@ country_event = {
 					}
 				}
 				FromFrom = { country_event = { id = nemac.10 } }
+				break = yes
+			}
+			if = {
+				limit = {
+					FromFrom = {
+						has_country_flag = ne_shroud_country
+					}
+				}
+				FromFrom = { country_event = { id = neshr.10 } }
 				break = yes
 			}
 		}

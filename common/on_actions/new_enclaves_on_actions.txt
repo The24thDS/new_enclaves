@@ -6,10 +6,12 @@ on_monthly_pulse = {
 
 on_custom_diplomacy = {
 	events = {
-		neshr.100
-		neshr.905
+		nehiv.100
+		nehiv.905
 		nemac.100
 		nemac.905
+		neshr.100
+		neshr.905
 	}
 }
 
@@ -19,8 +21,9 @@ on_custom_diplomacy = {
 # FromFromFrom = fleet 2
 on_entering_battle = {
 	events = {
-		neshr.903
+		nehiv.903
 		nemac.903
+		neshr.903
 	}
 }
 
@@ -30,7 +33,8 @@ on_entering_battle = {
 # FromFromFrom = ship 2
 on_ship_destroyed_victim = {
 	events = {
-		neshr.900
+		nehiv.900
 		nemac.900
+		neshr.900
 	}
 }

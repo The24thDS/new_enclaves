@@ -1,5 +1,13 @@
 ### Universal Hive ###
 
+universal_hive_collaboration = {
+	country_society_tech_research_speed = 0.15
+}
+
+ne_hive_consensus_pheromones = {
+	planet_stability_add = 5
+}
+
 ### Prime Machines ###
 
 # Prime Machines Expertise

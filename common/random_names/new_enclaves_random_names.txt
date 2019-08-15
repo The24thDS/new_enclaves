@@ -1,5 +1,18 @@
 ### NEW ENCLAVES
 
+
+empire_name_parts_list = {
+	key = "ne_hive_names"
+	parts = {
+		"Hive Enclave" = 10
+	}
+}
+empire_name_parts_list = {
+	key = "ne_machine_names"
+	parts = {
+		"Machine Enclave" = 10
+	}
+}
 empire_name_parts_list = {
 	key = "ne_shroud_names"
 	parts = {
@@ -7,28 +20,18 @@ empire_name_parts_list = {
 	}
 }
 
-empire_name_parts_list = {
-	key = "ne_machine_names"
-	parts = {
-		"Machine Enclave" = 10
-	}
-}
-
-# Spiritualists
 empire_name_format = {
 	random_weight = {
 		factor = 0
 		modifier = {
 			add = 100
 			is_country_type = ne_enclave
-			has_government = gov_ne_shroud
+			has_government = gov_ne_hive
 		}
 	}
-	format = "format.ne_shroud.1"
-	noun = "<ne_shroud_names>"
+	format = "format.ne_hive.1"
+	noun = "<ne_hive_names>"
 }
-
-# Machines
 empire_name_format = {
 	random_weight = {
 		factor = 0
@@ -40,4 +43,16 @@ empire_name_format = {
 	}
 	format = "format.ne_machine.1"
 	noun = "<ne_machine_names>"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = ne_enclave
+			has_government = gov_ne_shroud
+		}
+	}
+	format = "format.ne_shroud.1"
+	noun = "<ne_shroud_names>"
 }

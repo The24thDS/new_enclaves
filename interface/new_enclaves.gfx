@@ -1,5 +1,69 @@
 spriteTypes = {
 
+	# Hives
+	spriteType = {
+		name = "GFX_event_button_452_hive"
+		texturefile = "gfx/interface/buttons/button_452_animated_hive.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_452_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_452_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tile_large_bg_hive"
+		textureFile = "gfx/interface/tiles/tile_large_bg_hive.dds"
+		borderSize = { x=330 y=296 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_hex_bg_hive"
+		textureFile = "gfx/interface/planetview/planet_view_hex_bg_hive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_line_long_hive"
+		textureFile = "gfx/interface/planetview/line_long_hive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_main_close_button_hive"
+		texturefile = "gfx/interface/buttons/close_button_hive.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_diplomacy_portrait_frame_hive"
+		textureFile = "gfx/interface/diplomacy/diplomacy_portrait_frame_hive.dds"
+	}
+
+	flagSpriteType = {
+		name = "GFX_empire_flag_128_hive"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame_hive.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+
+		bg_position = { x = 10 y = 10 }
+		bg_size = { width = 111 height = 111 }
+		symbol_position = { x = 24 y = 24 }
+		symbol_size = { width = 83 height = 83 }
+	}
+
+	# Machines
 	spriteType = {
 		name = "GFX_event_button_452_machine"
 		texturefile = "gfx/interface/buttons/button_452_animated_machine.dds"
@@ -52,6 +116,69 @@ spriteTypes = {
 	flagSpriteType = {
 		name = "GFX_empire_flag_128_machine"
 		textureFile = "gfx/interface/flags/empire_flag_128_frame_machine.dds"		#this one will determine the size of the sprite
+		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
+		effectFile = "gfx/FX/flag_sprite.shader"
+		noOfFrames = 1
+
+		bg_position = { x = 10 y = 10 }
+		bg_size = { width = 111 height = 111 }
+		symbol_position = { x = 24 y = 24 }
+		symbol_size = { width = 83 height = 83 }
+	}
+
+	# Shroud
+	spriteType = {
+		name = "GFX_event_button_452_shroud"
+		texturefile = "gfx/interface/buttons/button_452_animated_shroud.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_452_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_452_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tile_large_bg_shroud"
+		textureFile = "gfx/interface/tiles/tile_large_bg_shroud.dds"
+		borderSize = { x=330 y=296 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_hex_bg_shroud"
+		textureFile = "gfx/interface/planetview/planet_view_hex_bg_shroud.dds"
+	}
+
+	spriteType = {
+		name = "GFX_line_long_shroud"
+		textureFile = "gfx/interface/planetview/line_long_shroud.dds"
+	}
+
+	spriteType = {
+		name = "GFX_main_close_button_shroud"
+		texturefile = "gfx/interface/buttons/close_button_shroud.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_diplomacy_portrait_frame_shroud"
+		textureFile = "gfx/interface/diplomacy/diplomacy_portrait_frame_shroud.dds"
+	}
+
+	flagSpriteType = {
+		name = "GFX_empire_flag_128_shroud"
+		textureFile = "gfx/interface/flags/empire_flag_128_frame_shroud.dds"		#this one will determine the size of the sprite
 		masking_texture = "gfx/interface/flags/empire_flag_128_mask.dds"
 		effectFile = "gfx/FX/flag_sprite.shader"
 		noOfFrames = 1

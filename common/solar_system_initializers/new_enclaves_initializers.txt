@@ -3,6 +3,293 @@
 ### NEW ENCLAVES ###
 
 # Hive: Dark Green, turquoise, circle
+ne_hive_init = {
+	name = "NAME_NEHIV_System"
+	class = "sc_m_giant"
+	usage = misc_system_init
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 145
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 290
+	}
+
+	usage_odds = {
+		base = 100
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+
+	max_instances = 1
+	spawn_chance = 100
+
+	flags = { ne_hive_system ne_enclave }
+
+	planet = {
+		name = "NAME_NEHIV_Star"
+		class = "pc_m_giant_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 60
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_NEHIV_Htrae"
+		class = "pc_molten"
+		orbit_distance = 90
+		orbit_angle = 260
+		size = 20
+		has_ring = no
+
+		init_effect = {
+			if = {
+				limit = {
+					NOT = { exists = event_target:ne_hive_country }
+				}
+				create_species = {
+					name = random
+					class = random_non_machine
+					portrait = random
+					traits = random
+				}
+				create_country = {
+					name = "NAME_NEHIV_Country"
+					type = ne_enclave
+					authority = "auth_hive_mind"
+					civics =	{
+						civic = civic_ancient_hive
+					}
+					species = last_created
+					flag = {
+						icon = {
+							category = "enclaves"
+							file = "ne_flag_hive.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors={
+							"dark_green"
+							"turquoise"
+							"null"
+							"null"
+						}
+					}
+					ethos = {
+						ethic = ethic_gestalt_consciousness
+					}
+					ignore_initial_colony_error = yes
+				}
+				last_created_country = {
+					set_country_flag = ne_hive_country
+					set_graphical_culture = mammalian_01
+					save_global_event_target_as = ne_hive_country
+					create_fleet = {
+						name = "NAME_NEHIV_Fleet"
+						settings = { spawn_debris = no }
+						effect = {
+							set_owner = prev
+								create_ship = {
+								name = random
+								design = "NAME_NEHIV_Enclave_Station"
+								graphical_culture = prev
+							}
+							set_location = {
+								target = prevprev
+								angle = random
+								distance = 15
+							}
+							save_event_target_as = CustomCapital
+							prev = {
+								set_custom_capital_location = event_target:CustomCapital
+							}
+						}
+					}
+					create_leader = {
+						class = ruler
+						species = prev
+						name = random
+						skill = 5
+					}
+					set_leader = last_created_country
+				}
+			}
+		}
+	}
+
+	planet = {
+		name = "NAME_NEHIV_Srma"
+		class = "pc_molten"
+		orbit_distance = 25
+		orbit_angle = 60
+		size = 13
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_NEHIV_Retipuj"
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = -160
+		size = 35
+		has_ring = no
+		change_orbit = 6
+
+		moon = {
+			name = "NAME_NEHIV_Oi"
+			class = "pc_molten"
+			size = 6
+			orbit_distance = 10
+			orbit_angle = 110
+			has_ring = no
+		}
+		moon = {
+			name = "NAME_NEHIV_Aporue"
+			class = "pc_desert"
+			size = 6
+			orbit_distance = 2.5
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "NAME_NEHIV_Edemynag"
+			class = "pc_arid"
+			size = 9
+			orbit_distance = 2.5
+			orbit_angle = 80
+			has_ring = no
+		}
+		moon = {
+			name = "NAME_NEHIV_Otsillac"
+			class = "pc_desert"
+			size = 7
+			orbit_distance = 2.5
+			orbit_angle = -155
+			has_ring = no
+		}
+	}
+
+	planet = {
+		name = "NAME_NEHIV_Nrutas"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 170
+		size = 30
+		has_ring = yes
+		change_orbit = 7
+
+		moon = {
+			name = "NAME_NEHIV_Natit"
+			class = "pc_arctic"
+			size = 8
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+	}
+
+	planet = {
+		name = "NAME_NEHIV_Enutpen"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = 20
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_NEHIV_Sunaru"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = -195
+		size = 20
+		has_ring = no
+		change_orbit = 4
+
+		moon = {
+			name = "NAME_NEHIV_Notirt"
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 7
+			orbit_angle = 115
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+}
 
 # Machine Enclave
 ne_machine_init = {
@@ -31,7 +318,34 @@ ne_machine_init = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 10
+		size = 15
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_shattered"
+		count = { min = 1 max = 2 }
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 20 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_shattered"
+		count = { min = 2 max = 4 }
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 20 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_shattered"
+		count = { min = 1 max = 1 }
+		orbit_distance = 45
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 25 }
 		has_ring = no
 
 		init_effect = {
@@ -94,7 +408,7 @@ ne_machine_init = {
 							set_location = {
 								target = prevprev
 								angle = random
-								distance = 100
+								distance = 15
 							}
 							save_event_target_as = CustomCapital
 							prev = {
@@ -116,37 +430,10 @@ ne_machine_init = {
 
 	planet = {
 		class = "pc_shattered"
-		count = { min = 1 max = 2 }
-		orbit_distance = 40
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
-		has_ring = no
-	}
-
-	planet = {
-		class = "pc_shattered"
-		count = { min = 2 max = 3 }
-		orbit_distance = 30
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
-		has_ring = no
-	}
-
-	planet = {
-		class = "pc_shattered"
-		count = { min = 1 max = 1 }
-		orbit_distance = 45
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
-		has_ring = no
-	}
-
-	planet = {
-		class = "pc_shattered"
 		count = { min = 1 max = 1 }
 		orbit_distance = 25
 		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
+		size = { min = 20 max = 40 }
 		has_ring = no
 	}
 
@@ -155,22 +442,14 @@ ne_machine_init = {
 		count = { min = 1 max = 2 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
-		has_ring = no
-	}
-
-	planet = {
-		class = "pc_shattered"
-		count = { min = 1 max = 2 }
-		orbit_distance = 35
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
+		size = { min = 15 max = 30 }
 		has_ring = no
 	}
 }
 
 # Spiritualists
 ne_shroud_init = {
+	name = "NAME_NESHR_System"
 	class = sc_black_hole
 	usage = misc_system_init
 
@@ -198,7 +477,15 @@ ne_shroud_init = {
 		orbit_angle = 1
 		size = 30
 		has_ring = no
+	}
 
+	planet = {
+		name = "NAME_NESHR_Planet_1"
+		class = "pc_shrouded"
+		orbit_distance = 40
+		orbit_angle = 90
+		size = 25
+		has_ring = no
 
 		init_effect = {
 			if = {
@@ -261,7 +548,7 @@ ne_shroud_init = {
 							set_location = {
 								target = prevprev
 								angle = random
-								distance = 100
+								distance = 10
 							}
 							save_event_target_as = CustomCapital
 							prev = {
@@ -279,15 +566,6 @@ ne_shroud_init = {
 				}
 			}
 		}
-	}
-
-	planet = {
-		name = "NAME_NESHR_Planet_1"
-		class = "pc_shrouded"
-		orbit_distance = 40
-		orbit_angle = 90
-		size = 25
-		has_ring = no
 	}
 
 	planet = {

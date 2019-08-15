@@ -562,7 +562,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.110.end
+		name = nemac.100.end
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
@@ -640,7 +640,7 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -2000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = prime_machines_expertise
@@ -674,7 +674,7 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -3000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = prime_machines_expertise
@@ -708,7 +708,7 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -4000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = prime_machines_expertise
@@ -739,7 +739,7 @@ country_event = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -1000 }
+		add_resource = { energy = -5000 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = prime_machines_expertise
@@ -797,7 +797,6 @@ country_event = {
 		add_resource = { energy = -1000 }
 		custom_tooltip = opinion20
 		hidden_effect = {
-			set_country_flag = ne_machine_prime_machine_recruited
 			event_target:ne_machine = {
 				add_trust = {
 					who = Root
@@ -850,7 +849,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.110.end
+		name = nemac.100.end
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
@@ -916,7 +915,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.110.end
+		name = nemac.100.end
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
