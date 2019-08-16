@@ -686,7 +686,7 @@ country_event = {
 
 	picture_event_data = {
 		portrait = event_target:ne_hive
-		room = enclave_artist_room
+		room = enclave_hive_room
 	}
 
 	immediate = {
