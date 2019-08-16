@@ -119,18 +119,18 @@
   nemac.111.name: "Prime Machines Aid"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Yes."
-  nemac.111.a.reply: "§Yprime@galaxy:~$ sudo assist update§!"
+  nemac.111.a.reply: "§Yprime:~$ sudo assist update§!"
   nemac.111.end: "No."
   # Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each of our units is fully equipped with our performance protocols, beig specially suited to optmize the work of fellow machines. An upfront maintenance fee is required for their employement."
   nemac.120.a: "That's a reasonable price."
-  nemac.120.a.reply: "§Yprime@galaxy:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   # Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Prime Secrets"
   nemac.130.desc: "§Y<<CUMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you the secrets of how to replicate our qualities. Of course, we require a suitable compensation in return."
   nemac.130.a: "That's a deal!"
-  nemac.130.a.reply: "§Yprime@galaxy:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]@galaxy:~/root"
+  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   # Prime Machines destroyed or attacked
   nemac.901.name: "Prime Machine Station Destroyed"
   nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
@@ -181,6 +181,7 @@
   # Shroud's Children Guidance
   neshr.110.name: "Shroud's Children Guidance"
   neshr.110.desc: "Our spiritual guidance has much more practical benefits than they may seem at first glance. Although our objective is to transcend this material realm, only by having a deep understanding of physical reality one is able to conceive other levels of existance.\n\nOur sages are more than willing to teach you about the ontological secrets of the universe. Hopefully, you'll understand if we require some material assistance to accomodate our members at your empire in return."
+  neshr.110.a: "Of course. Let us make the arrangements."
   neshr.110.a.reply: "Perfect. You now have free access to our sacred archives for the next 10 years. Fear not, the more arcane texts we'll eventually start to make sense."
   neshr.110.back: "What else did you have to offer?"
   neshr.111.name: "Shroud's Children Guidance"
@@ -213,6 +214,10 @@
   neshr.905d.desc: "Your violent nature is just another result of your attachment to the material realm."
   ### Traits, Modifiers, Technologies ###
   ## Universal Hive
+  universal_hive_collaboration: "Universal Hive Collaboration"
+  universal_hive_collaboration_desc: "The Universal Hive is helping our sociologists, greatly increasing our Society research."
+  ne_hive_consensus_pheromones: "Consensus Pheromones"
+  ne_hive_consensus_pheromones_desc: "Consensus can be carefully engineered in a laboratory - a trade secret of the Universal Hive."
   ## Prime Machines
   leader_prime_machine: "Prime Machine"
   leader_prime_machine_desc: "This Governor is an autonomous unit from the Prime Machines, possessing unparalleled abilities optimizing robots."

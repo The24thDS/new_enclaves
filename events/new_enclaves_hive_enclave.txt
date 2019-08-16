@@ -66,9 +66,6 @@ country_event = {
 	desc = nehiv.100g.desc
 	desc = nehiv.100h.desc
 	desc = nehiv.100i.desc
-	desc = nehiv.100j.desc
-	desc = nehiv.100k.desc
-	desc = nehiv.100l.desc
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -690,6 +687,14 @@ country_event = {
 	picture_event_data = {
 		portrait = event_target:ne_hive
 		room = enclave_artist_room
+	}
+
+	immediate = {
+		set_country_flag = ne_hive_diplomacy_engaged
+	}
+
+	after = {
+		remove_country_flag = ne_hive_diplomacy_engaged
 	}
 
 	# Consensus pheromones

@@ -1,9 +1,23 @@
+# A fleet has entered a system
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		ne.12
+	}
+}
+
+# No scope, like on_game_start
 on_monthly_pulse = {
 	events = {
 		ne.10
 	}
 }
 
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
 on_custom_diplomacy = {
 	events = {
 		nehiv.100

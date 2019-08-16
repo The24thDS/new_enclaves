@@ -919,96 +919,96 @@ country_event = {
 					amount = 20
 				}
 			}
-		}
-		random_list = {
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_shroud_species
-					name = "NAME_Saint_Ennoir"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
+			random_list = {
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_shroud_species
+						name = "NAME_Saint_Ennoir"
+						skill = 5
+						traits = {
+							trait = leader_trait_saint
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 41
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_shroud_species
-					name = "NAME_Blessed_Ienois"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
+					last_created_leader = {
+						set_age = 41
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
 				}
-				last_created_leader = {
-					set_age = 45
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_shroud_species
-					name = "NAME_Hallowed_Lognill"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_shroud_species
+						name = "NAME_Blessed_Ienois"
+						skill = 5
+						traits = {
+							trait = leader_trait_saint
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 43
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_shroud_species
-					name = "NAME_Apostle_Ziesa"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
+					last_created_leader = {
+						set_age = 45
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
 				}
-				last_created_leader = {
-					set_age = 47
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_shroud_species
-					name = "NAME_Kkronquts_The_Paragon"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_shroud_species
+						name = "NAME_Hallowed_Lognill"
+						skill = 5
+						traits = {
+							trait = leader_trait_saint
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 42
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_shroud_species
-					name = "NAME_Angel_Iriels"
-					skill = 5
-					traits = {
-						trait = leader_trait_saint
+					last_created_leader = {
+						set_age = 43
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
 				}
-				last_created_leader = {
-					set_age = 43
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_shroud_species
+						name = "NAME_Apostle_Ziesa"
+						skill = 5
+						traits = {
+							trait = leader_trait_saint
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
+					}
+					last_created_leader = {
+						set_age = 47
+					}
+				}
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_shroud_species
+						name = "NAME_Kkronquts_The_Paragon"
+						skill = 5
+						traits = {
+							trait = leader_trait_saint
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
+					}
+					last_created_leader = {
+						set_age = 42
+					}
+				}
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_shroud_species
+						name = "NAME_Angel_Iriels"
+						skill = 5
+						traits = {
+							trait = leader_trait_saint
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
+					}
+					last_created_leader = {
+						set_age = 43
+					}
 				}
 			}
 		}

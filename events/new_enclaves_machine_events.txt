@@ -783,6 +783,19 @@ country_event = {
 		room = enclave_artist_room
 	}
 
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+		event_target:ne_machine = {
+			owner_species = { save_event_target_as = ne_machine_species }
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
 	# Hire Governor
 	option = {
 		name = nemac.120.a
@@ -803,36 +816,36 @@ country_event = {
 					amount = 20
 				}
 			}
-		}
-		random_list = {
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_Unity_01"
-					skill = 5
-					traits = {
-						trait = leader_prime_machine
+			random_list = {
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_machine_species
+						name = "NAME_Unity_01"
+						skill = 5
+						traits = {
+							trait = leader_prime_machine
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
-				}
-				last_created_leader = {
-					set_age = 0
-				}
-			}
-			20 = {
-				create_leader = {
-					class = governor
-					species = event_target:ne_machine_species
-					name = "NAME_EIRPLUSONE"
-					skill = 5
-					traits = {
-						trait = leader_prime_machine
+					last_created_leader = {
+						set_age = 0
 					}
-					event_leader = yes # prevents this leader from leading factions and winning elections
 				}
-				last_created_leader = {
-					set_age = 0
+				20 = {
+					create_leader = {
+						class = governor
+						species = event_target:ne_machine_species
+						name = "NAME_EIRPLUSONE"
+						skill = 5
+						traits = {
+							trait = leader_prime_machine
+						}
+						event_leader = yes # prevents this leader from leading factions and winning elections
+					}
+					last_created_leader = {
+						set_age = 0
+					}
 				}
 			}
 		}

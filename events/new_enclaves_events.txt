@@ -280,7 +280,7 @@ country_event = {
 			if = {
 				limit = {
 					FromFrom = {
-						has_country_flag = ne_machine_country
+						has_country_flag = ne_hive_country
 					}
 				}
 				FromFrom = { country_event = { id = nehiv.10 } }
