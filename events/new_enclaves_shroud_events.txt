@@ -424,6 +424,40 @@ country_event = {
 		custom_gui = "enclave_shroud_option"
 		trigger = { num_pops < 61 }
 		allow = {
+			resource_stockpile_compare = { resource = energy value >= 500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_guidance
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_guidance_hired
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
@@ -454,8 +488,42 @@ country_event = {
 		response_text = neshr.110.a.reply
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			num_pops > 60
-			num_pops < 121
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_guidance
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_guidance_hired
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+	option = {
+		name = neshr.110.a
+		response_text = neshr.110.a.reply
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
 		}
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
@@ -487,82 +555,14 @@ country_event = {
 		name = neshr.110.a
 		response_text = neshr.110.a.reply
 		custom_gui = "enclave_shroud_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_shroud }
-			}
-		}
-		add_resource = { energy = -3000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = shrouds_children_guidance
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_shroud = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_shroud
-				flag = ne_shroud_guidance_hired
-			}
-			country_event = { id = neshr.111 days = 3600 }
-		}
-	}
-	option = {
-		name = neshr.110.a
-		response_text = neshr.110.a.reply
-		custom_gui = "enclave_shroud_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_shroud }
-			}
-		}
-		add_resource = { energy = -4000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = shrouds_children_guidance
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_shroud = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_shroud
-				flag = ne_shroud_guidance_hired
-			}
-			country_event = { id = neshr.111 days = 3600 }
-		}
-	}
-	option = {
-		name = neshr.110.a
-		response_text = neshr.110.a.reply
-		custom_gui = "enclave_shroud_option"
 		trigger = {	num_pops > 240 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
+			resource_stockpile_compare = { resource = energy value >= 2500 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -5000 }
+		add_resource = { energy = -2500 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = shrouds_children_guidance
@@ -633,6 +633,40 @@ country_event = {
 		custom_gui = "enclave_shroud_option"
 		trigger = { num_pops < 61 }
 		allow = {
+			resource_stockpile_compare = { resource = energy value >= 500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_guidance
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_guidance_hired
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
@@ -663,8 +697,42 @@ country_event = {
 		response_text = neshr.111.a.reply
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			num_pops > 60
-			num_pops < 121
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = shrouds_children_guidance
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_guidance_hired
+			}
+			country_event = { id = neshr.111 days = 3600 }
+		}
+	}
+	option = {
+		name = neshr.111.a
+		response_text = neshr.111.a.reply
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
 		}
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
@@ -696,82 +764,14 @@ country_event = {
 		name = neshr.111.a
 		response_text = neshr.111.a.reply
 		custom_gui = "enclave_shroud_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_shroud }
-			}
-		}
-		add_resource = { energy = -3000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = shrouds_children_guidance
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_shroud = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_shroud
-				flag = ne_shroud_guidance_hired
-			}
-			country_event = { id = neshr.111 days = 3600 }
-		}
-	}
-	option = {
-		name = neshr.111.a
-		response_text = neshr.111.a.reply
-		custom_gui = "enclave_shroud_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_shroud }
-			}
-		}
-		add_resource = { energy = -4000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = shrouds_children_guidance
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_shroud = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_shroud
-				flag = ne_shroud_guidance_hired
-			}
-			country_event = { id = neshr.111 days = 3600 }
-		}
-	}
-	option = {
-		name = neshr.111.a
-		response_text = neshr.111.a.reply
-		custom_gui = "enclave_shroud_option"
 		trigger = { num_pops > 240 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
+			resource_stockpile_compare = { resource = energy value >= 2500 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
-		add_resource = { energy = -5000 }
+		add_resource = { energy = -2500 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = shrouds_children_guidance
@@ -841,11 +841,11 @@ country_event = {
 			days = 3600
 		}
 		hidden_effect = {
-			set_timed_relation_flag = {
+			set_relation_flag = {
 				flag = ne_shroud_festival_hired
 				who = event_target:ne_shroud
-				days = 3600
 			}
+			country_event = { id = neshr.121 days = 3600 }
 			event_target:ne_shroud = {
 				add_trust = {
 					who = Root
@@ -869,6 +869,60 @@ country_event = {
 		name = neshr.110.end
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
+	}
+}
+
+# neshr.121: Festivals Renewal
+country_event = {
+	id = neshr.121
+	title = neshr.121.name
+	desc = neshr.121.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_shroud_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_shroud_room
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_shroud
+			flag = ne_shroud_festival_hired
+		}
+	}
+
+	option = {
+		name = neshr.121.a
+		response_text = neshr.121.a.reply
+		custom_gui = "enclave_shroud_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = ne_shroud_festival
+			days = 3600
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				flag = ne_shroud_festival_hired
+				who = event_target:ne_shroud
+			}
+			country_event = { id = neshr.121 days = 3600 }
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
 	}
 }
 

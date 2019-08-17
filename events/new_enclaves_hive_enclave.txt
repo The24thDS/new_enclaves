@@ -168,6 +168,36 @@ country_event = {
 		}
 	}
 
+	# Option 3: Our own hive could use one of your drones. (nehiv.130)
+	option = {
+		name = nehiv.100.c
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			is_genocidal = no
+			has_authority = auth_hive_mind
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nehiv.100.c.opinion
+				event_target:ne_hive = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nehiv.100.c.alreadyhired
+				NOT = {
+					any_owned_leader = { has_trait = leader_universal_drone }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nehiv.130 }
+		}
+	}
+
 	# End communications
 	option = {
 		name = nehiv.100.end
@@ -256,6 +286,36 @@ country_event = {
 		}
 	}
 
+	# Option 3: Our own hive could use one of your drones. (nehiv.130)
+	option = {
+		name = nehiv.100.c
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			is_genocidal = no
+			has_authority = auth_hive_mind
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nehiv.100.c.opinion
+				event_target:ne_hive = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nehiv.100.c.alreadyhired
+				NOT = {
+					any_owned_leader = { has_trait = leader_universal_drone }
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nehiv.130 }
+		}
+	}
+
 	# End communications
 	option = {
 		name = nehiv.100.end
@@ -298,6 +358,40 @@ country_event = {
 		custom_gui = "enclave_hive_option"
 		trigger = { num_pops < 61 }
 		allow = {
+			resource_stockpile_compare = { resource = energy value >= 500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
@@ -328,8 +422,42 @@ country_event = {
 		response_text = nehiv.110.a.reply
 		custom_gui = "enclave_hive_option"
 		trigger = {
-			num_pops > 60
-			num_pops < 121
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -1500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.110.a
+		response_text = nehiv.110.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
 		}
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
@@ -361,82 +489,14 @@ country_event = {
 		name = nehiv.110.a
 		response_text = nehiv.110.a.reply
 		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -3000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.110.a
-		response_text = nehiv.110.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -4000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.110.a
-		response_text = nehiv.110.a.reply
-		custom_gui = "enclave_hive_option"
 		trigger = {	num_pops > 240 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
+			resource_stockpile_compare = { resource = energy value >= 2500 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -5000 }
+		add_resource = { energy = -2500 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = universal_hive_collaboration
@@ -507,6 +567,40 @@ country_event = {
 		custom_gui = "enclave_hive_option"
 		trigger = { num_pops < 61 }
 		allow = {
+			resource_stockpile_compare = { resource = energy value >= 500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
@@ -537,8 +631,42 @@ country_event = {
 		response_text = nehiv.111.a.reply
 		custom_gui = "enclave_hive_option"
 		trigger = {
-			num_pops > 60
-			num_pops < 121
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -1500 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = universal_hive_collaboration
+			days = 3600
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_collaboration
+			}
+			country_event = { id = nehiv.111 days = 3600 }
+		}
+	}
+	option = {
+		name = nehiv.111.a
+		response_text = nehiv.111.a.reply
+		custom_gui = "enclave_hive_option"
+		trigger = {
+			num_pops > 180
+			num_pops < 241
 		}
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
@@ -570,82 +698,14 @@ country_event = {
 		name = nehiv.111.a
 		response_text = nehiv.111.a.reply
 		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -3000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.111.a
-		response_text = nehiv.111.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -4000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.111.a
-		response_text = nehiv.111.a.reply
-		custom_gui = "enclave_hive_option"
 		trigger = { num_pops > 240 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
+			resource_stockpile_compare = { resource = energy value >= 2500 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -5000 }
+		add_resource = { energy = -2500 }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = universal_hive_collaboration
@@ -715,16 +775,155 @@ country_event = {
 			days = 3600
 		}
 		hidden_effect = {
-			set_timed_relation_flag = {
+			set_relation_flag = {
 				flag = ne_hive_consensus_pheromones_purchased
 				who = event_target:ne_hive
-				days = 3600
 			}
+			country_event = { id = nehiv.121 days = 3600 }
 			event_target:ne_hive = {
 				add_trust = {
 					who = Root
 					amount = 20
 				}
+			}
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = nehiv.110.back
+		custom_gui = "enclave_hive_option"
+		hidden_effect = {
+			country_event = { id = nehiv.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nehiv.100.end
+		custom_gui = "enclave_hive_option"
+		default_hide_option = yes
+	}
+}
+
+# nehiv.121: Consensus Pheromones renewal
+country_event = {
+	id = nehiv.121
+	title = nehiv.121.name
+	desc = nehiv.121.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_hive
+			flag = ne_hive_consensus_pheromones_purchased
+		}
+	}
+
+	option = {
+		name = nehiv.121.a
+		response_text = nehiv.121.a.reply
+		custom_gui = "enclave_hive_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -5000 }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = ne_hive_consensus_pheromones
+			days = 3600
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				flag = ne_hive_consensus_pheromones_purchased
+				who = event_target:ne_hive
+			}
+			country_event = { id = nehiv.121 days = 3600 }
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Not this time
+	option = {
+		name = nehiv.121.b
+		custom_gui = "enclave_hive_option"
+		default_hide_option = yes
+	}
+}
+
+# nehiv.130: Our own hive could use one of your drones.
+country_event = {
+	id = nehiv.130
+	title = nehiv.130.name
+	desc = nehiv.130.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_hive_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_hive
+		room = enclave_hive_room
+	}
+
+	immediate = {
+		set_country_flag = ne_hive_diplomacy_engaged
+		event_target:ne_hive = {
+			owner_species = { save_event_target_as = ne_hive_species	}
+		}
+	}
+
+	after = {
+		remove_country_flag = ne_hive_diplomacy_engaged
+	}
+
+	option = {
+		name = nehiv.130.a
+		response_text = nemac.130.a.reply
+		custom_gui = "enclave_hive_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		add_resource = { energy = -1000 }
+		custom_tooltip = opinion20
+		hidden_effect = {
+			event_target:ne_hive = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+			create_leader = {
+				class = governor
+				species = event_target:ne_hive_species
+				name = "NAME_Faceless"
+				skill = 5
+				traits = {
+					trait = leader_universal_drone
+				}
+				event_leader = yes # prevents this leader rom leading factions and winning elections
+			}
+			last_created_leader = {
+				set_age = 30
 			}
 		}
 	}

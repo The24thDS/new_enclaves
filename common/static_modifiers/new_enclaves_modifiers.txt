@@ -1,7 +1,7 @@
 ### Universal Hive ###
 
 universal_hive_collaboration = {
-	country_society_tech_research_speed = 0.15
+	country_society_tech_research_speed = 0.05
 }
 
 ne_hive_consensus_pheromones = {
@@ -12,14 +12,14 @@ ne_hive_consensus_pheromones = {
 
 # Prime Machines Expertise
 prime_machines_expertise = {
-	country_engineering_tech_research_speed = 0.15
+	country_engineering_tech_research_speed = 0.05
 }
 
 ### Shroud's Children ###
 
 # Shroud's Children Guidance
 shrouds_children_guidance = {
-	country_physics_tech_research_speed = 0.15
+	country_physics_tech_research_speed = 0.05
 }
 
 # Shroud's Children Preaching

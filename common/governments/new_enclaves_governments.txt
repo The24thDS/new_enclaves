@@ -9,7 +9,7 @@ gov_ne_hive = {
 	}
 
 	weight = {
-		base = 10000
+		base = 15000
 	}
 }
 

@@ -1,11 +1,10 @@
-# Spiritualists (leaders)
-
-leader_trait_saint = {
+# Hive
+leader_universal_drone = {
 	cost = 0
 	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_deep_connections.dds"
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.20
+		planet_crime_add = -50
 	}
 	leader_trait = { governor }
 	leader_class = { governor }
@@ -13,8 +12,7 @@ leader_trait_saint = {
 	randomized = no
 }
 
-# Machines (leaders)
-
+# Machines
 leader_prime_machine = {
 	cost = 0
 	modification = no
@@ -46,4 +44,18 @@ trait_robot_sapient_machine = {
 	modifier = {
 		planet_jobs_produces_mult = 0.10
 	}
+}
+
+# Spiritualists
+leader_trait_saint = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
 }
