@@ -1,0 +1,71 @@
+# Machine
+remove_ne_machine_trade_deal = {
+	if = {
+		limit = { has_modifier = ne_machine_trade_deal_1 }
+		remove_modifier = ne_machine_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_machine_trade_deal_2 }
+		remove_modifier = ne_machine_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_machine_trade_deal_3 }
+		remove_modifier = ne_machine_trade_deal_3
+	}
+}
+remove_all_ne_machine_trade_deal = {
+	if = {
+		limit = { has_modifier = prime_machines_expertise }
+		remove_modifier = prime_machines_expertise
+	}
+	if = {
+		limit = { has_modifier = ne_machine_trade_deal_1 }
+		remove_modifier = ne_machine_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_machine_trade_deal_2 }
+		remove_modifier = ne_machine_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_machine_trade_deal_3 }
+		remove_modifier = ne_machine_trade_deal_3
+	}
+}
+
+# Shroud
+remove_ne_shroud_trade_deal = {
+	if = {
+		limit = { has_modifier = ne_shroud_trade_deal_1 }
+		remove_modifier = ne_shroud_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_shroud_trade_deal_2 }
+		remove_modifier = ne_shroud_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_shroud_trade_deal_3 }
+		remove_modifier = ne_shroud_trade_deal_3
+	}
+}
+remove_all_ne_shroud_trade_deal = {
+	if = {
+		limit = { has_modifier = shrouds_children_guidance }
+		remove_modifier = shrouds_children_guidance
+	}
+	if = {
+		limit = { has_modifier = ne_shroud_festival }
+		remove_modifier = ne_shroud_festival
+	}
+	if = {
+		limit = { has_modifier = ne_shroud_trade_deal_1 }
+		remove_modifier = ne_shroud_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_shroud_trade_deal_2 }
+		remove_modifier = ne_shroud_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_shroud_trade_deal_3 }
+		remove_modifier = ne_shroud_trade_deal_3
+	}
+}

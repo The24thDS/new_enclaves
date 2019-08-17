@@ -222,6 +222,48 @@ country_event = {
 		}
 	}
 
+	# Option 4: We are interested in strategic resources. (nemac.140)
+	option = {
+		name = nemac.100.d
+		custom_gui = "enclave_machine_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				is_spiritualist = yes
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.d.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = Root
+						value >= 100
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nemac.100.d.alreadyhired
+				has_active_ne_machine_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.140 }
+		}
+	}
+
+	# Option 4.1: Remove trade deal
+	option = {
+		name = nemac.100.da
+		response_text = nemac.100.da.reply
+		is_dialog_only = yes
+		custom_gui = "enclave_machine_option"
+		trigger = { has_active_ne_machine_trade_deal = yes }
+		custom_tooltip = nemac.100.da.tooltip
+		hidden_effect = { remove_ne_machine_trade_deal = yes }
+	}
+
 	# End communications
 	option = {
 		name = nemac.100.end
@@ -348,6 +390,41 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = nemac.130 }
 		}
+	}
+
+	# Option 4: We are interested in strategic resources. (nemac.140)
+	option = {
+		name = nemac.100.d
+		custom_gui = "enclave_machine_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = nemac.100.d.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = Root
+						value >= 100
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nemac.100.d.alreadyhired
+				has_active_ne_machine_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nemac.140 }
+		}
+	}
+
+	# Option 4.1: Cancel deal
+	option = {
+		name = nemac.100.da
+		response_text = nemac.100.da.reply
+		is_dialog_only = yes
+		custom_gui = "enclave_machine_option"
+		trigger = { has_active_ne_machine_trade_deal = yes }
+		custom_tooltip = nemac.100.da.tooltip
+		hidden_effect = { remove_ne_machine_trade_deal = yes }
 	}
 
 	# End communications
@@ -934,7 +1011,156 @@ country_event = {
 	}
 }
 
-# nemac.140: 
+# nemac.140: Strategic Resources
+country_event = {
+	id = nemac.140
+	title = nemac.140.name
+	desc = nemac.140.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_machine_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_machine_room
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	# 1 for 20 monthly
+	option = {
+		name = nemac.140.a
+		custom_gui = "enclave_machine_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -1000 }
+		add_modifier = {
+			modifier = ne_machine_trade_deal_1
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade_deal
+			}
+			country_event = { id = nemac.141 }
+		}
+	}
+	# 2 for 40 monthly
+	option = {
+		name = nemac.140.b
+		custom_gui = "enclave_machine_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -2000 }
+		add_modifier = {
+			modifier = ne_machine_trade_deal_2
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade_deal
+			}
+			country_event = { id = nemac.141 }
+		}
+	}
+	# 3 for 60 monthly
+	option = {
+		name = nemac.140.c
+		custom_gui = "enclave_machine_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -3000 }
+		add_modifier = {
+			modifier = ne_machine_trade_deal_3
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_machine
+				flag = ne_machine_trade_deal
+			}
+			country_event = { id = nemac.141 }
+		}
+	}
+
+	# Back to main menu
+	option = {
+		name = nemac.110.back
+		custom_gui = "enclave_machine_option"
+		hidden_effect = {
+			country_event = { id = nemac.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nemac.100.end
+		custom_gui = "enclave_machine_option"
+		default_hide_option = yes
+	}
+}
+
+# nemac.141: Strategic Resource - Response event
+country_event = {
+	id = nemac.141
+	title = nemac.140.name
+	desc = nemac.141.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_machine_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_machine
+		room = enclave_machine_room
+	}
+
+	immediate = {
+		set_country_flag = ne_machine_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_machine_diplomacy_engaged
+		}
+	}
+
+	# Back
+	option = {
+		name = nemac.110.back
+		custom_gui = "enclave_machine_option"
+		hidden_effect = {
+			country_event = { id = nemac.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = nemac.100.end
+		custom_gui = "enclave_machine_option"
+		default_hide_option = yes
+	}
+}
 
 # nemac.900: Prime Machines destroyed (HIDDEN)
 event = {
@@ -988,9 +1214,7 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		add_resource = {
-			physics_research = 1000
-			society_research = 1000
-			engineering_research = 1000
+			engineering_research = 3000
 		}
 		if = {
 			limit = { has_ancrel = yes }
@@ -1006,44 +1230,28 @@ country_event = {
 	desc = {
 		text = nemac.902.a.desc
 		trigger = {
-			NOT = {
-				has_relation_flag = {
-					who = From
-					flag = ne_machine_trade
-				}
-			}
+			has_any_active_ne_machine_trade_deal = no
 			has_communications = event_target:ne_machine_destroyer
 		}
 	}
 	desc = {
 		text = nemac.902.b.desc
 		trigger = {
-			NOT = {
-				has_relation_flag = {
-					who = From
-					flag = ne_machine_trade
-				}
-			}
+			has_any_active_ne_machine_trade_deal = no
 			NOT = { has_communications = event_target:ne_machine }
 		}
 	}
 	desc = {
 		text = nemac.902.c.desc
 		trigger = {
-			has_relation_flag = {
-				who = From
-				flag = ne_machine_trade
-			}
+			has_any_active_ne_machine_trade_deal = yes
 			has_communications = event_target:ne_machine_destroyer
 		}
 	}
 	desc = {
 		text = nemac.902.d.desc
 		trigger = {
-			has_relation_flag = {
-				who = From
-				flag = ne_machine_trade
-			}
+			has_any_active_ne_machine_trade_deal = yes
 			NOT = { has_communications = event_target:ne_machine_destroyer }
 		}
 	}
@@ -1055,20 +1263,20 @@ country_event = {
 
 	immediate = {
 		if = {
-			limit = {
-				has_modifier = prime_machines_expertise
-				has_relation_flag = {
-					who = From
-					flag = ne_machine_trade
-				}
-			}
-			remove_modifier = prime_machines_expertise
+			limit = { has_any_active_ne_machine_trade_deal = yes }
+			remove_all_ne_machine_trade_deal = yes
 		}
 		if = {
 			limit = {
-				has_relation_flag = {
-					who = From
-					flag = ne_machine_trade
+				OR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_machine_trade
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_machine_trade_deal
+					}
 				}
 				is_ai = yes
 			}
@@ -1079,10 +1287,14 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
+				NOR = {
 					has_relation_flag = {
 						who = From
 						flag = ne_machine_trade
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_machine_trade_deal
 					}
 				}
 				is_ai = yes
@@ -1098,10 +1310,14 @@ country_event = {
 	option = {
 		name = nemac.902.a
 		trigger = {
-			NOT = {
+			NOR = {
 				has_relation_flag = {
 					who = From
 					flag = ne_machine_trade
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade_deal
 				}
 			}
 		}
@@ -1109,15 +1325,41 @@ country_event = {
 	option = {
 		name = nemac.902.b
 		trigger = {
-			has_relation_flag = {
-				who = From
-				flag = ne_machine_trade
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_machine_trade_deal
+				}
 			}
 		}
 		hidden_effect = {
-			remove_relation_flag = {
-				who = From
-				flag = ne_machine_trade
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_machine_trade
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_machine_trade
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_machine_trade_deal
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_machine_trade_deal
+				}
 			}
 		}
 	}
@@ -1144,9 +1386,9 @@ country_event = {
 		}
 		set_country_flag = attacked_ne_machine
 		if = {
-			limit = { has_modifier = prime_machines_expertise }
-			remove_modifier = prime_machines_expertise
-			country_event = { id = nemac.904}
+			limit = { has_any_active_ne_machine_trade_deal = yes }
+			remove_all_ne_machine_trade_deal = yes
+			country_event = { id = nemac.904 }
 		}
 	}
 }

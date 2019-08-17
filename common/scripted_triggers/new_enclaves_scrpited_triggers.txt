@@ -5,3 +5,36 @@ is_genocidal = {
 		has_valid_civic = civic_machine_terminator
 	}
 }
+
+has_active_ne_machine_trade_deal = {
+	OR = {
+		has_modifier = ne_machine_trade_deal_1
+		has_modifier = ne_machine_trade_deal_2
+		has_modifier = ne_machine_trade_deal_3
+	}
+}
+has_any_active_ne_machine_trade_deal = {
+	OR = {
+		has_modifier = prime_machines_expertise
+		has_modifier = ne_machine_trade_deal_1
+		has_modifier = ne_machine_trade_deal_2
+		has_modifier = ne_machine_trade_deal_3
+	}
+}
+
+has_active_ne_shroud_trade_deal = {
+	OR = {
+		has_modifier = ne_shroud_trade_deal_1
+		has_modifier = ne_shroud_trade_deal_2
+		has_modifier = ne_shroud_trade_deal_3
+	}
+}
+has_any_active_ne_shroud_trade_deal = {
+	OR = {
+		has_modifier = shrouds_children_guidance
+		has_modifier = ne_shroud_festival
+		has_modifier = ne_shroud_trade_deal_1
+		has_modifier = ne_shroud_trade_deal_2
+		has_modifier = ne_shroud_trade_deal_3
+	}
+}

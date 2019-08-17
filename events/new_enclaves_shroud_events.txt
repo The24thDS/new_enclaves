@@ -247,7 +247,7 @@ country_event = {
 				}
 			}
 			custom_tooltip = {
-				fail_text = leviathans.100.c.alreadyrecruited
+				fail_text = neshr.100.c.alreadyrecruited
 				NOT = {
 					any_owned_leader = { has_trait = leader_trait_saint }
 				}
@@ -256,6 +256,49 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = neshr.130 }
 		}
+	}
+
+	# Option 4: We are interested in Strategic Resources
+	option = {
+		name = neshr.100.d
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			NOR = {
+				is_genocidal = yes
+				is_materialist = yes
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.d.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = Root
+						value >= 100
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = neshr.100.d.alreadyhired
+				has_active_ne_shroud_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.140 }
+		}
+	}
+
+	# Option 4.1: Remove trade deal
+	option = {
+		name = neshr.100.da
+		response_text = neshr.100.da.reply
+		is_dialog_only = yes
+		custom_gui = "enclave_shroud_option"
+		trigger = { has_active_ne_shroud_trade_deal = yes }
+		custom_tooltip = neshr.100.da.tooltip
+		hidden_effect = { remove_ne_shroud_trade_deal = yes }
 	}
 
 	# End communications
@@ -371,7 +414,7 @@ country_event = {
 				}
 			}
 			custom_tooltip = {
-				fail_text = leviathans.100.c.alreadyrecruited
+				fail_text = neshr.100.c.alreadyrecruited
 				NOT = {
 					any_owned_leader = { has_trait = leader_trait_saint }
 				}
@@ -381,6 +424,42 @@ country_event = {
 			country_event = { id = neshr.130 }
 		}
 	}
+
+	# Option 4: We are interested in Strategic Resources
+	option = {
+		name = neshr.100.d
+		custom_gui = "enclave_shroud_option"
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.d.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = Root
+						value >= 100
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = neshr.100.d.alreadyhired
+				has_active_ne_shroud_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.140 }
+		}
+	}
+
+	# Option 4.1: Remove trade deal
+	option = {
+		name = neshr.100.da
+		response_text = neshr.100.da.reply
+		is_dialog_only = yes
+		custom_gui = "enclave_shroud_option"
+		trigger = { has_active_ne_shroud_trade_deal = yes }
+		custom_tooltip = neshr.100.da.tooltip
+		hidden_effect = { remove_ne_shroud_trade_deal = yes }
+	}
+
 
 	# End communications
 	option = {
@@ -1085,6 +1164,157 @@ country_event = {
 	}
 }
 
+# neshr.140: Strategic Resource
+country_event = {
+	id = neshr.140
+	title = neshr.140.name
+	desc = neshr.140.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_shroud_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_shroud_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	# 1 for 20 monthly
+	option = {
+		name = neshr.140.a
+		custom_gui = "enclave_shroud_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -1000 }
+		add_modifier = {
+			modifier = ne_shroud_trade_deal_1
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade_deal
+			}
+			country_event = { id = neshr.141 }
+		}
+	}
+	# 2 for 40 monthly
+	option = {
+		name = neshr.140.b
+		custom_gui = "enclave_shroud_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -2000 }
+		add_modifier = {
+			modifier = ne_shroud_trade_deal_2
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade_deal
+			}
+			country_event = { id = neshr.141 }
+		}
+	}
+	# 3 for 60 monthly
+	option = {
+		name = neshr.140.c
+		custom_gui = "enclave_shroud_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_shroud }
+			}
+		}
+		add_resource = { energy = -3000 }
+		add_modifier = {
+			modifier = ne_shroud_trade_deal_3
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_shroud
+				flag = ne_shroud_trade_deal
+			}
+			country_event = { id = neshr.141 }
+		}
+	}
+
+	# Back to main menu
+	option = {
+		name = neshr.110.back
+		custom_gui = "enclave_shroud_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = neshr.100.end
+		custom_gui = "enclave_shroud_option"
+		default_hide_option = yes
+	}
+}
+
+# neshr.141: Strategic Resource - Response event
+country_event = {
+	id = neshr.141
+	title = neshr.140.name
+	desc = neshr.141.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_shroud_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_shroud_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	# Back
+	option = {
+		name = neshr.110.back
+		custom_gui = "enclave_shroud_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = neshr.100.end
+		custom_gui = "enclave_shroud_option"
+		default_hide_option = yes
+	}
+}
+
 # neshr.900: Shroud's Children destroyed (HIDDEN) (called by on_ship_destroyed_victim)
 event = {
 	id = neshr.900
@@ -1153,64 +1383,28 @@ country_event = {
 	desc = {
 		text = neshr.902.a.desc
 		trigger = {
-			NOR = {
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_guidance_hired
-				}
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_festival_hired
-				}
-			}
+			has_any_active_ne_shroud_trade_deal = no
 			has_communications = event_target:ne_shroud_destroyer
 		}
 	}
 	desc = {
 		text = neshr.902.b.desc
 		trigger = {
-			NOR = {
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_guidance_hired
-				}
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_festival_hired
-				}
-			}
+			has_any_active_ne_shroud_trade_deal = no
 			NOT = { has_communications = event_target:ne_shroud }
 		}
 	}
 	desc = {
 		text = neshr.902.c.desc
 		trigger = {
-			OR = {
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_guidance_hired
-				}
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_festival_hired
-				}
-			}
+			has_any_active_ne_shroud_trade_deal = yes
 			has_communications = event_target:ne_shroud_destroyer
 		}
 	}
 	desc = {
 		text = neshr.902.d.desc
 		trigger = {
-			OR = {
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_guidance_hired
-				}
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_festival_hired
-				}
-			}
+			has_any_active_ne_shroud_trade_deal = yes
 			NOT = { has_communications = event_target:ne_shroud_destroyer }
 		}
 	}
@@ -1221,26 +1415,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		if = {
-			limit = {
-				has_modifier = shrouds_children_guidance
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_guidance_hired
-				}
-			}
-			remove_modifier = shrouds_children_guidance
-		}
-		if = {
-			limit = {
-				has_modifier = ne_shroud_festival
-				has_relation_flag = {
-					who = From
-					flag = ne_shroud_festival_hired
-				}
-			}
-			remove_modifier = ne_shroud_festival
-		}
+		remove_all_ne_shroud_trade_deal = yes
 		if = {
 			limit = {
 				OR = {
@@ -1251,6 +1426,10 @@ country_event = {
 					has_relation_flag = {
 						who = From
 						flag = ne_shroud_festival_hired
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_trade_deal
 					}
 				}
 				is_ai = yes
@@ -1270,6 +1449,10 @@ country_event = {
 					has_relation_flag = {
 						who = From
 						flag = ne_shroud_festival_hired
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_trade_deal
 					}
 				}
 				is_ai = yes
@@ -1298,6 +1481,10 @@ country_event = {
 					who = From
 					flag = ne_shroud_festival_hired
 				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade_deal
+				}
 			}
 		}
 	}
@@ -1313,16 +1500,48 @@ country_event = {
 					who = From
 					flag = ne_shroud_festival_hired
 				}
+				has_relation_flag = {
+					who = From
+					flag = ne_shroud_trade_deal
+				}
 			}
 		}
 		hidden_effect = {
-			remove_relation_flag = {
-				who = From
-				flag = ne_shroud_guidance_hired
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_guidance_hired
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_shroud_guidance_hired
+				}
 			}
-			remove_relation_flag = {
-				who = From
-				flag = ne_shroud_festival_hired
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_festival_hired
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_shroud_festival_hired
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_shroud_trade_deal
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_shroud_trade_deal
+				}
 			}
 		}
 	}
@@ -1349,20 +1568,8 @@ country_event = {
 		}
 		set_country_flag = attacked_ne_shroud
 		if = {
-			limit = {
-				OR = {
-					has_modifier = shrouds_children_guidance
-					has_modifier = ne_shroud_festival
-				}
-			}
-			if = {
-				limit = { has_modifier = shrouds_children_guidance }
-				remove_modifier = shrouds_children_guidance
-			}
-			if = {
-				limit = { has_modifier = ne_shroud_festival }
-				remove_modifier = ne_shroud_festival
-			}
+			limit = { has_any_active_ne_shroud_trade_deal = yes }
+			remove_all_ne_shroud_trade_deal = yes
 			country_event = { id = neshr.904}
 		}
 	}

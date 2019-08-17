@@ -374,6 +374,56 @@ country_event = {
 	}
 }
 
+# ne.17: No More Energy - Trades Canceled
+country_event = {
+	id = ne.17
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		resource_stockpile_compare = { resource = energy value <= 0 }
+		OR = {
+			has_active_ne_machine_trade_deal = yes
+			has_active_ne_shroud_trade_deal = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_active_ne_machine_trade_deal = yes }
+			remove_ne_machine_trade_deal = yes
+			event_target:ne_machine_country = {
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+		if = {
+			limit = { has_active_ne_shroud_trade_deal = yes }
+			remove_ne_shroud_trade_deal = yes
+			event_target:ne_shroud_country = {
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOR = {
+					has_active_xuracorp_trade = yes
+					has_active_riggan_trade yes
+					has_active_muutagan_trade = yes
+				}
+			}
+			country_event = { id = leviathans.171 }
+		}
+	}
+}
+
 # ne.1000: passthrough for story.7
 country_event = {
 	id = ne.1000

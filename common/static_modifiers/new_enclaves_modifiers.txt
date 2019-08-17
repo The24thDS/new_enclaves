@@ -15,6 +15,20 @@ prime_machines_expertise = {
 	country_engineering_tech_research_speed = 0.05
 }
 
+# Prime Machines trade deals
+ne_machine_trade_deal_1 = {
+	country_base_sr_living_metal_produces_add = 1
+	country_base_energy_produces_add = -20
+}
+ne_machine_trade_deal_2 = {
+	country_base_sr_living_metal_produces_add = 2
+	country_base_energy_produces_add = -40
+}
+ne_machine_trade_deal_3 = {
+	country_base_sr_living_metal_produces_add = 3
+	country_base_energy_produces_add = -60
+}
+
 ### Shroud's Children ###
 
 # Shroud's Children Guidance
@@ -25,4 +39,18 @@ shrouds_children_guidance = {
 # Shroud's Children Preaching
 ne_shroud_festival = {
 	pop_ethic_spiritualist_attraction_mult = 0.50
+}
+
+# Shroud's Children deals
+ne_shroud_trade_deal_1 = {
+	country_base_sr_zro_produces_add = 1
+	country_base_energy_produces_add = -20
+}
+ne_shroud_trade_deal_2 = {
+	country_base_sr_zro_produces_add = 2
+	country_base_energy_produces_add = -40
+}
+ne_shroud_trade_deal_3 = {
+	country_base_sr_zro_produces_add = 3
+	country_base_energy_produces_add = -60
 }
