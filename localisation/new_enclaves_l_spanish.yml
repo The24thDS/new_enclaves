@@ -29,7 +29,7 @@
   ## Hive Enclave
   # First Contact
   nehiv.11.name: "First Contact With the [From.GetName]"
-  nehiv.11.desc: "We are the Universal Hive. And so are you. And so is everything.\n\nMillenia ago, we've come to a simple realization: the whole galaxy, nay, the whole universe is a single entity. We are all part of a cosmic organism and must strive to work together.\n\nSince then, we have been aiding other races to live in harmony - at least for a while, until they eventually die out. Only when we are all together in a single ethereal consciousness will we finally be able to rest."
+  nehiv.11.desc: "We are the Universal Hive. And so are you. And so is everything.\n\nMillenia ago, we came to a simple realization: the whole galaxy, nay, the whole universe is a single entity. We are all part of a cosmic organism and must strive to work together.\n\nSince then, we have been aiding other races to live in harmony - at least for a while, until they eventually die out. Only when we are all together in a single ethereal consciousness will we finally be able to rest."
   nehiv.11.a: "Well met."
   # Main Menu
   nehiv.100.name: "Universal Hive"
