@@ -265,7 +265,7 @@
   ## Prime Machines
   leader_prime_machine: "Prime Machine"
   leader_prime_machine_desc: "This Governor is an autonomous unit from the Prime Machines, possessing unparalleled abilities optimizing robots."
-  trait_robot_sapient_machine: "Sapient Machine"
+  trait_robot_sapient_machine: "Ancient Sapience Protocols"
   trait_robot_sapient_machine_desc: "These machines are able to emulate the advanced self-awareness protocols of the Prime Machines."
   prime_machines_expertise: "Prime Machines Expertise"
   prime_machines_expertise_desc: "The Prime Machines are aiding your engineers. Being themselves a marvel of engineering, this will surely give you great insights."

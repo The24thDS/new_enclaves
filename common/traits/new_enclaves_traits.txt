@@ -29,6 +29,8 @@ leader_prime_machine = {
 trait_robot_sapient_machine = {
 	cost = 4
 	opposites = { "trait_robot_efficient_processors" }
+	initial = no
+	randomized = no
 	icon = "gfx/interface/icons/traits/trait_robot_learning_algorithms.dds"
 
 	allowed_archetypes = { ROBOT MACHINE }
