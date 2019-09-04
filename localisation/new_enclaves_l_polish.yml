@@ -95,7 +95,7 @@
   ## Machine Enclave
   # First Contact
   nemac.11.name: "First Contact With the [From.GetName]"
-  nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be sistematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
+  nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be systematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
   nemac.11.a: "We can only hope. Well met."
   nemac.10.spiritualist: "Soulless abominations!"
   # Main Menu
