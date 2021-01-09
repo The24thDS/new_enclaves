@@ -8,6 +8,13 @@ tech_prime_machines_secrets = {
 	is_rare = yes
 	is_dangerous = yes
 
+	prereqfor_desc = {
+      feature = {
+        title = "feature_add_sapient_machine_trait"
+        desc = "feature_add_sapient_machine_trait_desc"
+      }
+  }
+
 	prerequisites = {}
 
 	weight_modifier = {
