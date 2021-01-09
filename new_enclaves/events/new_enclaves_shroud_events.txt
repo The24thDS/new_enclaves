@@ -1158,7 +1158,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.110.end
+		name = neshr.100.end
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}

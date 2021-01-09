@@ -229,7 +229,8 @@
   # Request Saintly Guidance
   neshr.130.name: "Saintly Guidance"
   neshr.130.desc: "We consider you one of our most promising disciples. However, you still have much to learn. We are sure your progress would impreve considerably if one of our Saints lived among you.\n\nAlas, Saints are still bound to this material realm. As such, we first need a suitable donation to pay for their personal expenses and help our cause."
-  neshr.130.a.reply: "Understandable. You'll have our contribution."
+  neshr.130.a: "Understandable. You'll have our contribution."
+  neshr.130.a.reply: "We will send one of our Saints to your capital."
   # Stratetic Resources
   neshr.140.name: "Strategic Resources"
   neshr.140.desc: "If you want to better attune yourself to the ethereal realms, we can provide you with some Zro. We trust you enough to know you won't use it recklessly. Remember: the difference between a medicine and poison is the dose."
