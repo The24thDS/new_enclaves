@@ -27,6 +27,12 @@
   NAME_NESHR_Planet_1: "Blessed"
   NAME_NESHR_Planet_2: "Sanctified"
   NAME_NESHR_Planet_3: "Rejected"
+  NAME_Saint_Ennoir:0 "Saint Ennoir"
+  NAME_Blessed_Ienois:0 "Blessed Ienois"
+  NAME_Hallowed_Lognill:0 "Hallowed Lognill"
+  NAME_Apostle_Ziesa:0 "Apostle Ziesa"
+  NAME_Kkronquts_The_Paragon:0 "Kkronquts The Paragon"
+  NAME_Angel_Iriels:0 "Angel Iriels"
   # Machine Enclave
   NAME_NEMAC_Star: "Core"
   NAME_NEMAC_Country: "Prime Machines"
