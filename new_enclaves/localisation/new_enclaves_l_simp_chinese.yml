@@ -142,7 +142,7 @@
   nemac.111.end: "No."
   # Employ Unit
   nemac.120.name: "Recruit Prime Machine"
-  nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optmize the work of fellow machines. An upfront maintenance fee is required for their employement."
+  nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
   nemac.120.a: "That's a reasonable price."
   nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   # Your making is outstanding. How can we build machines like you?
