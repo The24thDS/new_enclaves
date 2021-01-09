@@ -35,10 +35,12 @@ trait_robot_sapient_machine = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 
+	# Synth and Machine only
 	species_potential_add = {
 		exists = from
 		from = {
 			has_technology = tech_prime_machines_secrets
+			has_technology = tech_synthetic_workers
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
