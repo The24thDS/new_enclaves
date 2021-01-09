@@ -1,4 +1,7 @@
-# Should work just like normal enclaves (for now, at least), but as I don't want any event triggered by/for normal enclaves affecting them without my prior knowledge and I may want a shorthand to select only my new enclaves, I thought it would be better to make a new country_type
+# Should work just like normal enclaves (for now, at least), 
+# but as I don't want any event triggered by/for normal enclaves 
+# affecting them without my prior knowledge and I may want a shorthand to select only my new enclaves, 
+# I thought it would be better to make a new country_type
 ne_enclave = {
   blocks_piracy = yes
   show_in_contacts_list = yes
