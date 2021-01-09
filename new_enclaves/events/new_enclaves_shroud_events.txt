@@ -945,7 +945,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.110.end
+		name = neshr.100.end
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
@@ -974,8 +974,7 @@ country_event = {
 	}
 
 	option = {
-		name = neshr.121.a
-		response_text = neshr.121.a.reply
+		name = DEAL
 		custom_gui = "enclave_shroud_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
