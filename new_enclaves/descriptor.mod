@@ -6,5 +6,6 @@ tags={
 	"Gameplay"
 }
 name="[2.8.1] New Enclaves"
+picture="thumbnail.png"
 supported_version="2.8.1"
-picture="thumbnail.jpg"
+remote_file_id="2356224372"
