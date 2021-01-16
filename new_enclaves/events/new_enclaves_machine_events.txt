@@ -37,13 +37,19 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
+			has_policy_flag = robots_allowed
 		}
 	}
 
 	option = {
 		name = SCUM
 		custom_gui = "enclave_machine_option"
-		trigger = {	has_valid_civic = civic_fanatic_purifiers }
+		trigger = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_policy_flag = robots_outlawed
+			}
+		}
 	}
 
 	option = {
@@ -108,7 +114,12 @@ country_event = {
 
 	option = {
 		name = SCUM
-		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		trigger = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_policy_flag = robots_outlawed
+			}
+		}
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
@@ -141,6 +152,7 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
+			has_policy_flag = robots_allowed
 		}
 		allow = {
 			custom_tooltip = {
@@ -163,6 +175,7 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
+			has_policy_flag = robots_allowed
 		}
 		allow = {
 			custom_tooltip = {
@@ -180,7 +193,6 @@ country_event = {
 					any_owned_leader = { has_trait = leader_prime_machine }
 				}
 			}
-			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.120 }
@@ -197,6 +209,7 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
+			has_policy_flag = robots_allowed
 		}
 		allow = {
 			custom_tooltip = {
@@ -215,7 +228,6 @@ country_event = {
 					has_technology = tech_prime_machines_secrets
 				}
 			}
-			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.130 }
@@ -232,6 +244,7 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
+			has_policy_flag = robots_allowed
 		}
 		allow = {
 			custom_tooltip = {
@@ -275,6 +288,7 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
+			has_policy_flag = robots_allowed
 		}
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
@@ -385,7 +399,6 @@ country_event = {
 					has_technology = tech_prime_machines_secrets
 				}
 			}
-			NOT = { has_policy_flag = robots_outlawed }
 		}
 		hidden_effect = {
 			country_event = { id = nemac.130 }
