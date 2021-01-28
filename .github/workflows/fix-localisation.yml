@@ -10,6 +10,8 @@ jobs:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Replace dashes
       uses: The24thDS/stellaris-localisation-crowdin-fix@v1
+      with:
+        localisation_folder: 'new_enclaves/localisation'
     - name: Commit files
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
