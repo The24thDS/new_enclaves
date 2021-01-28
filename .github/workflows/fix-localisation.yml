@@ -9,7 +9,7 @@ jobs:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Replace dashes
-      uses: ./.github/actions/replace
+      uses: datamonsters/replace-action@v2
       with:
         files: 'new_enclaves/localisation/english/new_enclaves_l_english.yml'
         replacements: '---=placeholder'
