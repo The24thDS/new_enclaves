@@ -1,5 +1,5 @@
 name: Fix localisation
-on: [pull_request]
+on: [push]
 jobs:
   fix_localisation:
     runs-on: ubuntu-latest
