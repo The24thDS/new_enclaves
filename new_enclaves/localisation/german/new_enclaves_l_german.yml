@@ -1,12 +1,12 @@
-﻿l_german:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ### Governments ###
   #Hive Enclave
   civic_ancient_hive: "Antiker Hive"
   civic_ancient_hive_desc: "Antiker Hive"
   gov_ne_hive: "Hive Enclave"
-  gov_ne_hive_desc: "Es ist unmöglich festzustellen, wie alt dieser Hive ist. Es fühlt sich so an, als ob er seit dem Urknall existiert."
+  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
   ne_hive_government: "§YEs ist unmöglich festzustellen, wie alt dieser Hive ist. Es fühlt sich so an, als ob er seit dem Urknall existiert.§!"
   RT_AWAKENED: "Erwacht"
   #Machine Enclave
