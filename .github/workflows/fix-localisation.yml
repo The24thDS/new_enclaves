@@ -1,5 +1,8 @@
 name: Fix localisation
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - 'master'
 jobs:
   fix_localisation:
     runs-on: ubuntu-latest
