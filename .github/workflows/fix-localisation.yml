@@ -1,6 +1,6 @@
 name: Fix localisation
 on:
-  push:
+  pull_request:
     branches-ignore:
       - 'master'
 jobs:
