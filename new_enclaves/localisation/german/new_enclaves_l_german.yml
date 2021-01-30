@@ -4,18 +4,18 @@
   ### Governments ###
   #Hive Enclave
   civic_ancient_hive: "Antiker Hive"
-  civic_ancient_hive_desc: "Ancient Hive"
+  civic_ancient_hive_desc: "Antiker Hive"
   gov_ne_hive: "Hive Enclave"
-  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as fwell be as old as the universe."
-  ne_hive_government: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
-  RT_AWAKENED: "Awakened"
+  gov_ne_hive_desc: "Es ist unmöglich festzustellen, wie alt dieser Hive ist. Es fühlt sich so an, als ob er seit dem Urknall existiert."
+  ne_hive_government: "§YEs ist unmöglich festzustellen, wie alt dieser Hive ist. Es fühlt sich so an, als ob er seit dem Urknall existiert.§!"
+  RT_AWAKENED: "Erwacht"
   #Machine Enclave
-  civic_autonomous_node: "Autonomous Node"
+  civic_autonomous_node: "Autonome Node"
   civic_autonomous_node_desc: ""
-  gov_ne_machine: "Machine Enclave"
-  gov_ne_machine_desc: "The remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise."
-  ne_machine_government: "Machine Enclave"
-  ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
+  gov_ne_machine: "Maschinen Enclave"
+  gov_ne_machine_desc: "Das Überbleibsel einer alten künstlichen Intelligenz, abgetrennt vom Maschinen Kollektiv bevor dieses Untergegangen ist."
+  ne_machine_government: "Maschinen Enclave"
+  ne_machine_government_desc: "§LDas Überbleibsel einer alten künstlichen Intelligenz, abgetrennt vom Maschinen Kollektiv bevor dieses Untergegangen ist.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
   #Shroud Enclave
   civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
