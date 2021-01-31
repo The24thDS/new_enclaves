@@ -1,12 +1,12 @@
-﻿l_simp_chinese:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ### Governments ###
   #Hive Enclave
   civic_ancient_hive: "上古蜂巢"
   civic_ancient_hive_desc: "失落蜂巢"
   gov_ne_hive: "上古蜂巢"
-  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
+  gov_ne_hive_desc: "我们很难确定这个蜂巢的历史有多久。它可能和宇宙一样古老。"
   ne_hive_government: "§Y我们很难确定这个蜂巢的历史有多久。它可能和宇宙一样古老。§!"
   RT_AWAKENED: "觉醒"
   #Machine Enclave
