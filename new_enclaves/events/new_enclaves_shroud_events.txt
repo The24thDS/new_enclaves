@@ -32,12 +32,7 @@ country_event = {
 		name = neshr.11.a
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 	}
 
@@ -174,12 +169,7 @@ country_event = {
 		name = neshr.100.a
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 		allow = {
 			custom_tooltip = {
@@ -197,12 +187,7 @@ country_event = {
 		name = neshr.100.b
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 		allow = {
 			custom_tooltip = {
@@ -229,12 +214,7 @@ country_event = {
 		name = neshr.100.c
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 		allow = {
 			custom_tooltip = {
@@ -263,12 +243,7 @@ country_event = {
 		name = neshr.100.d
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 		allow = {
 			custom_tooltip = {
@@ -307,12 +282,7 @@ country_event = {
 		default_hide_option = yes
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 		hidden_effect = {
 			remove_country_flag = ne_shroud_diplomacy_engaged
@@ -1673,12 +1643,7 @@ country_event = {
 		name = neshr.904.a
 		custom_gui = "enclave_shroud_option"
 		trigger = {
-			NOR = {
-				is_genocidal = yes
-				is_materialist = yes
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
+			can_interact_with_shrouds_children = yes
 		}
 		default_hide_option = yes
 	}
