@@ -11,7 +11,7 @@ jobs:
       with:
         game: stellaris
         modPath: "new_enclaves"
-        #cache: "vanilla_cache/stl.cwb.bz2"
+        cache: "vanilla_cache/stl.cwb.bz2"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required, secret is automatically set by github
     - name: Upload artifact
