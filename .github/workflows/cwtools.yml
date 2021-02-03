@@ -1,6 +1,6 @@
 name: CWTools CI
 
-on: [pull_request] # other events may work but are not supported
+on: [pull_request, push] # other events may work but are not supported
 
 jobs:
   cwtools_job:
