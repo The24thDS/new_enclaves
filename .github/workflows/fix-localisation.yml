@@ -1,5 +1,8 @@
 name: Fix localisation
 on:
+  pull_request:
+    branches-ignore:
+      - 'master'
   push:
     branches-ignore:
       - 'master'
