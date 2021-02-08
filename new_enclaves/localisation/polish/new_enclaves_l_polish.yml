@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ### Governments ###
   #Hive Enclave
@@ -7,7 +7,8 @@
   civic_ancient_hive_desc: "Ancient Hive"
   gov_ne_hive: "Hive Enclave"
   gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
-  ne_hive_government: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
+  ne_hive_government: "Hive Enclave"
+  ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
   RT_AWAKENED: "Awakened"
   #Machine Enclave
   civic_autonomous_node: "Autonomous Node"
@@ -77,7 +78,7 @@
   nehiv.130.name: "Universal Drone"
   nehiv.130.desc: "\"Your\" hive is our hive, too. We are, after all, parts of the same Universal Being.\n\nWith that being said, the particular collection of entities that makes up what you refer as your hive can, indeed, benefit from our help. If you are having problems with deviance, we can send special drones to bring back the harmony we all strive for."
   nehiv.130.a: "Harmony is priceless."
-  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
+  nehiv.130.a.reply: "Indeed it is. We are sending an Universal Drone immediately."
   #Aggresion
   nehiv.901.name: "Universal Hive Station Destroyed"
   nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
@@ -148,6 +149,7 @@
   nemac.130.name: "Prime Secrets"
   nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
   nemac.130.a: "That's a deal!"
+  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Strategic Resources"
   nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
@@ -285,6 +287,8 @@
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
+  opinion_destroyed_ne_hive: "Destroyed Hive Enclave"
+  opinion_destroyed_ne_hive_trade: "Destroyed Hive Enclave we had deals with"
   opinion_destroyed_ne_machine: "Destroyed Machine Enclave"
   opinion_destroyed_ne_machine_trade: "Destroyed Machine Enclave we had deals with"
   opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"
