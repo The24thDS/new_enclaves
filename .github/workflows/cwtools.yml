@@ -14,9 +14,9 @@ jobs:
         #cache: "vanilla_cache/stl.cwb.bz2"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required, secret is automatically set by github
-    - name: Upload artifact
-      if: always() # so even if the check fails, the log is uploaded
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: cwtools_output
-        path: output.json
+    #- name: Upload artifact
+    #  if: always() # so even if the check fails, the log is uploaded
+    #  uses: actions/upload-artifact@v1.0.0
+    #  with:
+    #    name: cwtools_output
+    #    path: output.json
