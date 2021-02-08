@@ -37,7 +37,10 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
-			has_policy_flag = robots_allowed
+			OR = {
+				has_policy_flag = robots_allowed
+				is_machine_empire = yes
+			}
 		}
 	}
 
@@ -152,7 +155,10 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
-			has_policy_flag = robots_allowed
+			OR = {
+				has_policy_flag = robots_allowed
+				is_machine_empire = yes
+			}
 		}
 		allow = {
 			custom_tooltip = {
@@ -175,7 +181,10 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
-			has_policy_flag = robots_allowed
+			OR = {
+				has_policy_flag = robots_allowed
+				is_machine_empire = yes
+			}
 		}
 		allow = {
 			custom_tooltip = {
@@ -209,7 +218,10 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
-			has_policy_flag = robots_allowed
+			OR = {
+				has_policy_flag = robots_allowed
+				is_machine_empire = yes
+			}
 		}
 		allow = {
 			custom_tooltip = {
@@ -244,7 +256,10 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
-			has_policy_flag = robots_allowed
+			OR = {
+				has_policy_flag = robots_allowed
+				is_machine_empire = yes
+			}
 		}
 		allow = {
 			custom_tooltip = {
@@ -288,7 +303,10 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				is_spiritualist = yes
 			}
-			has_policy_flag = robots_allowed
+			OR = {
+				has_policy_flag = robots_allowed
+				is_machine_empire = yes
+			}
 		}
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
