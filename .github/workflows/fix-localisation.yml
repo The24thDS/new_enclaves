@@ -19,12 +19,6 @@ jobs:
       with:
         localisation_folder: 'new_enclaves/localisation'
     - name: Commit files
-      run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git commit -m "Automatic localisation fix" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        commit_message: Fix localisation files
