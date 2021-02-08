@@ -519,7 +519,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = nehiv.110.back
+		name = ne_back
 		custom_gui = "enclave_hive_option"
 		hidden_effect = {
 			country_event = { id = nehiv.101 }
@@ -791,7 +791,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = nehiv.110.back
+		name = ne_back
 		custom_gui = "enclave_hive_option"
 		hidden_effect = {
 			country_event = { id = nehiv.101 }
@@ -930,7 +930,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = nehiv.110.back
+		name = ne_back
 		custom_gui = "enclave_hive_option"
 		hidden_effect = {
 			country_event = { id = nehiv.101 }
@@ -1110,7 +1110,7 @@ country_event = {
 					}
 					has_relation_flag = {
 						who = From
-						flag = ne_hive_consensus_pheromones
+						flag = ne_hive_consensus_pheromones_purchased
 					}
 				}
 				is_ai = yes

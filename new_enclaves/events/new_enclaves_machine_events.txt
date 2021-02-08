@@ -294,7 +294,7 @@ country_event = {
 
 	# End communications
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_machine_option"
 		trigger = {
@@ -411,7 +411,7 @@ country_event = {
 				}
 			}
 			custom_tooltip = {
-				fail_text = leviathans.100.c.alreadyteached
+				fail_text = nemac.100.c.alreadyteached
 				NOR = {
 					has_tech_option = tech_prime_machines_secrets
 					has_technology = tech_prime_machines_secrets
@@ -460,7 +460,7 @@ country_event = {
 
 	# End communications
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
@@ -661,7 +661,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = nemac.110.back
+		name = ne_back
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
@@ -670,7 +670,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
@@ -961,7 +961,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = nemac.110.back
+		name = ne_back
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
@@ -970,7 +970,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
@@ -1027,7 +1027,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = nemac.110.back
+		name = ne_back
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
@@ -1036,7 +1036,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
@@ -1136,7 +1136,7 @@ country_event = {
 
 	# Back to main menu
 	option = {
-		name = nemac.110.back
+		name = ne_back
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
@@ -1145,7 +1145,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
@@ -1178,7 +1178,7 @@ country_event = {
 
 	# Back
 	option = {
-		name = nemac.110.back
+		name = ne_back
 		custom_gui = "enclave_machine_option"
 		hidden_effect = {
 			country_event = { id = nemac.101 }
@@ -1187,7 +1187,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nemac.100.end
+		name = GOODBYE
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
 	}
