@@ -238,7 +238,37 @@ country_event = {
 		}
 	}
 
-	# Option 4: We are interested in Strategic Resources
+	# Option 4: Psionic Theory tech
+	option = {
+		name = neshr.100.tech
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			can_interact_with_shrouds_children = yes
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.d.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = Root
+						value >= 80
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = neshr.100.tech.alreadyteached
+				NOR = {
+					has_tech_option = tech_psionic_theory
+					has_technology = tech_psionic_theory
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.150 }
+		}
+	}
+
+	# Option 5: We are interested in Strategic Resources
 	option = {
 		name = neshr.100.d
 		custom_gui = "enclave_shroud_option"
@@ -265,7 +295,7 @@ country_event = {
 		}
 	}
 
-	# Option 4.1: Remove trade deal
+	# Option 5.1: Remove trade deal
 	option = {
 		name = neshr.100.da
 		response_text = neshr.100.da.reply
@@ -278,7 +308,7 @@ country_event = {
 
 	# End communications
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_shroud_option"
 		trigger = {
@@ -395,7 +425,37 @@ country_event = {
 		}
 	}
 
-	# Option 4: We are interested in Strategic Resources
+	# Option 4: Psionic Theory tech
+	option = {
+		name = neshr.100.tech
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			can_interact_with_shrouds_children = yes
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = neshr.100.d.opinion
+				event_target:ne_shroud = {
+					trust = {
+						who = Root
+						value >= 80
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = neshr.100.tech.alreadyteached
+				NOR = {
+					has_tech_option = tech_psionic_theory
+					has_technology = tech_psionic_theory
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = neshr.150 }
+		}
+	}
+
+	# Option 5: We are interested in Strategic Resources
 	option = {
 		name = neshr.100.d
 		custom_gui = "enclave_shroud_option"
@@ -419,7 +479,7 @@ country_event = {
 		}
 	}
 
-	# Option 4.1: Remove trade deal
+	# Option 5.1: Remove trade deal
 	option = {
 		name = neshr.100.da
 		response_text = neshr.100.da.reply
@@ -433,7 +493,7 @@ country_event = {
 
 	# End communications
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
@@ -634,7 +694,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = neshr.110.back
+		name = ne_back
 		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
@@ -643,7 +703,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
@@ -906,7 +966,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = neshr.110.back
+		name = ne_back
 		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
@@ -915,7 +975,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
@@ -1118,7 +1178,7 @@ country_event = {
 
 	# Back to Main Menu
 	option = {
-		name = neshr.110.back
+		name = ne_back
 		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
@@ -1127,7 +1187,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
@@ -1227,7 +1287,7 @@ country_event = {
 
 	# Back to main menu
 	option = {
-		name = neshr.110.back
+		name = ne_back
 		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
@@ -1236,7 +1296,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
@@ -1269,7 +1329,7 @@ country_event = {
 
 	# Back
 	option = {
-		name = neshr.110.back
+		name = ne_back
 		custom_gui = "enclave_shroud_option"
 		hidden_effect = {
 			country_event = { id = neshr.101 }
@@ -1278,7 +1338,7 @@ country_event = {
 
 	# End
 	option = {
-		name = neshr.100.end
+		name = GOODBYE
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
@@ -1645,6 +1705,71 @@ country_event = {
 		trigger = {
 			can_interact_with_shrouds_children = yes
 		}
+		default_hide_option = yes
+	}
+}
+
+# neshr.150: The Next Step
+country_event = {
+	id = neshr.150
+	title = neshr.150.name
+	desc = neshr.150.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_shroud_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_shroud_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = neshr.150.a
+		response_text = neshr.150.a.reply
+		custom_gui = "enclave_shroud_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 10000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_machine }
+			}
+		}
+		add_resource = { energy = -10000 }
+		custom_tooltip = opinion20
+		add_research_option = tech_psionic_theory
+		hidden_effect = {
+			event_target:ne_machine = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Back
+	option = {
+		name = ne_back
+		custom_gui = "enclave_shroud_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
 	}
 }
