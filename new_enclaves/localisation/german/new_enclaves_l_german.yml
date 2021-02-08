@@ -6,7 +6,7 @@
   civic_ancient_hive: "Antiker Hive"
   civic_ancient_hive_desc: "Antiker Hive"
   gov_ne_hive: "Hive Enclave"
-  gov_ne_hive_desc: "Es ist unmöglich festzustellen, wie alt dieser Hive ist. Es fühlt sich so an, als ob er seit dem Urknall existiert."
+  gov_ne_hive_desc: "Es ist unmöglich festzustellen, wie alt dieser Schwarm ist. Es fühlt sich so an, als ob er seit dem Urknall existiert."
   ne_hive_government: "§YEs ist unmöglich festzustellen, wie alt dieser Hive ist. Es fühlt sich so an, als ob er seit dem Urknall existiert.§!"
   RT_AWAKENED: "Erwacht"
   #Machine Enclave
@@ -16,19 +16,19 @@
   gov_ne_machine_desc: "Das Überbleibsel einer alten künstlichen Intelligenz, abgetrennt vom Maschinen Kollektiv bevor dieses Untergegangen ist."
   ne_machine_government: "Maschinen Enclave"
   ne_machine_government_desc: "§LDas Überbleibsel einer alten künstlichen Intelligenz, abgetrennt vom Maschinen Kollektiv bevor dieses Untergegangen ist.§!"
-  RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
+  RT_PRIME_CONSCIOUSNESS: "Bestes Bewusstsein"
   #Shroud Enclave
-  civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
+  civic_priesthood_of_the_cycle: "Priestertum des Zyklus"
   civic_priesthood_of_the_cycle_desc: ""
-  gov_ne_shroud: "Shroud Enclave"
-  gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
-  ne_shroud_government: "Shroud Enclave"
-  ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
-  RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
+  gov_ne_shroud: "Schleierenklave"
+  gov_ne_shroud_desc: "Eine autonome religiöse Ordnung, die in die Geheimnisse höherer Existenzstufen eingeweiht ist."
+  ne_shroud_government: "Schleierenklave"
+  ne_shroud_government_desc: "§Eine autonome religiöse Ordnung, die in die Geheimnisse höherer Existenzstufen eingeweiht ist.§!"
+  RT_PROPHETS_SUCCESSOR: "Nachfolger des Propheten"
   ### Diplomacy Events ###
   ## Hive Enclave
   #First Contact
-  nehiv.11.name: "First Contact With the [From.GetName]"
+  nehiv.11.name: "Erster Kontakt mit den [From.GetName]"
   nehiv.11.desc: "We are the Universal Hive. And so are you. And so is everything.\n\nMillenia ago, we've come to a simple realization: the whole galaxy, nay, the whole universe is a single entity. We are all part of a cosmic organism and must strive to work together.\n\nSince then, we have been aiding other races to live in harmony - at least for a while, until they eventually die out. Only when we are all together in a single ethereal consciousness will we finally be able to rest."
   nehiv.11.a: "Well met."
   #Main Menu
@@ -284,8 +284,8 @@
   ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
-  opinion_destroyed_ne_machine: "Destroyed Machine Enclave"
-  opinion_destroyed_ne_machine_trade: "Destroyed Machine Enclave we had deals with"
-  opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"
-  opinion_destroyed_ne_shroud_trade: "Destroyed Shroud Enclave we had deals with"
+  INVESTIGATE_NE_ENCLAVE_DESC: "Wir müssen mehr über die mysteriösen Außerirdischen erfahren, die sich im §Y[Prev.From.GetName] System§! befinden. Wenn sie eine Sprache besitzen, müssen wir sie entschlüsseln und Kommunikation herstellen.\n\nBelohung: £influence£ §GEinfluss§! oder §SSpezialprojekt§!"
+  opinion_destroyed_ne_machine: "Zerstörte Maschinenenklave"
+  opinion_destroyed_ne_machine_trade: "Zerstörte Maschinenenklave, mit der wir Geschäfte machten"
+  opinion_destroyed_ne_shroud: "Zerstörte Schwarm-Enklave"
+  opinion_destroyed_ne_shroud_trade: "Zerstörte Schwarm-Enklave, mit der wir Geschäfte machten"

@@ -895,7 +895,7 @@ country_event = {
 
 	option = {
 		name = nehiv.130.a
-		response_text = nemac.130.a.reply
+		response_text = nehiv.130.a.reply
 		custom_gui = "enclave_hive_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
