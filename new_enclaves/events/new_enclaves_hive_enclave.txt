@@ -1110,7 +1110,7 @@ country_event = {
 					}
 					has_relation_flag = {
 						who = From
-						flag = ne_hive_consensus_pheromones
+						flag = ne_hive_consensus_pheromones_purchased
 					}
 				}
 				is_ai = yes
