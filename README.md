@@ -2,7 +2,7 @@ This is the updated version of the New Enclaves mod originally made by [lpslucas
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -56,6 +56,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/CodeJudge-9000"><img src="https://avatars.githubusercontent.com/u/66952128?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CodeJudge-9000</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/issues?q=author%3ACodeJudge-9000" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://crowdin.com/profile/paradroid"><img src="https://i2.wp.com/crowdin.com/images/user-picture.png" width="100px;" alt=""/><br /><sub><b>Paradroid</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
     <td align="center"><a href="https://steamcommunity.com/profiles/76561198984303830"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/d3/d3dc8c3b65b0ece07eb890b613bc0d425fec1b0d_full.jpg" width="100px;" alt=""/><br /><sub><b>桃溪柳岸醉道长</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://steamcommunity.com/id/MrArcaneGates"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/1d/1da1356c225f7bf2d7c8e6a06d46f831ef471ae1_full.jpg" width="100px;" alt=""/><br /><sub><b>MrArcaneGates</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

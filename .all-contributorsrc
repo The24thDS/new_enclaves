@@ -54,6 +54,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "MrArcaneGates",
+      "name": "MrArcaneGates",
+      "avatar_url": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/1d/1da1356c225f7bf2d7c8e6a06d46f831ef471ae1_full.jpg",
+      "profile": "https://steamcommunity.com/id/MrArcaneGates",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
