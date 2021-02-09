@@ -1,6 +1,6 @@
 This is the updated version of the New Enclaves mod originally made by [lpslucasps](https://github.com/lpslucasps).
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 I've decided to fork his repo and maintain the mod since he has been inactive for the last 16 months.
@@ -48,8 +48,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a><a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a><a href="#content-lpslucasps" title="Content">🖋</a><a href="#maintenance-The24thDS" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a> <a href="#content-The24thDS" title="Content">🖋</a> <a href="#ideas-The24thDS" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-The24thDS" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/lpslucasps"><img src="https://avatars.githubusercontent.com/u/1896763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lpslucasps</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=lpslucasps" title="Code">💻</a> <a href="#content-lpslucasps" title="Content">🖋</a> <a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/CodeJudge-9000"><img src="https://avatars.githubusercontent.com/u/66952128?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CodeJudge-9000</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/issues?q=author%3ACodeJudge-9000" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
