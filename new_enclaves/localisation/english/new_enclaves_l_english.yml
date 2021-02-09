@@ -1,6 +1,7 @@
 ﻿l_english:
   ne_enclave: "Enclave"
-  ### Governments ###
+  ne_back: "What else did you have to offer?"
+### Governments ###
   # Hive Enclave
   civic_ancient_hive: "Ancient Hive"
   civic_ancient_hive_desc: "Ancient Hive"
@@ -26,7 +27,7 @@
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
   ### Diplomacy Events ###
-  ## Hive Enclave
+## Hive Enclave
   # First Contact
   nehiv.11.name: "First Contact With the [From.GetName]"
   nehiv.11.desc: "We are the Universal Hive. And so are you. And so is everything.\n\nMillenia ago, we've come to a simple realization: the whole galaxy, nay, the whole universe is a single entity. We are all part of a cosmic organism and must strive to work together.\n\nSince then, we have been aiding other races to live in harmony - at least for a while, until they eventually die out. Only when we are all together in a single ethereal consciousness will we finally be able to rest."
@@ -51,13 +52,11 @@
   nehiv.100.c: "Our own hive could use one of your drones."
   nehiv.100.c.opinion: "Requires the §YUniversal Hive§! to have:\n£opinion£ Opinion +50"
   nehiv.100.c.alreadyhired: "We already have a governor from the Universal Hive."
-  nehiv.100.end: "Gooodbye."
   # Sociology help
   nehiv.110.name: "Sociological Assistance"
   nehiv.110.desc: "We are compelled to. The better you understand how to live in harmony, the better is the universe served.\n\nSuch assistance, notwithstanding our willingness, can't be done for free. Our continued existence is of fundamental importance. As such, we require a small donation."
   nehiv.110.a: "You'll have it."
   nehiv.110.a.reply: "Wonderful. All for the good of the Universal Being."
-  nehiv.110.back: "What else did you have to offer?"
   nehiv.111.name: "Universal Hive Assistance"
   nehiv.111.desc: "The collaboration between our sociologists in the last 10 years was very fruitful, bringing happiness to the Universal Being. Should we renew our agreement?"
   nehiv.111.a: "Yes."
@@ -92,7 +91,7 @@
   nehiv.904.desc: "Every complex being has to deal with cancerigenous agents that work for its own destruction. The Universal Being is no exception.\n\nWe'll not feed the cancer that's corrupting the universe. All agreements we once had are now null and void."
   nehiv.904.a: "End communications."
   nehiv.905a.desc: "We are all one with the universe. You are but cancerous cells that incapable understand it."
-  ## Machine Enclave
+## Machine Enclave
   # First Contact
   nemac.11.name: "First Contact With the [From.GetName]"
   nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be systematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
@@ -127,29 +126,26 @@
   nemac.100.da: "We wish to end our resource trade deal."
   nemac.100.da.reply: "We understand. It's done. Anything else?"
   nemac.100.da.tooltip: "This will terminate our current resource trade deal with the Prime Machines."
-  nemac.100.end: "Goodbye."
   # Can you help us with our machines?
   nemac.110.name: "Mechanical Aid"
   nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
   nemac.110.a: "Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
-  nemac.110.back: "What else did you have to offer?"
-  nemac.100.end: "Goodbye."
   nemac.111.name: "Prime Machines Aid"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Yes."
-  nemac.111.a.reply: "§Yprime:~$ sudo assist update§!"
+  nemac.111.a.reply: "§Yprime:~\$ sudo assist update§!"
   nemac.111.end: "No."
   # Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
   nemac.120.a: "That's a reasonable price."
-  nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  nemac.120.a.reply: "§Yprime:~\$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   # Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Prime Secrets"
   nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
   nemac.130.a: "That's a deal!"
-  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
+  nemac.130.a.reply: "§Yprime:~\$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   # Strategic Resource - Living Metal
   nemac.140.name: "Strategic Resources"
   nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
@@ -174,13 +170,13 @@
   nemac.905b.desc: "This galactic cycle is proving to be as unsuccessful at achieving everlasting harmony between sythetics and organics as the previous ones, in great part because of you."
   nemac.905c.desc: "§R<<ERROR: EXTERMINATION PROTOCOL ONLINE>>§!\n\n§R<<ACCESS DENIED>>§!"
   nemac.905d.desc: "We hope not all species of this current galactic cycle are as destructive as you, lest it proves to be the shortest one yet."
-  ## Shroud Enclave
+## Shroud Enclave
   neshr.11.name: "First Contact With the [From.GetName]"
-  neshr.11.desc: "The Shroud's Children greets you, fellow creature.\n\nAlthough it's not the first time we've met. Aeons ago, we found each other in the ethereal realms, long before your race even had a physical manifestation. Perhaps you still remember this in your dreams?\n\nWe can teach you how to recollect these and other lost knowledge forgotten in the process of transmigration of souls. Of course, you'll understand if we require a small contribution in return. The subsistence of our order in the material realm depends on it."
+  neshr.11.desc: "The Shroud's Children greet you, fellow creature.\n\nAlthough it's not the first time we've met. Aeons ago, we found each other in the ethereal realms, long before your race even had a physical manifestation. Perhaps you still remember this in your dreams?\n\nWe can teach you how to recollect these and other lost knowledge forgotten in the process of transmigration of souls. Of course, you'll understand if we require a small contribution in return. The subsistence of our order in the material realm depends on it."
   neshr.11.a: "Well met."
   neshr.10.materialist: "Superstitious lot!"
   neshr.10.hive: "You won't contaminate our unity!"
-  # Main Menu
+ # Main Menu
   neshr.100.name: "Shroud's Children"
   neshr.100a.desc: "Contrary to popular belief, we hold no special animosity towards mechanical beings. They are indeed removed from the Shroud. But so is all physical existence, to some degree. In other words, we are all heretics, in a way. Who are we to persecute fellow heretics?"
   neshr.100b.desc: "Welcome, fellow creature! Have you come in search of enlightenment?"
@@ -194,7 +190,7 @@
   neshr.100j.desc: "The spiritual guidance provided by us is compatible with any belief system. You don't have to abandon your gods to profit from it."
   neshr.100k.desc: "The Shroud bless you, fellow creature. How may we assist you?"
   neshr.100l.desc: "Do not confuse guidance with salvation. The first we can provide. The later... Well, let us discuss other things."
-  # Main Menu - Options
+ # Main Menu - Options
   neshr.100.a: "What can your guidance offer us?"
   neshr.100.a.alreadyguiding: "The §YShroud's Children§! is already guiding us, improving our Physics Research speed."
   neshr.100.b: "Organize religious festivals across our worlds."
@@ -203,42 +199,47 @@
   neshr.100.c: "Request Saintly Help"
   neshr.100.c.opinion: "Requires the §YShroud's Children§! to have:\n£opinion£ Opinion +50"
   neshr.100.c.alreadyrecruited: "We already have a Saint from the §YShroud's Children§! as a governor."
+  neshr.100.tech: "We want to make the §YNext Step§!!"
+  neshr.100.tech.alreadyteached: "We already know how to make the §YNext Step§!."
   neshr.100.d: "We are interested in Strategic Resources."
   neshr.100.d.opinion: "Requires the §YShroud's Children§! to have:\n£opinion£ Opinion +100"
   neshr.100.d.alreadyhired: "We already have a §YShroud's Children Trade Deal§!\n"
   neshr.100.da: "We wish to end our resource trade deal."
   neshr.100.da.reply: "We hope you didn't overuse the Zro. Take your time to recuperate."
   neshr.100.da.tooltip: "This will terminate our current resource trade deal with the Shroud's Children."
-  neshr.100.end: "Goodbye."
-  # Shroud's Children Guidance
+ # Shroud's Children Guidance
   neshr.110.name: "Shroud's Children Guidance"
   neshr.110.desc: "Our spiritual guidance has much more practical benefits than they may seem at first glance. Although our objective is to transcend this material realm, only by having a deep understanding of physical reality one is able to conceive other levels of existence.\n\nOur sages are more than willing to teach you about the ontological secrets of the universe. Hopefully, you'll understand if we require some material assistance to accomodate our members at your empire in return."
   neshr.110.a: "Of course. Let us make the arrangements."
   neshr.110.a.reply: "Perfect. You now have free access to our sacred archives for the next 10 years. Fear not, the more arcane texts we'll eventually start to make sense."
-  neshr.110.back: "What else did you have to offer?"
   neshr.111.name: "Shroud's Children Guidance"
   neshr.111.desc: "How are you today, fellow creature?\n\nYou have learned much from our archives in the last ten years - and so have we, being blessed by your presence, cordial debate and inquisitive nature.\n\nUnfortunately, our arrangement has come to an end. But that has not to be the case. Would you like to renew your aprenticeship and learn more about the ontological secrets of the universe with us?"
   neshr.111.a: "It would be an honor."
   neshr.111.a.reply: "The honor is ours, fellow creature."
   neshr.111.end: "We'll ponder about what we've learned alone for now."
-  # Religious Festivals
+ # Religious Festivals
   neshr.120.name: "Religious Festivals"
   neshr.120.desc: "We would gladly preach across your worlds for free, but there are some costs involved in an opperation of such scale.\n\nWe estimate the material assitance needed would cost a total of:\n§R£energy£ -1000§!"
   neshr.121.name: "Religious Festivals"
   neshr.121.desc: "Hello, fellow creature.\n\nThe last of the planned religious festivals you hired us to perform 10 years ago has come to an end. Of course, it does not mean we have depleted the well of trascendental truths we can share with you. In fact, with a small material assistance, we can begin another series of festivals right away. What do you think?"
-  # Request Saintly Guidance
+ # Request Saintly Guidance
   neshr.130.name: "Saintly Guidance"
-  neshr.130.desc: "We consider you one of our most promising disciples. However, you still have much to learn. We are sure your progress would impreve considerably if one of our Saints lived among you.\n\nAlas, Saints are still bound to this material realm. As such, we first need a suitable donation to pay for their personal expenses and help our cause."
+  neshr.130.desc: "We consider you one of our most promising disciples. However, you still have much to learn. We are sure your progress would improve considerably if one of our Saints lived among you.\n\nAlas, Saints are still bound to this material realm. As such, we first need a suitable donation to pay for their personal expenses and help our cause."
   neshr.130.a: "Understandable. You'll have our contribution."
   neshr.130.a.reply: "We will send one of our Saints to your capital."
-  # Stratetic Resources
+ # Next Step
+  neshr.150.name: "Next Step"
+  neshr.150.desc: "Are you ready to make the §YNext Step§!?\n\nThe only way forward is leaving this material form behind you and ascending to the ethereal realms. We can help you make the §YNext Step§! in your evolution.\n\nHowever we need a small contribution before we can transfer the details to your network. A transfer so big requires a lot of energy."
+  neshr.150.a: "Of course. We will initiate the transfer right away!"
+  neshr.150.a.reply: "Transfer received. Here is what you need to make the §YNext Step§!. We hope to meet you in the ethereal realms."
+ # Stratetic Resources
   neshr.140.name: "Strategic Resources"
   neshr.140.desc: "If you want to better attune yourself to the ethereal realms, we can provide you with some Zro. We trust you enough to know you won't use it recklessly. Remember: the difference between a medicine and poison is the dose."
   neshr.140.a: "§G1§! £sr_zro£ §H$sr_zro$§!/month for §R20§! £energy£ §H$energy$§!/month."
   neshr.140.b: "§G2§! £sr_zro£ §H$sr_zro$§!/month for §R40§! £energy£ §H$energy$§!/month."
   neshr.140.c: "§G3§! £sr_zro£ §H$sr_zro$§!/month for §R60§! £energy£ §H$energy$§!/month."
   neshr.141.desc: "Please, be careful. We undertand if you wish to use some of the Zro for recreative purposes, but don't overdo it!"
-  # Aggresion
+ # Aggresion
   neshr.901.name: "Shroud's Children Station Destroyed"
   neshr.901.desc: "After destroying the ancient Shroud's Children station in [ne_shroud_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Shroud's Children databanks that should be a great boon to our research."
   neshr.902.a.desc: "$neshr.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_shroud_destroyer.GetName] were behind this attack."
@@ -255,15 +256,15 @@
   neshr.905b.desc: "We are sad you couldn't accept our truths, fellow creature."
   neshr.905c.desc: "Physical reality is but an illusion. Have you come to free us from it?"
   neshr.905d.desc: "Your violent nature is just another result of your attachment to the material realm."
-  ### Traits, Modifiers, Technologies ###
-  ## Universal Hive
+### Traits, Modifiers, Technologies ###
+ ## Universal Hive
   leader_universal_drone: "Universal Drone"
   leader_universal_drone_desc: "A drone from the Universal Hive. Not only is he able to be integrated into any hive, his mere presence can quell any sign of deviance."
   universal_hive_collaboration: "Universal Hive Collaboration"
   universal_hive_collaboration_desc: "The Universal Hive is helping our sociologists, greatly increasing our Society research."
   ne_hive_consensus_pheromones: "Consensus Pheromones"
   ne_hive_consensus_pheromones_desc: "Consensus can be carefully engineered in a laboratory - a trade secret of the Universal Hive."
-  ## Prime Machines
+ ## Prime Machines
   leader_prime_machine: "Prime Machine"
   leader_prime_machine_desc: "This Governor is an autonomous unit from the Prime Machines, possessing unparalleled abilities optimizing robots."
   trait_robot_sapient_machine: "Ancient Sapience Protocols"
@@ -277,14 +278,14 @@
   ne_machine_trade_deal_1: "Prime Machines Deal (£sr_living_metal£ x1)"
   ne_machine_trade_deal_2: "Prime Machines Deal (£sr_living_metal£ x2)"
   ne_machine_trade_deal_3: "Prime Machines Deal (£sr_living_metal£ x3)"
-  ## Shroud's Children
+ ## Shroud's Children
   leader_trait_saint: "Saint"
   leader_trait_saint_desc: "This Governor was beatified by the Shroud."
   shrouds_children_guidance: "Shroud's Children Guidance"
   shrouds_children_guidance_desc: "The Shroud's Children gave us access to their ancient archives. Although much of the material is arcane in nature, it's also rich in knowledge about this physical reality."
   ne_shroud_festival: "Religious Festivals"
   ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
-  ### Misc ###
+ ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
   INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
   opinion_destroyed_ne_hive: "Destroyed Hive Enclave"
