@@ -45,6 +45,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "桃溪柳岸醉道长",
+      "name": "桃溪柳岸醉道长",
+      "avatar_url": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/d3/d3dc8c3b65b0ece07eb890b613bc0d425fec1b0d_full.jpg",
+      "profile": "https://steamcommunity.com/profiles/76561198984303830",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,

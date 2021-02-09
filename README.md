@@ -55,6 +55,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/lpslucasps"><img src="https://avatars.githubusercontent.com/u/1896763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lpslucasps</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=lpslucasps" title="Code">💻</a> <a href="#content-lpslucasps" title="Content">🖋</a> <a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/CodeJudge-9000"><img src="https://avatars.githubusercontent.com/u/66952128?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CodeJudge-9000</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/issues?q=author%3ACodeJudge-9000" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://crowdin.com/profile/paradroid"><img src="https://i2.wp.com/crowdin.com/images/user-picture.png" width="100px;" alt=""/><br /><sub><b>Paradroid</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://steamcommunity.com/profiles/76561198984303830"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/d3/d3dc8c3b65b0ece07eb890b613bc0d425fec1b0d_full.jpg" width="100px;" alt=""/><br /><sub><b>桃溪柳岸醉道长</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
   </tr>
 </table>
 
