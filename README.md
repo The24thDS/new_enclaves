@@ -48,7 +48,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a></td>
+    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a> <a href="#content-The24thDS" title="Content">🖋</a> <a href="#ideas-The24thDS" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
