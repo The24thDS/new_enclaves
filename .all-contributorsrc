@@ -36,6 +36,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Paradroid",
+      "name": "Paradroid",
+      "avatar_url": "",
+      "profile": "",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
