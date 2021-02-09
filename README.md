@@ -48,8 +48,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lpslucasps"><img src="https://avatars.githubusercontent.com/u/1896763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lpslucasps</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=lpslucasps" title="Code">💻</a> <a href="#content-lpslucasps" title="Content">🖋</a> <a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a><a href="#maintenance-The24thDS" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a><a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a><a href="#content-lpslucasps" title="Content">🖋</a><a href="#maintenance-The24thDS" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/lpslucasps"><img src="https://avatars.githubusercontent.com/u/1896763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lpslucasps</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=lpslucasps" title="Code">💻</a> <a href="#content-lpslucasps" title="Content">🖋</a> <a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
