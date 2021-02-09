@@ -40,8 +40,8 @@
     {
       "login": "Paradroid",
       "name": "Paradroid",
-      "avatar_url": "",
-      "profile": "",
+      "avatar_url": "https://i2.wp.com/crowdin.com/images/user-picture.png",
+      "profile": "https://crowdin.com/profile/paradroid",
       "contributions": [
         "translation"
       ]
