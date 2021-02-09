@@ -27,6 +27,15 @@
         "content",
         "ideas"
       ]
+    },
+    {
+      "login": "CodeJudge-9000",
+      "name": "CodeJudge-9000",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66952128?v=4",
+      "profile": "https://github.com/CodeJudge-9000",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
