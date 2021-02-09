@@ -1,4 +1,7 @@
 This is the updated version of the New Enclaves mod originally made by [lpslucasps](https://github.com/lpslucasps).
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 I've decided to fork his repo and maintain the mod since he has been inactive for the last 16 months.
 Contributions are welcome and encouraged.
@@ -35,3 +38,23 @@ Although the mod won't break ongoing saves, the new enclaves require a new game 
 # TRANSLATION
 
 If you want to contribute by translating the locs, you can do that on [Crowdin](https://crowdin.com/project/new-enclaves). Once you login/register and request access to one of the languages I will grant you access to start translating it. The translations in the repo are updated every 24 hours with the new ones from Crowdin.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

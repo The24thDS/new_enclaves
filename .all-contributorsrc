@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "The24thDS",
+      "name": "David Sima",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26633429?v=4",
+      "profile": "https://david-sima.dev",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "new_enclaves",
+  "projectOwner": "The24thDS",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
