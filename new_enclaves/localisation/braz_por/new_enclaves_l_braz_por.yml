@@ -1,6 +1,7 @@
-﻿l_braz_por:
-
+---
+l_english:
   ne_enclave: "Enclave"
+  ne_back: "What else did you have to offer?"
   ### Governments ###
   #Hive Enclave
   civic_ancient_hive: "Ancient Hive"
@@ -52,13 +53,11 @@
   nehiv.100.c: "Our own hive could use one of your drones."
   nehiv.100.c.opinion: "Requires the §YUniversal Hive§! to have:\n£opinion£ Opinion +50"
   nehiv.100.c.alreadyhired: "We already have a governor from the Universal Hive."
-  nehiv.100.end: "Gooodbye."
   #Sociology help
   nehiv.110.name: "Sociological Assistance"
   nehiv.110.desc: "We are compelled to. The better you understand how to live in harmony, the better is the universe served.\n\nSuch assistance, notwithstanding our willingness, can't be done for free. Our continued existence is of fundamental importance. As such, we require a small donation."
   nehiv.110.a: "You'll have it."
   nehiv.110.a.reply: "Wonderful. All for the good of the Universal Being."
-  nehiv.110.back: "What else did you have to offer?"
   nehiv.111.name: "Universal Hive Assistance"
   nehiv.111.desc: "The collaboration between our sociologists in the last 10 years was very fruitful, bringing happiness to the Universal Being. Should we renew our agreement?"
   nehiv.111.a: "Yes."
@@ -128,28 +127,26 @@
   nemac.100.da: "We wish to end our resource trade deal."
   nemac.100.da.reply: "We understand. It's done. Anything else?"
   nemac.100.da.tooltip: "This will terminate our current resource trade deal with the Prime Machines."
-  nemac.100.end: "Goodbye."
   #Can you help us with our machines?
   nemac.110.name: "Mechanical Aid"
   nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
   nemac.110.a: "Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
-  nemac.110.back: "What else did you have to offer?"
   nemac.111.name: "Prime Machines Aid"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Yes."
-  nemac.111.a.reply: "§Yprime:~$ sudo assist update§!"
+  nemac.111.a.reply: "§Yprime:~\\$ sudo assist update§!"
   nemac.111.end: "No."
   #Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
   nemac.120.a: "That's a reasonable price."
-  nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  nemac.120.a.reply: "§Yprime:~\\$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Prime Secrets"
   nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
   nemac.130.a: "That's a deal!"
-  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
+  nemac.130.a.reply: "§Yprime:~\\$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Strategic Resources"
   nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
@@ -176,7 +173,7 @@
   nemac.905d.desc: "We hope not all species of this current galactic cycle are as destructive as you, lest it proves to be the shortest one yet."
   ## Shroud Enclave
   neshr.11.name: "First Contact With the [From.GetName]"
-  neshr.11.desc: "The Shroud's Children greets you, fellow creature.\n\nAlthough it's not the first time we've met. Aeons ago, we found each other in the ethereal realms, long before your race even had a physical manifestation. Perhaps you still remember this in your dreams?\n\nWe can teach you how to recollect these and other lost knowledge forgotten in the process of transmigration of souls. Of course, you'll understand if we require a small contribution in return. The subsistence of our order in the material realm depends on it."
+  neshr.11.desc: "The Shroud's Children greet you, fellow creature.\n\nAlthough it's not the first time we've met. Aeons ago, we found each other in the ethereal realms, long before your race even had a physical manifestation. Perhaps you still remember this in your dreams?\n\nWe can teach you how to recollect these and other lost knowledge forgotten in the process of transmigration of souls. Of course, you'll understand if we require a small contribution in return. The subsistence of our order in the material realm depends on it."
   neshr.11.a: "Well met."
   neshr.10.materialist: "Superstitious lot!"
   neshr.10.hive: "You won't contaminate our unity!"
@@ -203,19 +200,19 @@
   neshr.100.c: "Request Saintly Help"
   neshr.100.c.opinion: "Requires the §YShroud's Children§! to have:\n£opinion£ Opinion +50"
   neshr.100.c.alreadyrecruited: "We already have a Saint from the §YShroud's Children§! as a governor."
+  neshr.100.tech: "We want to make the §YNext Step§!!"
+  neshr.100.tech.alreadyteached: "We already know how to make the §YNext Step§!."
   neshr.100.d: "We are interested in Strategic Resources."
   neshr.100.d.opinion: "Requires the §YShroud's Children§! to have:\n£opinion£ Opinion +100"
   neshr.100.d.alreadyhired: "We already have a §YShroud's Children Trade Deal§!\n"
   neshr.100.da: "We wish to end our resource trade deal."
   neshr.100.da.reply: "We hope you didn't overuse the Zro. Take your time to recuperate."
   neshr.100.da.tooltip: "This will terminate our current resource trade deal with the Shroud's Children."
-  neshr.100.end: "Goodbye."
   #Shroud's Children Guidance
   neshr.110.name: "Shroud's Children Guidance"
   neshr.110.desc: "Our spiritual guidance has much more practical benefits than they may seem at first glance. Although our objective is to transcend this material realm, only by having a deep understanding of physical reality one is able to conceive other levels of existence.\n\nOur sages are more than willing to teach you about the ontological secrets of the universe. Hopefully, you'll understand if we require some material assistance to accomodate our members at your empire in return."
   neshr.110.a: "Of course. Let us make the arrangements."
   neshr.110.a.reply: "Perfect. You now have free access to our sacred archives for the next 10 years. Fear not, the more arcane texts we'll eventually start to make sense."
-  neshr.110.back: "What else did you have to offer?"
   neshr.111.name: "Shroud's Children Guidance"
   neshr.111.desc: "How are you today, fellow creature?\n\nYou have learned much from our archives in the last ten years - and so have we, being blessed by your presence, cordial debate and inquisitive nature.\n\nUnfortunately, our arrangement has come to an end. But that has not to be the case. Would you like to renew your aprenticeship and learn more about the ontological secrets of the universe with us?"
   neshr.111.a: "It would be an honor."
@@ -228,9 +225,14 @@
   neshr.121.desc: "Hello, fellow creature.\n\nThe last of the planned religious festivals you hired us to perform 10 years ago has come to an end. Of course, it does not mean we have depleted the well of trascendental truths we can share with you. In fact, with a small material assistance, we can begin another series of festivals right away. What do you think?"
   #Request Saintly Guidance
   neshr.130.name: "Saintly Guidance"
-  neshr.130.desc: "We consider you one of our most promising disciples. However, you still have much to learn. We are sure your progress would impreve considerably if one of our Saints lived among you.\n\nAlas, Saints are still bound to this material realm. As such, we first need a suitable donation to pay for their personal expenses and help our cause."
+  neshr.130.desc: "We consider you one of our most promising disciples. However, you still have much to learn. We are sure your progress would improve considerably if one of our Saints lived among you.\n\nAlas, Saints are still bound to this material realm. As such, we first need a suitable donation to pay for their personal expenses and help our cause."
   neshr.130.a: "Understandable. You'll have our contribution."
   neshr.130.a.reply: "We will send one of our Saints to your capital."
+  #Next Step
+  neshr.150.name: "Next Step"
+  neshr.150.desc: "Are you ready to make the §YNext Step§!?\n\nThe only way forward is leaving this material form behind you and ascending to the ethereal realms. We can help you make the §YNext Step§! in your evolution.\n\nHowever we need a small contribution before we can transfer the details to your network. A transfer so big requires a lot of energy."
+  neshr.150.a: "Of course. We will initiate the transfer right away!"
+  neshr.150.a.reply: "Transfer received. Here is what you need to make the §YNext Step§!. We hope to meet you in the ethereal realms."
   #Stratetic Resources
   neshr.140.name: "Strategic Resources"
   neshr.140.desc: "If you want to better attune yourself to the ethereal realms, we can provide you with some Zro. We trust you enough to know you won't use it recklessly. Remember: the difference between a medicine and poison is the dose."
