@@ -1194,7 +1194,7 @@ country_event = {
 }
 
 # nemac.900: Prime Machines destroyed (HIDDEN)
-event = {
+country_event = {
 	id = nemac.900
 	hide_window = yes
 

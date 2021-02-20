@@ -415,7 +415,7 @@ country_event = {
 			limit = {
 				NOR = {
 					has_active_xuracorp_trade = yes
-					has_active_riggan_trade yes
+					has_active_riggan_trade = yes
 					has_active_muutagan_trade = yes
 				}
 			}

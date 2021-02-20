@@ -391,7 +391,7 @@ guiTypes = {
 
 				name ="title"
 				position = { x = 180 y = 40 }
-				textureFile = ""
+				# textureFile = ""
 				font = "cg_16b"
 				borderSize = {x = 4 y = 4}
 				text = "FRONT_SAVE_GAMES"	

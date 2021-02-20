@@ -732,7 +732,7 @@ country_event = {
 	immediate = {
 		remove_relation_flag = {
 			who = event_target:ne_shroud
-			flag = ne_shroud_trade
+			flag = ne_shroud_trade_deal
 		}
 	}
 
@@ -1345,7 +1345,7 @@ country_event = {
 }
 
 # neshr.900: Shroud's Children destroyed (HIDDEN) (called by on_ship_destroyed_victim)
-event = {
+country_event = {
 	id = neshr.900
 	hide_window = yes
 

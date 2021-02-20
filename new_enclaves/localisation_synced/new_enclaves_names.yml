@@ -18,6 +18,7 @@
   NAME_NEHIV_Enclave_Station: "Hive Enclave Station"
   NAME_NEHIV_Srma: "Sram"
   NAME_Faceless: "Faceless"
+  format.ne_hive.1: "$NAME_NEHIV_Country$"
   # Shroud Enclave
   NAME_NESHR_System: "Harbinger"
   NAME_NESHR_Star: "Harbinger"
@@ -33,6 +34,7 @@
   NAME_Apostle_Ziesa:0 "Apostle Ziesa"
   NAME_Kkronquts_The_Paragon:0 "Kkronquts The Paragon"
   NAME_Angel_Iriels:0 "Angel Iriels"
+  format.ne_shroud.1: "$NAME_NESHR_Country$"
   # Machine Enclave
   NAME_NEMAC_Star: "Core"
   NAME_NEMAC_Country: "Prime Machines"
@@ -40,3 +42,4 @@
   NAME_NEMAC_Enclave_Station: "Machine Enclave Station"
   NAME_Unity_01: "Prime Unit"
   NAME_EIRPLUSONE: "EIR+1"
+  format.ne_machine.1: "$NAME_NEMAC_Country$"
