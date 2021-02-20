@@ -39,10 +39,16 @@ has_any_active_ne_shroud_trade_deal = {
 	}
 }
 can_interact_with_shrouds_children = {
-	NOR = {
-		is_genocidal = yes
-		is_materialist = yes
-		has_authority = auth_machine_intelligence
-		has_authority = auth_hive_mind
+	OR = {
+		NOR = {
+			is_genocidal = yes
+			is_materialist = yes
+			has_authority = auth_machine_intelligence
+			has_authority = auth_hive_mind
+		}
+		AND = {
+			is_materialist = yes
+			has_technology = tech_psionic_theory
+		}
 	}
 }
