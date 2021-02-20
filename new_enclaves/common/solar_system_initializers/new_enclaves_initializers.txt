@@ -121,7 +121,7 @@ ne_hive_init = {
 						name = random
 						skill = 5
 					}
-					set_leader = last_created_country
+					set_leader = last_created_leader
 				}
 			}
 		}
@@ -422,7 +422,7 @@ ne_machine_init = {
 						name = random
 						skill = 5
 					}
-					set_leader = last_created_country
+					set_leader = last_created_leader
 				}
 			}
 		}
@@ -562,7 +562,7 @@ ne_shroud_init = {
 						name = random
 						skill = 5
 					}
-					set_leader = last_created_country
+					set_leader = last_created_leader
 				}
 			}
 		}
