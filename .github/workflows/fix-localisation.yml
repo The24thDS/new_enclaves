@@ -22,6 +22,3 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Fix localisation files
-        commit_user_name: Localisation Bot # defaults to "GitHub Actions"
-        commit_user_email: actions@github.com # defaults to "actions@github.com"
-        commit_author: Loc Bot <actions@github.com>
