@@ -1,5 +1,5 @@
-﻿l_simp_chinese:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "What else did you have to offer?"
   ### Governments ###
@@ -240,6 +240,9 @@
   neshr.140.b: "§G2§! £sr_zro£ §H$sr_zro$§!/month for §R40§! £energy£ §H$energy$§!/month."
   neshr.140.c: "§G3§! £sr_zro£ §H$sr_zro$§!/month for §R60§! £energy£ §H$energy$§!/month."
   neshr.141.desc: "Please, be careful. We undertand if you wish to use some of the Zro for recreative purposes, but don't overdo it!"
+  ne_shroud_trade_deal_1: "Shroud's Children Trade Deal"
+  ne_shroud_trade_deal_2: "$ne_shroud_trade_deal_1$"
+  ne_shroud_trade_deal_3: "$ne_shroud_trade_deal_1$"
   #Aggresion
   neshr.901.name: "Shroud's Children Station Destroyed"
   neshr.901.desc: "After destroying the ancient Shroud's Children station in [ne_shroud_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Shroud's Children databanks that should be a great boon to our research."
@@ -295,3 +298,4 @@
   opinion_destroyed_ne_machine_trade: "Destroyed Machine Enclave we had deals with"
   opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"
   opinion_destroyed_ne_shroud_trade: "Destroyed Shroud Enclave we had deals with"
+  station_enclave_curator_01_key: "Curator Station Enclave"
