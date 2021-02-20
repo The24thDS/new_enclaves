@@ -200,7 +200,7 @@ country_event = {
 
 	# End communications
 	option = {
-		name = nehiv.100.end
+		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_hive_option"
 		trigger = { is_genocidal = no }
@@ -318,7 +318,7 @@ country_event = {
 
 	# End communications
 	option = {
-		name = nehiv.100.end
+		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_hive_option"
 		hidden_effect = {
@@ -528,7 +528,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nehiv.100.end
+		name = GOODBYE
 		custom_gui = "enclave_hive_option"
 		default_hide_option = yes
 	}
@@ -800,7 +800,7 @@ country_event = {
 
 	# End
 	option = {
-		name = nehiv.100.end
+		name = GOODBYE
 		custom_gui = "enclave_hive_option"
 		default_hide_option = yes
 	}
@@ -939,14 +939,14 @@ country_event = {
 
 	# End
 	option = {
-		name = nehiv.100.end
+		name = GOODBYE
 		custom_gui = "enclave_hive_option"
 		default_hide_option = yes
 	}
 }
 
 # nehiv.900: Universal Hive destroyed (HIDDEN)
-event = {
+country_event = {
 	id = nehiv.900
 	hide_window = yes
 
