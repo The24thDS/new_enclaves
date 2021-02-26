@@ -25,7 +25,7 @@ l_english:
   gov_ne_shroud: "Schleierenklave"
   gov_ne_shroud_desc: "Eine autonome religiöse Ordnung, die in die Geheimnisse höherer Existenzstufen eingeweiht ist."
   ne_shroud_government: "Schleierenklave"
-  ne_shroud_government_desc: "§Eine autonome religiöse Ordnung, die in die Geheimnisse höherer Existenzstufen eingeweiht ist.§!"
+  ne_shroud_government_desc: "§LEine autonome religiöse Ordnung, die in die Geheimnisse höherer Existenzstufen eingeweiht ist.§!"
   RT_PROPHETS_SUCCESSOR: "Nachfolger des Propheten"
   ### Diplomacy Events ###
   ## Hive Enclave
@@ -234,12 +234,12 @@ l_english:
   neshr.150.a: "Of course. We will initiate the transfer right away!"
   neshr.150.a.reply: "Transfer received. Here is what you need to make the §YNext Step§!. We hope to meet you in the ethereal realms."
   #Stratetic Resources
-  neshr.140.name: "Strategic Resources"
-  neshr.140.desc: "If you want to better attune yourself to the ethereal realms, we can provide you with some Zro. We trust you enough to know you won't use it recklessly. Remember: the difference between a medicine and poison is the dose."
-  neshr.140.a: "§G1§! £sr_zro£ §H$sr_zro$§!/month for §R20§! £energy£ §H$energy$§!/month."
-  neshr.140.b: "§G2§! £sr_zro£ §H$sr_zro$§!/month for §R40§! £energy£ §H$energy$§!/month."
-  neshr.140.c: "§G3§! £sr_zro£ §H$sr_zro$§!/month for §R60§! £energy£ §H$energy$§!/month."
-  neshr.141.desc: "Please, be careful. We undertand if you wish to use some of the Zro for recreative purposes, but don't overdo it!"
+  neshr.140.name: "Strategische Ressourcen"
+  neshr.140.desc: "Wenn ihr euch besser auf die ätherischen Bereiche einstellen möchtet, können wir euch Zro zur Verfügung stellen. Wir vertrauen euch genug, um zu wissen, dass ihr es nicht rücksichtslos verwenden werdet. Denkt daran: Der Unterschied zwischen einem Medikament und Gift ist die Dosis."
+  neshr.140.a: "§G1§! £sr_zro£ §H$sr_zro$§!/Monat für §R20§! £energy£ §H$energy$§!/Monat."
+  neshr.140.b: "§G2§! £sr_zro£ §H$sr_zro$§!/Monat für §R40§! £energy£ §H$energy$§!/Monat."
+  neshr.140.c: "§G3§! £sr_zro£ §H$sr_zro$§!/Monat für §R60§! £energy£ §H$energy$§!/Monat."
+  neshr.141.desc: "Bitte seid vorsichtig. Wir verstehen, wenn ihr einen Teil des Zro zu Erholungszwecken verwenden möchtet, aber übertreibt es nicht!"
   ne_shroud_trade_deal_1: "Shroud's Children Trade Deal"
   ne_shroud_trade_deal_2: "$ne_shroud_trade_deal_1$"
   ne_shroud_trade_deal_3: "$ne_shroud_trade_deal_1$"
