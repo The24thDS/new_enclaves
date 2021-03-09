@@ -18,7 +18,13 @@ jobs:
       uses: The24thDS/stellaris-localisation-crowdin-fix@v1.0.3
       with:
         localisation_folder: 'new_enclaves/localisation'
-    - name: Commit files
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Fix localisation files
+    - name: Commit report
+      run: |
+        git config --global user.name 'The24thDS'
+        git config --global user.email 'the24thds@users.noreply.github.com'
+        git commit -am "Fix localisation files"
+        git push
+#     - name: Commit files
+#       uses: stefanzweifel/git-auto-commit-action@v4
+#       with:
+#         commit_message: Fix localisation files
