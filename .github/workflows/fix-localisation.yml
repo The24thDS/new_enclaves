@@ -14,17 +14,18 @@ jobs:
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+        ref: ${{ github.head_ref }}
     - name: Fix locs
       uses: The24thDS/stellaris-localisation-crowdin-fix@v1.0.3
       with:
         localisation_folder: 'new_enclaves/localisation'
-    - name: Commit report
-      run: |
-        git config --global user.name 'The24thDS'
-        git config --global user.email 'the24thds@users.noreply.github.com'
-        git commit -am "Fix localisation files"
-        git push
-#     - name: Commit files
-#       uses: stefanzweifel/git-auto-commit-action@v4
-#       with:
-#         commit_message: Fix localisation files
+#     - name: Commit report
+#       run: |
+#         git config --global user.name 'The24thDS'
+#         git config --global user.email 'the24thds@users.noreply.github.com'
+#         git commit -am "Fix localisation files"
+#         git push
+    - name: Commit files
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Fix localisation files
