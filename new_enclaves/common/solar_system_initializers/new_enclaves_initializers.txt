@@ -92,6 +92,7 @@ ne_hive_init = {
 				}
 				last_created_country = {
 					set_country_flag = ne_hive_country
+					set_country_flag = ne_country
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_hive_country
 					create_fleet = {
@@ -393,6 +394,7 @@ ne_machine_init = {
 				}
 				last_created_country = {
 					set_country_flag = ne_machine_country
+					set_country_flag = ne_country
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_machine_country
 					create_fleet = {
@@ -533,6 +535,7 @@ ne_shroud_init = {
 				}
 				last_created_country = {
 					set_country_flag = ne_shroud_country
+					set_country_flag = ne_country
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_shroud_country
 					create_fleet = {

@@ -45,81 +45,81 @@ country_event = {
 	}
 }
 
-# ne.12: Empire with no communications with enclave enters its system for the first time
-fleet_event = {
-	id = ne.12
-	title = action.10.name
-	desc = action.15.desc
-	picture = GFX_evt_star_chart
-	location = From
-	trackable = yes
+# # ne.12: Empire with no communications with enclave enters its system for the first time
+	# fleet_event = {
+	# 	id = ne.12
+	# 	title = action.10.name
+	# 	desc = action.15.desc
+	# 	picture = GFX_evt_star_chart
+	# 	location = From
+	# 	trackable = yes
 
-	is_triggered_only = yes
+	# 	is_triggered_only = yes
 
-	trigger = {
-		owner = {
-			is_country_type = default
-			exists = capital_scope
-		}
-		From = {
-			has_star_flag = ne_enclave
-			any_ship_in_system = {
-				exists = owner
-				owner = {
-					is_country_type = ne_enclave
-					NOR = {
-						has_communications = root.owner
-						reverse_has_relation_flag = {
-							flag = ongoing_enclave_investigation
-							who = root.owner
-						}
-					}
-				}
-			}
-		}
-	}
+	# 	trigger = {
+	# 		owner = {
+	# 			is_country_type = default
+	# 			exists = capital_scope
+	# 		}
+	# 		From = {
+	# 			has_star_flag = ne_enclave
+	# 			any_ship_in_system = {
+	# 				exists = owner
+	# 				owner = {
+	# 					is_country_type = ne_enclave
+	# 					NOR = {
+	# 						has_communications = root.owner
+	# 						reverse_has_relation_flag = {
+	# 							flag = ongoing_enclave_investigation
+	# 							who = root.owner
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-	immediate = {
-		owner = {
-			capital_scope = { save_event_target_as = pc_home }
-			From = {
-				random_fleet_in_system = {
-					limit = {
-						exists = owner
-						owner = { is_country_type = ne_enclave }
-					}
-					owner = {
-						save_event_target_as = target_ne_enclave
-						country_event = { id = ne.13 days = 300 random = 50 }
-						enable_special_project = {
-							name = "INVESTIGATE_NE_ENCLAVE"
-							location = event_target:pc_home
-							owner = root.owner
-						}
-						country_event = { id = ne.1000 } # passthrough for story.7
-					}
-				}
-			}
-			set_relation_flag = {
-				flag = ongoing_enclave_investigation
-				who = event_target:target_ne_enclave
-			}
-		}
-	}
+	# 	immediate = {
+	# 		owner = {
+	# 			capital_scope = { save_event_target_as = pc_home }
+	# 			From = {
+	# 				random_fleet_in_system = {
+	# 					limit = {
+	# 						exists = owner
+	# 						owner = { is_country_type = ne_enclave }
+	# 					}
+	# 					owner = {
+	# 						save_event_target_as = target_ne_enclave
+	# 						country_event = { id = ne.13 days = 300 random = 50 }
+	# 						# enable_special_project = {
+	# 						# 	name = "INVESTIGATE_NE_ENCLAVE"
+	# 						# 	location = event_target:pc_home
+	# 						# 	owner = root.owner
+	# 						# }
+	# 						country_event = { id = ne.1000 } # passthrough for story.7
+	# 					}
+	# 				}
+	# 			}
+	# 			set_relation_flag = {
+	# 				flag = ongoing_enclave_investigation
+	# 				who = event_target:target_ne_enclave
+	# 			}
+	# 		}
+	# 	}
 
-	option = {
-		name = action.10.a
-		owner = {
-			tooltip = {
-				enable_special_project = {
-					name = "INVESTIGATE_NE_ENCLAVE"
-					location = event_target:pc_home
-					owner = ROOT
-				}
-			}
-		}
-	}
-}
+	# 	option = {
+	# 		name = action.10.a
+	# 		owner = {
+	# 			tooltip = {
+	# 				enable_special_project = {
+	# 					name = "INVESTIGATE_NE_ENCLAVE"
+	# 					location = event_target:pc_home
+	# 					owner = ROOT
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
 
 # ne.13: New Enclave makes contact after 300 days
 country_event = {
