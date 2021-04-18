@@ -244,93 +244,27 @@ country_event = {
 	}
 }
 
-# ne.15: Communications Established
+# ne.15: New Enclaves First Contact Port
+# Root = enclave
+# From = Empire
 country_event = {
 	id = ne.15
-	title = leviathans.99.name
-	desc = leviathans.99.desc
-	picture = GFX_evt_throne_room
-	show_sound = event_radio_chatter
-
+	hide_window = yes
 	is_triggered_only = yes
 
-	immediate = { establish_communications_no_message = FromFrom }
-
-	after = {
-		if = {
-			limit = {
-				is_xenophile = yes
+	immediate = {
+		switch = {
+			trigger = has_country_flag
+			ne_hive_country = {
+				country_event = { id = nehiv.10 scopes = { from = from } }
 			}
-			add_monthly_resource_mult = {
-				resource = influence
-				value = @tier2influencecontactxenophile
-				min = @tier2influencecontactmin
-				max = @tier2influencecontactmax
+			ne_shroud_country = {
+				country_event = { id = neshr.10 scopes = { from = from } }
 			}
-		}
-		else = {
-			add_monthly_resource_mult = {
-				resource = influence
-				value = @tier2influencecontact
-				min = @tier2influencecontactmin
-				max = @tier2influencecontactmax
+			ne_machine_country = {
+				country_event = { id = nemac.10 scopes = { from = from } }
 			}
 		}
-		hidden_effect = {
-			if = {
-				limit = {
-					FromFrom = {
-						has_country_flag = ne_hive_country
-					}
-				}
-				FromFrom = { country_event = { id = nehiv.10 } }
-				break = yes
-			}
-			if = {
-				limit = {
-					FromFrom = {
-						has_country_flag = ne_machine_country
-					}
-				}
-				FromFrom = { country_event = { id = nemac.10 } }
-				break = yes
-			}
-			if = {
-				limit = {
-					FromFrom = {
-						has_country_flag = ne_shroud_country
-					}
-				}
-				FromFrom = { country_event = { id = neshr.10 } }
-				break = yes
-			}
-		}
-	}
-
-	option = {
-		name = SCUM
-		trigger = {
-			has_valid_civic = civic_fanatic_purifiers
-		}
-	}
-
-	option = {
-		name = TASTY
-		trigger = {
-			has_valid_civic = civic_hive_devouring_swarm
-		}
-	}
-
-	option = {
-		name = EXTERMINATE
-		trigger = {
-			has_valid_civic = civic_machine_terminator
-		}
-	}
-
-	option = {
-		name = leviathans.98.a
-		trigger = { is_genocidal = no }
 	}
 }
 
