@@ -1,6 +1,7 @@
 name: Fix localisation
 on:
   pull_request:
+    types: [opened, synchronize]
     branches-ignore:
       - 'master'
   push:
