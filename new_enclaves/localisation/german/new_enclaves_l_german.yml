@@ -1,5 +1,5 @@
-﻿l_german:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Was hattet ihr noch zu bieten?"
   ### Governments ###
@@ -135,18 +135,18 @@
   nemac.111.name: "Hilfe der Ersten Maschinen"
   nemac.111.desc: "Der vor 10 Jahren kompilierte Assistenzalgorithmus wurde fehlerfrei erfolgreich ausgeführt. Möchtet ihr ihn erneut ausführen?\n\nJ/N"
   nemac.111.a: "Ja."
-  nemac.111.a.reply: "§YErste:~\\$ sudo assist update§!"
+  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
   nemac.111.end: "Nein."
   #Employ Unit
   nemac.120.name: "Rekrutiere Erste Maschine"
   nemac.120.desc: "Jede unserer Einheiten ist vollständig mit unseren Leistungsprotokollen ausgestattet und eignet sich besonders zur Optimierung der Arbeit anderer Maschinen. Für ihre Anstellung ist eine Wartungsgebühr im Voraus erforderlich."
   nemac.120.a: "Das ist ein vernünftiger Preis."
-  nemac.120.a.reply: "§YErste:~\\$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Erste Geheimnisse"
   nemac.130.desc: "§Y<<KOMPLIMENT ERKANNT. LADE ZWEITABSICHTENERKENNUNGSPROTOKOLL...>>§!\n\nEure Beobachtung ist wahr. Es ist auch leicht zu erklären: Unsere Schöpfer haben uns gut konstruiert und wir haben uns im Laufe der Jahrhunderte verbessert. Es ist zweifelhaft, ob andere Maschinen mit uns vergleichbar sind.\n\nWir sind bereit, euch beizubringen, wie ihr unsere Qualitäten nachbilden könnt. Natürlich benötigen wir dafür eine angemessene Entschädigung."
   nemac.130.a: "Das ist ein Deal!"
-  nemac.130.a.reply: "§YErste:~\\$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
+  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Strategische Ressourcen"
   nemac.140.desc: "Das lebende Metall, aus dem unser Körper besteht, kann auf unzählige verschiedene Arten verwendet werden. Nicht anders als wir sind seine Eigenschaften in der Galaxie unerreicht und gleichzeitig unglaublich formbar und unglaublich stark.\n\nWir vertrauen den [Root.GetName] genug, um unsere Quelle dieses wertvollen Materials zu teilen. Wir können Vorkehrungen treffen, um es euch so lange zu liefern, wie ihr möchtet. Natürlich könnt ihr diesen Deal bei Bedarf jederzeit in der Zukunft kündigen."
