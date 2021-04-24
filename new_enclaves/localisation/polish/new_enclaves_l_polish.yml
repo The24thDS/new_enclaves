@@ -135,18 +135,18 @@
   nemac.111.name: "Prime Machines Aid"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Yes."
-  nemac.111.a.reply: "§Yprime:~\\$ sudo assist update§!"
+  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
   nemac.111.end: "No."
   #Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
   nemac.120.a: "That's a reasonable price."
-  nemac.120.a.reply: "§Yprime:~\\$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Prime Secrets"
   nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
   nemac.130.a: "That's a deal!"
-  nemac.130.a.reply: "§Yprime:~\\$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
+  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Strategic Resources"
   nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
