@@ -1,0 +1,25 @@
+#######################
+## Fix for enclaves not making contact after 300 days
+#######################
+
+namespace = ne_leviathans
+
+# Enclaves make contact after 300 days
+country_event = {
+	id = ne_leviathans.97
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		from = { NOT = { has_communications = root } }
+	}
+
+	immediate = {
+		from = {
+			root = { establish_communications_no_message = prev }
+			country_event = { id = leviathans.98 scopes = { from = root } }
+		}
+	}
+}

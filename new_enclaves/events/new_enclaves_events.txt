@@ -53,18 +53,12 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		exists = from.contact_country
-		from.contact_country = { NOT = { has_communications = root } }
+		exists = from
+		from = { NOT = { has_communications = root } }
 	}
 
 	immediate = {
-		log = "Root: [Root.GetRealName]"
-		log = "From: [From.GetRealName]"
-		log = "FromFrom: [FromFrom.GetRealName]"
-		log = "Prev: [Prev.GetRealName]"
-		log = "PrevPrev: [PrevPrev.GetRealName]"
-		log = "From.ContactCountry: [From.ContactCountry.GetRealName]"
-		from.contact_country = {
+		from = {
 			root = { establish_communications_no_message = prev }
 			country_event = { id = ne.14 scopes = { from = root } }
 		}
@@ -80,14 +74,6 @@ country_event = {
 	show_sound = event_radio_chatter
 
 	is_triggered_only = yes
-
-	immediate = {
-		log = "Root: [Root.GetRealName]"
-		log = "From: [From.GetRealName]"
-		log = "FromFrom: [FromFrom.GetRealName]"
-		log = "Prev: [Prev.GetRealName]"
-		log = "PrevPrev: [PrevPrev.GetRealName]"
-	}
 
 	after = {
 		hidden_effect = {

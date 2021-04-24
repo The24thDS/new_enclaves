@@ -32,7 +32,7 @@ set_first_contact_starting_stage = {
 					trigger = is_country_type
 					enclave = {
 						setup_first_contact_path = { TYPE = enclave }
-						country_event = { id = leviathans.97 days = 720 random = 360 } #they'll establish contact if you aren't quick enough
+						country_event = { id = ne_leviathans.97 days = 720 random = 360 scopes = { from = root.owner } } #they'll establish contact if you aren't quick enough
 					}
 					ne_enclave = {
 						setup_first_contact_path = { TYPE = enclave }
