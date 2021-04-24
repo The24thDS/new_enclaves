@@ -68,7 +68,7 @@ ne_hive_init = {
 					civics =	{
 						civic = civic_ancient_hive
 					}
-					species = last_created
+					species = last_created_species
 					flag = {
 						icon = {
 							category = "enclaves"
@@ -92,6 +92,7 @@ ne_hive_init = {
 				}
 				last_created_country = {
 					set_country_flag = ne_hive_country
+					set_country_flag = ne_country
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_hive_country
 					create_fleet = {
@@ -117,7 +118,7 @@ ne_hive_init = {
 					}
 					create_leader = {
 						class = ruler
-						species = prev
+						species = last_created_species
 						name = random
 						skill = 5
 					}
@@ -369,7 +370,7 @@ ne_machine_init = {
 					civics =	{
 						civic = civic_autonomous_node
 					}
-					species = last_created
+					species = last_created_species
 					flag = {
 						icon = {
 							category = "enclaves"
@@ -393,6 +394,7 @@ ne_machine_init = {
 				}
 				last_created_country = {
 					set_country_flag = ne_machine_country
+					set_country_flag = ne_country
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_machine_country
 					create_fleet = {
@@ -418,7 +420,7 @@ ne_machine_init = {
 					}
 					create_leader = {
 						class = ruler
-						species = prev
+						species = last_created_species
 						name = random
 						skill = 5
 					}
@@ -508,7 +510,7 @@ ne_shroud_init = {
 					civics =	{
 						civic = civic_priesthood_of_the_cycle
 					}
-					species = last_created
+					species = last_created_species
 					flag = {
 						icon = {
 							category = "enclaves"
@@ -533,6 +535,7 @@ ne_shroud_init = {
 				}
 				last_created_country = {
 					set_country_flag = ne_shroud_country
+					set_country_flag = ne_country
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_shroud_country
 					create_fleet = {
@@ -558,7 +561,7 @@ ne_shroud_init = {
 					}
 					create_leader = {
 						class = ruler
-						species = prev
+						species = last_created_species
 						name = random
 						skill = 5
 					}
