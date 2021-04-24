@@ -3,7 +3,6 @@
 # From = System
 on_entering_system_fleet = {
 	events = {
-		# ne.12
 	}
 }
 
