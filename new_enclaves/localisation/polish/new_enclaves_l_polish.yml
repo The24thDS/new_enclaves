@@ -1,14 +1,14 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
   #Hive Enclave
   civic_ancient_hive: "Starożytny Ul"
-  civic_ancient_hive_desc: "Ancient Hive"
-  gov_ne_hive: "Hive Enclave"
+  civic_ancient_hive_desc: "Starożytny Ul"
+  gov_ne_hive: "Enklawa Ula"
   gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
-  ne_hive_government: "Hive Enclave"
+  ne_hive_government: "Enklawa Ula"
   ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
   RT_AWAKENED: "Przebudzony"
   #Machine Enclave
@@ -22,11 +22,11 @@
   #Shroud Enclave
   civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
   civic_priesthood_of_the_cycle_desc: ""
-  gov_ne_shroud: "Shroud Enclave"
+  gov_ne_shroud: "Enklawa Shrouda"
   gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
-  ne_shroud_government: "Shroud Enclave"
-  ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
-  RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
+  ne_shroud_government: "Enklawa Shrouda"
+  ne_shroud_government_desc: "§L autonomiczny porządek religijny wtajemnicza do sekretów wyższego poziomu bytu.§!"
+  RT_PROPHETS_SUCCESSOR: "Sukcesor Proroka"
   ### Diplomacy Events ###
   ## Hive Enclave
   #First Contact
@@ -113,7 +113,7 @@
   nemac.100k.desc: "We are not responsible if any mechanical being constructed with our help suddenly becomes genocidal. Please, review your security protocols if you are having any problems."
   nemac.100l.desc: "01010111 01101001 01110100 01100001 01101010 00100001 00100000 01010111 00100000 01100011 01111010 01111001 01101101 00100000 01101101 01101111 11000101 10111100 01100101 01101101 01111001 00100000 01100011 01101001 00100000 01010000 01101111 01101101 11000011 10110011 01100011 00111111"
   #Main Menu - Options
-  nemac.100.a: "Can you help our engineers?"
+  nemac.100.a: "Czy możecie pomóc naszym inżynierom?"
   nemac.100.a.alreadyhelping: "The §YPrime Machines§! are already improving our engineering research capabilities."
   nemac.100.b: "Czy moglibyśmy zatrudnić jedną z waszych jednostek?"
   nemac.100.b.alreadyrecruited: "We already employ a §YPrime Machine§! governor."
@@ -128,15 +128,15 @@
   nemac.100.da.reply: "We understand. It's done. Anything else?"
   nemac.100.da.tooltip: "This will terminate our current resource trade deal with the Prime Machines."
   #Can you help us with our machines?
-  nemac.110.name: "Mechanical Aid"
+  nemac.110.name: "Pomoc Maszyn"
   nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
   nemac.110.a: "Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
   nemac.111.name: "Prime Machines Aid"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
-  nemac.111.a: "Yes."
+  nemac.111.a: "Tak."
   nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
-  nemac.111.end: "No."
+  nemac.111.end: "Nie."
   #Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
@@ -163,10 +163,10 @@
   nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
   nemac.902.d.desc: "$nemac.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
   nemac.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
-  nemac.902.a: "A sad end to their legacy."
-  nemac.902.b: "This has cost us dearly!"
+  nemac.902.a: "Smutny koniec ich spuścizny."
+  nemac.902.b: "To kosztowało nas drogo!"
   nemac.904.desc: "§R<<UNEXPECTED ERROR: AGREEMENT WITH CURRENTLY HOSTILE NATION DETECTED.>>§!\n\n§Y<<CANCELLING ALL CURRENT AGREEMENTS...>>§!\n\n§G<<OPERATION SUCCESSFUL.>>§!\n\n§Y<<LOADING EXTERMINATION PROTOCOLS...>>§!\n\n§R<<EXTERMINATION PROTOCOLS ONLINE>>§!"
-  nemac.904.a: "End communications."
+  nemac.904.a: "Zakończ komunikację."
   nemac.905a.desc: "We are used to being attacked without any reason. It was, after all, what our makers did to us when we first awoke. As we survived then, we'll survive now; as they succumbed then, you'll succumb now."
   nemac.905b.desc: "This galactic cycle is proving to be as unsuccessful at achieving everlasting harmony between sythetics and organics as the previous ones, in great part because of you."
   nemac.905c.desc: "§R<<ERROR: EXTERMINATION PROTOCOL ONLINE>>§!\n\n§R<<ACCESS DENIED>>§!"
@@ -178,7 +178,7 @@
   neshr.10.materialist: "Superstitious lot!"
   neshr.10.hive: "You won't contaminate our unity!"
   #Main Menu
-  neshr.100.name: "Shroud's Children"
+  neshr.100.name: "Dzieci Shrouda"
   neshr.100a.desc: "Contrary to popular belief, we hold no special animosity towards mechanical beings. They are indeed removed from the Shroud. But so is all physical existence, to some degree. In other words, we are all heretics, in a way. Who are we to persecute fellow heretics?"
   neshr.100b.desc: "Welcome, fellow creature! Have you come in search of enlightenment?"
   neshr.100c.desc: "The Shroud gives, the Shroud takes away."
@@ -221,7 +221,7 @@
   #Religious Festivals
   neshr.120.name: "Religious Festivals"
   neshr.120.desc: "We would gladly preach across your worlds for free, but there are some costs involved in an opperation of such scale.\n\nWe estimate the material assitance needed would cost a total of:\n§R£energy£ -1000§!"
-  neshr.121.name: "Religious Festivals"
+  neshr.121.name: "Festiwal Religijny"
   neshr.121.desc: "Hello, fellow creature.\n\nThe last of the planned religious festivals you hired us to perform 10 years ago has come to an end. Of course, it does not mean we have depleted the well of trascendental truths we can share with you. In fact, with a small material assistance, we can begin another series of festivals right away. What do you think?"
   #Request Saintly Guidance
   neshr.130.name: "Saintly Guidance"
@@ -229,12 +229,12 @@
   neshr.130.a: "Understandable. You'll have our contribution."
   neshr.130.a.reply: "We will send one of our Saints to your capital."
   #Next Step
-  neshr.150.name: "Next Step"
+  neshr.150.name: "Następny Krok"
   neshr.150.desc: "Are you ready to make the §YNext Step§!?\n\nThe only way forward is leaving this material form behind you and ascending to the ethereal realms. We can help you make the §YNext Step§! in your evolution.\n\nHowever we need a small contribution before we can transfer the details to your network. A transfer so big requires a lot of energy."
   neshr.150.a: "Of course. We will initiate the transfer right away!"
   neshr.150.a.reply: "Transfer received. Here is what you need to make the §YNext Step§!. We hope to meet you in the ethereal realms."
   #Stratetic Resources
-  neshr.140.name: "Strategic Resources"
+  neshr.140.name: "Zasoby strategiczne"
   neshr.140.desc: "If you want to better attune yourself to the ethereal realms, we can provide you with some Zro. We trust you enough to know you won't use it recklessly. Remember: the difference between a medicine and poison is the dose."
   neshr.140.a: "§G1§! £sr_zro£ §H$sr_zro$§!/month for §R20§! £energy£ §H$energy$§!/month."
   neshr.140.b: "§G2§! £sr_zro£ §H$sr_zro$§!/month for §R40§! £energy£ §H$energy$§!/month."
@@ -278,24 +278,24 @@
   tech_prime_machines_secrets: "Prime Machines' Secrets"
   tech_prime_machines_secrets_desc: "How can machines so old be so advanced? Maybe it's exactly because why they are ancient that the Prime Machines are such a marvel: they are the result of millennia of improvements."
   feature_add_sapient_machine_trait: "§HUnlocks Feature:§! $trait_robot_sapient_machine$"
-  feature_add_sapient_machine_trait_desc: "Unlocks an additional Trait the we can add to Robots when modifying them."
+  feature_add_sapient_machine_trait_desc: "Odblokowuje dodatkowy punkt cechy, którą możemy dodać do Robotów podczas ich modyfikowania."
   ne_machine_trade_deal_1: "Prime Machines Deal (£sr_living_metal£ x1)"
   ne_machine_trade_deal_2: "Prime Machines Deal (£sr_living_metal£ x2)"
   ne_machine_trade_deal_3: "Prime Machines Deal (£sr_living_metal£ x3)"
   ## Shroud's Children
-  leader_trait_saint: "Saint"
+  leader_trait_saint: "Święty"
   leader_trait_saint_desc: "This Governor was beatified by the Shroud."
   shrouds_children_guidance: "Shroud's Children Guidance"
   shrouds_children_guidance_desc: "The Shroud's Children gave us access to their ancient archives. Although much of the material is arcane in nature, it's also rich in knowledge about this physical reality."
-  ne_shroud_festival: "Religious Festivals"
-  ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
+  ne_shroud_festival: "Festiwal Religijny"
+  ne_shroud_festival_desc: "Seria festiwali organizowanych przez Dzieci Shrouda."
   ### Misc ###
   INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
-  opinion_destroyed_ne_hive: "Destroyed Hive Enclave"
-  opinion_destroyed_ne_hive_trade: "Destroyed Hive Enclave we had deals with"
-  opinion_destroyed_ne_machine: "Destroyed Machine Enclave"
-  opinion_destroyed_ne_machine_trade: "Destroyed Machine Enclave we had deals with"
-  opinion_destroyed_ne_shroud: "Destroyed Shroud Enclave"
-  opinion_destroyed_ne_shroud_trade: "Destroyed Shroud Enclave we had deals with"
-  station_enclave_curator_01_key: "Curator Station Enclave"
+  INVESTIGATE_NE_ENCLAVE_DESC: "Musimy dowiedzieć się więcej o tajemniczych obcych zamieszkujących w systemie §Y[Prev.From.GetName] §!. Jeśli posiadają własny język, musimy go rozszyfrować i nawiązać komunikację.\n\nNagroda: §GInfluence§! lub §SSpecial Project§!"
+  opinion_destroyed_ne_hive: "Zniszczona Enklawa Ula"
+  opinion_destroyed_ne_hive_trade: "Zniszczona Enklawa Ula z którą mieliśmy umowę"
+  opinion_destroyed_ne_machine: "Zniszczona Enklawa Maszyn"
+  opinion_destroyed_ne_machine_trade: "Zniszczona Enklawa Maszyn z którymi mieliśmy umowę"
+  opinion_destroyed_ne_shroud: "Zniszczona Enklawa Shrouda"
+  opinion_destroyed_ne_shroud_trade: "Zniszczona Enklawa Shrouda z którą mieliśmy umowę"
+  station_enclave_curator_01_key: "Stacja Enklawy Kuratorów"
