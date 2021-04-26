@@ -176,13 +176,13 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "ne_version"
 				font = "cg_16b"
-				text = "New Enclaves v2.0.0"
+				text = "New Enclaves v2.1.0"
 				position = { x= -409 y = -58  }
 				maxWidth = 300
 				maxHeight = 20
 				fixedSize = yes
 				format = left
-				tooltip = "Commit: 6e1c539"
+				tooltip = "Commit: 3cc6581"
 			}
 			instantTextBoxType = {
 				name = "version"
