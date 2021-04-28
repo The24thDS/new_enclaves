@@ -1,23 +1,23 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
-  ne_back: "What else did you have to offer?"
+  ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
   #Hive Enclave
-  civic_ancient_hive: "Ancient Hive"
-  civic_ancient_hive_desc: "Ancient Hive"
-  gov_ne_hive: "Hive Enclave"
-  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
-  ne_hive_government: "Hive Enclave"
-  ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
-  RT_AWAKENED: "Awakened"
+  civic_ancient_hive: "Mente Colmena"
+  civic_ancient_hive_desc: "Colmena Anciana"
+  gov_ne_hive: "Enclave Colmena"
+  gov_ne_hive_desc: "Es imposible datar como de antigua la colmena es. Quizá tan antigua como el universo es."
+  ne_hive_government: "Enclave Colmena"
+  ne_hive_government_desc: "§Es imposible datar como de antigua la colmena es. Quizá tan antigua como el universo es.§!"
+  RT_AWAKENED: "Despertado"
   #Machine Enclave
-  civic_autonomous_node: "Autonomous Node"
+  civic_autonomous_node: "Nodo Autónomo"
   civic_autonomous_node_desc: ""
-  gov_ne_machine: "Machine Enclave"
-  gov_ne_machine_desc: "The remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise."
-  ne_machine_government: "Machine Enclave"
-  ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
+  gov_ne_machine: "Enclave Máquina"
+  gov_ne_machine_desc: "Los restos de una inteligencia artificial anciana, separada del colectivo de las máquinas antes de su eventual fallecimiento."
+  ne_machine_government: "Enclave Máquina"
+  ne_machine_government_desc: "§Los restos de una inteligencia artificial anciana, separada del colectivo de las máquinas antes de su eventual fallecimiento.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
   #Shroud Enclave
   civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
