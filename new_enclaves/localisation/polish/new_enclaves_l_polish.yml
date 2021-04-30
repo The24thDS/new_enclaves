@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -47,7 +47,7 @@
   #Main Menu - Options
   nehiv.100.a: "Czy możesz pomóc naszym socjologom?"
   nehiv.100.a.alreadyhelping: "Uniwersalny Umysł Zbiorowy już pomaga naszym socjologom."
-  nehiv.100.b: "We are interested in your... \"conformity\" techniques."
+  nehiv.100.b: "Jesteśmy zainteresowani waszą... techniką „konformizmu”."
   nehiv.100.b.opinion: "Wymagane §YUniversal Hive§! aby mieć:\n£opinion£Opinia +50"
   nehiv.100.b.alreadyhired: "We're already using the Consensus Pheromones provided by the Universal Hive."
   nehiv.100.c: "Naszemu rojowi przydałby się jeden z waszych dronów."
@@ -65,7 +65,7 @@
   nehiv.111.end: "Nie teraz."
   #Consensus pheromones
   nehiv.120.name: "Feromony Konsensusu"
-  nehiv.120.desc: "\"Conformity techiniques\"? What a strange name. We have no such things.\n\nWe do, however, have what we call \"consensus pheromones\". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ -5000§!"
+  nehiv.120.desc: "\"Techniką konformizmu \"? Ależ dziwna nazwa. Nie mamy takich rzeczy.\n\nMamy jednak to, co nazywamy \"feromony konsensusu\". Są one specjalnie zaprojektowane w celu ograniczenia dewiacji i rozprzestrzeniania harmonii między istotami organicznymi.\n\nPonieważ muszą być starannie zaprojektowane, aby oddziaływać na każdą istotę z twojego imperium, niezależnie od tego jakie gatunku oni są, będziemy wymagać pokrycia wszystkich kosztów ich masowej produkcji.\n\nAby rozpocząć ich produkcję, będziemy potrzebować:\n§R£energy£-5000 §!"
   nehiv.120.a: "Niewielka cena."
   nehiv.120.a.reply: "Nie masz pojęcia, jak małe."
   nehiv.121.name: "Feromony Konsensusu Umowa"
