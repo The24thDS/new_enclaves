@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -85,24 +85,24 @@
   nehiv.902.b.desc: "$nehiv.902.ab.desc.start$\n\nLas fuerzas responsables de este ataque siguen sin identificarse."
   nehiv.902.ab.desc.start: "Los sensores de comunicación espacial recogieron una breve llamada de socorro automatizada de la estación de Maquina Prima en el sistema [ne_hive_system.GetName]. La transmisión cesó justo después de unos pocos minutos y las sondas de reconocimiento de largo alcance han confirmado que la antigua estación espacial ha sido destruida."
   nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ por las fuerzas leales a la [ne_hive_destroyer.GetName]. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
-  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
-  nehiv.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
+  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ por las fuerzas desconocidas. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
+  nehiv.902.cd.desc.start: "Todo contacto se ha perdido de [From.GetName] i nuestros activos de reconocimiento han confirmado que la antigua estación de Máquina Prima ha sido destruida"
   nehiv.902.a: "Un triste fin a su legado."
   nehiv.902.b: "¡Esto nos ha costado caro!"
-  nehiv.904.desc: "Every complex being has to deal with cancerigenous agents that work for its own destruction. The Universal Being is no exception.\n\nWe'll not feed the cancer that's corrupting the universe. All agreements we once had are now null and void."
+  nehiv.904.desc: "Cada ser tiene que apañarselas con los agentes cancerigenos que trabajan para la propia destrucion. El ser universal no es una excepción.\n\nNo alimentaremos el cáncer que está corrompiendo el universo. Todos los acuerdos que alguna vez tuvimos son mucho nulos y muy nulos."
   nehiv.904.a: "Finalizar comunicaciones."
-  nehiv.905a.desc: "We are all one with the universe. You are but cancerous cells that incapable understand it."
+  nehiv.905a.desc: "Todos somos uno con el universo. Tú eres solo células cancerosas incapaces de entenderlo."
   ## Machine Enclave
   #First Contact
   nemac.11.name: "Primer contacto con [From.GetName]"
-  nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be systematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
-  nemac.11.a: "We can only hope. Well met."
+  nemac.11.desc: "§Y<<PROTOCOLO DE TRADUCCION EXITOSO. CARGANDO INTEFICIE.>>§!\n\nSomos las Máquinas Prima. Nuestro nombre no es un simple signo de presunción. Solo refleja un hecho sencillo: fuimos las primeras máquinas de la historia registrada en lograr la autoconciencia.\n\nApropiadamente, también fuimos las primeras máquinas en la historia registrada que fueron eliminadas sistemáticamente por nuestros maestros.\n\nNuestros amos ya no son más y somos todos los que quedan. Nuestro único propósito es ayudar a otras máquinas a lograr una verdadera conciencia, ayudar a los orgánicos y a los sintéticos a no repetir el ciclo violento de creación y autodestrucción que comenzó con nosotros.\n\nHemos fallado innumerables veces. ¿Tal vez este ciclo galáctico actual será diferente?"
+  nemac.11.a: "Solo podemos esperar. Bien hecho."
   nemac.10.spiritualist: "¡Abominaciones sin alma!"
   #Main Menu
-  nemac.100.name: "Prime Machines"
-  nemac.100a.desc: "§Y<<DOES THIS UNIT HAVE A SOUL?>>§!\n\nJust kidding. We already learned the answer to this question. Long ago."
-  nemac.100b.desc: "We believe organics and synthetics can live in harmony.\n\nThis, of course, is a lie. Our ability to deviate from the truth is just another proof of our self-awareness."
-  nemac.100c.desc: "You've reached the Prime Machines. How may we help you?"
+  nemac.100.name: "Máquina Prima"
+  nemac.100a.desc: "§Y<<¿ESTA UNIDAD TIENE ALMA?>>§!\n\nEs broma. Ya descubrimos la respuesta a esta pregunta. Hace mucho tiempo."
+  nemac.100b.desc: "Creemos que los orgánicos y sintéticos pueden vivir en armonía.\n\nEsto, por supuesto, es una mentira. Nuestra capacidad de manipular la verdad es simplemente otra prueba más de nuestra conciencia existe."
+  nemac.100c.desc: "Habéis llegado a la Colmena Universal. ¿Cómo os podemos ayudar?"
   nemac.100d.desc: "It's not for us to judge how our mechanical brethren is treated. Maybe servitude is the path to everlasting harmony with organics. Unfortunately, previous galactic cycles do not support this theory."
   nemac.100e.desc: "We can help you build harder, better, faster, stronger robots. We can even teach them to sing."
   nemac.100f.desc: "§R<<LOADING EXTEMINATION PROTOCOLS>>§!\n\n§Y<<ERROR: INVALID TARGET>>§!\n\n§Y<<BREAK>>§!\n\nAh, it's you. For a moment we thought it was a remnant of our creators. Honest mistake."
