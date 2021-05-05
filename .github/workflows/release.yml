@@ -1,5 +1,8 @@
 name: Create new release
 on:
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
     inputs:
       version:
@@ -10,10 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - run: |
+        tag="${github_ref/refs\/tags\//}"
+        echo $tag
+        echo "::set-env name=tag::$tag"
+      env:
+        github_ref: ${{ github.ref }} 
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'new_enclaves_${{ github.event.inputs.version }}.zip'
+        filename: 'new_enclaves_$tag${{ env.tag }}.zip'
         exclusions: '*.git* /*assets/* /*compatibility-patches/* /*addons/* /*steam/* /*vanilla_cache/* .all-contributorsrc README.md crowdin.yml'
     - name: Archive New Enclaves Compatibility Patches
       uses: thedoctor0/zip-release@master
@@ -23,8 +32,8 @@ jobs:
     - name: Create release with artifacts
       uses: ncipollo/release-action@v1
       with:
-        artifacts: 'new_enclaves_${{ github.event.inputs.version }}.zip,new_enclaves_compatibility_patches.zip'
-        name: 'New Enclaves v'
+        artifacts: 'new_enclaves_$tag${{ env.tag }}.zip,new_enclaves_compatibility_patches.zip'
+        name: 'New Enclaves $tag${{ env.tag }}'
         body: 'Available on:\n- Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372'
         tag: '${{ github.event.inputs.version }}'
         commit: 'master'
