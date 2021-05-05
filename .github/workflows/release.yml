@@ -18,7 +18,8 @@ jobs:
         echo $tag
         echo "::set-env name=tag::$tag"
       env:
-        github_ref: ${{ github.ref }} 
+        github_ref: ${{ github.ref }}
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
