@@ -1,6 +1,10 @@
 name: Create new release
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,7 +13,7 @@ jobs:
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'new_enclaves_v.zip'
+        filename: 'new_enclaves_${{ github.event.inputs.version }}.zip'
         exclusions: '*.git* /*assets/* /*compatibility-patches/* /*addons/* /*steam/* /*vanilla_cache/* .all-contributorsrc README.md crowdin.yml'
     - name: Archive New Enclaves Compatibility Patches
       uses: thedoctor0/zip-release@master
@@ -19,8 +23,10 @@ jobs:
     - name: Create release with artifacts
       uses: ncipollo/release-action@v1
       with:
-        artifacts: 'new_enclaves_v.zip,new_enclaves_compatibility_patches.zip'
+        artifacts: 'new_enclaves_${{ github.event.inputs.version }}.zip,new_enclaves_compatibility_patches.zip'
         name: 'New Enclaves v'
         body: 'Available on:\n- Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372'
+        tag: '${{ github.event.inputs.version }}'
+        commit: 'master'
         draft: true
         token: ${{ secrets.GITHUB_TOKEN }}
