@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ contains(github.ref, 'refs/tags') }}
     steps:
     - uses: actions/checkout@master
     - run: |
@@ -23,7 +24,7 @@ jobs:
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'new_enclaves_$tag${{ env.tag }}.zip'
+        filename: 'new_enclaves_${{ env.tag }}.zip'
         exclusions: '*.git* /*assets/* /*compatibility-patches/* /*addons/* /*steam/* /*vanilla_cache/* .all-contributorsrc README.md crowdin.yml'
     - name: Archive New Enclaves Compatibility Patches
       uses: thedoctor0/zip-release@master
@@ -33,10 +34,10 @@ jobs:
     - name: Create release with artifacts
       uses: ncipollo/release-action@v1
       with:
-        artifacts: 'new_enclaves_$tag${{ env.tag }}.zip,new_enclaves_compatibility_patches.zip'
-        name: 'New Enclaves $tag${{ env.tag }}'
-        body: 'Available on:\n- Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372'
-        tag: '${{ github.event.inputs.version }}'
-        commit: 'master'
+        artifacts: 'new_enclaves_${{ env.tag }}.zip,new_enclaves_compatibility_patches.zip'
+        name: 'New Enclaves ${{ env.tag }}'
+        body: 'Available on: - Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372'
+        #tag: '${{ github.event.inputs.version }}'
+        #commit: 'master'
         draft: true
         token: ${{ secrets.GITHUB_TOKEN }}
