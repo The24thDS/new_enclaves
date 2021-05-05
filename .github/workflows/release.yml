@@ -1,10 +1,5 @@
 name: Create new release
 on:
-  push:
-    branches:
-    - master
-    tags:
-    - '*'
   workflow_dispatch:
 jobs:
   build:
@@ -22,7 +17,7 @@ jobs:
         filename: 'new_enclaves_compatibility_patches.zip'
         path: 'compatibility-patches/'
     - name: Create release with artifacts
-    - uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@v1
       with:
         artifacts: 'new_enclaves_v.zip,new_enclaves_compatibility_patches.zip'
         name: 'New Enclaves v'
