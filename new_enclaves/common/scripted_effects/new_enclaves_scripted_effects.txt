@@ -31,6 +31,30 @@ remove_all_ne_machine_trade_deal = {
 		remove_modifier = ne_machine_trade_deal_3
 	}
 }
+create_prime_machines_species = {
+	if = {
+		limit = {
+			has_synthethic_dawn = yes
+		}
+		create_machine_species = yes
+	}
+	else = {
+		create_machine_species = {
+			CLASS = "ROBOT"
+		}
+	}
+}
+create_machine_species = {
+	create_species = {
+		name = random
+		class = $CLASS|MACHINE$
+		portrait = random
+		traits = {
+			trait = trait_robot_sapient_machine
+			trait = trait_robot_emotion_emulators
+		}
+	}
+}
 
 # Shroud
 remove_ne_shroud_trade_deal = {

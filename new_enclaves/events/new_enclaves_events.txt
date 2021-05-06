@@ -249,3 +249,30 @@ country_event = {
 		}
 	}
 }
+
+# TODO: remove in a future version
+country_event = {
+	id = ne.1100
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		event_target:ne_machine_country = {
+			NOT = { has_country_flag = ne_machine_fixed }
+		}
+		has_synthethic_dawn = no
+	}
+
+	immediate = {
+		event_target:ne_machine_country = {
+			set_country_flag = ne_machine_fixed
+			owner_main_species = {
+				change_species_portrait = robot1
+			}
+			leader = {
+				change_leader_portrait = robot1
+			}
+		}
+	}
+}

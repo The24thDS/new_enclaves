@@ -17,6 +17,7 @@ on_yearly_pulse = {
 on_monthly_pulse_country = {
 	events = {
 		ne.17
+		ne.1100 # TODO: remove in a future version
 	}
 }
 

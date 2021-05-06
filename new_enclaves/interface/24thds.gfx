@@ -1,6 +1,6 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_24thds_logo"
-		texturefile = "gfx/interface/icons/logo_24th_ds_modding_studio.dds"
+		name = "GFX_rmg_logo"
+		texturefile = "gfx/interface/icons/logo_rmg.dds"
 	}
 }

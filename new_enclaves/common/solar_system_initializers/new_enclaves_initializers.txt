@@ -354,15 +354,7 @@ ne_machine_init = {
 				limit = {
 					NOT = { exists = event_target:ne_machine_country }
 				}
-				create_species = {
-					name = random
-					class = "MACHINE"
-					portrait = random
-					traits = {
-						trait = trait_robot_sapient_machine
-						trait = trait_robot_emotion_emulators
-					}
-				}
+				create_prime_machines_species = yes
 				create_country = {
 					name = "NAME_NEMAC_Country"
 					type = ne_enclave
@@ -395,6 +387,7 @@ ne_machine_init = {
 				last_created_country = {
 					set_country_flag = ne_machine_country
 					set_country_flag = ne_country
+					set_country_flag = ne_machine_fixed # TODO: remove in a future version
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_machine_country
 					create_fleet = {
