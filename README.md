@@ -1,6 +1,6 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-dark.svg?style=tound-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-dark.svg?style=tound-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -79,6 +79,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://crowdin.com/profile/jonimega"><img src="https://www.gravatar.com/avatar/74408fe3bd2949e0d45ff4fd9145a54a?s=260&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png" width="100px;" alt=""/><br /><sub><b>JoniMega</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
     <td align="center"><a href="https://crowdin.com/profile/mrxzx"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14725286/large/666c00cfd2772116f9adee43726d6b85.png" width="100px;" alt=""/><br /><sub><b>MRXZX</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
     <td align="center"><a href="https://steamcommunity.com/id/imca"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ba/ba4eb175f1d35a50eb7b05bbad90673778047f04_full.jpg" width="100px;" alt=""/><br /><sub><b>SIVA Fox</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://steamcommunity.com/id/ChooMcoo/"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1526200/1b9d00f090479d24604d15b3b8a385ad7de6433d.gif" width="100px;" alt=""/><br /><sub><b>ChooMcoo</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
