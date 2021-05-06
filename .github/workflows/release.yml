@@ -1,30 +1,30 @@
 name: Create new release
 on:
-  push:
-    tags:
-      - 'v*'
-#   workflow_dispatch:
-#     inputs:
-#       version:
-#         description: 'Version'
-#         required: true
+#   push:
+#     tags:
+#       - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.ref, 'refs/tags') }}
+#     if: ${{ contains(github.ref, 'refs/tags') }}
     steps:
     - uses: actions/checkout@master
-    - run: |
-        tag="${github_ref/refs\/tags\//}"
-        echo $tag
-        echo "::set-env name=tag::$tag"
-      env:
-        github_ref: ${{ github.ref }}
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+#     - run: |
+#         tag="${github_ref/refs\/tags\//}"
+#         echo $tag
+#         echo "::set-env name=tag::$tag"
+#       env:
+#         github_ref: ${{ github.ref }}
+#         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
-        filename: 'new_enclaves_${{ env.tag }}.zip'
+        filename: 'new_enclaves_${{ github.event.inputs.version }}.zip'
         exclusions: '*.git* /*assets/* /*compatibility-patches/* /*addons/* /*steam/* /*vanilla_cache/* .all-contributorsrc README.md crowdin.yml'
     - name: Archive New Enclaves Compatibility Patches
       uses: thedoctor0/zip-release@master
@@ -34,10 +34,10 @@ jobs:
     - name: Create release with artifacts
       uses: ncipollo/release-action@v1
       with:
-        artifacts: 'new_enclaves_${{ env.tag }}.zip,new_enclaves_compatibility_patches.zip'
-        name: 'New Enclaves ${{ env.tag }}'
+        artifacts: 'new_enclaves_${{ github.event.inputs.version }}.zip,new_enclaves_compatibility_patches.zip'
+        name: 'New Enclaves ${{ github.event.inputs.version }}'
         body: 'Available on: - Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372'
-        #tag: '${{ github.event.inputs.version }}'
-        #commit: 'master'
+        tag: '${{ github.event.inputs.version }}'
+        commit: 'master'
         draft: true
         token: ${{ secrets.GITHUB_TOKEN }}
