@@ -1,22 +1,22 @@
-﻿l_russian:
-
-  ne_enclave: "Enclave"
-  ne_back: "What else did you have to offer?"
+---
+l_english:
+  ne_enclave: "Анклав"
+  ne_back: "Что еще вы предлагаете?"
   ### Governments ###
   #Hive Enclave
-  civic_ancient_hive: "Ancient Hive"
-  civic_ancient_hive_desc: "Ancient Hive"
-  gov_ne_hive: "Hive Enclave"
-  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
-  ne_hive_government: "Hive Enclave"
-  ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
-  RT_AWAKENED: "Awakened"
+  civic_ancient_hive: "Древний улей"
+  civic_ancient_hive_desc: "Древний улей"
+  gov_ne_hive: "Анклав-улей"
+  gov_ne_hive_desc: "Сколько лет этому улью, определить невозможно. Он может быть таким же старым, как вселенная."
+  ne_hive_government: "Анклав-улей"
+  ne_hive_government_desc: "§Сколько лет этому улью, определить невозможно. Он может быть таким же старым, как вселенная.§!"
+  RT_AWAKENED: "Пробуждение"
   #Machine Enclave
-  civic_autonomous_node: "Autonomous Node"
+  civic_autonomous_node: "Анклав машин"
   civic_autonomous_node_desc: ""
-  gov_ne_machine: "Machine Enclave"
-  gov_ne_machine_desc: "The remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise."
-  ne_machine_government: "Machine Enclave"
+  gov_ne_machine: "Анклав машин"
+  gov_ne_machine_desc: "Остатки древнего искусственного интеллекта, отделенного от машинного коллектива до его окончательной гибели."
+  ne_machine_government: "Анклав машин"
   ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
   #Shroud Enclave
