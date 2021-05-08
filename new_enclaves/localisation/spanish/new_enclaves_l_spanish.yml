@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -130,9 +130,9 @@
   #Can you help us with our machines?
   nemac.110.name: "Ayuda mecánica"
   nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
-  nemac.110.a: "Seems good to us."
-  nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
-  nemac.111.name: "Prime Machines Aid"
+  nemac.110.a: "Nos parece bueno el trato."
+  nemac.110.a.reply: "§Y<<PROCESANDO COMPRA: COMPRA COMPLETADA>>§!"
+  nemac.111.name: "Ayuda de Máquina Prima"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Sí."
   nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
