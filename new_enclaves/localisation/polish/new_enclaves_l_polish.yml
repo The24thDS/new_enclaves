@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -69,9 +69,9 @@
   nehiv.120.a: "Niewielka cena."
   nehiv.120.a.reply: "Nie masz pojęcia, jak małe."
   nehiv.121.name: "Feromony Konsensusu Umowa"
-  nehiv.121.desc: "Today we sent the last batch of the Consensus Pheromones produced 10 years ago. I'm sure you didn't even realize they were still active - which proves how effective they were at creating harmonious and stable societies.\n\nWe can start producing another batch right now if we have the right resources. What do you think?"
+  nehiv.121.desc: "Dziś wysłaliśmy ostatnią partię feromonów konsensusu którą wyprodukowaliśmy 10 lat temu. Jestem pewien, że nawet nie zdaliście sobie sprawy, że są nadal były aktywne - co dowodzi, jak skuteczne są one w tworzeniu harmonijnych i stabilnych społeczeństw.\n\nMożemy zacząć produkować kolejną partię, jeśli będziemy mieć odpowiednie zasoby. Co sądzisz?"
   nehiv.121.a: "Byłoby to najbardziej wskazane."
-  nehiv.121.a.reply: "A wise choice. You'll soon see the effects. Or, better yet, won't."
+  nehiv.121.a.reply: "Mądry wybór. Wkrótce zobaczysz efekty. Lub, jeszcze lepiej, nie."
   nehiv.121.b: "Nie tym razem."
   #Hiring Drone
   nehiv.130.name: "Uniwersalny dron"
@@ -149,20 +149,20 @@
   nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Zasoby strategiczne"
-  nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
-  nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R20§! £energy£ §H$energy$§!/month."
-  nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R40§! £energy£ §H$energy$§!/month."
-  nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R60§! £energy£ §H$energy$§!/month."
-  nemac.141.desc: "We hope it will be as useful to you as it's useful to us."
+  nemac.140.desc: "Żywy metal tworzący nasze ciała może być wykorzystywany na niezliczone różne sposoby. W przeciwieństwie do nas, jego właściwości nie mają sobie równych w galaktyce, są jednocześnie są niezwykle plastyczny i niewiarygodnie silny.\n\nUfamy [Root.GetName] na tyle, aby podzielić się naszym źródłem tego cennego materiału. Możemy uzgodnić jak długo będziecie chcieli otrzymywać ten zasób. Oczywiście w każdej chwil możecie anulować tę umowę."
+  nemac.140.a: "§G1§! £sr_living_metal£§H$sr_living_metal$§!/miesiąc za §R20§! £energia£§H$energy$§!/miesiąc."
+  nemac.140.b: "§G1§! £sr_living_metal£§H$sr_living_metal$§!/miesiąc za §R20§! £energia£§H$energy$§!/miesiąc."
+  nemac.140.c: "§G1§! £sr_living_metal£§H$sr_living_metal$§!/miesiąc za §R20§! £energia£§H$energy$§!/miesiąc."
+  nemac.141.desc: "Mamy nadzieję, że będzie to dla was równie przydatne, jak dla nas."
   #Prime Machines destroyed or attacked
   nemac.901.name: "Prime Machine Station Destroyed"
-  nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
-  nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_machine_destroyer.GetName] were behind this attack."
-  nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nThe forces responsible for this attack remain unidentified."
-  nemac.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Prime Machine station in the [ne_machine_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
-  nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
-  nemac.902.d.desc: "$nemac.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
-  nemac.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
+  nemac.901.desc: "Po zniszczeniu starożytnej stacji Maszyn w systemie [ne_machine_system.GetName], nasze zdolne siły przeczesały obszar, który był okupywany przez przez maszyny w celu znalezienia czegoś cennego. Udało im się odzyskać kilka fragmentów pamięci z baz danych Maszyn, które powinny być wielkim bonusem w naszych badaniach."
+  nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nŚlady jonów sugerują, że siły [ne_machine_destroyer.GetName] stoją za tym atakiem."
+  nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nSiły odpowiedzialne za ten atak pozostają niezidentyfikowane."
+  nemac.902.ab.desc.start: "Dalekie systemy komunikacji kosmicznej odebrały krótkie zautomatyzowane połączenie alarmowe z stacji Maszyn w systemie [ne_machine_system.GetName]. Transmisja ustała po zaledwie kilku minutach, a systemy do odbioru dalekiego zasięgu potwierdziły, że starożytna stacja kosmiczna została zniszczona."
+  nemac.902.c.desc: "$nemac.902.cd.desc.start$ przez siły lojalne w stosunku do [ne_machine_destroyer.GetName]. Niestety oznacza to również, że straciliśmy cały dostęp do cennych usług Maszyn."
+  nemac.902.d.desc: "$nemac.902.cd.desc.start$ przez nieznane siły. Oznacza to niestety, że straciliśmy cały dostęp do cennych usług Maszyn."
+  nemac.902.cd.desc.start: "Wszystkie kontakty zostały utracone z [From.GetName], a nasi zwiadowcy potwierdzili, że starożytna stacja Maszyn została zniszczona"
   nemac.902.a: "Smutny koniec ich spuścizny."
   nemac.902.b: "To kosztowało nas drogo!"
   nemac.904.desc: "§R<<UNEXPECTED ERROR: AGREEMENT WITH CURRENTLY HOSTILE NATION DETECTED.>>§!\n\n§Y<<CANCELLING ALL CURRENT AGREEMENTS...>>§!\n\n§G<<OPERATION SUCCESSFUL.>>§!\n\n§Y<<LOADING EXTERMINATION PROTOCOLS...>>§!\n\n§R<<EXTERMINATION PROTOCOLS ONLINE>>§!"
