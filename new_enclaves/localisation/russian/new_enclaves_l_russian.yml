@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   ne_enclave: "Анклав"
   ne_back: "Что еще вы мне предлагаете?"
   ### Governments ###
@@ -100,8 +100,8 @@
   nemac.10.spiritualist: "Бездушные мерзости!"
   #Main Menu
   nemac.100.name: "Главные Машины"
-  nemac.100a.desc: "§Y<<DOES THIS UNIT HAVE A SOUL?>>§!\n\nJust kidding. We already learned the answer to this question. Long ago."
-  nemac.100b.desc: "We believe organics and synthetics can live in harmony.\n\nThis, of course, is a lie. Our ability to deviate from the truth is just another proof of our self-awareness."
+  nemac.100a.desc: "§Y<<ЕСТЬ ЛИ У ЭТОЙ ЕДИНИЦЫ ДУША?>>§!\n\nПросто шучу. Мы уже узнали ответ на этот вопрос. Давным-давно."
+  nemac.100b.desc: "Мы верим, что органики и ситетика могут жить в гармонии.\n\nЭто, конечно, ложь. Наша способность отклоняться от истины-это еще одно доказательство нашего самосознания."
   nemac.100c.desc: "Вы достигли Главных Машин. Как мы можем вам помочь?"
   nemac.100d.desc: "It's not for us to judge how our mechanical brethren is treated. Maybe servitude is the path to everlasting harmony with organics. Unfortunately, previous galactic cycles do not support this theory."
   nemac.100e.desc: "Мы можем помочь вам построить сильных, лучших, быстрых, прочных роботов. Мы даже можем научить их петь.\n\nP.s: В оригинале, вместо \"...сильных, лучших, быстрых, прочных..\", написано \"...harder, better, faster, stronger...\", что является отсылкой к одноименной песне от группы \"Daft Punk\"."
