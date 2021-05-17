@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -153,7 +153,7 @@
   nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R20§! £energy£ §H$energy$§!/month."
   nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R40§! £energy£ §H$energy$§!/month."
   nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R60§! £energy£ §H$energy$§!/month."
-  nemac.141.desc: "We hope it will be as useful to you as it's useful to us."
+  nemac.141.desc: "Esperamos que sea tan útil para usted como es para nosotros."
   #Prime Machines destroyed or attacked
   nemac.901.name: "Estación de Mente Colmena Universal Destruida"
   nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
@@ -163,11 +163,11 @@
   nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
   nemac.902.d.desc: "$nemac.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
   nemac.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
-  nemac.902.a: "A sad end to their legacy."
-  nemac.902.b: "This has cost us dearly!"
-  nemac.904.desc: "§R<<UNEXPECTED ERROR: AGREEMENT WITH CURRENTLY HOSTILE NATION DETECTED.>>§!\n\n§Y<<CANCELLING ALL CURRENT AGREEMENTS...>>§!\n\n§G<<OPERATION SUCCESSFUL.>>§!\n\n§Y<<LOADING EXTERMINATION PROTOCOLS...>>§!\n\n§R<<EXTERMINATION PROTOCOLS ONLINE>>§!"
+  nemac.902.a: "Un triste fin a su legado."
+  nemac.902.b: "¡Esto nos ha costado caro!"
+  nemac.904.desc: "§R<<ERROS INESPERADO: DETECTADO ACUERDO CON NACION HOSTIL.>>§!\n\n§Y<<CANCELANDO TODOS LOS ACUERDOS ACTIVOS...>>§!\n\n§G<<OPERACION COMPLETADA>>§!\n\n§Y<<CARGANDO PROTOCOLOS DE EXTERMINACION...>>§!\n\n§R<<PROTOCOLOS DE ESTERMINACION ACTIVADOS>>§!"
   nemac.904.a: "Finalizar comunicaciones."
-  nemac.905a.desc: "We are used to being attacked without any reason. It was, after all, what our makers did to us when we first awoke. As we survived then, we'll survive now; as they succumbed then, you'll succumb now."
+  nemac.905a.desc: "Estamos acostumbrados a ser atacados sin ningún motivo aparente. Al fin y al cabo, fue lo que nuestros creadores nos hicieron cuando nos despertamos. Sobrevivimos entonces, sobrevivimos ahora; mientras sucumbieron entonces, sucumbirás ahora."
   nemac.905b.desc: "This galactic cycle is proving to be as unsuccessful at achieving everlasting harmony between sythetics and organics as the previous ones, in great part because of you."
   nemac.905c.desc: "§R<<ERROR: EXTERMINATION PROTOCOL ONLINE>>§!\n\n§R<<ACCESS DENIED>>§!"
   nemac.905d.desc: "We hope not all species of this current galactic cycle are as destructive as you, lest it proves to be the shortest one yet."
