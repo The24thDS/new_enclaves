@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -144,20 +144,20 @@
   nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Secretos Primos"
-  nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
+  nemac.130.desc: "§Y<<COMPLIMIENTO DETECTADO. CARGANDO PROTOCOLOS DE SEGUNDAS INTENCIONES...>>§!\n\nTu observación es verdadera. También se explica fácilmente: nuestros creadores nos engendraron bien y nos hemos mejorado a través de los siglos. Es dudoso que otras máquinas sean bastante comparables con nosotros.\n\nEstamos dispuestos a enseñarle cómo replicar nuestras cualidades. Por supuesto, necesitamos una compensación adecuada a cambio."
   nemac.130.a: "¡Trato!"
-  nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
+  nemac.130.a.reply: "§Yprima:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Recursos Estratégicos"
   nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
-  nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R20§! £energy£ §H$energy$§!/month."
-  nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R40§! £energy£ §H$energy$§!/month."
-  nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R60§! £energy£ §H$energy$§!/month."
+  nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/al mes por §R20§! £energy£ §H$energy$§!/mes."
+  nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/al mes por §R40§! £energy£ §H$energy$§!/mes."
+  nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/al mes por §R60§! £energy£ §H$energy$§!/mes."
   nemac.141.desc: "Esperamos que sea tan útil para usted como es para nosotros."
   #Prime Machines destroyed or attacked
   nemac.901.name: "Estación de Mente Colmena Universal Destruida"
-  nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
-  nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_machine_destroyer.GetName] were behind this attack."
+  nemac.901.desc: "Después de destruir la antigua estación Universal de la Colmena en el sistema de [ne_machine_system.GetName], nuestras capaces fuerzas peinaron el área, una vez ocupada, para encontrar algo valioso. Consiguieron recuperar varios fragmentos de memoria de las bases de datos de Prime Machines que deberían ser de gran ayuda para nuestra investigación."
+  nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nRestas de iones residuales sugieren que las fuerzas de [ne_machine_destroyer.GetName] estaban detrás de este ataque."
   nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nThe forces responsible for this attack remain unidentified."
   nemac.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Prime Machine station in the [ne_machine_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
   nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
@@ -181,7 +181,7 @@
   neshr.100.name: "Hijos del Velo"
   neshr.100a.desc: "Contrary to popular belief, we hold no special animosity towards mechanical beings. They are indeed removed from the Shroud. But so is all physical existence, to some degree. In other words, we are all heretics, in a way. Who are we to persecute fellow heretics?"
   neshr.100b.desc: "Welcome, fellow creature! Have you come in search of enlightenment?"
-  neshr.100c.desc: "The Shroud gives, the Shroud takes away."
+  neshr.100c.desc: "El Velo da y el Velo se lo lleva."
   neshr.100d.desc: "There are many planes of existence beyond this one. We should be happy we don't live in the worst one, just one particularly doomed to suffer."
   neshr.100e.desc: "I'm tired of this physical manifestation. Unfortunately, my true form may not be suitable to the sanity of weaker minds, so I must endure it."
   neshr.100f.desc: "The Shroud should not be dealt with lightly, lest it consumes all existence. With our guidance, we hope to never let it happen. Again."
