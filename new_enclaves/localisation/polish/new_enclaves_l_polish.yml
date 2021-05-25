@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -9,7 +9,7 @@
   gov_ne_hive: "Enklawa Ula"
   gov_ne_hive_desc: "Jest nie możliwym ustalenie jak stary jest ten umysł zbiorowy. Równie dobrze może być tak stary jak wszechświat."
   ne_hive_government: "Enklawa Ula"
-  ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
+  ne_hive_government_desc: "§Jest nie możliwym ustalenie jak stary jest ten umysł zbiorowy. Równie dobrze może być tak stary jak wszechświat.§!"
   RT_AWAKENED: "Przebudzony"
   #Machine Enclave
   civic_autonomous_node: "Węzeł Autonomiczny"
@@ -17,10 +17,10 @@
   gov_ne_machine: "Enklawa Maszyn"
   gov_ne_machine_desc: "Pozostałości starożytnej sztucznej inteligencji, rozdzielone od zbiorczej świadomości przed jej nieuniknionym upadkiem."
   ne_machine_government: "Enklawa Maszyn"
-  ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
+  ne_machine_government_desc: "§Pozostałości starożytnej sztucznej inteligencji, rozdzielone od zbiorczej świadomości maszyn przed jej nieuniknionym końcem.§!"
   RT_PRIME_CONSCIOUSNESS: "Główna Świadomość"
   #Shroud Enclave
-  civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
+  civic_priesthood_of_the_cycle: "Kapłaństwo cyklu"
   civic_priesthood_of_the_cycle_desc: ""
   gov_ne_shroud: "Enklawa Shrouda"
   gov_ne_shroud_desc: "Autonomiczny porządek religijny wtajemnicza do sekretów wyższego poziomu bytu."
@@ -32,7 +32,7 @@
   #First Contact
   nehiv.11.name: "Pierwszy kontakt z [From.GetName]"
   nehiv.11.desc: "Jesteśmy Uniwersalnym Umysłem Zbiorowym. Tak samo jak wy. I tak samo jak wszystko.\n\nMillenia temu, doszliśmy do prostej racji: cała galaktyka, nie, cały wszechświat jest jedną jednostką. Wszyscy jesteśmy częścią organizmu kosmicznego i musimy dążyć do współpracy.\n\nOd tego czasu pomagamy innym rasom żyć w harmonii - przynajmniej przez pewien czas, dopóki nie zginą. Dopiero wtedy, gdy wszyscy razem znajdziemy się w jednej wiecznej świadomości, będziemy mogli wreszcie spocząć."
-  nehiv.11.a: "Well met."
+  nehiv.11.a: "Co za spotkanie."
   #Main Menu
   nehiv.100.name: "Uniwersalny Ul"
   nehiv.100a.desc: "Staramy się służyć wszechświatu. Jesteś częścią wszechświata. Ergo, jesteśmy tutaj, aby ci służyć."
@@ -40,7 +40,7 @@
   nehiv.100c.desc: "Twoje ciało składa się z miliardów pojedynczych komórek pracujących w zgodzie. Co zrobić, jeśli my, złożone świadome istoty, jesteśmy tylko komórkami galaktyki?"
   nehiv.100d.desc: "Skontaktowałeś się z Uniwersalnym Umysłem Zbiorowym. Jak możemy Ci pomóc?"
   nehiv.100e.desc: "Wszyscy jesteśmy jednym ulem."
-  nehiv.100f.desc: "The universe is as alive as you and me. Even more so."
+  nehiv.100f.desc: "Wszechświat jest tak samo żywy jak ty i ja."
   nehiv.100g.desc: "Nie żyjemy we wszechświecie. To wszechświat mieszka wewnątrz nas. Jesteśmy jego integralną częścią."
   nehiv.100h.desc: "Pomóc tobie, jest jak pomóc wszechświatowi, Więc pozwól nam ci pomóc."
   nehiv.100i.desc: "Nie stwarzamy zagrożenia dla twojego poczucia indywidualność, zdajemy sobie sprawę z przydatności takiego złudzenia. Dopóki wszyscy żyjemy w harmonii służącej wszechświecie, możemy pracować razem."
@@ -49,14 +49,14 @@
   nehiv.100.a.alreadyhelping: "Uniwersalny Umysł Zbiorowy już pomaga naszym socjologom."
   nehiv.100.b: "Jesteśmy zainteresowani waszą... techniką „konformizmu”."
   nehiv.100.b.opinion: "Wymagane §YUniversal Hive§! aby mieć:\n£opinion£Opinia +50"
-  nehiv.100.b.alreadyhired: "We're already using the Consensus Pheromones provided by the Universal Hive."
+  nehiv.100.b.alreadyhired: "Używamy już feromonów konsensusu dostarczanych przez Uniwersalny Umysł Zbiorowy."
   nehiv.100.c: "Naszemu rojowi przydałby się jeden z waszych dronów."
   nehiv.100.c.opinion: "Wymagane §YUniversal Hive§! aby mieć:\n£opinion£Opinia +50"
   nehiv.100.c.alreadyhired: "Mamy już gubernatora z Uniwersalnego Umysłu Zbiorowego."
   #Sociology help
   nehiv.110.name: "Pomoc socjologiczna"
   nehiv.110.desc: "Jesteśmy zobligowani. Im lepiej rozumiesz, jak żyć w harmonii, tym lepiej służysz wszechświatowi.\n\nTaka pomoc, bez względu na naszą chęć, nie może być wykonana za darmo. Nasze ciągłe istnienie ma fundamentalne znaczenie. W związku z tym wymagamy małej dotacji."
-  nehiv.110.a: "You'll have it."
+  nehiv.110.a: "Dostaniesz to."
   nehiv.110.a.reply: "Wspaniale. Wszystko dla dobra Uniwersalnego Bytu."
   nehiv.111.name: "Uniwersalna Pomoc Umysłu Zbiorowego"
   nehiv.111.desc: "Współpraca pomiędzy naszymi socjologami w ciągu ostatnich 10 lat była bardzo owocna, co przyniosło szczęście uniwersalnemu bytowi. Czy powinniśmy odnowić nasze porozumienie?"
@@ -75,23 +75,23 @@
   nehiv.121.b: "Nie tym razem."
   #Hiring Drone
   nehiv.130.name: "Uniwersalny dron"
-  nehiv.130.desc: "\"Your\" hive is our hive, too. We are, after all, parts of the same Universal Being.\n\nWith that being said, the particular collection of entities that makes up what you refer as your hive can, indeed, benefit from our help. If you are having problems with deviance, we can send special drones to bring back the harmony we all strive for."
+  nehiv.130.desc: "\"Wasz\" umysł to nasz umysł. Jesteśmy przecież częściami tego samego Uniwersalnego bytu.\n\nMówiąc to, konkretna kolekcja jednostek, które składają się na to, co nazywasz umysłem zbiorowym, może rzeczywiście skorzystać z naszej pomocy. Jeśli masz problemy z dewiacją, możemy wysłać specjalne drony i przywrócić harmonię, o którą wszyscy się staramy."
   nehiv.130.a: "Harmonia jest bezcenna."
-  nehiv.130.a.reply: "Indeed it is. We are sending an Universal Drone immediately."
+  nehiv.130.a.reply: "Tak naprawdę jest. Wysyłamy Uniwersalnego Drona od razu."
   #Aggresion
-  nehiv.901.name: "Universal Hive Station Destroyed"
-  nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
+  nehiv.901.name: "Stacja Uniwersalnego Umysłu Zbiorowego zniszczona"
+  nehiv.901.desc: "Po zniszczeniu starożytnej stacji Uniwersalnego Umysłu Zbiorowego w systemie [ne_hive_system.GetName], nasze zdolne siły przeczesały obszar w poszukiwaniu czegokolwiek wartościowego. Udało im się odzyskać kilka fragmentów pamięci z baz danych Umysłu Zbiorowego, które powinny być wielkim wsparciem naszych badań."
   nehiv.902.a.desc: "$nehiv.902.ab.desc.start$\n\nŚlady szlaków jonów sugerują, że siły [ne_hive_destroyer.GetName] stoją za tym atakiem."
   nehiv.902.b.desc: "$nehiv.902.ab.desc.start$\n\nSiły odpowiedzialne za ten atak pozostają niezidentyfikowane."
   nehiv.902.ab.desc.start: "Dalekie systemy komunikacji kosmicznej podniosły krótkie zautomatyzowane połączenie alarmowe z stacji Maszyn Głównych w systemie [ne_hive_system.GetName]. Transmisja ustała po zaledwie kilku minutach, a systemy do odbioru dalekiego zasięgu potwierdziły, że starożytna stacja kosmiczna została zniszczona."
-  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ by forces loyal to the [ne_hive_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
+  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ przez siły lojalne w stosunku do [ne_hive_destroyer.GetName]. Niestety oznacza to również, że straciliśmy cały dostęp do cennych usług Maszyn."
   nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ przez nieznane siły. Oznacza to niestety, że straciliśmy cały dostęp do cennych usług Głównych Maszyn."
   nehiv.902.cd.desc.start: "Wszystkie kontakty zostały utracone z [From.GetName], a nasi zwiadowcy potwierdzili, że starożytna stacja Maszyn Głównych została zniszczona"
   nehiv.902.a: "Smutny koniec ich spuścizny."
-  nehiv.902.b: "This has cost us dearly!"
+  nehiv.902.b: "To kosztowało nas drogo!"
   nehiv.904.desc: "Każdy skomplikowana istota, musi zajmować się czynnikami nowotworowymi, które działają na swoje własne zniszczenia. Uniwersalny byt nie jest wyjątkiem.\n\nNie nakarmimy nowotworu, który spacza wszechświata. Wszystkie porozumienia jakie mieliśmy są nieważne."
   nehiv.904.a: "Zakończ komunikację."
-  nehiv.905a.desc: "We are all one with the universe. You are but cancerous cells that incapable understand it."
+  nehiv.905a.desc: "Wszyscy jesteśmy jednością z wszechświata. Wy tylko jesteście rakotwórczymi komórkami organizmu które nie są wstanie tego zrozumieć."
   ## Machine Enclave
   #First Contact
   nemac.11.name: "Pierwszy kontakt z [From.GetName]"
