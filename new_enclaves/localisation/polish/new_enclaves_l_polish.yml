@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -119,11 +119,11 @@
   nemac.100.b.alreadyrecruited: "Już zatrudniliśmy §YPierwotną Maszyne§! na stanowisku zarządcy."
   nemac.100.b.opinion: "Wymagane §YPierwotne Maszyny§! aby mieć:\n£opinion£Opinia +50"
   nemac.100.c: "Jesteś wyjątkowym automatem. Jak możemy budować takie maszyny?"
-  nemac.100.c.opinion: "Requires the §YPrime Machines§! to have:\n£opinion£ Opinion +80"
-  nemac.100.c.alreadyteached: "We already know how to make our own §YPrime Machines§!."
+  nemac.100.c.opinion: "Wymagane §YPierwotne Maszyny§! aby mieć:\n£opinion£Opinia +80"
+  nemac.100.c.alreadyteached: "Wiemy już, jak stworzyć własny §YPierwotne Maszynys§!."
   nemac.100.d: "We are interested in Strategic Resources."
   nemac.100.d.opinion: "Requires the §YPrime Machines§! to have:\n£opinion£ Opinion +100"
-  nemac.100.d.alreadyhired: "We already have a §YPrime Machines Trade Deal§!\n"
+  nemac.100.d.alreadyhired: "Mamy już §YUmowę Handlową Z Pierwotnymi Maszynami§!\n"
   nemac.100.da: "We wish to end our resource trade deal."
   nemac.100.da.reply: "We understand. It's done. Anything else?"
   nemac.100.da.tooltip: "This will terminate our current resource trade deal with the Prime Machines."
@@ -132,7 +132,7 @@
   nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
   nemac.110.a: "Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
-  nemac.111.name: "Prime Machines Aid"
+  nemac.111.name: "Pomoc Pierwotnych Maszyn"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
   nemac.111.a: "Tak."
   nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
@@ -199,9 +199,9 @@
   neshr.100.b.alreadyhired: "Our worlds are already hosting religious festivals."
   neshr.100.c: "Request Saintly Help"
   neshr.100.c.opinion: "Requires the §YShroud's Children§! to have:\n£opinion£ Opinion +50"
-  neshr.100.c.alreadyrecruited: "We already have a Saint from the §YShroud's Children§! as a governor."
+  neshr.100.c.alreadyrecruited: "Mamy już Świętego §YOd Dzieci Shrouda§! jako gubernatora."
   neshr.100.tech: "We want to make the §YNext Step§!!"
-  neshr.100.tech.alreadyteached: "We already know how to make the §YNext Step§!."
+  neshr.100.tech.alreadyteached: "Wiemy już, jak zrobić §YKolejny krok §!."
   neshr.100.d: "We are interested in Strategic Resources."
   neshr.100.d.opinion: "Requires the §YShroud's Children§! to have:\n£opinion£ Opinion +100"
   neshr.100.d.alreadyhired: "We already have a §YShroud's Children Trade Deal§!\n"
