@@ -24,7 +24,6 @@ ne_enclave = {
 		standard_event_module = {
 		}
 		exclusive_diplomacy_module = {
-			contact_rule = auto
 		}
 		# Nothing is allowed, but we need this for relationships.
 		#basic_technology_module = {}
