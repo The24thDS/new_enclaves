@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -121,16 +121,16 @@
   nemac.100.c: "Jesteś wyjątkowym automatem. Jak możemy budować takie maszyny?"
   nemac.100.c.opinion: "Wymagane §YPierwotne Maszyny§! aby mieć:\n£opinion£Opinia +80"
   nemac.100.c.alreadyteached: "Wiemy już, jak stworzyć własny §YPierwotne Maszynys§!."
-  nemac.100.d: "We are interested in Strategic Resources."
-  nemac.100.d.opinion: "Requires the §YPrime Machines§! to have:\n£opinion£ Opinion +100"
+  nemac.100.d: "Jesteśmy zainteresowani zasobami strategicznymi."
+  nemac.100.d.opinion: "Wymagane §YPierwotne Maszyny§! aby mieć:\n£opinion£Opinia +100"
   nemac.100.d.alreadyhired: "Mamy już §YUmowę Handlową Z Pierwotnymi Maszynami§!\n"
-  nemac.100.da: "We wish to end our resource trade deal."
-  nemac.100.da.reply: "We understand. It's done. Anything else?"
-  nemac.100.da.tooltip: "This will terminate our current resource trade deal with the Prime Machines."
+  nemac.100.da: "Chcemy zakończyć nasze porozumienie w sprawie handlu zasobami."
+  nemac.100.da.reply: "Rozumiemy. Gotowe. Coś jeszcze?"
+  nemac.100.da.tooltip: "To zakończy naszą obecną umowę handlową z pierwotnymi maszyn."
   #Can you help us with our machines?
   nemac.110.name: "Pomoc Maszyn"
-  nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
-  nemac.110.a: "Seems good to us."
+  nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nNasi twórcy byliby najstarszymi istotami w galaktyce z doświadczeniem w inżynierii. Ponieważ już nie są, obecnie my zajmujemy to stanowisko.\n\nZa rozsądną cenę możemy udostępnić Ci nasze protokoły optymalizacji, znacznie poprawia szybkość badań inżynieryjnych przez dziesięć lat lub do czasu kiedy obecny cykl galaktyczny dobiegnie końca. Cokolwiek będzie pierwsze."
+  nemac.110.a: "Brzmi dobrze."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
   nemac.111.name: "Pomoc Pierwotnych Maszyn"
   nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
