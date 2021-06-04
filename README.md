@@ -46,6 +46,7 @@ Actions available:
 This mod should be compatible with any mods that don’t overwrite the following files:
   - interface/frontend.gui
   - common/scripted_effects/first_contact_effects.txt
+  - common/pop_faction_types/00_xenoist.txt
 
 # TRANSLATION
 
@@ -80,6 +81,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://crowdin.com/profile/mrxzx"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14725286/large/666c00cfd2772116f9adee43726d6b85.png" width="100px;" alt=""/><br /><sub><b>MRXZX</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
     <td align="center"><a href="https://steamcommunity.com/id/imca"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ba/ba4eb175f1d35a50eb7b05bbad90673778047f04_full.jpg" width="100px;" alt=""/><br /><sub><b>SIVA Fox</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://steamcommunity.com/id/ChooMcoo/"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1526200/1b9d00f090479d24604d15b3b8a385ad7de6433d.gif" width="100px;" alt=""/><br /><sub><b>ChooMcoo</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://crowdin.com/profile/oralnegorod"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14744482/large/c9386643b0219b0e3b6009c437e0d2e6.jpeg" width="100px;" alt=""/><br /><sub><b>Утка Речная</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
   </tr>
 </table>
 
