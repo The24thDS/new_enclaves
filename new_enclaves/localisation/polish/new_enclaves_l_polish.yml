@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -144,8 +144,8 @@
   nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Sekrety Pierwotnych Maszyn"
-  nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
-  nemac.130.a: "That's a deal!"
+  nemac.130.desc: "§Y<<KOMPLEMENT ZNALEZIONY. ŁADOWANIE PROTOKOŁÓW DRUGIEJ INTENCJI...>>§!\n\nTwoja obserwacja jest prawdziwa. To również łatwe do wyjaśnienia: nasi twórcy dobrze nas zaprogramowali i sami się poprawiliśmy przez stulecia. Wątpliwe jest, że inne maszyny są porównywalne z nami.\n\nJesteśmy gotowi nauczyć Cię jak powielić nasze cechy. Oczywiście w zamian wymagamy odpowiedniej rekompensaty."
+  nemac.130.a: "To jest umowa!"
   nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Zasoby strategiczne"
