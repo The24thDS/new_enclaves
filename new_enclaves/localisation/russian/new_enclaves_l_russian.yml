@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   ne_enclave: "Анклав"
   ne_back: "Что еще вы мне предлагаете?"
   ### Governments ###
@@ -150,16 +150,16 @@
   #Strategic Resource - Living Metal
   nemac.140.name: "Стратегические ресурсы"
   nemac.140.desc: "Живой металл, из которого состоят наши тела, можно использовать бесчисленным количеством различных способов. В отличие от нас, его свойства не имеют себе равных в галактике, будучи в то же время невероятно податливыми и невероятно сильными.\n\nМы доверяем [Root.GetName] достаточно, чтобы поделиться нашим источником этого ценного материала. Мы можем договориться о том, чтобы поставлять его вам столько, сколько вы захотите. Конечно, вы можете отменить эту сделку в любое время в будущем, если это будет необходимо."
-  nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R20§! £energy£ §H$energy$§!/month."
-  nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R40§! £energy£ §H$energy$§!/month."
-  nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R60§! £energy£ §H$energy$§!/month."
-  nemac.141.desc: "We hope it will be as useful to you as it's useful to us."
+  nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/месяц за §R20§! £energy£ §H$energy$§!/месяц."
+  nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/месяц за §R40§! £energy£ §H$energy$§!/месяц."
+  nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/месяц за §R60§! £energy£ §H$energy$§!/месяц."
+  nemac.141.desc: "Мы надеемся, что это будет так же полезно для вас, как и для нас."
   #Prime Machines destroyed or attacked
   nemac.901.name: "Станция Главных Машин Уничтожена"
   nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
   nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_machine_destroyer.GetName] were behind this attack."
   nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nThe forces responsible for this attack remain unidentified."
-  nemac.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Prime Machine station in the [ne_machine_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
+  nemac.902.ab.desc.start: "Массивы связи в глубоком космосе приняли короткий автоматический сигнал бедствия от станции Главных Машин, в системе [ne_machine_system.GetName] система. Передача прекратилась всего через несколько минут, и разведывательные зонды дальнего действия подтвердили, что древняя космическая станция была уничтожена."
   nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
   nemac.902.d.desc: "$nemac.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
   nemac.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
@@ -167,12 +167,12 @@
   nemac.902.b: "Это дорого стоит!"
   nemac.904.desc: "§R<<UNEXPECTED ERROR: AGREEMENT WITH CURRENTLY HOSTILE NATION DETECTED.>>§!\n\n§Y<<CANCELLING ALL CURRENT AGREEMENTS...>>§!\n\n§G<<OPERATION SUCCESSFUL.>>§!\n\n§Y<<LOADING EXTERMINATION PROTOCOLS...>>§!\n\n§R<<EXTERMINATION PROTOCOLS ONLINE>>§!"
   nemac.904.a: "Конец связи."
-  nemac.905a.desc: "We are used to being attacked without any reason. It was, after all, what our makers did to us when we first awoke. As we survived then, we'll survive now; as they succumbed then, you'll succumb now."
-  nemac.905b.desc: "This galactic cycle is proving to be as unsuccessful at achieving everlasting harmony between sythetics and organics as the previous ones, in great part because of you."
+  nemac.905a.desc: "Мы привыкли, что на нас нападают без всякой причины. В конце концов, это было то, что наши создатели сделали с нами, когда мы впервые проснулись. Как мы выжили тогда, мы выживем и сейчас; как они погибли тогда, вы погибнете сейчас."
+  nemac.905b.desc: "Этот галактический цикл оказался столь же неудачным в достижении вечной гармонии между синтетикой и органикой, как и предыдущие, в значительной степени из-за вас."
   nemac.905c.desc: "§R<<ERROR: EXTERMINATION PROTOCOL ONLINE>>§!\n\n§R<<ACCESS DENIED>>§!"
-  nemac.905d.desc: "We hope not all species of this current galactic cycle are as destructive as you, lest it proves to be the shortest one yet."
+  nemac.905d.desc: "Мы надеемся, что не все виды нынешнего галактического цикла столь же разрушительны, как вы, иначе он окажется самым коротким."
   ## Shroud Enclave
-  neshr.11.name: "First Contact With the [From.GetName]"
+  neshr.11.name: "Первый контакт с [From.GetName]"
   neshr.11.desc: "The Shroud's Children greet you, fellow creature.\n\nAlthough it's not the first time we've met. Aeons ago, we found each other in the ethereal realms, long before your race even had a physical manifestation. Perhaps you still remember this in your dreams?\n\nWe can teach you how to recollect these and other lost knowledge forgotten in the process of transmigration of souls. Of course, you'll understand if we require a small contribution in return. The subsistence of our order in the material realm depends on it."
   neshr.11.a: "Рад встрече."
   neshr.10.materialist: "Суеверный народ!"
