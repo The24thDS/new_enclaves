@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -139,9 +139,9 @@
   nemac.111.end: "No."
   #Employ Unit
   nemac.120.name: "Reclutar maquina prima"
-  nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
+  nemac.120.desc: "Cada una de nuestras unidades está totalmente equipada con nuestros protocolos de rendimiento, siendo especialmente aptos para optimizar el trabajo de otras máquinas. Se requiere una tasa de mantenimiento por adelantado para su trabajo."
   nemac.120.a: "Es un precio razonable."
-  nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
+  nemac.120.a.reply: "§Yprima:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Secretos Primos"
   nemac.130.desc: "§Y<<COMPLIMIENTO DETECTADO. CARGANDO PROTOCOLOS DE SEGUNDAS INTENCIONES...>>§!\n\nTu observación es verdadera. También se explica fácilmente: nuestros creadores nos engendraron bien y nos hemos mejorado a través de los siglos. Es dudoso que otras máquinas sean bastante comparables con nosotros.\n\nEstamos dispuestos a enseñarle cómo replicar nuestras cualidades. Por supuesto, necesitamos una compensación adecuada a cambio."
@@ -149,7 +149,7 @@
   nemac.130.a.reply: "§Yprima:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
   nemac.140.name: "Recursos Estratégicos"
-  nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
+  nemac.140.desc: "El Metal Viviente que forma nuestro cuerpo puede ser utilizado de innumerables maneras. A diferencia de nosotros, sus propiedades son inigualables en la galaxia, siendo al mismo tiempo increíblemente maleables e increíblemente fuertes.\n\nConfiamos en el [Root.GetName] para compartir nuestra fuente de este valioso material. Podemos hacer arreglos para suministrárselas todo el tiempo que usted quiera. Por supuesto, usted puede cancelar esta operación en cualquier momento en el futuro, si es necesario."
   nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/al mes por §R20§! £energy£ §H$energy$§!/mes."
   nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/al mes por §R40§! £energy£ §H$energy$§!/mes."
   nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/al mes por §R60§! £energy£ §H$energy$§!/mes."
@@ -158,29 +158,29 @@
   nemac.901.name: "Estación de Mente Colmena Universal Destruida"
   nemac.901.desc: "Después de destruir la antigua estación Universal de la Colmena en el sistema de [ne_machine_system.GetName], nuestras capaces fuerzas peinaron el área, una vez ocupada, para encontrar algo valioso. Consiguieron recuperar varios fragmentos de memoria de las bases de datos de Prime Machines que deberían ser de gran ayuda para nuestra investigación."
   nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nRestas de iones residuales sugieren que las fuerzas de [ne_machine_destroyer.GetName] estaban detrás de este ataque."
-  nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nThe forces responsible for this attack remain unidentified."
-  nemac.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Prime Machine station in the [ne_machine_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
-  nemac.902.c.desc: "$nemac.902.cd.desc.start$ by forces loyal to the [ne_machine_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
-  nemac.902.d.desc: "$nemac.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Prime Machines."
-  nemac.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Prime Machine station was destroyed"
+  nemac.902.b.desc: "$nemac.902.ab.desc.start$\n\nLas fuerzas responsables de este ataque siguen sin identificarse."
+  nemac.902.ab.desc.start: "Los sensores de comunicación espacial recogieron una breve llamada de socorro automatizada de la estación de Maquina Prima en el sistema [ne_machine_system.GetName]. La transmisión cesó justo después de unos pocos minutos y las sondas de reconocimiento de largo alcance han confirmado que la antigua estación espacial ha sido destruida."
+  nemac.902.c.desc: "$nemac.902.cd.desc.start$ por las fuerzas leales a la [ne_machine_destroyer.GetName]. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
+  nemac.902.d.desc: "$nemac.902.cd.desc.start$ por las fuerzas desconocidas. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
+  nemac.902.cd.desc.start: "Todo contacto se ha perdido de [From.GetName] i nuestros activos de reconocimiento han confirmado que la antigua estación de Máquina Prima ha sido destruida"
   nemac.902.a: "Un triste fin a su legado."
   nemac.902.b: "¡Esto nos ha costado caro!"
   nemac.904.desc: "§R<<ERROS INESPERADO: DETECTADO ACUERDO CON NACION HOSTIL.>>§!\n\n§Y<<CANCELANDO TODOS LOS ACUERDOS ACTIVOS...>>§!\n\n§G<<OPERACION COMPLETADA>>§!\n\n§Y<<CARGANDO PROTOCOLOS DE EXTERMINACION...>>§!\n\n§R<<PROTOCOLOS DE ESTERMINACION ACTIVADOS>>§!"
   nemac.904.a: "Finalizar comunicaciones."
   nemac.905a.desc: "Estamos acostumbrados a ser atacados sin ningún motivo aparente. Al fin y al cabo, fue lo que nuestros creadores nos hicieron cuando nos despertamos. Sobrevivimos entonces, sobrevivimos ahora; mientras sucumbieron entonces, sucumbirás ahora."
   nemac.905b.desc: "This galactic cycle is proving to be as unsuccessful at achieving everlasting harmony between sythetics and organics as the previous ones, in great part because of you."
-  nemac.905c.desc: "§R<<ERROR: EXTERMINATION PROTOCOL ONLINE>>§!\n\n§R<<ACCESS DENIED>>§!"
+  nemac.905c.desc: "§R<<ERROR: PROTOCOLO DE EXTERMINACION ONLINE>>§!\n\n§R<<ACCESO DENEGADO>>§!"
   nemac.905d.desc: "We hope not all species of this current galactic cycle are as destructive as you, lest it proves to be the shortest one yet."
   ## Shroud Enclave
   neshr.11.name: "Primer contacto con [From.GetName]"
-  neshr.11.desc: "The Shroud's Children greet you, fellow creature.\n\nAlthough it's not the first time we've met. Aeons ago, we found each other in the ethereal realms, long before your race even had a physical manifestation. Perhaps you still remember this in your dreams?\n\nWe can teach you how to recollect these and other lost knowledge forgotten in the process of transmigration of souls. Of course, you'll understand if we require a small contribution in return. The subsistence of our order in the material realm depends on it."
+  neshr.11.desc: "Los Niños del Velo te saludan, queridas criaturas.\n\nAunque no es la primera vez que nos reunimos. Hace poco, nos encontramos entre nosotros en los reinos etéreos, mucho antes de que su raza tuviera incluso una manifestación física. ¿Tal vez todavía recuerde esto en sus sueños?\n\nPodemos enseñarte cómo recuperar estos y otros conocimientos perdidos olvidados en el proceso de transmigración de almas. Por supuesto, entenderá si necesitamos una pequeña contribución a cambio. La subsistencia de nuestro orden en el reino material depende de ello."
   neshr.11.a: "Bien hecho."
   neshr.10.materialist: "¡Demasiado superfluo!"
   neshr.10.hive: "¡No contaminarás nuestra unidad!"
   #Main Menu
   neshr.100.name: "Hijos del Velo"
-  neshr.100a.desc: "Contrary to popular belief, we hold no special animosity towards mechanical beings. They are indeed removed from the Shroud. But so is all physical existence, to some degree. In other words, we are all heretics, in a way. Who are we to persecute fellow heretics?"
-  neshr.100b.desc: "Welcome, fellow creature! Have you come in search of enlightenment?"
+  neshr.100a.desc: "Contrario a las creencias populares, no tenemos ninguna animosidad especial hacia los seres mecánicos. Pero también lo es toda la existencia física, hasta cierto punto. En otras palabras, todos somos heréticos, de algún modo. ¿Quiénes somos para perseguir a los herejes?"
+  neshr.100b.desc: "¡Bienvenido, compañero de creación! ¿Has venido en busca de iluminación?"
   neshr.100c.desc: "El Velo da y el Velo se lo lleva."
   neshr.100d.desc: "There are many planes of existence beyond this one. We should be happy we don't live in the worst one, just one particularly doomed to suffer."
   neshr.100e.desc: "I'm tired of this physical manifestation. Unfortunately, my true form may not be suitable to the sanity of weaker minds, so I must endure it."
