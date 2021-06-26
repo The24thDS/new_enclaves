@@ -1,26 +1,13 @@
 name: Create new release
 on:
-#   push:
-#     tags:
-#       - 'v*'
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version'
-        required: true
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
-#     if: ${{ contains(github.ref, 'refs/tags') }}
     steps:
     - uses: actions/checkout@master
-#     - run: |
-#         tag="${github_ref/refs\/tags\//}"
-#         echo $tag
-#         echo "::set-env name=tag::$tag"
-#       env:
-#         github_ref: ${{ github.ref }}
-#         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
