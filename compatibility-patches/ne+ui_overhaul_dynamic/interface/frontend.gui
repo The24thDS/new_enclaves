@@ -157,16 +157,42 @@ guiTypes = {
 				fixedSize = yes
 				format = left
 			}
+			# RMG buttons
+			instantTextBoxType = {
+				name = "rmg_socials"
+				font = "cg_16b"
+				text = "RMG Socials"
+				position = { x= -50 y = -80 }
+				maxWidth = 80
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				tooltip = "Renegades Modding Group"
+			}
+			buttonType =	{
+				name = "rmg_steam"
+				quadTextureSprite = "GFX_front_menu_rmg_steam"
+				position = { x= -50 y = -55 }
+				pdx_tooltip = "See more mods made by RMG members."
+				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2469745470"
+			}
+			buttonType =	{
+				name = "rmg_discord"
+				quadTextureSprite = "GFX_front_menu_rmg_discord"
+				position = { x= 0 y = -55 }
+				pdx_tooltip = "Join the RMG Discord server for hot news."
+				web_link="https://discord.gg/4xfQ78sPpm"
+			}
 			instantTextBoxType = {
 				name = "ne_version"
 				font = "cg_16b"
-				text = "New Enclaves v2.3.1"
+				text = "New Enclaves v2.3.2"
 				position = { x= -385 y = -58  }
 				maxWidth = 300
 				maxHeight = 20
 				fixedSize = yes
 				format = left
-				tooltip = "Commit: 42f2c27"
+				tooltip = "Commit: 70155a5"
 			}
 			buttonType = {
 				name = "ui_overhaul_button"
@@ -329,14 +355,11 @@ guiTypes = {
 				#orientation = "LOWER_RIGHT"
 				scale = 1.0
 			}
-			buttonType = {
+			iconType = {
 				name = "RMG_logo"
 				position = { x = -485 y = -102 }
 				quadTextureSprite = "GFX_rmg_logo"
 				scale = 0.53
-				oversound = mouse_over
-				web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=2469745470"
-				pdx_tooltip = "See more mods made by RMG"
 			}
 			iconType = {
 				name = "pi_logo"
