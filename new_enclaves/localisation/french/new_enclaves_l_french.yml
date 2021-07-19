@@ -1,28 +1,28 @@
-﻿l_french:
-
+---
+l_english:
   ne_enclave: "Enclave"
-  ne_back: "What else did you have to offer?"
+  ne_back: "Qu'avez-vous d'autre à offrir ?"
   ### Governments ###
   #Hive Enclave
-  civic_ancient_hive: "Ancient Hive"
-  civic_ancient_hive_desc: "Ancient Hive"
-  gov_ne_hive: "Hive Enclave"
-  gov_ne_hive_desc: "It's impossible to date how old is this hive. It may as well be as old as the universe."
-  ne_hive_government: "Hive Enclave"
-  ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
-  RT_AWAKENED: "Awakened"
+  civic_ancient_hive: "Ruche antique"
+  civic_ancient_hive_desc: "Ruche antique"
+  gov_ne_hive: "Enclave d'une Conscience collective"
+  gov_ne_hive_desc: "Il est impossible de déterminer l'âge de cette Conscience. Elle pourrait être aussi ancienne que l'univers."
+  ne_hive_government: "Enclave d'une Conscience collective"
+  ne_hive_government_desc: "§YIl est impossible de déterminer l'âge de cette Conscience. Elle pourrait être aussi ancienne que l'univers.§!"
+  RT_AWAKENED: "Éveillé"
   #Machine Enclave
-  civic_autonomous_node: "Autonomous Node"
+  civic_autonomous_node: "Système autonome"
   civic_autonomous_node_desc: ""
-  gov_ne_machine: "Machine Enclave"
-  gov_ne_machine_desc: "The remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise."
-  ne_machine_government: "Machine Enclave"
-  ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
-  RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
+  gov_ne_machine: "Enclave robotique"
+  gov_ne_machine_desc: "Les restes d'une antique intelligence artificielle, séparée de son réseau avant sa chute."
+  ne_machine_government: "Enclave robotique"
+  ne_machine_government_desc: "§LLes restes d'une antique intelligence artificielle, séparée de son réseau avant sa chute.§!"
+  RT_PRIME_CONSCIOUSNESS: "Conscience primordiale"
   #Shroud Enclave
-  civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
+  civic_priesthood_of_the_cycle: "Clergé du Cycle"
   civic_priesthood_of_the_cycle_desc: ""
-  gov_ne_shroud: "Shroud Enclave"
+  gov_ne_shroud: "Enclave du Voile"
   gov_ne_shroud_desc: "An autonomous religious order privy to the secrets of higher levels of existence."
   ne_shroud_government: "Shroud Enclave"
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
