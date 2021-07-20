@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://crowdin.com/profile/oralnegorod"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14744482/large/c9386643b0219b0e3b6009c437e0d2e6.jpeg" width="100px;" alt=""/><br /><sub><b>Утка Речная</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://steamcommunity.com/id/Teralion/"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/c2/c22b947ac1d9c02ad444c0a113f66b1bc224a425_full.jpg" width="100px;" alt=""/><br /><sub><b>Teralion</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
   </tr>
 </table>
 
