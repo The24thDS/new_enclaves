@@ -1,5 +1,5 @@
-﻿l_french:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Qu'avez-vous d'autre à offrir ?"
   ### Governments ###
@@ -15,10 +15,10 @@
   civic_autonomous_node: "Système autonome"
   civic_autonomous_node_desc: ""
   gov_ne_machine: "Enclave Robotique"
-  gov_ne_machine_desc: "Les restes d'une antique intelligence artificielle, séparée de son réseau avant sa chute."
+  gov_ne_machine_desc: "Les vestiges d'une antique intelligence artificielle, séparée de son réseau avant sa chute."
   ne_machine_government: "Enclave Robotique"
-  ne_machine_government_desc: "§LLes restes d'une antique intelligence artificielle, séparée de son réseau avant sa chute.§!"
-  RT_PRIME_CONSCIOUSNESS: "Conscience Supérieure"
+  ne_machine_government_desc: "§LLes vestiges d'une antique intelligence artificielle, séparée de son réseau avant sa chute.§!"
+  RT_PRIME_CONSCIOUSNESS: "Conscience Primordiale"
   #Shroud Enclave
   civic_priesthood_of_the_cycle: "Prêtrise du Cycle"
   civic_priesthood_of_the_cycle_desc: ""
