@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -80,13 +80,13 @@
   nehiv.130.a.reply: "Efectivamente, estamos enviando un dron universal inmediatamente."
   #Aggresion
   nehiv.901.name: "Estación de Mente Colmena Universal Destruida"
-  nehiv.901.desc: "Después de destruir la antigua estación Universal de la Colmena en el sistema de [ne_hive_system.GetName], nuestras capaces fuerzas peinaron el área, una vez ocupada, para encontrar algo valioso. Consiguieron recuperar varios fragmentos de memoria de las bases de datos de Prime Machines que deberían ser de gran ayuda para nuestra investigación."
+  nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Universal Hive's databanks that should be a great boon to our research."
   nehiv.902.a.desc: "$nehiv.902.ab.desc.start$\n\nRestas de iones residuales sugieren que las fuerzas de [ne_hive_destroyer.GetName] estaban detrás de este ataque."
   nehiv.902.b.desc: "$nehiv.902.ab.desc.start$\n\nLas fuerzas responsables de este ataque siguen sin identificarse."
-  nehiv.902.ab.desc.start: "Los sensores de comunicación espacial recogieron una breve llamada de socorro automatizada de la estación de Maquina Prima en el sistema [ne_hive_system.GetName]. La transmisión cesó justo después de unos pocos minutos y las sondas de reconocimiento de largo alcance han confirmado que la antigua estación espacial ha sido destruida."
-  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ por las fuerzas leales a la [ne_hive_destroyer.GetName]. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
-  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ por las fuerzas desconocidas. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
-  nehiv.902.cd.desc.start: "Todo contacto se ha perdido de [From.GetName] i nuestros activos de reconocimiento han confirmado que la antigua estación de Máquina Prima ha sido destruida"
+  nehiv.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Universal Hive station in the [ne_hive_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
+  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ by forces loyal to the [ne_hive_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Universal Hive."
+  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Universal Hive."
+  nehiv.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Universal Hive station was destroyed"
   nehiv.902.a: "Un triste fin a su legado."
   nehiv.902.b: "¡Esto nos ha costado caro!"
   nehiv.904.desc: "Cada ser tiene que apañarselas con los agentes cancerigenos que trabajan para la propia destrucion. El ser universal no es una excepción.\n\nNo alimentaremos el cáncer que está corrompiendo el universo. Todos los acuerdos que alguna vez tuvimos son mucho nulos y muy nulos."
@@ -190,7 +190,7 @@
   neshr.100i.desc: "El potencial psicológico de tu especie es incomparable. Con nuestra ayuda, puedes aprovecharla."
   neshr.100j.desc: "La guía espiritual que ofrecemos es compatible con cualquier sistema de creencias. No tienes que abandonar a tus dioses para beneficiarte de ello."
   neshr.100k.desc: "Que el Velo te bendiga, querida criatura. ¿Cómo podemos ayudarte?"
-  neshr.100l.desc: "No confunda la orientación con la salvación. Lo primero es lo que podemos proporcionar. Lo segundo... Bueno, hablemos de otras cosas."
+  neshr.100l.desc: "Do not confuse guidance with salvation. The first we can provide. The latter... Well, let us discuss other things."
   #Main Menu - Options
   neshr.100.a: "¿Qué nos puede ofrecer su orientación?"
   neshr.100.a.alreadyguiding: "¡Los niños del YVelo§! ya nos está guiando, mejorando nuestra velocidad de investigación de física."
@@ -249,7 +249,7 @@
   neshr.902.a.desc: "$neshr.902.ab.desc.start$\n\nRestos de iones residuales sugieren que las fuerzas de [ne_shroud_destroyer.GetName] estaban detrás de este ataque."
   neshr.902.b.desc: "$neshr.902.ab.desc.start$\n\nLas fuerzas responsables de este ataque siguen sin identificarse."
   neshr.902.ab.desc.start: "Los sensores de comunicación espacial recogieron una breve llamada de socorro automatizada de la estación de los Hijos del Velo a en el sistema [ne_shroud_system.GetName]. La transmisión cesó justo después de unos pocos minutos y las sondas de reconocimiento de largo alcance han confirmado que la antigua estación espacial ha sido destruida."
-  neshr.902.c.desc: "$neshr.902.cd.desc.start$ por las fuerzas leales a la [ne_shroud_destroyer.GetName]. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de la Máquina Prima."
+  neshr.902.c.desc: "$neshr.902.cd.desc.start$ by forces loyal to the [ne_shroud_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Shroud's Children."
   neshr.902.d.desc: "$neshr.902.cd.desc.start$ por las fuerzas desconocidas. Por desgracia, esto también significa que hemos perdido todo acceso a los valiosos servicios de los Hijos del Velo."
   neshr.902.cd.desc.start: "Todo contacto se ha perdido de [From.GetName] y nuestros activos de reconocimiento han confirmado que la antigua estación de los Hijos del Velo ha sido destruida"
   neshr.902.a: "Un triste fin a su legado."
