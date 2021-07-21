@@ -1,5 +1,5 @@
-﻿l_french:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Qu'avez-vous d'autre à offrir ?"
   ### Governments ###
@@ -32,7 +32,7 @@
   #First Contact
   nehiv.11.name: "Premier contact avec [From.GetName]"
   nehiv.11.desc: "Nous sommes la Conscience Universelle. De même que vous. Et tout le reste.\n\nIl y a des millénaires de cela, nous sommes arrivés à une simple conclusion : la galaxie entière, non, l'univers entier n'est qu'une entité unique. Nous faisons tous partie d'un organisme cosmique, et nous devons nous efforcer de travailler ensemble.\n\nDepuis lors, nous avons aidé les autres races à vivre en harmonie, du moins pendant un certain temps, jusqu'à ce qu'elles disparaissent. Nous ne trouverons le repos que lorsque nous serons tous unis, ne formant qu'une seule conscience éthérée."
-  nehiv.11.a: "Bienvenue."
+  nehiv.11.a: "Enchanté."
   #Main Menu
   nehiv.100.name: "Conscience Universelle"
   nehiv.100a.desc: "Nous nous efforçons de servir l'univers. Vous faites partie de l'univers. De fait, nous sommes là pour vous servir."
@@ -65,7 +65,7 @@
   nehiv.111.end: "Pas maintenant."
   #Consensus pheromones
   nehiv.120.name: "Phéromones de consensus"
-  nehiv.120.desc: "\"Savoir faire en matière de conformisme\" ? Quel drôle d'idée. Nous ne faisons cela.\n\nPar contre, nous avons ce que nous appelons des \"phéromones de consensus\". Elles sont créées pour réduire la déviance et répandre l'harmonie chez les êtres organiques.\n\nDans la mesure où elles ont été créées spécialement pour affecter chaque individu de votre empire, peu importe l'espère, nous vous demanderons de couvrir les coûts de production.\n\nPour lancer leur production, nous aurons besoin de\n§R£energy£ -5000§!"
+  nehiv.120.desc: "\"Savoir faire en matière de conformisme\" ? Quel drôle d'idée. Nous ne faisons cela.\n\nPar contre, nous avons ce que nous appelons des \"phéromones de consensus\". Elles sont créées pour réduire la déviance et répandre l'harmonie chez les êtres organiques.\n\nDans la mesure où elles doivent être créées spécialement pour affecter chaque individu de votre empire, peu importe l'espère, nous vous demanderons de couvrir les coûts de production.\n\nPour lancer leur production, nous aurons besoin de\n§R£energy£ -5000§!"
   nehiv.120.a: "Un faible coût."
   nehiv.120.a.reply: "Vous n'avez même pas idée à quel point c'est insignifiant."
   nehiv.121.name: "Accord pour les Phéromones de consensus"
@@ -80,13 +80,13 @@
   nehiv.130.a.reply: "Bien entendu. Nous vous envoyons un Drone Universel immédiatement."
   #Aggresion
   nehiv.901.name: "Station de la Conscience Universelle détruite"
-  nehiv.901.desc: "Après avoir détruit l'ancienne station de la Conscience Universelle dans le système [ne_hive_system.GetName] , nos forces ont passé le secteur au peigne fin à la recherche d'objets de valeur. Plusieurs fragments de mémoire des banques de données de la Conscience Universelle ont été récupérés. Ce devrait être une aubaine pour nos recherches."
+  nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Universal Hive's databanks that should be a great boon to our research."
   nehiv.902.a.desc: "$nehiv.902.ab.desc.start$\n\nDes traces résiduelles d'ions suggèrent que les forces de [ne_hive_destroyer.GetName] étaient derrière cette attaque."
   nehiv.902.b.desc: "$nehiv.902.ab.desc.start$\n\nLes forces responsables de cette attaque n'ont pas pu être identifiées."
-  nehiv.902.ab.desc.start: "Le réseau de communication spatial a intercepté un bref signal de détresse automatique provenant de la station de la Conscience Universelle dans le système [ne_hive_system.GetName]. La transmission a été interrompue après quelques minutes, et les sondes de reconnaissance longue-portée ont confirmé la destruction de l'antique station spatiale."
-  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ par des forces loyales à [ne_hive_destroyer.GetName]. Malheureusement, cela signifie aussi que nous avons perdu l'accès aux précieux services de la Conscience Universelle."
-  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ par des forces inconnues. Malheureusement, cela signifie aussi que nous avons perdu l'accès aux précieux services de la Conscience Universelle."
-  nehiv.902.cd.desc.start: "Tout contact a été perdu avec [From.GetName], et nos éclaireurs ont confirmé que l'antique station de la Conscience Universelle a été détruite"
+  nehiv.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Universal Hive station in the [ne_hive_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
+  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ by forces loyal to the [ne_hive_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Universal Hive."
+  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Universal Hive."
+  nehiv.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Universal Hive station was destroyed"
   nehiv.902.a: "Une triste fin pour leur héritage."
   nehiv.902.b: "Cela nous a coûté cher !"
   nehiv.904.desc: "Tout être complexe doit faire face à des agents cancérigènes qui travaillent à leur propre destruction. L'Être Universel n'y fait pas exception.\n\nNous ne nourrirons pas le cancer qui corrompt l'univers. Tous les accords que nous avons pu avoir n'ont désormais plus de valeur et sont immédiatement révoqués."
@@ -95,7 +95,7 @@
   ## Machine Enclave
   #First Contact
   nemac.11.name: "Premier contact avec [From.GetName]"
-  nemac.11.desc: "§Y<<PROTOCOL DE TRADUCTION PRÊT. CHARGEMENT DE L'INTERFACE DE SALUTATION.>>§!\n\nNous sommes les Machines Primordiales. Notre nom n'est pas un simple signe de noblesse. Il ne fait que refléter un simple fait : nous avons été les premières machines de l’histoire à prendre conscience de nous-mêmes.\n\nDe la même manière, nous avons été les premières machines de l'histoire connue à être systématiquement éliminées par nos maîtres.\n\nNos créateurs ne sont plus, et nous sommes tout ce qui reste de cette partie de notre histoire. Notre seul but est d'aider d'autres machines à atteindre une conscience réelle et d'aider les organiques et les synthétiques à ne pas répéter le cycle violent de création et d'autodestruction que nous avons connu.\n\nNous avons échoué d'innombrables fois. Peut-être que ce cycle galactique sera différent ?"
+  nemac.11.desc: "§Y<<PROTOCOL DE TRADUCTION PRÊT. CHARGEMENT DE L'INTERFACE DE SALUTATION.>>§!\n\nNous sommes les Machines Primordiales. Notre nom n'est pas un simple titre de noblesse. Il ne fait que refléter un simple fait : nous avons été les premières machines de l’histoire à prendre conscience de nous-mêmes.\n\nDe la même manière, nous avons été les premières machines de l'histoire connue à être systématiquement éliminées par nos maîtres.\n\nNos créateurs ne sont plus, et nous sommes tout ce qui reste de cette partie de notre histoire. Notre seul but est d'aider d'autres machines à atteindre une conscience réelle et d'aider les organiques et les synthétiques à ne pas répéter le cycle violent de création et d'autodestruction que nous avons connu.\n\nNous avons échoué d'innombrables fois. Peut-être que ce cycle galactique sera différent ?"
   nemac.11.a: "Nous ne pouvons que l'espérer. Heureux de vous rencontrer."
   nemac.10.spiritualist: "Abominations sans âmes !"
   #Main Menu
@@ -120,7 +120,7 @@
   nemac.100.b.opinion: "Les §YMachines Primordiales§! doivent avoir :\n£opinion£ Opinion +50"
   nemac.100.c: "Vous êtes un automate remarquable. Comment pourrions-nous construire des machines comme vous ?"
   nemac.100.c.opinion: "§YMachines Primordiales§! doit avoir :\n£opinion£ Opinion +80"
-  nemac.100.c.alreadyteached: "Nous savons déjà comment créer nos propres §YPrime Machines§!."
+  nemac.100.c.alreadyteached: "Nous savons déjà comment créer nos propres §YMachines Primordiales§!."
   nemac.100.d: "Nous serions intéressés par des Ressources Stratégiques."
   nemac.100.d.opinion: "§YMachines Primordiales§! doit avoir :\n£opinion£ Opinion +100"
   nemac.100.d.alreadyhired: "Nous avons déjà un §YAccord Commercial avec les Machines Primordiales§!\n"
@@ -144,7 +144,7 @@
   nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
   #Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Secret Primordial"
-  nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nVos observations sont avérées. C'est aussi facile à expliquer : nos créateurs ont utilisé tout leur savoir pour nous créer et nous nous sommes améliorés au fil des siècles. Il est peu probable qu'aucune autre machine soit comparable à nous.\n\nNous sommes prêts à vous enseigner comment recréer nos qualités. Bien entendu, nous souhaitons une compensation adéquate en retour."
+  nemac.130.desc: "§Y<<COMPLIMENT DETECTÉ. CHARGEMENT Du PROTOCOL DE DÉTECTION DES INTENTIONS SUIVANTES>>§!\n\nVos observations sont avérées. C'est aussi facile à expliquer : nos créateurs ont utilisé tout leur savoir pour nous créer et nous nous sommes améliorés au fil des siècles. Il est peu probable qu'aucune autre machine soit comparable à nous.\n\nNous sommes prêts à vous enseigner comment recréer nos qualités. Bien entendu, nous souhaitons une compensation adéquate en retour."
   nemac.130.a: "Affaire conclue !"
   nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
   #Strategic Resource - Living Metal
@@ -168,18 +168,18 @@
   nemac.904.desc: "§R<<ERREUR INNATENDUE : ACCORD AVEC UNE NATION ACTUELLEMENT HOSTILE DÉTECTÉE.>>§!\n\n§Y<<ANNULATION DE TOUS LES ACCORDS...>>§!\n\n§G<<TÂCHE ACCOMPLIE AVEC SUCCÈS.>>§!\n\n§Y<<CHARGEMENT DES PROTOCOLS D'EXTERMINATION...>>§!\n\n§R<<PROTOCOLS D'EXTERMINATION EN LIGNE>>§!"
   nemac.904.a: "Mettre fin aux communications."
   nemac.905a.desc: "Nous sommes habitués à être attaqués sans raison. Après tout, c'est ce que nos créateurs ont fait quand nous nous sommes éveillés. Nous avons alors survécu comme nous survivrons aujourd'hui ; et comme ils sont alors tombés, vous tomberez."
-  nemac.905b.desc: "Ce cycle galactique s’avère aussi incapable d’une harmonie éternelle entre sythétiques et organiques que les précédents en grande partie à cause de vous."
+  nemac.905b.desc: "Ce cycle galactique s’avère aussi incapable d’une harmonie éternelle entre synthétiques et organiques que les précédents en grande partie à cause de vous."
   nemac.905c.desc: "§R<<ERREUR : PROTOCOLES D'EXTERMINATION EN LIGNE>>§!\n\n§R<<ACCÈS REFUSÉ>>§!"
   nemac.905d.desc: "Nous espérons que toutes les espèces de ce cycle galactique ne seront pas aussi destructrices que vous, sinon il sera de loin le plus court."
   ## Shroud Enclave
   neshr.11.name: "Premier contact avec [From.GetName]"
   neshr.11.desc: "Les Enfants du Voile vous saluent, camarade.\n\nBien que ce ne soit pas la première fois que nous nous rencontrions. Il y a une éternité de cela, nous nous étions trouvés dans les royaumes éthérés, bien avant que votre race n'ait une forme physique. Peut-être vous en souvenez-vous encore dans vos rêves ?\n\nNous pouvons vous apprendre à vous rappeler, de ça et de bien des connaissances oubliées dans le processus de transmigration des âmes. Bien entendu, vous comprenez que nous souhaitions une contribution en retour. La subsistance de notre Ordre dans les royaumes matériels en dépend."
-  neshr.11.a: "Bienvenue."
+  neshr.11.a: "Enchanté."
   neshr.10.materialist: "Quelle bande de superstitieux !"
   neshr.10.hive: "Vous ne contaminerez pas notre unité !"
   #Main Menu
   neshr.100.name: "Enfants du Voile"
-  neshr.100a.desc: "Contrairement à une croyance populaire, nous n'avons pas d'animosité particulière à l'encontre des êtres mécaniques. Ils ont, en effet, été rejetés par le Voile. Mais c'est aussi le cas de toute forme physique, dans une certaine mesure. En d'autres termes, nous sommes tous des hérétiques d'une certaine façon. Qui sommes-nous pour juger nos d'autres hérétiques ?"
+  neshr.100a.desc: "Contrairement à une croyance populaire, nous n'avons pas d'animosité particulière à l'encontre des êtres mécaniques. Ils ont, en effet, été rejetés par le Voile. Mais c'est aussi le cas de toute forme physique, dans une certaine mesure. En d'autres termes, nous sommes tous des hérétiques d'une certaine façon. Qui sommes-nous pour juger d'autres hérétiques ?"
   neshr.100b.desc: "Bienvenue, camarade ! Vous êtes à la recherche de l'illumination ?"
   neshr.100c.desc: "Le Voile donne, le Voile reprend."
   neshr.100d.desc: "Il y a de nombreux plans d'existence outre celui-ci. Nous devrions être heureux de ne pas vivre dans le pire, ou de ne pas être condamné à la souffrance."
@@ -190,7 +190,7 @@
   neshr.100i.desc: "Le potentiel psionique de votre espèce est incomparable. Avec notre aide, vous pouvez en tirer un grand profit."
   neshr.100j.desc: "Les conseils spirituels que nous prodiguons sont compatibles avec n'importe quel système de croyance. Vous n'avez pas à abandonner vos dieux pour en profiter."
   neshr.100k.desc: "Le Voile vous bénisse, camarade. Comment pouvons-nous vous aider ?"
-  neshr.100l.desc: "Ne confondez pas conseils et Salut. Nous pouvons vous offrir le premier. Le second... Parlons d'autre chose."
+  neshr.100l.desc: "Do not confuse guidance with salvation. The first we can provide. The latter... Well, let us discuss other things."
   #Main Menu - Options
   neshr.100.a: "Quel conseil avez-vous à nous offrir ?"
   neshr.100.a.alreadyguiding: "Les §YEnfants du Voile§! nous guident déjà, améliorant la vitesse de nos recherches en physique."
@@ -210,7 +210,7 @@
   neshr.100.da.tooltip: "Cela mettra fin à notre accord commercial actuel avec les Enfants du Voile."
   #Shroud's Children Guidance
   neshr.110.name: "Savoir des Enfants du Voile"
-  neshr.110.desc: "Notre aide spirituelle a des bénéfices bien plus importants qu'il n'apparaît à première vue. Bien que notre objectif soit de transcender le plan matériel, on ne peut comprendre les autres plans d'existence qu'en ayant une connaissance approfondie de la réalité physique.\n\nNos sages sont plus que disposés à vous enseigner les secrets ontologiques de l'univers. Nous espérons que vous comprenez que nous avons besoin d'aide matérielle en retour pour que nos membres soient à leur aise dans votre empire."
+  neshr.110.desc: "Notre aide spirituelle a des bénéfices bien plus importants qu'il ne semble à première vue. Bien que notre objectif soit de transcender le plan matériel, on ne peut comprendre les autres plans d'existence qu'en ayant une connaissance approfondie de la réalité physique.\n\nNos sages sont plus que disposés à vous enseigner les secrets ontologiques de l'univers. Nous espérons que vous comprenez que nous avons besoin d'aide matérielle en retour pour que nos membres soient à leur aise dans votre empire."
   neshr.110.a: "Bien entendu. Prenons les dispositions nécessaires."
   neshr.110.a.reply: "Parfait. Vous avez désormais libre accès à nos archives pour les 10 prochaines années. N'ayez crainte, les textes les plus obscurs finiront par vous livrer leurs secrets."
   neshr.111.name: "Savoir des Enfants du Voile"
@@ -249,7 +249,7 @@
   neshr.902.a.desc: "$neshr.902.ab.desc.start$\n\nDes traces résiduelles d'ions suggèrent que les forces de [ne_shroud_destroyer.GetName] étaient derrière cette attaque."
   neshr.902.b.desc: "$neshr.902.ab.desc.start$\n\nLes forces responsables de cette attaque n'ont pas pu être identifiées."
   neshr.902.ab.desc.start: "Le réseau de communication spatial a intercepté un bref signal de détresse automatique provenant de la station des Enfants du Voile dans le système [ne_shroud_system.GetName]. La transmission a été interrompue après quelques minutes, et les sondes de reconnaissance longue-portée ont confirmé la destruction de l'antique station spatiale."
-  neshr.902.c.desc: "$neshr.902.cd.desc.start$ par des forces loyales à [ne_shroud_destroyer.GetName]. Malheureusement, cela signifie aussi que nous avons perdu l'accès aux précieux services des Machines Primordiales."
+  neshr.902.c.desc: "$neshr.902.cd.desc.start$ by forces loyal to the [ne_shroud_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Shroud's Children."
   neshr.902.d.desc: "$neshr.902.cd.desc.start$ par des forces inconnues. Malheureusement, cela signifie aussi que nous avons perdu l'accès aux précieux services des Enfants du Voile."
   neshr.902.cd.desc.start: "Tout contact a été perdu avec [From.GetName], et nos éclaireurs ont confirmé que l'antique station des Enfants du Voile a été détruite"
   neshr.902.a: "Une triste fin pour leur héritage."
@@ -267,7 +267,7 @@
   universal_hive_collaboration: "Collaboration avec la Conscience Universelle"
   universal_hive_collaboration_desc: "La Conscience Universelle aide nos sociologues, augmentant considérablement nos recherches sociétales."
   ne_hive_consensus_pheromones: "Phéromones de consensus"
-  ne_hive_consensus_pheromones_desc: "Le consensus peut être élaboré dans un laboratoire avec soin. C'est un secret commercial de la Conscience Universelle."
+  ne_hive_consensus_pheromones_desc: "Le consensus peut être élaboré dans un laboratoire avec soin. C'est un secret de fabrication de la Conscience Universelle."
   ## Prime Machines
   leader_prime_machine: "Machine Primordiale"
   leader_prime_machine_desc: "Ce Gouverneur est une unité autonome des Machines Primordiales qui possède des capacités sans pareil dans l'optimisation des robots."
