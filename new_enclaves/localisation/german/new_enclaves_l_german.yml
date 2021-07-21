@@ -1,5 +1,5 @@
-﻿l_german:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Was hattet ihr noch zu bieten?"
   ### Governments ###
@@ -80,13 +80,13 @@
   nehiv.130.a.reply: "Tatsächlich ist sie das. Wir senden sofort eine universelle Drohne."
   #Aggresion
   nehiv.901.name: "Universeller Schwarm Station Zerstört"
-  nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Universal Hive's databanks that should be a great boon to our research."
+  nehiv.901.desc: "Nachdem wir die alte Universeller Schwarm Station im System [ne_hive_system.GetName] zerstört hatten, durchkämmten unsere fähigen Streitkräfte das Gebiet, das sie einst besetzten, um etwas Wertvolles zu finden. Es gelang uns, mehrere Speicherfragmente aus den Universeller Schwarm Datenbanken wiederherzustellen, die ein großer Segen für unsere Forschung waren."
   nehiv.902.a.desc: "$nehiv.902.ab.desc.start$\n\nVerbleibende Ionenspuren deuten darauf hin, dass Kräfte von [ne_hive_destroyer.GetName] hinter diesem Angriff stecken."
   nehiv.902.b.desc: "$nehiv.902.ab.desc.start$\n\nDie für diesen Angriff verantwortlichen Kräfte bleiben unbekannt."
-  nehiv.902.ab.desc.start: "Deep space communication arrays picked up a brief automated distress call from the Universal Hive station in the [ne_hive_system.GetName] system. The transmission ceased after just a few minutes, and long-range recon probes have confirmed that the ancient space station has been destroyed."
-  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ by forces loyal to the [ne_hive_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Universal Hive."
-  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ by unknown forces. Unfortunately, this also means that we have lost all access to the valuable services of the Universal Hive."
-  nehiv.902.cd.desc.start: "All contact has been lost with the [From.GetName], and our recon assets have confirmed that the ancient Universal Hive station was destroyed"
+  nehiv.902.ab.desc.start: "Weltraumkommunikations-Scanner nahmen einen kurzen automatisierten Notruf von der Universeller Schwarm Station im System [ne_hive_system.GetName] entgegen. Die Übertragung wurde bereits nach wenigen Minuten unterbrochen, und Fernaufklärungssonden haben bestätigt, dass die alte Raumstation zerstört wurde."
+  nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ von Kräften, die den [ne_hive_destroyer.GetName] treu sind. Leider bedeutet dies auch, dass wir jeglichen Zugang zu den wertvollen Diensten des Universellen Schwarms verloren haben."
+  nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ von unbekannten Kräften. Leider bedeutet dies auch, dass wir jeglichen Zugang zu den wertvollen Diensten des Universellen Schwarms verloren haben."
+  nehiv.902.cd.desc.start: "Jeder Kontakt mit den [From.GetName] ist verloren gegangen, und unsere Aufklärungsressourcen haben bestätigt, dass die alte Erste Maschinen Station zerstört wurde"
   nehiv.902.a: "Ein trauriges Ende ihres Erbes."
   nehiv.902.b: "Das hat uns viel gekostet!"
   nehiv.904.desc: "Jedes komplexe Wesen muss sich mit krebserregenden Wirkstoffen auseinandersetzen, die an seiner eigene Zerstörung arbeiten. Das universelle Wesen ist keine Ausnahme.\n\nWir werden den Krebs, der das Universum korrumpiert, nicht füttern. Alle Vereinbarungen, die wir einst hatten, sind jetzt null und nichtig."
@@ -190,7 +190,7 @@
   neshr.100i.desc: "Das psionische Potenzial eurer Spezies ist unvergleichlich. Mit unserer Hilfe könnt ihr davon profitieren."
   neshr.100j.desc: "Die von uns bereitgestellte spirituelle Führung ist mit jedem Glaubenssystem vereinbar. Ihr müsst eure Götter nicht verlassen, um davon zu profitieren."
   neshr.100k.desc: "Der Schleier segne dich, Wesensgefährte. Wie können wir euch helfen?"
-  neshr.100l.desc: "Do not confuse guidance with salvation. The first we can provide. The latter... Well, let us discuss other things."
+  neshr.100l.desc: "Verwechsle Führung nicht mit Erlösung. Das erste können wir zur Verfügung stellen. Letzteres... nun, lasst uns andere Dinge besprechen."
   #Main Menu - Options
   neshr.100.a: "Was kann uns eure Führung bieten?"
   neshr.100.a.alreadyguiding: "Die §YKinder des Schleiers§! führen uns bereits und verbessern unsere Geschwindigkeit in der Physikforschung."
@@ -249,7 +249,7 @@
   neshr.902.a.desc: "$neshr.902.ab.desc.start$\n\nVerbleibende Ionenspuren deuten darauf hin, dass Kräfte von [ne_shroud_destroyer.GetName] hinter diesem Angriff stecken."
   neshr.902.b.desc: "$neshr.902.ab.desc.start$\n\nDie für diesen Angriff verantwortlichen Kräfte bleiben unbekannt."
   neshr.902.ab.desc.start: "Weltraumkommunikations-Scanner nahmen einen kurzen automatisierten Notruf von der Kinder des Schleiers Station im System [ne_shroud_system.GetName] entgegen. Die Übertragung wurde bereits nach wenigen Minuten unterbrochen, und Fernaufklärungssonden haben bestätigt, dass die alte Raumstation zerstört wurde."
-  neshr.902.c.desc: "$neshr.902.cd.desc.start$ by forces loyal to the [ne_shroud_destroyer.GetName]. Unfortunately, this also means that we have lost all access to the valuable services of the Shroud's Children."
+  neshr.902.c.desc: "$neshr.902.cd.desc.start$ von Kräften, die den [ne_shroud_destroyer.GetName] treu sind. Leider bedeutet dies auch, dass wir jeglichen Zugang zu den wertvollen Diensten der Kinder des Schleiers verloren haben."
   neshr.902.d.desc: "$neshr.902.cd.desc.start$ von unbekannten Kräften. Leider bedeutet dies auch, dass wir jeglichen Zugang zu den wertvollen Diensten der Kinder des Schleiers verloren haben."
   neshr.902.cd.desc.start: "Jeder Kontakt mit den [From.GetName] ist verloren gegangen, und unsere Aufklärungsressourcen haben bestätigt, dass die alte Kinder des Schleiers Station zerstört wurde"
   neshr.902.a: "Ein trauriges Ende ihres Erbes."
