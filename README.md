@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://crowdin.com/profile/oralnegorod"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14744482/large/c9386643b0219b0e3b6009c437e0d2e6.jpeg" width="100px;" alt=""/><br /><sub><b>Утка Речная</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://steamcommunity.com/id/Teralion/"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/c2/c22b947ac1d9c02ad444c0a113f66b1bc224a425_full.jpg" width="100px;" alt=""/><br /><sub><b>Teralion</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
   </tr>
 </table>
 
@@ -93,3 +94,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+# LICENSE
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> for eveyone except Paradox Interactive, for which the project is licensed under [CC0 1.0 Universal (CC0 1.0)
+Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/).
