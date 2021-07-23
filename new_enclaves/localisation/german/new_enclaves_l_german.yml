@@ -86,7 +86,7 @@
   nehiv.902.ab.desc.start: "Weltraumkommunikations-Scanner nahmen einen kurzen automatisierten Notruf von der Universeller Schwarm Station im System [ne_hive_system.GetName] entgegen. Die Übertragung wurde bereits nach wenigen Minuten unterbrochen, und Fernaufklärungssonden haben bestätigt, dass die alte Raumstation zerstört wurde."
   nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ von Kräften, die den [ne_hive_destroyer.GetName] treu sind. Leider bedeutet dies auch, dass wir jeglichen Zugang zu den wertvollen Diensten des Universellen Schwarms verloren haben."
   nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ von unbekannten Kräften. Leider bedeutet dies auch, dass wir jeglichen Zugang zu den wertvollen Diensten des Universellen Schwarms verloren haben."
-  nehiv.902.cd.desc.start: "Jeder Kontakt mit den [From.GetName] ist verloren gegangen, und unsere Aufklärungsressourcen haben bestätigt, dass die alte Universeller Schwarm zerstört wurde"
+  nehiv.902.cd.desc.start: "Jeder Kontakt mit den [From.GetName] ist verloren gegangen, und unsere Aufklärungsressourcen haben bestätigt, dass die alte Erste Maschinen Station zerstört wurde"
   nehiv.902.a: "Ein trauriges Ende ihres Erbes."
   nehiv.902.b: "Das hat uns viel gekostet!"
   nehiv.904.desc: "Jedes komplexe Wesen muss sich mit krebserregenden Wirkstoffen auseinandersetzen, die an seiner eigene Zerstörung arbeiten. Das universelle Wesen ist keine Ausnahme.\n\nWir werden den Krebs, der das Universum korrumpiert, nicht füttern. Alle Vereinbarungen, die wir einst hatten, sind jetzt null und nichtig."

@@ -86,7 +86,7 @@
   nehiv.902.ab.desc.start: "Dalekie systemy komunikacji kosmicznej podniosły krótkie zautomatyzowane połączenie alarmowe z stacji Maszyn Głównych w systemie [ne_hive_system.GetName]. Transmisja ustała po zaledwie kilku minutach, a systemy do odbioru dalekiego zasięgu potwierdziły, że starożytna stacja kosmiczna została zniszczona."
   nehiv.902.c.desc: "$nehiv.902.cd.desc.start$ przez siły lojalne w stosunku do [ne_hive_destroyer.GetName]. Niestety oznacza to również, że straciliśmy cały dostęp do cennych usług Maszyn."
   nehiv.902.d.desc: "$nehiv.902.cd.desc.start$ przez nieznane siły. Oznacza to niestety, że straciliśmy cały dostęp do cennych usług Głównych Maszyn."
-  nehiv.902.cd.desc.start: "Wszystkie kontakty zostały utracone z [From.GetName], a nasi zwiadowcy potwierdzili, że starożytna stacja Maszyn Głównych została zniszczona"
+  nehiv.902.cd.desc.start: "Wszystkie kontakty zostały utracone z [From.GetName], a nasi zwiadowcy potwierdzili, że starożytna stacja Maszyn została zniszczona"
   nehiv.902.a: "Smutny koniec ich spuścizny."
   nehiv.902.b: "To kosztowało nas drogo!"
   nehiv.904.desc: "Każdy skomplikowana istota, musi zajmować się czynnikami nowotworowymi, które działają na swoje własne zniszczenia. Uniwersalny byt nie jest wyjątkiem.\n\nNie nakarmimy nowotworu, który spacza wszechświata. Wszystkie porozumienia jakie mieliśmy są nieważne."
