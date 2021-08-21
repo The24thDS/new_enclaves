@@ -492,6 +492,68 @@ guiTypes = {
 				spriteType = "GFX_ship_designer_blocker"
 			}	
 		}
+
+		containerWindowType = {
+			name = "rmg_view_window"
+			position = { x= 565 y = -240 }
+			size = { width = 400 height = 480 }
+			orientation = center
+	
+			background = {
+				name ="background"
+				quadTextureSprite = "GFX_glow_tile_purple"
+				position = { x = 0 y = 0 }
+			}
+	
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg_artist"
+				position = { x = -5 y = -5 }
+				alwaysTransparent = yes
+			}
+	
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line"
+				position = { x = 10 y = 40 }
+			}
+	
+			instantTextBoxType={
+				name = "load_label"
+				font = "large_title_font"
+				position = { x= 26 y= 8 }
+				maxWidth = 300
+				maxHeight = 16
+				text = "RMG Latest News"
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+	
+			buttonType =	{
+				name = "lotor_dev_diary_1"
+				quadTextureSprite = "GFX_rmg_lotor_dev_diary_1"
+				position = { x = 20 y = 60 }
+				web_link="https://www.reddit.com/r/Stellaris/comments/p87buh/legacy_of_the_old_republic_dev_diary_1_timeline/"
+			}
+			buttonType =	{
+				name = "stnc"
+				quadTextureSprite = "GFX_rmg_stnc"
+				position = { x = 20 y = 160 }
+				web_link="https://steamcommunity.com/sharedfiles/filedetails/changelog/1886496498"
+			}
+			buttonType =	{
+				name = "lotor_announcement"
+				quadTextureSprite = "GFX_rmg_lotor_announcement"
+				position = { x = 20 y = 260 }
+				web_link="https://www.reddit.com/r/Stellaris/comments/ouopk0/legacy_of_the_old_republic/"
+			}
+			buttonType =	{
+				name = "planet_states_released"
+				quadTextureSprite = "GFX_rmg_planet_states_released"
+				position = { x = 20 y = 360 }
+				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2409516058"
+			}
+		}
 	}
 
 	containerWindowType = {
