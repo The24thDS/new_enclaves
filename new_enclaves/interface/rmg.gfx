@@ -29,8 +29,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/buttons/rmg_lotor_announcement.dds"
 	}
 	spriteType = {
-		name = "GFX_rmg_planet_states_released"
-		texturefile = "gfx/interface/buttons/rmg_planet_states_released.dds"
+		name = "GFX_rmg_swnd_released"
+		texturefile = "gfx/interface/buttons/rmg_swnd.dds"
 	}
 	spriteType = {
 		name = "GFX_rmg_stnc"
