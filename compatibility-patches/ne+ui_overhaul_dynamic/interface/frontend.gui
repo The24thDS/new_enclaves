@@ -519,28 +519,28 @@ guiTypes = {
 			}
 	
 			buttonType =	{
+				name = "swnd_released"
+				quadTextureSprite = "GFX_rmg_swnd_released"
+				position = { x = 20 y = 60 }
+				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721"
+			}
+			buttonType =	{
 				name = "lotor_dev_diary_1"
 				quadTextureSprite = "GFX_rmg_lotor_dev_diary_1"
-				position = { x = 20 y = 60 }
+				position = { x = 20 y = 160 }
 				web_link="https://www.reddit.com/r/Stellaris/comments/p87buh/legacy_of_the_old_republic_dev_diary_1_timeline/"
 			}
 			buttonType =	{
 				name = "stnc"
 				quadTextureSprite = "GFX_rmg_stnc"
-				position = { x = 20 y = 160 }
+				position = { x = 20 y = 260 }
 				web_link="https://steamcommunity.com/sharedfiles/filedetails/changelog/1886496498"
 			}
 			buttonType =	{
 				name = "lotor_announcement"
 				quadTextureSprite = "GFX_rmg_lotor_announcement"
-				position = { x = 20 y = 260 }
-				web_link="https://www.reddit.com/r/Stellaris/comments/ouopk0/legacy_of_the_old_republic/"
-			}
-			buttonType =	{
-				name = "planet_states_released"
-				quadTextureSprite = "GFX_rmg_planet_states_released"
 				position = { x = 20 y = 360 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2409516058"
+				web_link="https://www.reddit.com/r/Stellaris/comments/ouopk0/legacy_of_the_old_republic/"
 			}
 		}
 	}
