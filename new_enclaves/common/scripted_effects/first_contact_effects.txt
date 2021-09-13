@@ -80,9 +80,9 @@ set_first_contact_starting_stage = {
 					nomad = { setup_first_contact_path = { TYPE = nomad } }
 					default = {
 						root = { fire_on_action = { on_action = on_first_contact_stage_1_no_path } }
-					# 	root = {
-					# 		log_error = "No valid first contact path for encounter with [This.ContactCountry.GetName] (country type: [This.ContactCountry.GetCountryType])"
-					# 	}
+					#	root = {
+					#		log_error = "No valid first contact path for encounter with [This.ContactCountry.GetName] (country type: [This.ContactCountry.GetCountryType])"
+					#	}
 					}
 				}
 			}
@@ -677,9 +677,8 @@ increment_first_contact_skill_1 = {
 			}
 			check_variable_arithmetic = {
 				which = first_contact_skill_variable
-				by = 3
+				modulo = 3
 				value = 2
-				mode = modulo
 			}
 		}
 		custom_tooltip = first_contact_skill_increased
@@ -701,9 +700,8 @@ increment_first_contact_skill_2 = {
 
 			check_variable_arithmetic = {
 				which = first_contact_skill_variable
-				by = 3
+				modulo = 3
 				value >= 1
-				mode = modulo
 			}
 		}
 		custom_tooltip = first_contact_skill_increased
@@ -727,9 +725,8 @@ increment_first_contact_skill = {
 			limit = {
 				check_variable_arithmetic = {
 					which = first_contact_skill_variable
-					by = 3
+					modulo = 3
 					value = 0
-					mode = modulo
 				}
 			}
 			if = {
@@ -1056,7 +1053,7 @@ standard_first_contact_on_roll_failed = {
 		#	leader = { add_experience = @FIRST_CONTACT_XP_1_INSIGHT }
 		}
 		# else = {
-		# 	leader = { add_experience = @FIRST_CONTACT_XP_0_INSIGHT }
+		#	leader = { add_experience = @FIRST_CONTACT_XP_0_INSIGHT }
 		# }
 		random_list = {
 			19 = { }
