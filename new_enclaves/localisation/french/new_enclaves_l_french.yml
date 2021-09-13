@@ -1,5 +1,5 @@
-﻿l_french:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Qu'avez-vous d'autre à offrir ?"
   ### Governments ###
@@ -290,8 +290,6 @@
   ne_shroud_festival: "Festivals Religieux"
   ne_shroud_festival_desc: "Une série de festivals organisés par les Enfants du Voile."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "Nous devons en apprendre davantage à propos des aliens vivants dans le §Ysystème [Prev.From.GetName]§!. S'ils ont un langage, nous devons le décrypter pour étable les communications.\n\nRécompenses : £influence£ §GInfluence§! ou §SProjet Spécial§!"
   opinion_destroyed_ne_hive: "Enclave de la Conscience Universelle détruite"
   opinion_destroyed_ne_hive_trade: "Enclave de la Conscience Universelle avec laquelle nous avions des accords commerciaux détruite"
   opinion_destroyed_ne_machine: "Enclave Robotique détruite"
