@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   ne_enclave: "Анклав"
   ne_back: "Что еще вы мне предлагаете?"
   ### Governments ###
@@ -290,8 +290,6 @@
   ne_shroud_festival: "Религиозные фестивали"
   ne_shroud_festival_desc: "Серия фестивалей, организованных Детьми Покрова."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "Нам нужно узнать больше о таинственных инопланетянах, проживающих в системе §Y[Prev.From.GetName]§!. Если у них есть язык, мы должны расшифровать его и установить связь.\n\nНаграда: £влияние£ §Gвлияние§! или §Специальный проект§!"
   opinion_destroyed_ne_hive: "Уничтожен Анклав Улья"
   opinion_destroyed_ne_hive_trade: "Уничтожен Анклав Улья, с которым у нас была сделка"
   opinion_destroyed_ne_machine: "Уничтожен Анклав Машин"
