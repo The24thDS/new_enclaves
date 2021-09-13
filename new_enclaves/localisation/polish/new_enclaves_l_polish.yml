@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -290,8 +290,6 @@
   ne_shroud_festival: "Festiwal Religijny"
   ne_shroud_festival_desc: "Seria festiwali organizowanych przez Dzieci Shrouda."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "Musimy dowiedzieć się więcej o tajemniczych obcych zamieszkujących w systemie §Y[Prev.From.GetName] §!. Jeśli posiadają własny język, musimy go rozszyfrować i nawiązać komunikację.\n\nNagroda: §GInfluence§! lub §SSpecial Project§!"
   opinion_destroyed_ne_hive: "Zniszczona Enklawa Umysłu Zbiorowego"
   opinion_destroyed_ne_hive_trade: "Zniszczona Enklawa Ula z którą mieliśmy umowę"
   opinion_destroyed_ne_machine: "Zniszczona Enklawa Maszyn"
