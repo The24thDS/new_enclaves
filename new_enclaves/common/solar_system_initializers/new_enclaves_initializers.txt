@@ -1,7 +1,5 @@
 @base_moon_distance = 10
-
 ### NEW ENCLAVES ###
-
 # Hive: Dark Green, turquoise, circle
 ne_hive_init = {
 	name = "NAME_NEHIV_System"
@@ -15,7 +13,6 @@ ne_hive_init = {
 		type = icy_asteroid_belt
 		radius = 290
 	}
-
 	usage_odds = {
 		base = 100
 		modifier = {
@@ -27,12 +24,12 @@ ne_hive_init = {
 			has_star_flag = empire_cluster
 		}
 	}
-
 	max_instances = 1
 	spawn_chance = 100
-
-	flags = { ne_hive_system ne_enclave }
-
+	flags = {
+		ne_hive_system
+		ne_enclave
+	}
 	planet = {
 		name = "NAME_NEHIV_Star"
 		class = "pc_m_giant_star"
@@ -41,7 +38,6 @@ ne_hive_init = {
 		size = 60
 		has_ring = no
 	}
-
 	planet = {
 		name = "NAME_NEHIV_Htrae"
 		class = "pc_molten"
@@ -49,11 +45,12 @@ ne_hive_init = {
 		orbit_angle = 260
 		size = 20
 		has_ring = no
-
 		init_effect = {
 			if = {
 				limit = {
-					NOT = { exists = event_target:ne_hive_country }
+					NOT = {
+						exists = event_target:ne_hive_country
+					}
 				}
 				create_species = {
 					name = random
@@ -65,7 +62,7 @@ ne_hive_init = {
 					name = "NAME_NEHIV_Country"
 					type = ne_enclave
 					authority = "auth_hive_mind"
-					civics =	{
+					civics = {
 						civic = civic_ancient_hive
 					}
 					species = last_created_species
@@ -74,11 +71,11 @@ ne_hive_init = {
 							category = "enclaves"
 							file = "ne_flag_hive.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "circle.dds"
 						}
-						colors={
+						colors = {
 							"dark_green"
 							"turquoise"
 							"null"
@@ -97,10 +94,12 @@ ne_hive_init = {
 					save_global_event_target_as = ne_hive_country
 					create_fleet = {
 						name = "NAME_NEHIV_Fleet"
-						settings = { spawn_debris = no }
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
-								create_ship = {
+							create_ship = {
 								name = random
 								design = "NAME_NEHIV_Enclave_Station"
 								graphical_culture = prev
@@ -127,7 +126,6 @@ ne_hive_init = {
 			}
 		}
 	}
-
 	planet = {
 		name = "NAME_NEHIV_Srma"
 		class = "pc_molten"
@@ -136,7 +134,6 @@ ne_hive_init = {
 		size = 13
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_asteroid"
 		orbit_distance = 30
@@ -144,7 +141,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_asteroid"
 		orbit_distance = 0
@@ -152,7 +148,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_asteroid"
 		orbit_distance = 0
@@ -160,7 +155,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_asteroid"
 		orbit_distance = 0
@@ -168,7 +162,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		name = "NAME_NEHIV_Retipuj"
 		class = "pc_gas_giant"
@@ -177,7 +170,6 @@ ne_hive_init = {
 		size = 35
 		has_ring = no
 		change_orbit = 6
-
 		moon = {
 			name = "NAME_NEHIV_Oi"
 			class = "pc_molten"
@@ -211,7 +203,6 @@ ne_hive_init = {
 			has_ring = no
 		}
 	}
-
 	planet = {
 		name = "NAME_NEHIV_Nrutas"
 		class = "pc_gas_giant"
@@ -220,7 +211,6 @@ ne_hive_init = {
 		size = 30
 		has_ring = yes
 		change_orbit = 7
-
 		moon = {
 			name = "NAME_NEHIV_Natit"
 			class = "pc_arctic"
@@ -230,7 +220,6 @@ ne_hive_init = {
 			has_ring = no
 		}
 	}
-
 	planet = {
 		name = "NAME_NEHIV_Enutpen"
 		class = "pc_gas_giant"
@@ -239,7 +228,6 @@ ne_hive_init = {
 		size = 20
 		has_ring = no
 	}
-
 	planet = {
 		name = "NAME_NEHIV_Sunaru"
 		class = "pc_gas_giant"
@@ -248,7 +236,6 @@ ne_hive_init = {
 		size = 20
 		has_ring = no
 		change_orbit = 4
-
 		moon = {
 			name = "NAME_NEHIV_Notirt"
 			class = "pc_barren"
@@ -258,7 +245,6 @@ ne_hive_init = {
 			has_ring = no
 		}
 	}
-
 	planet = {
 		class = "pc_asteroid"
 		orbit_distance = 30
@@ -266,7 +252,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
@@ -274,7 +259,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
@@ -282,7 +266,6 @@ ne_hive_init = {
 		size = 5
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
@@ -296,7 +279,6 @@ ne_hive_init = {
 ne_machine_init = {
 	class = sc_pulsar
 	usage = misc_system_init
-
 	usage_odds = {
 		base = 100
 		modifier = {
@@ -308,12 +290,12 @@ ne_machine_init = {
 			has_star_flag = empire_cluster
 		}
 	}
-
 	max_instances = 1
 	spawn_chance = 100
-
-	flags = { ne_machine_system ne_enclave }
-
+	flags = {
+		ne_machine_system
+		ne_enclave
+	}
 	planet = {
 		name = "NAME_NEMAC_Star"
 		class = star
@@ -322,44 +304,69 @@ ne_machine_init = {
 		size = 15
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_shattered"
-		count = { min = 1 max = 2 }
+		count = {
+			min = 1
+			max = 2
+		}
 		orbit_distance = 40
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 20 max = 25 }
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 20
+			max = 25
+		}
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_shattered"
-		count = { min = 2 max = 4 }
+		count = {
+			min = 2
+			max = 4
+		}
 		orbit_distance = 30
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 15 max = 20 }
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 15
+			max = 20
+		}
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_shattered"
-		count = { min = 1 max = 1 }
+		count = {
+			min = 1
+			max = 1
+		}
 		orbit_distance = 45
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 15 max = 25 }
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 15
+			max = 25
+		}
 		has_ring = no
-
 		init_effect = {
 			if = {
 				limit = {
-					NOT = { exists = event_target:ne_machine_country }
+					NOT = {
+						exists = event_target:ne_machine_country
+					}
 				}
 				create_prime_machines_species = yes
 				create_country = {
 					name = "NAME_NEMAC_Country"
 					type = ne_enclave
 					authority = "auth_machine_intelligence"
-					civics =	{
+					civics = {
 						civic = civic_autonomous_node
 					}
 					species = last_created_species
@@ -368,11 +375,11 @@ ne_machine_init = {
 							category = "enclaves"
 							file = "ne_flag_machine.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "sinus.dds"
 						}
-						colors={
+						colors = {
 							"red_orange"
 							"grey"
 							"null"
@@ -387,15 +394,16 @@ ne_machine_init = {
 				last_created_country = {
 					set_country_flag = ne_machine_country
 					set_country_flag = ne_country
-					set_country_flag = ne_machine_fixed # TODO: remove in a future version
 					set_graphical_culture = mammalian_01
 					save_global_event_target_as = ne_machine_country
 					create_fleet = {
 						name = "NAME_NEMAC_Fleet"
-						settings = { spawn_debris = no }
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
-								create_ship = {
+							create_ship = {
 								name = random
 								design = "NAME_NEMAC_Enclave_Station"
 								graphical_culture = prev
@@ -422,22 +430,38 @@ ne_machine_init = {
 			}
 		}
 	}
-
 	planet = {
 		class = "pc_shattered"
-		count = { min = 1 max = 1 }
+		count = {
+			min = 1
+			max = 1
+		}
 		orbit_distance = 25
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 20 max = 40 }
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 20
+			max = 40
+		}
 		has_ring = no
 	}
-
 	planet = {
 		class = "pc_shattered"
-		count = { min = 1 max = 2 }
+		count = {
+			min = 1
+			max = 2
+		}
 		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 15 max = 30 }
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 15
+			max = 30
+		}
 		has_ring = no
 	}
 }
@@ -447,7 +471,6 @@ ne_shroud_init = {
 	name = "NAME_NESHR_System"
 	class = sc_black_hole
 	usage = misc_system_init
-
 	usage_odds = {
 		base = 100
 		modifier = {
@@ -459,12 +482,12 @@ ne_shroud_init = {
 			has_star_flag = empire_cluster
 		}
 	}
-
 	max_instances = 1
 	spawn_chance = 100
-
-	flags = { ne_shroud_system ne_enclave }
-
+	flags = {
+		ne_shroud_system
+		ne_enclave
+	}
 	planet = {
 		name = "NAME_NESHR_Star"
 		class = star
@@ -473,7 +496,6 @@ ne_shroud_init = {
 		size = 30
 		has_ring = no
 	}
-
 	planet = {
 		name = "NAME_NESHR_Planet_1"
 		class = "pc_shrouded"
@@ -481,11 +503,12 @@ ne_shroud_init = {
 		orbit_angle = 90
 		size = 25
 		has_ring = no
-
 		init_effect = {
 			if = {
 				limit = {
-					NOT = { exists = event_target:ne_shroud_country }
+					NOT = {
+						exists = event_target:ne_shroud_country
+					}
 				}
 				create_species = {
 					name = random
@@ -500,7 +523,7 @@ ne_shroud_init = {
 					name = "NAME_NESHR_Country"
 					type = ne_enclave
 					authority = "auth_oligarchic"
-					civics =	{
+					civics = {
 						civic = civic_priesthood_of_the_cycle
 					}
 					species = last_created_species
@@ -509,11 +532,11 @@ ne_shroud_init = {
 							category = "enclaves"
 							file = "ne_flag_shroud.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "stripes.dds"
 						}
-						colors={
+						colors = {
 							"indigo"
 							"burgundy"
 							"null"
@@ -533,10 +556,12 @@ ne_shroud_init = {
 					save_global_event_target_as = ne_shroud_country
 					create_fleet = {
 						name = "NAME_NESHR_Fleet"
-						settings = { spawn_debris = no }
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
-								create_ship = {
+							create_ship = {
 								name = random
 								design = "NAME_NESHR_Enclave_Station"
 								graphical_culture = prev
@@ -563,7 +588,6 @@ ne_shroud_init = {
 			}
 		}
 	}
-
 	planet = {
 		name = "NAME_NESHR_Planet_2"
 		class = "pc_shielded"
@@ -572,7 +596,6 @@ ne_shroud_init = {
 		size = 20
 		has_ring = no
 	}
-
 	planet = {
 		name = "NAME_NESHR_Planet_3"
 		class = "pc_broken"
