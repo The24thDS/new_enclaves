@@ -1,5 +1,5 @@
-﻿l_braz_por:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "What else did you have to offer?"
   ### Governments ###
@@ -290,8 +290,6 @@
   ne_shroud_festival: "Religious Festivals"
   ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "We need to learn more about the mysterious aliens residing in the §Y[Prev.From.GetName] System§!. If they possess a language, we must decipher it and establish communications.\n\nReward: £influence£ §GInfluence§! or §SSpecial Project§!"
   opinion_destroyed_ne_hive: "Destroyed Hive Enclave"
   opinion_destroyed_ne_hive_trade: "Destroyed Hive Enclave we had deals with"
   opinion_destroyed_ne_machine: "Destroyed Machine Enclave"
