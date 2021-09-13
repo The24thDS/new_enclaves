@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -290,8 +290,6 @@
   ne_shroud_festival: "Festivales religiosos"
   ne_shroud_festival_desc: "Una serie de festivales organizados por los Hijos del Velo."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "Necesitamos aprender más sobre los misteriosos alienígenas que residen en el §Y[Prev.From.GetName] Sistema§! Si poseen un idioma, debemos descifrarlo y establecer comunicaciones.\n\nRecompensa: £influence£ §GInfluencia§! or §SProyecto especial§!"
   opinion_destroyed_ne_hive: "Enclave de colmena destruido"
   opinion_destroyed_ne_hive_trade: "Destrucción del enclave colmena en la que teníamos tratos vigentes"
   opinion_destroyed_ne_machine: "Enclave de colmena destruido"
