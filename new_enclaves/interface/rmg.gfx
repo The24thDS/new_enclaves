@@ -21,16 +21,16 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
-		name = "GFX_rmg_lotor_dev_diary_1"
-		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_1.dds"
+		name = "GFX_rmg_new_enclaves"
+		texturefile = "gfx/interface/buttons/rmg_new_enclaves.dds"
 	}
 	spriteType = {
-		name = "GFX_rmg_lotor_announcement"
-		texturefile = "gfx/interface/buttons/rmg_lotor_announcement.dds"
+		name = "GFX_rmg_planet_states"
+		texturefile = "gfx/interface/buttons/rmg_planet_states.dds"
 	}
 	spriteType = {
-		name = "GFX_rmg_swnd_released"
-		texturefile = "gfx/interface/buttons/rmg_swnd.dds"
+		name = "GFX_rmg_lotor_dev_diary_2"
+		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_2.dds"
 	}
 	spriteType = {
 		name = "GFX_rmg_stnc"
