@@ -529,28 +529,28 @@ guiTypes = {
 			}
 	
 			buttonType =	{
+				name = "lotor_dev_diary_3"
+				quadTextureSprite = "GFX_rmg_lotor_dev_diary_3"
+				position = { x = 20 y = 60 }
+				web_link="https://www.reddit.com/r/Stellaris/comments//star_wars_legacy_of_the_old_republic_dev_diary_3/"
+			}
+			buttonType =	{
+				name = "swnd"
+				quadTextureSprite = "GFX_rmg_swnd"
+				position = { x = 20 y = 160 }
+				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721"
+			}
+			buttonType =	{
 				name = "new_enclaves"
 				quadTextureSprite = "GFX_rmg_new_enclaves"
-				position = { x = 20 y = 60 }
+				position = { x = 20 y = 260 }
 				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372"
 			}
 			buttonType =	{
 				name = "stnc"
 				quadTextureSprite = "GFX_rmg_stnc"
-				position = { x = 20 y = 160 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/changelog/1886496498"
-			}
-			buttonType =	{
-				name = "planet_states"
-				quadTextureSprite = "GFX_rmg_planet_states"
-				position = { x = 20 y = 260 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2409516058"
-			}
-			buttonType =	{
-				name = "lotor_dev_diary_2"
-				quadTextureSprite = "GFX_rmg_lotor_dev_diary_2"
 				position = { x = 20 y = 360 }
-				web_link="https://www.reddit.com/r/Stellaris/comments/ph46s2/star_wars_legacy_of_the_old_republic_dev_diary_2/"
+				web_link="https://steamcommunity.com/sharedfiles/filedetails/changelog/1886496498"
 			}
 		}
 	}
