@@ -29,11 +29,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/buttons/rmg_planet_states.dds"
 	}
 	spriteType = {
-		name = "GFX_rmg_lotor_dev_diary_2"
-		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_2.dds"
+		name = "GFX_rmg_lotor_dev_diary_3"
+		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_3.dds"
 	}
 	spriteType = {
 		name = "GFX_rmg_stnc"
 		texturefile = "gfx/interface/buttons/rmg_stnc.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_swnd"
+		texturefile = "gfx/interface/buttons/rmg_swnd.dds"
 	}
 }
