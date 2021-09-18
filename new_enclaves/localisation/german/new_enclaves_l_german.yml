@@ -290,8 +290,6 @@
   ne_shroud_festival: "Religiöse Feste"
   ne_shroud_festival_desc: "Eine Reihe von Festen, die von den Kinder des Schleiers organisiert werden."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "Wir müssen mehr über die mysteriösen Außerirdischen erfahren, die sich im §Y[Prev.From.GetName] System§! befinden. Wenn sie eine Sprache besitzen, müssen wir sie entschlüsseln und Kommunikation herstellen.\n\nBelohung: £influence£ §GEinfluss§! oder §SSpezialprojekt§!"
   opinion_destroyed_ne_hive: "Zerstörte Schwarm-Enklave"
   opinion_destroyed_ne_hive_trade: "Zerstörte Schwarm-Enklave, mit der wir Geschäfte machten"
   opinion_destroyed_ne_machine: "Zerstörte Maschinenenklave"
@@ -299,3 +297,4 @@
   opinion_destroyed_ne_shroud: "Zerstörte Schwarm-Enklave"
   opinion_destroyed_ne_shroud_trade: "Zerstörte Schwarm-Enklave, mit der wir Geschäfte machten"
   station_enclave_curator_01_key: "Kurator Station Enklave"
+  NE_VERSION: "New Enclaves v2.4.3"
