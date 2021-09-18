@@ -190,7 +190,7 @@
   neshr.100i.desc: "El potencial psicológico de tu especie es incomparable. Con nuestra ayuda, puedes aprovecharla."
   neshr.100j.desc: "La guía espiritual que ofrecemos es compatible con cualquier sistema de creencias. No tienes que abandonar a tus dioses para beneficiarte de ello."
   neshr.100k.desc: "Que el Velo te bendiga, querida criatura. ¿Cómo podemos ayudarte?"
-  neshr.100l.desc: "Do not confuse guidance with salvation. The first we can provide. The latter... Well, let us discuss other things."
+  neshr.100l.desc: "No confunda la orientación con la salvación. Lo primero es lo que podemos proporcionar. Lo segundo... Bueno, hablemos de otras cosas."
   #Main Menu - Options
   neshr.100.a: "¿Qué nos puede ofrecer su orientación?"
   neshr.100.a.alreadyguiding: "¡Los niños del YVelo§! ya nos está guiando, mejorando nuestra velocidad de investigación de física."
@@ -290,8 +290,6 @@
   ne_shroud_festival: "Festivales religiosos"
   ne_shroud_festival_desc: "Una serie de festivales organizados por los Hijos del Velo."
   ### Misc ###
-  INVESTIGATE_NE_ENCLAVE: "$ESTABLISH_COMMUNICATIONS$"
-  INVESTIGATE_NE_ENCLAVE_DESC: "Necesitamos aprender más sobre los misteriosos alienígenas que residen en el §Y[Prev.From.GetName] Sistema§! Si poseen un idioma, debemos descifrarlo y establecer comunicaciones.\n\nRecompensa: £influence£ §GInfluencia§! or §SProyecto especial§!"
   opinion_destroyed_ne_hive: "Enclave de colmena destruido"
   opinion_destroyed_ne_hive_trade: "Destrucción del enclave colmena en la que teníamos tratos vigentes"
   opinion_destroyed_ne_machine: "Enclave de colmena destruido"
@@ -299,3 +297,4 @@
   opinion_destroyed_ne_shroud: "Enclave del Velo destruido"
   opinion_destroyed_ne_shroud_trade: "Destrucción del enclave del Velo en la que teníamos tratos vigentes"
   station_enclave_curator_01_key: "Enclave Estación Curador"
+  NE_VERSION: "New Enclaves v2.4.3"
