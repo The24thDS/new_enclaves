@@ -1,0 +1,40 @@
+{
+  "bumpFiles": [
+    {
+      "filename": "new_enclaves.mod",
+      "updater": "mod-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/descriptor.mod",
+      "updater": "mod-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/braz_por/new_enclaves_l_braz_por.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/english/new_enclaves_l_english.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/french/new_enclaves_l_french.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/german/new_enclaves_l_german.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/polish/new_enclaves_l_polish.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/russian/new_enclaves_l_russian.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "new_enclaves/localisation/spanish/new_enclaves_l_spanish.yml",
+      "updater": "yml-file-updater.js"
+    }
+  ]
+}
