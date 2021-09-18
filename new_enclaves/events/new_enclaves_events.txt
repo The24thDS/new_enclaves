@@ -89,7 +89,9 @@ country_event = {
 					ne_machine_country = {
 						country_event = { id = nemac.10 }
 					}
-					default = { log_error = "Unexpected new enclave type or missing script flag" }
+					default = {
+						fire_on_action = { on_action = on_ne_comms_established_no_path }
+					}
 				}
 			}
 		}
@@ -142,7 +144,9 @@ country_event = {
 			ne_machine_country = {
 				country_event = { id = nemac.10 scopes = { from = from } }
 			}
-			default = { log_error = "Unexpected new enclave type or missing script flag" }
+			default = {
+				fire_on_action = { on_action = on_ne_comms_established_no_path }
+			}
 		}
 	}
 }

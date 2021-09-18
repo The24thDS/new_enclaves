@@ -58,3 +58,10 @@ on_ship_destroyed_victim = {
 		neshr.900
 	}
 }
+
+# This = enclave
+# From = empire
+on_ne_comms_established_no_path = {
+	events = {
+	}
+}
