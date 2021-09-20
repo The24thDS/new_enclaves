@@ -1,3 +1,20 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.5.0](https://github.com/The24thDS/new_enclaves/compare/v2.4.3-dev...v2.5.0) (2021-09-20)
+
+
+### Features
+
+* improved comms established compatibility for submods ([27aaa5a](https://github.com/The24thDS/new_enclaves/commit/27aaa5aa88c7fce350cbd2fb28431927266a6ced))
+
+
+### Bug Fixes
+
+* **locs:** removed unused locs and added version loc ([be2aa35](https://github.com/The24thDS/new_enclaves/commit/be2aa35087aca9173fc799c1e069b9903ad6b1e6))
+* **ui-overhault-patch:** updated the RMG News section ([18ba415](https://github.com/The24thDS/new_enclaves/commit/18ba41555fdb75d8002816461687b851797b5782))
+
 ## [2.4.3-dev](https://github.com/The24thDS/new_enclaves/compare/v2.4.2-dev...v2.4.3-dev) (2021-09-13)
 
 ### Bug Fixes
