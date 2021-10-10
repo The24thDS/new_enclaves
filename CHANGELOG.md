@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.1](https://github.com/The24thDS/new_enclaves/compare/v2.5.0...v2.5.1) (2021-10-10)
+
+
+### Bug Fixes
+
+* fixed Ancient Sapience Protocols trait not showing for machine empires ([28d8133](https://github.com/The24thDS/new_enclaves/commit/28d81337cb6d48ffecd4cb84fde1aa37cc8f634c))
+* updated German and Polish translations with new changes ([6d56b8e](https://github.com/The24thDS/new_enclaves/commit/6d56b8ee8daa9b7fa0f8921cff4875c0e23b27e9))
+
 ## [2.5.0](https://github.com/The24thDS/new_enclaves/compare/v2.4.3-dev...v2.5.0) (2021-09-20)
 
 
