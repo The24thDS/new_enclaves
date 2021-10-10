@@ -1,0 +1,106 @@
+namespace = ne_test
+
+# Establish comms with Prime Machines
+country_event = {
+	id = ne_test.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_machine_country
+			}
+			establish_communications_no_message = prev
+		}
+	}
+}
+
+# Establish comms with Universal Hive
+country_event = {
+	id = ne_test.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_hive_country
+			}
+			establish_communications_no_message = prev
+		}
+	}
+}
+
+# Establish comms with Shroud Children
+country_event = {
+	id = ne_test.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_shroud_country
+			}
+			establish_communications_no_message = prev
+		}
+	}
+}
+
+# Max opinion with Prime Machines
+country_event = {
+	id = ne_test.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_machine_country
+			}
+			add_trust = {
+				amount = 100
+				who = root
+			}
+		}
+	}
+}
+
+# Max opinion with Universal Hive
+country_event = {
+	id = ne_test.11
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_hive_country
+			}
+			add_trust = {
+				amount = 100
+				who = root
+			}
+		}
+	}
+}
+
+# Max opinion with Shroud Children
+country_event = {
+	id = ne_test.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_shroud_country
+			}
+			add_trust = {
+				amount = 100
+				who = root
+			}
+		}
+	}
+}

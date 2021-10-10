@@ -40,7 +40,10 @@ trait_robot_sapient_machine = {
 		exists = from
 		from = {
 			has_technology = tech_prime_machines_secrets
-			has_technology = tech_synthetic_workers
+			OR = {
+				has_technology = tech_synthetic_workers
+				is_machine_empire = yes
+			}
 			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
