@@ -58,42 +58,22 @@ If you want to contribute by translating the locs, you can do that on [Crowdin](
 
 If you like my work you can sponsor me on [Github](https://github.com/sponsors/The24thDS) or buy me a tea on [BuyMeACoffe](https://www.buymeacoffee.com/the24thds).
 
-## Contributors ✨
+### Credits
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+This mod would not exist in its current state without these people:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Sima</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a> <a href="#content-The24thDS" title="Content">🖋</a> <a href="#ideas-The24thDS" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-The24thDS" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/lpslucasps"><img src="https://avatars.githubusercontent.com/u/1896763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lpslucasps</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=lpslucasps" title="Code">💻</a> <a href="#content-lpslucasps" title="Content">🖋</a> <a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/CodeJudge-9000"><img src="https://avatars.githubusercontent.com/u/66952128?v=4?s=100" width="100px;" alt=""/><br /><sub><b>CodeJudge-9000</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/issues?q=author%3ACodeJudge-9000" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://crowdin.com/profile/paradroid"><img src="https://i2.wp.com/crowdin.com/images/user-picture.png" width="100px;" alt=""/><br /><sub><b>Paradroid</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://steamcommunity.com/profiles/76561198984303830"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/d3/d3dc8c3b65b0ece07eb890b613bc0d425fec1b0d_full.jpg" width="100px;" alt=""/><br /><sub><b>桃溪柳岸醉道长</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://steamcommunity.com/id/MrArcaneGates"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/1d/1da1356c225f7bf2d7c8e6a06d46f831ef471ae1_full.jpg" width="100px;" alt=""/><br /><sub><b>MrArcaneGates</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://steamcommunity.com/profiles/76561198055332584/"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/67/67a664bfdc56d43b8b1194a7e9c038d677cbc565_full.jpg" width="100px;" alt=""/><br /><sub><b>Kaiser</b></sub></a><br /><a href="" title="Testing">📓 </a></td>
-    <td align="center"><a href="https://steamcommunity.com/id/ReimuLi"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/e6/e65d5b4d82967ddb304f0d121f3e42275c215c9c_full.jpg" width="100px;" alt=""/><br /><sub><b>Lunar Traveller and the group</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://crowdin.com/profile/jonimega"><img src="https://www.gravatar.com/avatar/74408fe3bd2949e0d45ff4fd9145a54a?s=260&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png" width="100px;" alt=""/><br /><sub><b>JoniMega</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://crowdin.com/profile/mrxzx"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14725286/large/666c00cfd2772116f9adee43726d6b85.png" width="100px;" alt=""/><br /><sub><b>MRXZX</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://steamcommunity.com/id/imca"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/ba/ba4eb175f1d35a50eb7b05bbad90673778047f04_full.jpg" width="100px;" alt=""/><br /><sub><b>SIVA Fox</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://steamcommunity.com/id/ChooMcoo/"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1526200/1b9d00f090479d24604d15b3b8a385ad7de6433d.gif" width="100px;" alt=""/><br /><sub><b>ChooMcoo</b></sub></a><br /><a href="" title="Bug reports">🐛</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://crowdin.com/profile/oralnegorod"><img src="https://crowdin-static.downloads.crowdin.com/avatar/14744482/large/c9386643b0219b0e3b6009c437e0d2e6.jpeg" width="100px;" alt=""/><br /><sub><b>Утка Речная</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://steamcommunity.com/id/Teralion/"><img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/c2/c22b947ac1d9c02ad444c0a113f66b1bc224a425_full.jpg" width="100px;" alt=""/><br /><sub><b>Teralion</b></sub></a><br /><a href="" title="Translation">🌍</a></td>
-  </tr>
-</table>
+- [lpslucasps](https://github.com/lpslucasps) with the original idea behind the mod;
+- [CodeJudge-900](https://github.com/CodeJudge-9000), [MrArcaneGates](https://steamcommunity.com/id/MrArcaneGates), [SIVA Fox](https://steamcommunity.com/id/imca) and [ChooMcoo](https://steamcommunity.com/id/ChooMcoo/), AveAwan with their bug reports;
+- [Paradroid](https://crowdin.com/profile/paradroid) with the German translation;
+- [JoniMega](https://crowdin.com/profile/jonimega) with the Spanish translation;
+- [MRXZX](https://crowdin.com/profile/mrxzx) with the Polish translation;
+- [Lunar Traveller](https://steamcommunity.com/id/ReimuLi) and the group with the Chinese translation;
+- [Утка Речная](https://crowdin.com/profile/oralnegorod) with the Russian translation;
+- [Teralion](https://steamcommunity.com/id/Teralion/) with the French translation;
+- [Kaiser](https://steamcommunity.com/profiles/76561198055332584/) with his testing for 3.0.1;
+- and everyone that plays this mod.
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Thank you all!
 
 # LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> for eveyone except Paradox Interactive, for which the project is licensed under [CC0 1.0 Universal (CC0 1.0)
