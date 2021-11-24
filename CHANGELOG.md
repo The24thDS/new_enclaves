@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/The24thDS/new_enclaves/compare/v2.5.3...v2.6.0) (2021-11-24)
+
+
+### Features
+
+* updated for Stellaris 3.2 ([6eca8c3](https://github.com/The24thDS/new_enclaves/commit/6eca8c3fa27a93de6f86df1ce78df3cd7c2c23cb))
+
+
+### Bug Fixes
+
+* **setup:** fixed yml updater not updated translated files correctly ([c5a93f6](https://github.com/The24thDS/new_enclaves/commit/c5a93f6d469744cf9d312862f31a23f959512a34))
+* updated German and Polish translations with new changes ([d15a153](https://github.com/The24thDS/new_enclaves/commit/d15a153e171e82b6d2350ea46fd64f6f28fcef5c))
+
 ### [2.5.3](https://github.com/The24thDS/new_enclaves/compare/v2.5.2...v2.5.3) (2021-10-29)
 
 ### [2.5.2](https://github.com/The24thDS/new_enclaves/compare/v2.5.1...v2.5.2) (2021-10-10)
