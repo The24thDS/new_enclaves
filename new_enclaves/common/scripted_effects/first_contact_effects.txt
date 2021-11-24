@@ -7,7 +7,17 @@
 
 # first_contact scope. Putting here so it's easy to find again
 set_first_contact_starting_stage = {
-	custom_tooltip = start_first_contact
+	if = {
+		limit = {
+			contact_country = {
+				is_country_type = dragon_dummy
+			}
+		}
+		custom_tooltip = start_dragon_communications_study
+	}
+	else = {
+		custom_tooltip = start_first_contact
+	}
 	hidden_effect = {
 		owner = {
 			set_timed_country_flag = {
@@ -18,10 +28,7 @@ set_first_contact_starting_stage = {
 		if = {
 			limit = {
 				contact_country = {
-					OR = {
-						is_country_type = default
-						is_country_type = prikki
-					}
+					is_country_type = default
 				}
 			}
 			set_first_contact_stage = default_stage_1
@@ -78,6 +85,7 @@ set_first_contact_starting_stage = {
 					caravaneer_home = { setup_first_contact_path = { TYPE = caravaneers } }
 					cloud = { setup_first_contact_path = { TYPE = void_clouds } }
 					nomad = { setup_first_contact_path = { TYPE = nomad } }
+					dragon_dummy = { setup_first_contact_path = { TYPE = origin_dragon } }
 					default = {
 						root = { fire_on_action = { on_action = on_first_contact_stage_1_no_path } }
 					#	root = {
@@ -420,6 +428,7 @@ finish_first_contact_effect = {
 									has_established_contact = prev
 								}
 							}
+#							custom_tooltip = further_fc_caravaneers_completed
 							hidden_effect = {
 								if = {
 									limit = {
@@ -1507,9 +1516,20 @@ octopodes_fc_random_events = {
 	}
 }
 
+no_events = { }
+
 hostile_fc_random_events = {
 	#no events needed, but worth keeping in case we ever decide otherwise
 }
 space_fauna_fc_random_events = {
 	#no events needed, but worth keeping in case we ever decide otherwise
+}
+
+dragon_random_events = {
+	if = {
+		limit = {
+			NOT = { has_first_contact_flag = aquatics_280_fired }
+		}
+		first_contact_event = { id = aquatics.280 }
+	}
 }
