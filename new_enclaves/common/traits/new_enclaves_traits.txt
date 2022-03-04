@@ -1,7 +1,7 @@
 # Hive
 leader_universal_drone = {
 	cost = 0
-	modification = no
+	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_deep_connections.dds"
 	modifier = {
 		planet_crime_add = -50
@@ -15,7 +15,7 @@ leader_universal_drone = {
 # Machines
 leader_prime_machine = {
 	cost = 0
-	modification = no
+	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/trait_robot_learning_algorithms.dds"
 	modifier = {
 		planet_jobs_robotic_produces_mult = 0.10
@@ -56,7 +56,7 @@ trait_robot_sapient_machine = {
 # Spiritualists
 leader_trait_saint = {
 	cost = 0
-	modification = no
+	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.20
