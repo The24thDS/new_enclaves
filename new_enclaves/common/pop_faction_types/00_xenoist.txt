@@ -12,7 +12,7 @@ xenoist = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 2
+			unity = 2
 		}
 	}
 
@@ -583,7 +583,7 @@ xenoist = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				unity = 500
 			}
 
 			potential = {
