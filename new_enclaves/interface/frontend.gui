@@ -493,6 +493,7 @@ guiTypes = {
 		}
 
 		# JENKINS_IMPORT_RMG_NEWS #
+
 	}
 
 	containerWindowType = {
