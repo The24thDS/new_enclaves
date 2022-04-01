@@ -208,6 +208,7 @@ guiTypes = {
 				maxHeight = 20
 				fixedSize = yes
 				format = left
+				tooltip = "JENKINS_BUILD_NUMBER"
 			}
 			instantTextBoxType = {
 				name = "version"
