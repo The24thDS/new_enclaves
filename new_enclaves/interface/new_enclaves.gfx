@@ -176,6 +176,19 @@ spriteTypes = {
 		textureFile = "gfx/interface/diplomacy/diplomacy_portrait_frame_shroud.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rmg_logo"
+		textureFile = "gfx/interface/icons/logo_rmg.dds"
+	}
+	spriteType = {
+		name = "GFX_front_menu_rmg_steam"
+		textureFile = "gfx/interface/buttons/main_menu_rmg_steam.dds"
+	}
+	spriteType = {
+		name = "GFX_front_menu_rmg_discord"
+		textureFile = "gfx/interface/buttons/main_menu_rmg_discord.dds"
+	}
+
 	flagSpriteType = {
 		name = "GFX_empire_flag_128_shroud"
 		textureFile = "gfx/interface/flags/empire_flag_128_frame_shroud.dds"		#this one will determine the size of the sprite
