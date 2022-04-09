@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/The24thDS/new_enclaves/compare/v2.6.3...v2.7.0) (2022-04-09)
+
+
+### Features
+
+* updated for Stellaris 3.2 ([768be88](https://github.com/The24thDS/new_enclaves/commit/768be88bd200497d6653f74e8db63b43b9afcc20))
+
+
+### Bug Fixes
+
+* fixed xenoist faction not recognizing my enclaves as enclaves ([33405fb](https://github.com/The24thDS/new_enclaves/commit/33405fbe5497245bd32d8d16db93dc6ca7a984cf))
+
 ### [2.6.3](https://github.com/The24thDS/new_enclaves/compare/v2.6.2...v2.6.3) (2022-04-01)
 
 ### [2.6.2](https://github.com/The24thDS/new_enclaves/compare/v2.6.1...v2.6.2) (2022-03-09)
