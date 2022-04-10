@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -297,4 +297,4 @@
   opinion_destroyed_ne_shroud: "Enclave del Velo destruido"
   opinion_destroyed_ne_shroud_trade: "Destrucción del enclave del Velo en la que teníamos tratos vigentes"
   station_enclave_curator_01_key: "Enclave Estación Curador"
-  NE_VERSION: "New Enclaves v2.6.3"
+  NE_VERSION: "New Enclaves v2.7.0"
