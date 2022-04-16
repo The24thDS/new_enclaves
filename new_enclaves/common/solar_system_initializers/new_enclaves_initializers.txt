@@ -605,3 +605,216 @@ ne_shroud_init = {
 		has_ring = no
 	}
 }
+
+ne_drg_init = {
+	name = "NAME_NEDRG_System"
+	class = sc_ne_a
+	usage = misc_system_init
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 190
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 290
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 280
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 270
+	}
+	usage_odds = {
+		base = 100
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	spawn_chance = 100
+	flags = {
+		ne_drg_system
+		ne_enclave
+	}
+	init_effect = {
+		star = {
+			create_ambient_object = {
+				type = "ne_turbulent_nebula_2_green"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
+		add_modifier = { modifier = turbulent_nebula }
+	}
+	planet = {
+		name = "NAME_NEDRG_Star"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEDRG_Planet_1"
+		class = pc_molten
+		orbit_distance = 60
+		orbit_angle = 200
+		size = 15
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEDRG_Planet_2"
+		class = pc_barren
+		orbit_distance = 40
+		orbit_angle = 80
+		size = 15
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEDRG_Planet_3"
+		class = pc_barren
+		orbit_distance = 15
+		orbit_angle = -180
+		size = 20
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEDRG_Planet_4"
+		class = pc_broken
+		orbit_distance = 70
+		orbit_angle = 170
+		size = 30
+		has_ring = yes
+		change_orbit = 7
+		moon = {
+			name = "NAME_NEDRG_Planet_4_1"
+			class = pc_barren
+			size = 8
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+		init_effect = {
+			create_ambient_object = {
+				type = "ne_space_storm_2_green"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+			add_modifier = {
+				modifier = dangerous_wildlife
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+			}
+			add_modifier = {
+				modifier = weak_magnetic_field
+			}
+			add_modifier = {
+				modifier = wild_storms
+			}
+			add_modifier = {
+				modifier = ultra_rich
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:ne_drg_country
+					}
+				}
+				create_species = {
+					name = random
+					class = random_non_machine
+					portrait = random
+					traits = random
+				}
+				create_country = {
+					name = "NAME_NEDRG_Country"
+					type = ne_enclave
+					authority = auth_corporate
+					civics = {
+						civic = civic_ruthless_competition
+						civic = civic_permanent_employment
+					}
+					species = last_created_species
+					flag = {
+						icon = {
+							category = "enclaves"
+							file = "DeepDives_Icon.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "new_dawn.dds"
+						}
+						colors = {
+							"dark_green"
+							"brown"
+							"null"
+							"null"
+						}
+					}
+					ethos = {
+						ethic = ethic_materialist
+						ethic = ethic_militarist
+						ethic = ethic_xenophobe
+					}
+					ignore_initial_colony_error = yes
+				}
+				last_created_country = {
+					set_country_flag = ne_drg_country
+					set_country_flag = ne_country
+					set_graphical_culture = mammalian_01
+					save_global_event_target_as = ne_drg_country
+					create_fleet = {
+						name = "NAME_NEDRG_Fleet"
+						settings = {
+							spawn_debris = no
+						}
+						effect = {
+							set_owner = prev
+							create_ship = {
+								name = "NAME_NEDRG_Fleet"
+								design = "NAME_NEDRG_Enclave_Station"
+								graphical_culture = prev
+							}
+							set_location = {
+								target = prevprev
+								angle = 25
+								distance = 15
+							}
+							save_event_target_as = CustomCapital
+							prev = {
+								set_custom_capital_location = event_target:CustomCapital
+							}
+						}
+					}
+					create_leader = {
+						class = ruler
+						species = last_created_species
+						name = random
+						skill = 5
+					}
+					set_leader = last_created_leader
+				}
+			}
+		}
+	}
+}

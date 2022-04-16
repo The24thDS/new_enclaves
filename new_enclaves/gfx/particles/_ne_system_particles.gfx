@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxparticle = {
+		name = "ne_space_storm_2_green_effect"
+		type = "ne_space_storm_2_green_file"
+		scale = 1
+	}
+}

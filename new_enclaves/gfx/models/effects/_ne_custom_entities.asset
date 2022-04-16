@@ -1,0 +1,81 @@
+entity = {
+	name = "ne_turbulent_nebula_2_green_entity"
+	pdxmesh = "system_lightning_locations_mesh"
+	scale = 1
+	locator = {		name = "root"	}
+	locator = {		name = "lightning_core_1"	position = { 0 -200 0 }}
+	locator = {		name = "lightning_core_2"	position = { 0 -300 0 } rotation = { 0 0 120 }}
+
+	#	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "ne_nebula_turbulent_2_green_entity" }
+	#	attach = { "root" = "system_lightning_combined_ani_2_entity" }
+	
+	#	default_state = "idle"
+	#	state = {		name = "idle"		state_time = 20 looping = yes
+	#		event = {	time = 0 	particle = "nebula_core_3_particle"		trigger_once = yes		keep_particle = yes		}
+	#		event = {	time = 0 	node = "lightning_core_1" entity = "system_lightning_combined_ani_2_entity"	life = 60 }
+	#		event = {	time = 10 	node = "lightning_core_2" entity = "system_lightning_combined_ani_1_entity"	life = 60 }
+	#	}
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 35 looping = yes
+		event = {	time = 0 		node = "lightning_01" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 4 		node = "lightning_02" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 8 		node = "lightning_03" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 12 		node = "lightning_04" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		event = {	time = 17		node = "lightning_05" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 21 		node = "lightning_06" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 25		node = "lightning_07" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 30		node = "lightning_08" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 36		node = "lightning_09" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 44		node = "lightning_10" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 48		node = "lightning_11" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 55		node = "lightning_12" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+																											   
+		event = {	time = 1 		node = "lightning_03" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 5 		node = "lightning_01" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 7 		node = "lightning_02" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 14 		node = "lightning_07" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		event = {	time = 18		node = "lightning_06" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 22 		node = "lightning_05" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 24		node = "lightning_04" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 32		node = "lightning_09" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 35		node = "lightning_10" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 42		node = "lightning_08" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 46		node = "lightning_12" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 59		node = "lightning_11" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+
+		start_event = {		trigger_once = yes		sound = { soundeffect = sfx_amb_nebula_turbulent } }
+	
+	}
+	cull_radius = 2000
+}
+
+entity = {
+	name = "ne_nebula_turbulent_2_green_entity"
+	pdxmesh = "ne_nebula_turbulent_2_green_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+entity = {
+	name = "ne_space_storm_2_green_entity"
+	locator = { name = "core" position = { 0 -5 0 }}
+	scale = 20
+
+	default_state = "idle"
+	state = { name = "idle" 		state_time = 5
+		event = { time = 0 node = "core" particle = "ne_space_storm_2_green_effect" keep_particle = yes trigger_once = yes }
+		start_event = { 
+			trigger_once = yes 
+			sound = { soundeffect = "sfx_amb_space_storm_2" } 
+            }
+        }
+	
+	cull_radius = 20000
+}

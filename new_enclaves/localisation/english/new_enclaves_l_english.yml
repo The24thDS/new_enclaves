@@ -297,3 +297,5 @@
   opinion_destroyed_ne_shroud_trade: "Destroyed Shroud Enclave we had deals with"
   station_enclave_curator_01_key: "Curator Station Enclave"
   NE_VERSION: "New Enclaves v2.7.0"
+  sc_ne_a: "$pc_a_star$"
+  sc_ne_a_desc: "$pc_a_star_desc$"
