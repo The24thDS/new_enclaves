@@ -56,6 +56,39 @@ create_machine_species = {
 	}
 }
 
+create_drg_species = {
+	if = {
+		limit = {
+			has_humanoids = yes
+		}
+		create_species = {
+			name = "Dwarf"
+			plural = "Dwarves"
+			adjective = "Dwarven"
+			class = "HUM"
+			portrait = "humanoid_hp_11"
+			traits = {
+				trait = trait_industrious
+				trait = trait_quick_learners
+				trait = trait_strong
+			}
+		}
+	}
+	else = {
+		create_species = {
+			name = "Manager"
+			plural = "Managers"
+			adjective = "Managerial"
+			class = "HUM"
+			portrait = "human"
+			traits = {
+				trait = trait_wasteful
+				trait = trait_weak
+			}
+		}
+	}
+}
+
 # Shroud
 remove_ne_shroud_trade_deal = {
 	if = {

@@ -740,12 +740,7 @@ ne_drg_init = {
 						exists = event_target:ne_drg_country
 					}
 				}
-				create_species = {
-					name = random
-					class = random_non_machine
-					portrait = random
-					traits = random
-				}
+				create_drg_species = yes
 				create_country = {
 					name = "NAME_NEDRG_Country"
 					type = ne_enclave
@@ -809,8 +804,20 @@ ne_drg_init = {
 					create_leader = {
 						class = ruler
 						species = last_created_species
-						name = random
-						skill = 5
+						gender = male
+					}
+					last_created_leader = {
+						if = {
+							limit = {
+								has_humanoids = yes
+							}
+							set_name = "Karl"
+							set_skill = 6
+						}
+						else = {
+							set_name = "Mission Control"
+							set_skill = 1
+						}
 					}
 					set_leader = last_created_leader
 				}
