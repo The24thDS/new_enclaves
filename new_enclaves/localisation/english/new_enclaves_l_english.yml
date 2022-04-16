@@ -26,6 +26,15 @@
   ne_shroud_government: "Shroud Enclave"
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
+  # Mining Enclave
+  civic_mining_corporation: "Mining Corporation"
+  civic_mining_corporation_desc: ""
+  gov_ne_mining: "Mining Corporation Enclave"
+  gov_ne_mining_desc: "An independent interplanetary corporation that hires mercenaries to mine the most deadliest planets in the known galaxy."
+  gov_ne_mining_no_dlc: "$gov_ne_mining$"
+  gov_ne_mining_no_dlc_desc: "$gov_ne_mining_desc$"
+  RT_LEAF_LOVER: "Leaf Lover"
+  RT_LORD_OF_DEEP: "Lord of the Deep"
   ### Diplomacy Events ###
 ## Hive Enclave
   # First Contact

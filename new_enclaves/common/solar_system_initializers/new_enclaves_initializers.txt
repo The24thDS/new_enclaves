@@ -748,12 +748,13 @@ ne_drg_init = {
 					civics = {
 						civic = civic_ruthless_competition
 						civic = civic_permanent_employment
+						civic = civic_mining_corporation
 					}
 					species = last_created_species
 					flag = {
 						icon = {
 							category = "enclaves"
-							file = "DeepDives_Icon.dds"
+							file = "ne_flag_mining.dds"
 						}
 						background = {
 							category = "backgrounds"

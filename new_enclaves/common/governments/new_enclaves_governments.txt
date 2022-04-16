@@ -42,3 +42,34 @@ gov_ne_shroud = {
 		base = 10000
 	}
 }
+
+# Mining Enclave
+gov_ne_mining = {
+	ruler_title = RT_LORD_OF_DEEP
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_mining_corporation
+		has_humanoids = yes
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+gov_ne_mining_no_dlc = {
+	ruler_title = RT_LEAF_LOVER
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_mining_corporation
+		has_humanoids = no
+	}
+
+	weight = {
+		base = 10000
+	}
+}
