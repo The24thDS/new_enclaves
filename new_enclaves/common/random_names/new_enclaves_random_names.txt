@@ -19,6 +19,12 @@ empire_name_parts_list = {
 		"Spiritualist Enclave" = 10
 	}
 }
+empire_name_parts_list = {
+	key = "ne_mining_names"
+	parts = {
+		"Mining Enclave" = 10
+	}
+}
 
 empire_name_format = {
 	random_weight = {
@@ -55,4 +61,19 @@ empire_name_format = {
 	}
 	format = "format.ne_shroud.1"
 	noun = "<ne_shroud_names>"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_country_type = ne_enclave
+			OR = {
+				has_government = gov_ne_mining
+				has_government = gov_ne_mining_no_dlc
+			}
+		}
+	}
+	format = "format.ne_mining.1"
+	noun = "<ne_mining_names>"
 }
