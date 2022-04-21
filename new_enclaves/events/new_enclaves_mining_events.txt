@@ -1,0 +1,463 @@
+namespace = nedrg
+
+# DRG Main Menu
+country_event = {
+	id = nedrg.100
+	title = nedrg.100.name
+	desc = nedrg.100.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_mining_room
+	}
+
+	trigger = {
+		from = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_drg_country
+		}
+		NOT = { has_country_flag = ne_drg_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ne_drg }
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		from = { save_event_target_as = ne_drg }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_caravaneer_option"
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_caravaneer_option"
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_caravaneer_option"
+	}
+
+	option = {
+		name = saluting2_5_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = { is_genocidal = no }
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+
+	# End communications
+	option = {
+		name = GOODBYE
+		default_hide_option = yes
+		custom_gui = "enclave_caravaneer_option"
+		trigger = { is_genocidal = no }
+	}
+}
+
+# Meme event kinda
+country_event = {
+	id = nedrg.101
+	title = nedrg.101.name
+	desc = {
+		text = saluting2_1_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 0 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_1
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 0 } }
+	}
+	desc = {
+		text = saluting2_2_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 1 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_2
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 1 } }
+	}
+	desc = {
+		text = saluting2_3_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 2 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_3
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 2 } }
+	}
+	desc = {
+		text = saluting2_4_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 3 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_4
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 3 } }
+	}
+	desc = {
+		text = saluting2_5_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 4 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_5
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 4 } }
+	}
+	desc = {
+		text = saluting2_7_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 5 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_7
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 5 } }
+	}
+	desc = {
+		text = saluting2_8_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 6 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_8
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 6 } }
+	}
+	desc = {
+		text = saluting2_9_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 7 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_9
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 7 } }
+	}
+	desc = {
+		text = saluting2_11_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 8 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_11
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 8 } }
+	}
+	desc = {
+		text = saluting2_12_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 9 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_12
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 9 } }
+	}
+	desc = {
+		text = saluting2_13_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 10 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_13
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 10 } }
+	}
+	desc = {
+		text = saluting2_15_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 11 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_15
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 11 } }
+	}
+	desc = {
+		text = saluting2_16_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 12 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_16
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 12 } }
+	}
+	desc = {
+		text = saluting2_17_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 13 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_17
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 13 } }
+	}
+	desc = {
+		text = saluting2_18_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 14 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_18
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 14 } }
+	}
+	desc = {
+		text = saluting2_19_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 15 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_19
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 15 } }
+	}
+	desc = {
+		text = rockandstonesalute_01_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 16 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_01
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 16 } }
+	}
+	desc = {
+		text = rockandstonesalute_02_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 17 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_02
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 17 } }
+	}
+	desc = {
+		text = rockandstonesalute_03_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 18 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_03
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 18 } }
+	}
+	desc = {
+		text = rockandstonesalute_04_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 19 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_04
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 19 } }
+	}
+	desc = {
+		text = rockandstonesalute_05_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 20 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_05
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 20 } }
+	}
+	desc = {
+		text = rockandstonesalute_06_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 21 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_06
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 21 } }
+	}
+	desc = {
+		text = rockandstonesalute_07_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 22 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_07
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 22 } }
+	}
+	desc = {
+		text = rockandstonesalute_08_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 23 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_08
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 23 } }
+	}
+	desc = {
+		text = rockandstonesalute_09_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 24 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_09
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 24 } }
+	}
+	desc = {
+		text = rockandstonesalute_10_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 25 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_10
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 25 } }
+	}
+	desc = {
+		text = new_saluting_1_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 26 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_1
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 26 } }
+	}
+	desc = {
+		text = new_saluting_2_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 27 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_2
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 27 } }
+	}
+	desc = {
+		text = new_saluting_3_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 28 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_3
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 28 } }
+	}
+	desc = {
+		text = new_saluting_4_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 29 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_4
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 29 } }
+	}
+	desc = {
+		text = new_saluting_5_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 30 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_5
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 30 } }
+	}
+	desc = {
+		text = new_saluting_6_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 31 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_6
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 31 } }
+	}
+	desc = {
+		text = new_saluting_7_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 32 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_7
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 32 } }
+	}
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		generate_random_variable_value = { variable = ne_drg_salute_pick digits = 2 max_value = 32 }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = new_saluting_3_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value < 3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = saluting2_17_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value < 3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = saluting2_8_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value < 3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = rockandstonesalute_05_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value > 2
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = rockandstonesalute_10_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value > 2
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = saluting2_16_text
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value > 2
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+
+	# Back to Menu
+	option = {
+		name = BACK
+		custom_gui = "enclave_caravaneer_option"
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+	# End communications
+	option = {
+		name = GOODBYE
+		default_hide_option = yes
+		custom_gui = "enclave_caravaneer_option"
+	}
+}

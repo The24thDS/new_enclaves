@@ -1,0 +1,164 @@
+sound = {
+	name = "saluting2_1"
+	file = "events/saluting2_1.wav"
+}
+
+sound = {
+	name = "saluting2_2"
+	file = "events/saluting2_2.wav"
+}
+
+sound = {
+	name = "saluting2_3"
+	file = "events/saluting2_3.wav"
+}
+
+sound = {
+	name = "saluting2_4"
+	file = "events/saluting2_4.wav"
+}
+
+sound = {
+	name = "saluting2_5"
+	file = "events/saluting2_5.wav"
+}
+
+sound = {
+	name = "saluting2_7"
+	file = "events/saluting2_7.wav"
+}
+
+sound = {
+	name = "saluting2_8"
+	file = "events/saluting2_8.wav"
+}
+
+sound = {
+	name = "saluting2_9"
+	file = "events/saluting2_9.wav"
+}
+
+sound = {
+	name = "saluting2_11"
+	file = "events/saluting2_11.wav"
+}
+
+sound = {
+	name = "saluting2_12"
+	file = "events/saluting2_12.wav"
+}
+
+sound = {
+	name = "saluting2_13"
+	file = "events/saluting2_13.wav"
+}
+
+sound = {
+	name = "saluting2_15"
+	file = "events/saluting2_15.wav"
+}
+
+sound = {
+	name = "saluting2_16"
+	file = "events/saluting2_16.wav"
+}
+
+sound = {
+	name = "saluting2_17"
+	file = "events/saluting2_17.wav"
+}
+
+sound = {
+	name = "saluting2_18"
+	file = "events/saluting2_18.wav"
+}
+
+sound = {
+	name = "saluting2_19"
+	file = "events/saluting2_19.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_01"
+	file = "events/rockandstonesalute_01.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_02"
+	file = "events/rockandstonesalute_02.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_03"
+	file = "events/rockandstonesalute_03.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_04"
+	file = "events/rockandstonesalute_04.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_05"
+	file = "events/rockandstonesalute_05.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_06"
+	file = "events/rockandstonesalute_06.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_07"
+	file = "events/rockandstonesalute_07.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_08"
+	file = "events/rockandstonesalute_08.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_09"
+	file = "events/rockandstonesalute_09.wav"
+}
+
+sound = {
+	name = "rockandstonesalute_10"
+	file = "events/rockandstonesalute_10.wav"
+}
+
+sound = {
+	name = "new_saluting_1"
+	file = "events/new_saluting_1.wav"
+}
+
+sound = {
+	name = "new_saluting_2"
+	file = "events/new_saluting_2.wav"
+}
+
+sound = {
+	name = "new_saluting_3"
+	file = "events/new_saluting_3.wav"
+}
+
+sound = {
+	name = "new_saluting_4"
+	file = "events/new_saluting_4.wav"
+}
+
+sound = {
+	name = "new_saluting_5"
+	file = "events/new_saluting_5.wav"
+}
+
+sound = {
+	name = "new_saluting_6"
+	file = "events/new_saluting_6.wav"
+}
+
+sound = {
+	name = "new_saluting_7"
+	file = "events/new_saluting_7.wav"
+}

@@ -18,7 +18,7 @@ gfx_settings =
 	# galaxy_background = { texture = "gfx/map/sky_rim.dds" 	trigger = { always = yes } ycocg = yes }
 	
 	#galaxy_background_hsv_shift = { 0.0 0.0 0.0 }
-	galaxy_background_hsv_shift = { -0.2 -0.2 -0.3 }
+	galaxy_background_hsv_shift = { -0.2 -0.2 0.0 }
 	
 	
 	galaxy_background_lut = "gfx/worldgfx/colorcorrection_neutral.tga"
