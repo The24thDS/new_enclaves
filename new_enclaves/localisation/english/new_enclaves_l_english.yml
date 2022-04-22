@@ -297,6 +297,16 @@
   nedrg.100.d.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +100"
   nedrg.100.d.alreadybought: "We recently bought §YERR://23Y%/§!. They are not willing to sell us more for now."
   nedrg.101.name: "V"
+ # Can you help us with our machines?
+  nedrg.110.name: "Mining Assistance"
+  nedrg.110.desc: "As you can see from our quarterly report we are the most profitable mining corporation in the galaxy.\n\nFor a reasonable price, we can spare some of our employees to organize your miners, significantly improving your production for ten years."
+  nedrg.110.a: "Seems good to us."
+  nedrg.110.reply: "May this be a prosperous collaboration. By the Beard!"
+  nedrg.111.name: "Mining Assistance"
+  nedrg.111.desc: "Our [This.ne_drg_assistance_duration] years long contract for Mining Assistance has come to an end.\n\nWe offer you the option to continue it for another 10 years or to sign an extended contract for [This.ne_drg_assistance_extended_duration] years. Please remember that all payment is done upfront and refunds are not accepted.\n\n§HDISCLAIMER:§! The extended contract contains a §H20% tax§! to adjust for your population growth.\n\nHow do you wish to continue this collaboration?\n\n"
+  nedrg.111.a: "For another 10 years."
+  nedrg.111.b: "Let's do it for the next [This.ne_drg_assistance_extended_duration] years."
+  nedrg.111.variable_opinion: "Opinion: £opinion£ §G+[This.drg_extended_assistance_opinion]§!"
 ### Traits, Modifiers, Technologies, Others ###
  ## Universal Hive
   leader_universal_drone: "Universal Drone"
@@ -326,6 +336,9 @@
   shrouds_children_guidance_desc: "The Shroud's Children gave us access to their ancient archives. Although much of the material is arcane in nature, it's also rich in knowledge about this physical reality."
   ne_shroud_festival: "Religious Festivals"
   ne_shroud_festival_desc: "A series of festivals organized by the Shroud's Children."
+ ## Deep Rock Galactic
+  deep_rock_galactic_expertise: "Deep Rock Galactic Expertise"
+  deep_rock_galactic_expertise_desc: "Deep Rock galactic is organizing our miners, resulting in an increased production of minerals."
  ### Misc ###
   opinion_destroyed_ne_hive: "Destroyed Hive Enclave"
   opinion_destroyed_ne_hive_trade: "Destroyed Hive Enclave we had deals with"
@@ -338,7 +351,7 @@
   sc_ne_a: "$pc_a_star$"
   sc_ne_a_desc: "$pc_a_star_desc$"
  ## DRG
-  successful_trade: "Credits have been withdrawn, Supply drop is inbound."
+  drg_successful_trade: "Credits have been withdrawn, Supply drop is inbound."
   # Rock and Stone salutes
   saluting2_1_text: "Rock on!"
   saluting2_2_text: "Rock and Stone... Yeeaaahhh!"

@@ -1,5 +1,10 @@
 namespace = nedrg
 
+@MINING_ASSISTANCE_DURATION_DAYS = 3600
+@DEFAULT_MINING_ASSISTANCE_DURATION_YEARS = 10
+@MINING_ASSISTANCE_PRICE_PER_POP = 8.8
+@MINING_ASSISTANCE_MIN_PRICE = 500
+
 # nedrg.10: Port
 country_event = {
 	id = nedrg.10
@@ -130,11 +135,11 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = nedrg.100.a.alreadyhelping
-				# NOT = { has_modifier = deep_rock_galactic_expertise }
+				NOT = { has_modifier = deep_rock_galactic_expertise }
 			}
 		}
 		hidden_effect = {
-			# country_event = { id = nedrg.110 }
+			country_event = { id = nedrg.110 }
 		}
 	}
 
@@ -194,7 +199,7 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = nedrg.100.c.opinion
-				event_target:ne_machine = {
+				event_target:ne_drg = {
 					trust = {
 						who = root
 						value >= 80
@@ -228,7 +233,7 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = nedrg.100.d.opinion
-				event_target:ne_machine = {
+				event_target:ne_drg = {
 					trust = {
 						who = Root
 						value >= 100
@@ -652,5 +657,261 @@ country_event = {
 		name = GOODBYE
 		default_hide_option = yes
 		custom_gui = "enclave_caravaneer_option"
+	}
+}
+
+# nedrg.110: Can you help our miners
+country_event = {
+	id = nedrg.110
+	title = nedrg.110.name
+	desc = nedrg.110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		export_trigger_value_to_variable = { trigger = num_pops variable = drg_assistance_price }
+		multiply_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_PRICE_PER_POP }
+		change_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_MIN_PRICE }
+		ceiling_variable = drg_assistance_price
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+			if = {
+				limit = { is_variable_set = drg_assistance_price }
+				clear_variable = drg_assistance_price
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.110.a
+		response_text = nedrg.110.reply
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= drg_assistance_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_drg }
+			}
+		}
+		add_resource = { energy = -1 mult = drg_assistance_price }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = deep_rock_galactic_expertise
+			days = @MINING_ASSISTANCE_DURATION_DAYS
+		}
+		hidden_effect = {
+			event_target:ne_drg = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade
+			}
+			set_variable = {
+				which = ne_drg_assistance_duration
+				value = @DEFAULT_MINING_ASSISTANCE_DURATION_YEARS
+			}
+			country_event = { id = nedrg.111 days = @MINING_ASSISTANCE_DURATION_DAYS }
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_caravaneer_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_caravaneer_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.111: Continue helping?
+country_event = {
+	id = nedrg.111
+	title = nedrg.111.name
+	desc = nedrg.111.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_drg }
+		exists = event_target:ne_drg
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_drg
+			flag = ne_drg_trade
+		}
+		# Normal duration cost calculation
+		export_trigger_value_to_variable = { trigger = num_pops variable = drg_assistance_price }
+		multiply_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_PRICE_PER_POP }
+		change_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_MIN_PRICE }
+		ceiling_variable = drg_assistance_price
+		# Extended duration calculation
+		set_variable = { which = ne_drg_assistance_extended_duration value = this.ne_drg_assistance_duration }
+		change_variable = { which = ne_drg_assistance_extended_duration value = 5 }
+		# Extended duration cost calculation
+		set_variable = { which = drg_extended_assistance_price value = this.drg_assistance_price }
+		multiply_variable = { which = drg_extended_assistance_price value = this.ne_drg_assistance_extended_duration }
+		divide_variable = { which = drg_extended_assistance_price value = @DEFAULT_MINING_ASSISTANCE_DURATION_YEARS }
+		multiply_variable = { which = drg_extended_assistance_price value = 1.2 } # +20%
+		# Extended duration opinion calculation
+		set_variable = { which = drg_extended_assistance_opinion value = this.ne_drg_assistance_extended_duration }
+		multiply_variable = { which = drg_extended_assistance_opinion value = 2 }
+		set_variable = { which = drg_extended_assistance_opinion_count value = this.drg_extended_assistance_opinion }
+		divide_variable = { which = drg_extended_assistance_opinion_count value = 10 }
+	}
+
+	# For 10 years
+	option = {
+		name = nedrg.111.a
+		response_text = nedrg.110.reply
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= drg_assistance_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_drg }
+			}
+		}
+		add_resource = { energy = -1 mult = drg_assistance_price }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = deep_rock_galactic_expertise
+			days = @MINING_ASSISTANCE_DURATION_DAYS
+		}
+		hidden_effect = {
+			event_target:ne_drg = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade
+			}
+			set_variable = {
+				which = ne_drg_assistance_duration
+				value = @DEFAULT_MINING_ASSISTANCE_DURATION_YEARS
+			}
+			country_event = { id = nedrg.111 days = @MINING_ASSISTANCE_DURATION_DAYS }
+		}
+	}
+
+	# Extended contract
+	option = {
+		name = nedrg.111.b
+		response_text = nedrg.110.reply
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= drg_extended_assistance_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_drg }
+			}
+		}
+		custom_tooltip = nedrg.111.variable_opinion
+		add_resource = { energy = -1 mult = drg_extended_assistance_price }
+		add_modifier = {
+			modifier = deep_rock_galactic_expertise
+			days = 360
+			time_multiplier = ne_drg_assistance_extended_duration
+		}
+		hidden_effect = {
+			event_target:ne_drg = {
+				while = {
+					count = prev.drg_extended_assistance_opinion_count
+					add_trust = {
+						who = root
+						amount = 10
+					}
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade
+			}
+			set_variable = {
+				which = ne_drg_assistance_duration
+				value = this.ne_drg_assistance_extended_duration
+			}
+			country_event = { id = nedrg.112 days = 1801 }
+		}
+	}
+
+	# End
+	option = {
+		name = NO
+		custom_gui = "enclave_caravaneer_option"
+		default_hide_option = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					is_variable_set = ne_drg_assistance_duration
+				}
+				clear_variable = ne_drg_assistance_duration
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { is_variable_set = ne_drg_assistance_extended_duration }
+				clear_variable = ne_drg_assistance_extended_duration
+			}
+			if = {
+				limit = { is_variable_set = drg_assistance_price }
+				clear_variable = drg_assistance_price
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nedrg.112
+	hide_window = yes
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_drg }
+		exists = event_target:ne_drg
+	}
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = deep_rock_galactic_expertise
+			}
+			country_event = { id = nedrg.112 days = 1800 }
+		}
+		else = {
+			country_event = { id = nedrg.111 }
+		}
 	}
 }

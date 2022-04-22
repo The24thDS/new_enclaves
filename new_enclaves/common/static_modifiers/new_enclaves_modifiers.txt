@@ -54,3 +54,9 @@ ne_shroud_trade_deal_3 = {
 	country_base_sr_zro_produces_add = 3
 	country_base_energy_produces_add = -60
 }
+
+### Deep Rock Galactic ###
+
+deep_rock_galactic_expertise = {
+	country_minerals_produces_mult = 0.1
+}
