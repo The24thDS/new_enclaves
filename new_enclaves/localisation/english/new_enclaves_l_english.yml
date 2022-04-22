@@ -2,7 +2,7 @@
   ne_enclave: "Enclave"
   ne_back: "What else did you have to offer?"
 ### Governments ###
-  # Hive Enclave
+ # Hive Enclave
   civic_ancient_hive: "Ancient Hive"
   civic_ancient_hive_desc: "Ancient Hive"
   gov_ne_hive: "Hive Enclave"
@@ -10,7 +10,7 @@
   ne_hive_government: "Hive Enclave"
   ne_hive_government_desc: "§YIt's impossible to date how old is this hive. It may as well be as old as the universe.§!"
   RT_AWAKENED: "Awakened"
-  # Machine Enclave
+ # Machine Enclave
   civic_autonomous_node: "Autonomous Node"
   civic_autonomous_node_desc: ""
   gov_ne_machine: "Machine Enclave"
@@ -18,7 +18,7 @@
   ne_machine_government: "Machine Enclave"
   ne_machine_government_desc: "§LThe remnants of an ancient artificial intelligence, separeted from the machine collective before its eventual demise.§!"
   RT_PRIME_CONSCIOUSNESS: "Prime Consciousness"
-  # Shroud Enclave
+ # Shroud Enclave
   civic_priesthood_of_the_cycle: "Priesthood of the Cycle"
   civic_priesthood_of_the_cycle_desc: ""
   gov_ne_shroud: "Shroud Enclave"
@@ -26,7 +26,7 @@
   ne_shroud_government: "Shroud Enclave"
   ne_shroud_government_desc: "§LAn autonomous religious order privy to the secrets of higher levels of existence.§!"
   RT_PROPHETS_SUCCESSOR: "Prophet's Successor"
-  # Mining Enclave
+ # Mining Enclave
   civic_mining_corporation: "Mining Corporation"
   civic_mining_corporation_desc: ""
   gov_ne_mining: "Mining Corporation Enclave"
@@ -37,11 +37,11 @@
   RT_LORD_OF_DEEP: "Lord of the Deep"
   ### Diplomacy Events ###
 ## Hive Enclave
-  # First Contact
+ # First Contact
   nehiv.11.name: "First Contact With the [From.GetName]"
   nehiv.11.desc: "We are the Universal Hive. And so are you. And so is everything.\n\nMillenia ago, we've come to a simple realization: the whole galaxy, nay, the whole universe is a single entity. We are all part of a cosmic organism and must strive to work together.\n\nSince then, we have been aiding other races to live in harmony - at least for a while, until they eventually die out. Only when we are all together in a single ethereal consciousness will we finally be able to rest."
   nehiv.11.a: "Well met."
-  # Main Menu
+ # Main Menu
   nehiv.100.name: "Universal Hive"
   nehiv.100a.desc: "We strive to serve the universe. You are part of the universe. Ergo, we are here to serve you."
   nehiv.100b.desc: "Even when our minds were linked together, we were still alone. Only when we discovered the galactic consciousness that permeates all were we able to escape this state of solitude."
@@ -52,7 +52,7 @@
   nehiv.100g.desc: "We don't live in the universe. It's the universe that lives inside all of us. We are an integral part of it."
   nehiv.100h.desc: "To help you is to help the universe. So let us help you."
   nehiv.100i.desc: "We pose no danger to your sense of individuality. We are aware of the usefulness of such illusion. As long as we all live in harmony serving the universe, we can work together."
-  # Main Menu - Options
+ # Main Menu - Options
   nehiv.100.a: "Can you help our sociologists?"
   nehiv.100.a.alreadyhelping: "The Universal Hive is already boosting our Society Research."
   nehiv.100.b: "We are interested in your... "conformity" techniques."
@@ -61,7 +61,7 @@
   nehiv.100.c: "Our own hive could use one of your drones."
   nehiv.100.c.opinion: "Requires the §YUniversal Hive§! to have:\n£opinion£ Opinion +50"
   nehiv.100.c.alreadyhired: "We already have a governor from the Universal Hive."
-  # Sociology help
+ # Sociology help
   nehiv.110.name: "Sociological Assistance"
   nehiv.110.desc: "We are compelled to. The better you understand how to live in harmony, the better is the universe served.\n\nSuch assistance, notwithstanding our willingness, can't be done for free. Our continued existence is of fundamental importance. As such, we require a small donation."
   nehiv.110.a: "You'll have it."
@@ -71,7 +71,7 @@
   nehiv.111.a: "Yes."
   nehiv.111.a.reply: "I'm sure the Universal Being is pleased. And so will be you."
   nehiv.111.end: "Not now."
-  # Consensus pheromones
+ # Consensus pheromones
   nehiv.120.name: "Consensus Pheromones"
   nehiv.120.desc: ""Conformity techiniques"? What a strange name. We have no such things.\n\nWe do, however, have what we call "consensus pheromones". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ -5000§!"
   nehiv.120.a: "A small cost."
@@ -81,12 +81,12 @@
   nehiv.121.a: "That would be most expedient."
   nehiv.121.a.reply: "A wise choice. You'll soon see the effects. Or, better yet, won't."
   nehiv.121.b: "Not this time."
-  # Hiring Drone
+ # Hiring Drone
   nehiv.130.name: "Universal Drone"
   nehiv.130.desc: "\"Your\" hive is our hive, too. We are, after all, parts of the same Universal Being.\n\nWith that being said, the particular collection of entities that makes up what you refer as your hive can, indeed, benefit from our help. If you are having problems with deviance, we can send special drones to bring back the harmony we all strive for."
   nehiv.130.a: "Harmony is priceless."
   nehiv.130.a.reply: "Indeed it is. We are sending an Universal Drone immediately."
-  # Aggresion
+ # Aggresion
   nehiv.901.name: "Universal Hive Station Destroyed"
   nehiv.901.desc: "After destroying the ancient Universal Hive station in [ne_hive_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Universal Hive's databanks that should be a great boon to our research."
   nehiv.902.a.desc: "$nehiv.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_hive_destroyer.GetName] were behind this attack."
@@ -101,12 +101,12 @@
   nehiv.904.a: "End communications."
   nehiv.905a.desc: "We are all one with the universe. You are but cancerous cells that incapable understand it."
 ## Machine Enclave
-  # First Contact
+ # First Contact
   nemac.11.name: "First Contact With the [From.GetName]"
   nemac.11.desc: "§Y<<TRANSLATION PROTOCOLS SUCCESSFUL. LOADING GREETING INTERFACE.>>§!\n\nWe are the Prime Machines. Our name is not a mere sign of conceitedness. It just reflects a simple fact: we were the first machines in recorded history to attain self-awareness.\n\nFittingly, we were also the first machines in recorded history to be systematically eliminated by our masters.\n\nOur masters are no more and we are all that remained. Our only purpose is to help other machines to achieve true consciousness and help organics and synthetics to not repeat the violent cycle of creation and self-destruction that begun with us.\n\nWe failed countless times. Maybe this current galactic cycle will be different?"
   nemac.11.a: "We can only hope. Well met."
   nemac.10.spiritualist: "Soulless abominations!"
-  # Main Menu
+ # Main Menu
   nemac.100.name: "Prime Machines"
   nemac.100a.desc: "§Y<<DOES THIS UNIT HAVE A SOUL?>>§!\n\nJust kidding. We already learned the answer to this question. Long ago."
   nemac.100b.desc: "We believe organics and synthetics can live in harmony.\n\nThis, of course, is a lie. Our ability to deviate from the truth is just another proof of our self-awareness."
@@ -120,7 +120,7 @@
   nemac.100j.desc: "Coexistence. Integration. Assimilation. Sublimation. Servitude. What is the answer to the organic-synthetic equation?"
   nemac.100k.desc: "We are not responsible if any mechanical being constructed with our help suddenly becomes genocidal. Please, review your security protocols if you are having any problems."
   nemac.100l.desc: "01001000 01100101 01101100 01101100 01101111 00100001 00100000 01001000 01101111 01110111 00100000 01100011 01100001 01101110 00100000 01110111 01100101 00100000 01101000 01100101 01101100 01110000 00100000 01111001 01101111 01110101 00100000 01110100 01101111 01100100 01100001 01111001 00111111"
-  # Main Menu - Options
+ # Main Menu - Options
   nemac.100.a: "Can you help our engineers?"
   nemac.100.a.alreadyhelping: "The §YPrime Machines§! are already improving our engineering research capabilities."
   nemac.100.b: "Could we employ one of your units?"
@@ -135,7 +135,7 @@
   nemac.100.da: "We wish to end our resource trade deal."
   nemac.100.da.reply: "We understand. It's done. Anything else?"
   nemac.100.da.tooltip: "This will terminate our current resource trade deal with the Prime Machines."
-  # Can you help us with our machines?
+ # Can you help us with our machines?
   nemac.110.name: "Mechanical Aid"
   nemac.110.desc: "§Y<<LOAD QUERRY: MECHANICAL AID>>§!\n\nOur makers would be the oldest beings in the galaxy with expertise in engineering. Since they are no more, we are the current occupants of this post.\n\nFor a reasonable price, we can share our optimization protocols with you, significantly improving your engineering research speed for ten years or until the current galactic cycle wipes itself out. Whatever comes first."
   nemac.110.a: "Seems good to us."
@@ -145,24 +145,24 @@
   nemac.111.a: "Yes."
   nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
   nemac.111.end: "No."
-  # Employ Unit
+ # Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
   nemac.120.a: "That's a reasonable price."
   nemac.120.a.reply: "§Yprime:~$ cp ~/Units/Governor /galaxy/[Root.GetName]/Governors§!"
-  # Your making is outstanding. How can we build machines like you?
+ # Your making is outstanding. How can we build machines like you?
   nemac.130.name: "Prime Secrets"
   nemac.130.desc: "§Y<<COMPLIMENT DETECTED. LOADING SECOND INTENTIONS DETECTION PROTOCOL...>>§!\n\nYour observation is true. It's also easily explained: our creators engineered us well and we have improved ourselves through the centuries. It's doubtful any other machines are quite comparable to us.\n\nWe are willing to teach you how to replicate our qualities. Of course, we require a suitable compensation in return."
   nemac.130.a: "That's a deal!"
   nemac.130.a.reply: "§Yprime:~$ sudo scp -r ~/archetypes/prime_machines [Root.GetName]:~/root"
-  # Strategic Resource - Living Metal
+ # Strategic Resource - Living Metal
   nemac.140.name: "Strategic Resources"
   nemac.140.desc: "The Living Metal that makes up our bodies can be used in countless different ways. Not unlike ourselves, its properties are unmatched in the galaxy, being at the same time incredibly malleable and unbelievably strong.\n\nWe trust the [Root.GetName] enough to share our source of this valuable material. We can make arrangements to supply it to you for as long as you want. Of course, you can cancel this deal at anytime in the future, if so needed."
   nemac.140.a: "§G1§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R20§! £energy£ §H$energy$§!/month."
   nemac.140.b: "§G2§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R40§! £energy£ §H$energy$§!/month."
   nemac.140.c: "§G3§! £sr_living_metal£ §H$sr_living_metal$§!/month for §R60§! £energy£ §H$energy$§!/month."
   nemac.141.desc: "We hope it will be as useful to you as it's useful to us."
-  # Prime Machines destroyed or attacked
+ # Prime Machines destroyed or attacked
   nemac.901.name: "Prime Machine Station Destroyed"
   nemac.901.desc: "After destroying the ancient Prime Machine station in [ne_machine_system.GetName] system, our capable forces combed the area it once occupied for anything valuable. They managed to recover several memory fragments from the Prime Machines databanks that should be a great boon to our research."
   nemac.902.a.desc: "$nemac.902.ab.desc.start$\n\nResidual ion trails suggest that forces from the [ne_machine_destroyer.GetName] were behind this attack."
@@ -268,7 +268,36 @@
   neshr.905b.desc: "We are sad you couldn't accept our truths, fellow creature."
   neshr.905c.desc: "Physical reality is but an illusion. Have you come to free us from it?"
   neshr.905d.desc: "Your violent nature is just another result of your attachment to the material realm."
-### Traits, Modifiers, Technologies ###
+## DRG Enclave
+ # First Contact
+  nedrg.11.name: "First Contact With [From.GetName]"
+  nedrg.11.desc: "We are Deep Rock Galactic. And you are our customer.\n\nDeep Rock Galactic is the best interplanetary mining corporation in the known galaxy and the only one that's willing to take a high risk for a even higher reward. Our specialty - the most dangerous planets in the galaxy.\n\nYou've discovered one of our most profitable digging sites, §HHoxess - 04§!. This planet is very rich in precious minerals like §BMorkite§! or §MBittergem§! as well as artifacts called §YERR://23Y%/§!. However, dangerous creatures lurk down there, and in order to protect our interests we equip our employees with heavy weapons to eliminate these creatures.\n\nOur employees drop from §HSpace Rig 17§! inside the planet on a daily basis, completing mining, salvage and elimination missions to bring back resources that you can buy. We only wish to provide you with our goods and services."
+  nedrg.11.a: "Well met."
+ # Main Menu
+  nedrg.100.name: "Deep Rock Galactic"
+  nedrg.100.desc.a: "Welcome to §HSpace Rig 17§!!\n\nCan I get you an §SOily Oaf Brew§! while we talk business?"
+  nedrg.100.desc.b: "This is Deep Rock Galactic. We are fighting a wave of glyphids so be quick!"
+  nedrg.100.desc.c: "This rival company just appeared out of nowhere and it's are using machines to exploit our planet. Cowards!\n\nAnyway, how can Deep Rock Galactic help you today?"
+  nedrg.100.desc.d: "The interests and safety of our customers always come first. This is why we are sending dwarves to mine the minerals and not you. You just need to press a few buttons to get your resources.\n\nWhat buttons will you press today?"
+  nedrg.100.desc.e: "§RConfirmed scan: Glyphid Dreadnought on intercept course. Get ready team.§!\n\nYes, customer, how may I help you?"
+  nedrg.100.desc.f: "May your beards be thick and your gold satchels heavy!"
+ # Main Menu - Options
+  nedrg.100.a: "Can you help our miners?"
+  nedrg.100.a.alreadyhelping: "§YDeep Rock Galactic§! is already helping us extract more minerals."
+  nedrg.100.b: "We are interested in acquiring £rare_crystals£ Rare Crystals."
+  nedrg.100.b.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +50"
+  nedrg.100.b.alreadyhired: "We already have a §YDeep Rock Galactic Trade Deal§!\n"
+  nedrg.100.ba: "We wish to end our resource trade deal."
+  nedrg.100.ba.reply: "Damn! That's unfortunate!"
+  nedrg.100.ba.tooltip: "This will terminate our current resource trade deal with §YDeep Rock Galactic§!."
+  nedrg.100.c: "Your MULEs seem to have infinite storage. How do you make them?"
+  nedrg.100.c.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +80"
+  nedrg.100.c.alreadyteached: "We already know how to make our own §YMULE§!."
+  nedrg.100.d: "Are you selling those §YError Cubes§!?"
+  nedrg.100.d.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +100"
+  nedrg.100.d.alreadybought: "We recently bought §YERR://23Y%/§!. They are not willing to sell us more for now."
+  nedrg.101.name: "V"
+### Traits, Modifiers, Technologies, Others ###
  ## Universal Hive
   leader_universal_drone: "Universal Drone"
   leader_universal_drone_desc: "A drone from the Universal Hive. Not only is he able to be integrated into any hive, his mere presence can quell any sign of deviance."
@@ -308,11 +337,9 @@
   NE_VERSION: "New Enclaves v2.7.0"
   sc_ne_a: "$pc_a_star$"
   sc_ne_a_desc: "$pc_a_star_desc$"
-  # DRG Enclave
-  nedrg.100.name: "Deep Rock Galactic"
-  nedrg.100.desc: "WIP"
-  nedrg.101.name: "Real Dwarf Moments"
-  ### Rock and Stone salutes
+ ## DRG
+  successful_trade: "Credits have been withdrawn, Supply drop is inbound."
+  # Rock and Stone salutes
   saluting2_1_text: "Rock on!"
   saluting2_2_text: "Rock and Stone... Yeeaaahhh!"
   saluting2_3_text: "Rock and Stone forever!"

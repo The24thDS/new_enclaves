@@ -6,6 +6,7 @@ ne_enclave = {
 	blocks_piracy = yes
 	show_in_contacts_list = yes
 	can_have_their_comms_shared = yes
+	government = yes
 	is_enclave = yes
 	ai = {
 		enabled = no
@@ -19,13 +20,9 @@ ne_enclave = {
 	custom_diplomacy = yes
 	custom_opinion = yes
 	modules = {
-		basic_technology_module = {
-		}
-		standard_event_module = {
-		}
-		exclusive_diplomacy_module = {
-		}
-		# Nothing is allowed, but we need this for relationships.
+		basic_technology_module = {}
+		standard_event_module = {}
+		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
 		#basic_technology_module = {}
 	}
 }

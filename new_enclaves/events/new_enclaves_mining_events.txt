@@ -1,10 +1,74 @@
 namespace = nedrg
 
+# nedrg.10: Port
+country_event = {
+	id = nedrg.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = nedrg.11 }
+		}
+	}
+}
+
+# nedrg.11: DRG introduction
+country_event = {
+	id = nedrg.11
+	title = nedrg.11.name
+	desc = nedrg.11.desc
+
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_mining_room
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = nedrg.11.a
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_caravaneer_option"
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
+	}
+	
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_caravaneer_option"
+	}
+}
+
 # DRG Main Menu
 country_event = {
 	id = nedrg.100
 	title = nedrg.100.name
-	desc = nedrg.100.desc
+	desc = nedrg.100.desc.a
+	desc = nedrg.100.desc.b
+	desc = nedrg.100.desc.c
+	desc = nedrg.100.desc.d
+	desc = nedrg.100.desc.e
+	desc = nedrg.100.desc.f
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -50,6 +114,135 @@ country_event = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
 		custom_gui = "enclave_caravaneer_option"
+	}
+
+	# Option 1: Can you help our miners? (nedrg.110)
+	option = {
+		name = nedrg.100.a
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.a.alreadyhelping
+				# NOT = { has_modifier = deep_rock_galactic_expertise }
+			}
+		}
+		hidden_effect = {
+			# country_event = { id = nedrg.110 }
+		}
+	}
+
+	# Option 2: Rare Crystals Deal (nedrg.120)
+	option = {
+		name = nedrg.100.b
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.b.opinion
+				event_target:ne_drg = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nedrg.100.b.alreadyhired
+				# has_active_ne_drg_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			# country_event = { id = nedrg.120 }
+		}
+	}
+
+	# Option 2.1: Remove trade deal
+	# option = {
+	# 	name = nedrg.100.ba
+	# 	response_text = nedrg.100.ba.reply
+	# 	is_dialog_only = yes
+	# 	custom_gui = "enclave_caravaneer_option"
+	# 	trigger = { has_active_ne_drg_trade_deal = yes }
+	# 	custom_tooltip = nedrg.100.ba.tooltip
+	# 	hidden_effect = { has_active_ne_drg_trade_deal = yes }
+	# }
+
+	# Option 3: MULE tech (nedrg.130)
+	option = {
+		name = nedrg.100.c
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.c.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = root
+						value >= 80
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nedrg.100.c.alreadyteached
+				NOR = {
+					# has_tech_option = tech_drg_mining_utility_lift_engine
+					# has_technology = tech_drg_mining_utility_lift_engine
+				}
+			}
+		}
+		hidden_effect = {
+			# country_event = { id = nedrg.130 }
+		}
+	}
+
+	# Option 4: Error cubes. (nedrg.140)
+	option = {
+		name = nedrg.100.d
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.d.opinion
+				event_target:ne_machine = {
+					trust = {
+						who = Root
+						value >= 100
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nedrg.100.d.alreadybought
+				NOT = { has_country_flag = recently_bought_error_cubes }
+			}
+		}
+		hidden_effect = {
+			# country_event = { id = nedrg.140 }
+		}
 	}
 
 	option = {

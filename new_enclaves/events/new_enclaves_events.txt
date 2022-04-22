@@ -89,6 +89,9 @@ country_event = {
 					ne_machine_country = {
 						country_event = { id = nemac.10 }
 					}
+					ne_drg_country = {
+						country_event = { id = nedrg.10 }
+					}
 					default = {
 						fire_on_action = { on_action = on_ne_comms_established_no_path }
 					}
@@ -143,6 +146,9 @@ country_event = {
 			}
 			ne_machine_country = {
 				country_event = { id = nemac.10 scopes = { from = from } }
+			}
+			ne_drg_country = {
+				country_event = { id = nedrg.10 scopes = { from = from } }
 			}
 			default = {
 				fire_on_action = { on_action = on_ne_comms_established_no_path }
