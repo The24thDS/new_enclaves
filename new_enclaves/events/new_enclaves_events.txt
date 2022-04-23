@@ -209,6 +209,7 @@ country_event = {
 		OR = {
 			has_active_ne_machine_trade_deal = yes
 			has_active_ne_shroud_trade_deal = yes
+			has_active_ne_drg_trade_deal = yes
 		}
 	}
 
@@ -227,6 +228,16 @@ country_event = {
 			limit = { has_active_ne_shroud_trade_deal = yes }
 			remove_ne_shroud_trade_deal = yes
 			event_target:ne_shroud_country = {
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+		if = {
+			limit = { has_active_ne_drg_trade_deal = yes }
+			remove_ne_drg_trade_deal = yes
+			event_target:ne_drg_country = {
 				add_trust = {
 					who = Root
 					amount = -20

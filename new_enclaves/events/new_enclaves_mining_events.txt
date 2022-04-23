@@ -166,24 +166,24 @@ country_event = {
 			}
 			custom_tooltip = {
 				fail_text = nedrg.100.b.alreadyhired
-				# has_active_ne_drg_trade_deal = no
+				has_active_ne_drg_trade_deal = no
 			}
 		}
 		hidden_effect = {
-			# country_event = { id = nedrg.120 }
+			country_event = { id = nedrg.120 }
 		}
 	}
 
 	# Option 2.1: Remove trade deal
-	# option = {
-	# 	name = nedrg.100.ba
-	# 	response_text = nedrg.100.ba.reply
-	# 	is_dialog_only = yes
-	# 	custom_gui = "enclave_caravaneer_option"
-	# 	trigger = { has_active_ne_drg_trade_deal = yes }
-	# 	custom_tooltip = nedrg.100.ba.tooltip
-	# 	hidden_effect = { has_active_ne_drg_trade_deal = yes }
-	# }
+	option = {
+		name = nedrg.100.ba
+		response_text = nedrg.100.ba.reply
+		is_dialog_only = yes
+		custom_gui = "enclave_caravaneer_option"
+		trigger = { has_active_ne_drg_trade_deal = yes }
+		custom_tooltip = nedrg.100.ba.tooltip
+		hidden_effect = { remove_ne_drg_trade_deal = yes }
+	}
 
 	# Option 3: MULE tech (nedrg.130)
 	option = {
@@ -914,5 +914,105 @@ country_event = {
 		else = {
 			country_event = { id = nedrg.111 }
 		}
+	}
+}
+
+# nedrg.120: Rare Crystals
+country_event = {
+	id = nedrg.120
+	title = nedrg.120.name
+	desc = nedrg.120.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	# 1 for 11 monthly
+	option = {
+		name = nedrg.120.a
+		custom_gui = "enclave_caravaneer_option"
+		response_text = drg_successful_trade
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 500 }
+		}
+		add_resource = { energy = -500 }
+		add_modifier = {
+			modifier = ne_drg_trade_deal_1
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade_deal
+			}
+		}
+	}
+ # 2 for 22 monthly
+	option = {
+		name = nedrg.120.b
+		custom_gui = "enclave_caravaneer_option"
+		response_text = drg_successful_trade
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+		}
+		add_resource = { energy = -1000 }
+		add_modifier = {
+			modifier = ne_drg_trade_deal_2
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade_deal
+			}
+		}
+	}
+ # 3 for 33 monthly
+	option = {
+		name = nedrg.120.c
+		custom_gui = "enclave_caravaneer_option"
+		response_text = drg_successful_trade
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+		}
+		add_resource = { energy = -1500 }
+		add_modifier = {
+			modifier = ne_drg_trade_deal_3
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade_deal
+			}
+		}
+	}
+
+ # Back to main menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_caravaneer_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_caravaneer_option"
+		default_hide_option = yes
 	}
 }

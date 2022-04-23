@@ -60,3 +60,16 @@ ne_shroud_trade_deal_3 = {
 deep_rock_galactic_expertise = {
 	country_minerals_produces_mult = 0.1
 }
+
+ne_drg_trade_deal_1 = {
+	country_base_rare_crystals_produces_add = 1
+	country_base_energy_produces_add = -11
+}
+ne_drg_trade_deal_2 = {
+	country_base_rare_crystals_produces_add = 2
+	country_base_energy_produces_add = -22
+}
+ne_drg_trade_deal_3 = {
+	country_base_rare_crystals_produces_add = 3
+	country_base_energy_produces_add = -33
+}

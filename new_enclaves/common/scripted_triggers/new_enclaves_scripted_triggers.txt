@@ -52,3 +52,18 @@ can_interact_with_shrouds_children = {
 		}
 	}
 }
+has_active_ne_drg_trade_deal = {
+	OR = {
+		has_modifier = ne_drg_trade_deal_1
+		has_modifier = ne_drg_trade_deal_2
+		has_modifier = ne_drg_trade_deal_3
+	}
+}
+has_any_active_ne_drg_trade_deal = {
+	OR = {
+		has_modifier = deep_rock_galactic_expertise
+		has_modifier = ne_drg_trade_deal_1
+		has_modifier = ne_drg_trade_deal_2
+		has_modifier = ne_drg_trade_deal_3
+	}
+}

@@ -223,3 +223,18 @@ generate_random_variable_value = {
 	}
 	clear_variable = temp_ten_power
 }
+
+remove_ne_drg_trade_deal = {
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_1 }
+		remove_modifier = ne_drg_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_2 }
+		remove_modifier = ne_drg_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_3 }
+		remove_modifier = ne_drg_trade_deal_3
+	}
+}
