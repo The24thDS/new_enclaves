@@ -250,10 +250,11 @@ country_event = {
 		}
 	}
 
+	# Option 5: Rock and Stone (nedrg.101)
 	option = {
 		name = saluting2_5_text
 		custom_gui = "enclave_caravaneer_option"
-		trigger = { is_genocidal = no }
+		trigger = { is_genocidal = no from = { has_government = gov_ne_mining } }
 		hidden_effect = {
 			country_event = { id = nedrg.101 }
 		}
