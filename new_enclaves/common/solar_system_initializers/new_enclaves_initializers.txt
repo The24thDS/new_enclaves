@@ -744,10 +744,8 @@ ne_drg_init = {
 				create_country = {
 					name = "NAME_NEDRG_Country"
 					type = ne_enclave
-					authority = auth_corporate
+					authority = auth_oligarchic
 					civics = {
-						civic = civic_ruthless_competition
-						civic = civic_permanent_employment
 						civic = civic_mining_corporation
 					}
 					species = last_created_species
