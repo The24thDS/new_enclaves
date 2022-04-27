@@ -66,3 +66,25 @@ leader_trait_saint = {
 	initial = no
 	randomized = no
 }
+
+trait_robot_mule_augmentation = {
+	cost = 4
+	opposites = { "trait_robot_power_drills" }
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/trait_robot_harvesters.dds"
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_mining_utility_lift_engine
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+	}
+
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.30
+	}
+}

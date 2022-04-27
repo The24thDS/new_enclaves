@@ -209,13 +209,13 @@ country_event = {
 			custom_tooltip = {
 				fail_text = nedrg.100.c.alreadyteached
 				NOR = {
-					# has_tech_option = tech_drg_mining_utility_lift_engine
-					# has_technology = tech_drg_mining_utility_lift_engine
+					has_tech_option = tech_mining_utility_lift_engine
+					has_technology = tech_mining_utility_lift_engine
 				}
 			}
 		}
 		hidden_effect = {
-			# country_event = { id = nedrg.130 }
+			country_event = { id = nedrg.130 }
 		}
 	}
 
@@ -1006,6 +1006,69 @@ country_event = {
 		custom_gui = "enclave_caravaneer_option"
 		hidden_effect = {
 			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_caravaneer_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.130: MULE
+country_event = {
+	id = nedrg.130
+	title = nedrg.130.name
+	desc = nedrg.130.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nedrg.130.a
+		response_text = nedrg.130.a.reply
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 30000 }
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+		add_resource = { energy = -30000 }
+		custom_tooltip = opinion20
+		add_research_option = tech_mining_utility_lift_engine
+		hidden_effect = {
+			event_target:ne_drg = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_caravaneer_option"
+		hidden_effect = {
+			country_event = { id = nemac.101 scopes = { from = event_target:ne_drg } }
 		}
 	}
 

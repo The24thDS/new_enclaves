@@ -292,7 +292,7 @@
   nedrg.100.ba.tooltip: "This will terminate our current resource trade deal with §YDeep Rock Galactic§!."
   nedrg.100.c: "Your MULEs seem to have infinite storage. How do you make them?"
   nedrg.100.c.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +80"
-  nedrg.100.c.alreadyteached: "We already know how to make our own §YMULE§!."
+  nedrg.100.c.alreadyteached: "We already have the §YMULE§! blueprints."
   nedrg.100.d: "Are you selling those §YError Cubes§!?"
   nedrg.100.d.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +100"
   nedrg.100.d.alreadybought: "We recently bought §YERR://23Y%/§!. They are not willing to sell us more for now."
@@ -313,6 +313,10 @@
   nedrg.120.a: "§G1§! £rare_crystals£ §H$rare_crystals$§!/month for §R11§! £energy£ §H$energy$§!/month."
   nedrg.120.b: "§G2§! £rare_crystals£ §H$rare_crystals$§!/month for §R22§! £energy£ §H$energy$§!/month."
   nedrg.120.c: "§G3§! £rare_crystals£ §H$rare_crystals$§!/month for §R33§! £energy£ §H$energy$§!/month."
+  nedrg.130.name: "$tech_mining_utility_lift_engine$"
+  nedrg.130.desc: "The §H$tech_mining_utility_lift_engine$§! is the result of years of R&D and is a trademarked product of Deep Rock Galactic.\n\nThe M.U.L.E is used on a daily basis by our employees to store minerals. It is able to walk on any surface, store a very large amount of minerals and it has an advanced pathfinding algorithm.\n\nGiven our very good business relations, management is willing to give you access to the blueprints for a price. You must also sign this contract agreeing to the following terms:\n\n - Construction of M.U.L.E replicas is strictly §RPROHIBITED§!\n - Integration of a M.U.L.E's features subset is §GALLOWED§!\n - Commercial use of M.U.L.E related secrets is strictly §RPROHIBITED§!\n - Commercial use as a result of features subset integration is §YALLOWED AS LONG AS§! it doesn't endanger Deep Rock Galactic's interests\n - Deep Rock Galactic reserves the right to decide at any moment what actions endanger its interests\n\nDo we have a deal?"
+  nedrg.130.a: "I'll sign it."
+  nedrg.130.a.reply: "By the Beard! You better respect those terms."
 ### Traits, Modifiers, Technologies, Others ###
  ## Universal Hive
   leader_universal_drone: "Universal Drone"
@@ -348,6 +352,12 @@
   ne_drg_trade_deal_1: "Deep Rock Galactic Deal (£rare_crystals£ x1)"
   ne_drg_trade_deal_2: "Deep Rock Galactic Deal (£rare_crystals£ x2)"
   ne_drg_trade_deal_3: "Deep Rock Galactic Deal (£rare_crystals£ x3)"
+  tech_mining_utility_lift_engine: "Mining Utility Lift Engine"
+  tech_mining_utility_lift_engine_desc: "Deep Rock Galactic's MULEs are robots capable of walking on any surface and storing infinite amounts of minerals. Perhaps by studying their blueprints we will be able to apply some of the discoveries to our own robots."
+  feature_add_mule_trait: "§HUnlocks Feature:§! $trait_robot_mule_augmentation$"
+  feature_add_mule_trait_desc: "$feature_add_sapient_machine_trait_desc$"
+  trait_robot_mule_augmentation: "M.U.L.E Augmentation"
+  trait_robot_mule_augmentation_desc: "These robots have been upgraded to use a similar molecular compression to DRG's $tech_mining_utility_lift_engine$. This allows the robots to store more minerals before having to deposit them, increasing our overall production."
  ### Misc ###
   opinion_destroyed_ne_hive: "Destroyed Hive Enclave"
   opinion_destroyed_ne_hive_trade: "Destroyed Hive Enclave we had deals with"
