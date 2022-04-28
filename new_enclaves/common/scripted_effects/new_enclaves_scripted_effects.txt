@@ -238,3 +238,22 @@ remove_ne_drg_trade_deal = {
 		remove_modifier = ne_drg_trade_deal_3
 	}
 }
+
+remove_all_ne_drg_trade_deal = {
+	if = {
+		limit = { has_modifier = deep_rock_galactic_expertise }
+		remove_modifier = deep_rock_galactic_expertise
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_1 }
+		remove_modifier = ne_drg_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_2 }
+		remove_modifier = ne_drg_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_3 }
+		remove_modifier = ne_drg_trade_deal_3
+	}
+}

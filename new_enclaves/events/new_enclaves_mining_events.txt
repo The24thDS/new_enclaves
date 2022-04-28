@@ -229,6 +229,7 @@ country_event = {
 				has_valid_civic = civic_hive_devouring_swarm
 				has_valid_civic = civic_machine_terminator
 			}
+			has_ancrel = yes
 		}
 		allow = {
 			custom_tooltip = {
@@ -1009,7 +1010,7 @@ country_event = {
 		}
 	}
 
-	# End
+ # End
 	option = {
 		name = GOODBYE
 		custom_gui = "enclave_caravaneer_option"
@@ -1166,6 +1167,328 @@ country_event = {
 	option = {
 		name = GOODBYE
 		custom_gui = "enclave_caravaneer_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.900: Deep Rock Galactic destroyed (HIDDEN)
+country_event = {
+	id = nedrg.900
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = ne_enclave
+		has_country_flag = ne_drg_country
+		FromFrom = {
+			is_ship_size = enclave_station
+		}
+	}
+
+	immediate = {
+		FromFrom = {
+			solar_system = { save_event_target_as = ne_drg_system }
+		}
+		From = {
+			country_event = { id = nedrg.901 }
+			save_event_target_as = ne_drg_destroyer
+		}
+		every_country = {
+			limit = {
+				has_communications = Root
+				NOT = { is_country = event_target:ne_drg_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = nedrg.902 }
+		}
+	}
+}
+
+# nedrg.901: DRG Destroyed (Destroyer)
+country_event = {
+	id = nedrg.901
+	title = nedrg.901.name
+	desc = nedrg.901.desc
+	picture = GFX_evt_space_debris
+	location = event_target:ne_drg_system
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_ne_drg
+	}
+
+	option = {
+		name = EXCELLENT
+		add_resource = {
+			engineering_research = 3000
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			large_artifact_reward = yes
+		}
+	}
+}
+
+# nedrg.902: DRG Destroyed
+country_event = {
+	id = nedrg.902
+	title = nedrg.901.name
+	desc = {
+		text = nedrg.902.a.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = no
+			has_communications = event_target:ne_drg_destroyer
+		}
+	}
+	desc = {
+		text = nedrg.902.b.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = no
+			NOT = { has_communications = event_target:ne_drg }
+		}
+	}
+	desc = {
+		text = nedrg.902.c.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = yes
+			has_communications = event_target:ne_drg_destroyer
+		}
+	}
+	desc = {
+		text = nedrg.902.d.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = yes
+			NOT = { has_communications = event_target:ne_drg_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:ne_drg_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_any_active_ne_drg_trade_deal = yes }
+			remove_all_ne_drg_trade_deal = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade_deal
+					}
+				}
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_drg_destroyer
+				modifier = opinion_destroyed_ne_drg_trade
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade_deal
+					}
+				}
+				is_ai = yes
+				is_spiritualist = no
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_drg_destroyer
+				modifier = opinion_destroyed_ne_drg
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.902.a
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade_deal
+				}
+			}
+		}
+	}
+	option = {
+		name = nedrg.902.b
+		trigger = {
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade_deal
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_drg_trade
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade_deal
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_drg_trade_deal
+				}
+			}
+		}
+	}
+}
+
+# nedrg.903: Attacked DRG (Hidden)
+country_event = {
+	id = nedrg.903
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		From = { has_country_flag = ne_drg_country }
+	}
+
+	immediate = {
+		From = {
+			save_event_target_as = ne_drg
+			add_trust = {
+				who = Root
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_ne_drg
+		if = {
+			limit = { has_any_active_ne_drg_trade_deal = yes }
+			remove_all_ne_drg_trade_deal = yes
+			country_event = { id = nedrg.904 }
+		}
+	}
+}
+
+# nedrg.904: Attacked DRG - Agreements terminated
+country_event = {
+	id = nedrg.904
+	title = nedrg.100.name
+	desc = nedrg.904.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	option = {
+		name = nedrg.904.a
+		custom_gui = "enclave_caravaneer_option"
+	}
+}
+
+# Attacked DRG - Refuses Communications
+country_event = {
+	id = nedrg.905
+	title = nedrg.100.name
+	desc = nedrg.905a.desc
+	desc = nedrg.905b.desc
+	desc = nedrg.905c.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	trigger = {
+		From = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_drg_country
+		}
+		has_country_flag = attacked_ne_drg
+		NOT = { has_country_flag = ne_drg_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		From = { save_event_target_as = ne_drg }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_caravaneer_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_caravaneer_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_caravaneer_option"
+	}
+
+	option = {
+		name = nedrg.904.a
+		custom_gui = "enclave_caravaneer_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
 		default_hide_option = yes
 	}
 }
