@@ -246,7 +246,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			# country_event = { id = nedrg.140 }
+			country_event = { id = nedrg.140 }
 		}
 	}
 
@@ -1068,7 +1068,97 @@ country_event = {
 		name = ne_back
 		custom_gui = "enclave_caravaneer_option"
 		hidden_effect = {
-			country_event = { id = nemac.101 scopes = { from = event_target:ne_drg } }
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_caravaneer_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.140: Error Cubes
+country_event = {
+	id = nedrg.140
+	title = nedrg.140.name
+	desc = nedrg.140.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nedrg.140.a
+		response_text = drg_successful_trade
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+		}
+		add_resource = { energy = -5000 minor_artifacts = 5 }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = recently_bought_error_cubes
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.140.b
+		response_text = drg_successful_trade
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 10000 }
+		}
+		add_resource = { energy = -10000 minor_artifacts = 10 }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = recently_bought_error_cubes
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.140.c
+		response_text = drg_successful_trade
+		custom_gui = "enclave_caravaneer_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 15000 }
+		}
+		add_resource = { energy = -15000 minor_artifacts = 15 }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = recently_bought_error_cubes
+				years = 5
+			}
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_caravaneer_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
 		}
 	}
 

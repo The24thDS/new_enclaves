@@ -201,4 +201,9 @@ spriteTypes = {
 		symbol_position = { x = 24 y = 24 }
 		symbol_size = { width = 83 height = 83 }
 	}
+
+	spriteType = {
+		name = "GFX_text_ne_drg_error_cube"
+		textureFile = "gfx/interface/icons/text_icons/ne_drg_error_cube.dds"
+	}
 }

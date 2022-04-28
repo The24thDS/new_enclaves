@@ -269,6 +269,8 @@
   neshr.905c.desc: "Physical reality is but an illusion. Have you come to free us from it?"
   neshr.905d.desc: "Your violent nature is just another result of your attachment to the material realm."
 ## DRG Enclave
+  ne_drg_error_cube: "Error Cube"
+  ne_drg_error_cube_plural: "Error Cubes"
  # First Contact
   nedrg.11.name: "First Contact With [From.GetName]"
   nedrg.11.desc: "We are Deep Rock Galactic. And you are our customer.\n\nDeep Rock Galactic is the best interplanetary mining corporation in the known galaxy and the only one that's willing to take a high risk for a even higher reward. Our specialty - the most dangerous planets in the galaxy.\n\nYou've discovered one of our most profitable digging sites, §HHoxess - 04§!. This planet is very rich in precious minerals like §BMorkite§! or §MBittergem§! as well as artifacts called §YERR://23Y%/§!. However, dangerous creatures lurk down there, and in order to protect our interests we equip our employees with heavy weapons to eliminate these creatures.\n\nOur employees drop from §HSpace Rig 17§! inside the planet on a daily basis, completing mining, salvage and elimination missions to bring back resources that you can buy. We only wish to provide you with our goods and services."
@@ -293,7 +295,7 @@
   nedrg.100.c: "Your MULEs seem to have infinite storage. How do you make them?"
   nedrg.100.c.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +80"
   nedrg.100.c.alreadyteached: "We already have the §YMULE§! blueprints."
-  nedrg.100.d: "Are you selling those §YError Cubes§!?"
+  nedrg.100.d: "Are you selling those £ne_drg_error_cube£ §Y$ne_drg_error_cube_plural$§!?"
   nedrg.100.d.opinion: "Requires §YDeep Rock Galactic§! to have:\n£opinion£ Opinion +100"
   nedrg.100.d.alreadybought: "We recently bought §YERR://23Y%/§!. They are not willing to sell us more for now."
   nedrg.101.name: "V"
@@ -317,6 +319,11 @@
   nedrg.130.desc: "The §H$tech_mining_utility_lift_engine$§! is the result of years of R&D and is a trademarked product of Deep Rock Galactic.\n\nThe M.U.L.E is used on a daily basis by our employees to store minerals. It is able to walk on any surface, store a very large amount of minerals and it has an advanced pathfinding algorithm.\n\nGiven our very good business relations, management is willing to give you access to the blueprints for a price. You must also sign this contract agreeing to the following terms:\n\n - Construction of M.U.L.E replicas is strictly §RPROHIBITED§!\n - Integration of a M.U.L.E's features subset is §GALLOWED§!\n - Commercial use of M.U.L.E related secrets is strictly §RPROHIBITED§!\n - Commercial use as a result of features subset integration is §YALLOWED AS LONG AS§! it doesn't endanger Deep Rock Galactic's interests\n - Deep Rock Galactic reserves the right to decide at any moment what actions endanger its interests\n\nDo we have a deal?"
   nedrg.130.a: "I'll sign it."
   nedrg.130.a.reply: "By the Beard! You better respect those terms."
+  nedrg.140.name: "$ne_drg_error_cube_plural$"
+  nedrg.140.desc: "Ah, yes, the $ne_drg_error_cube$. We don't know what it is used for, it's some kind of artifact but we have no use for artifacts here. So, if you are willing to pay, we can sell you some."
+  nedrg.140.a: "§G1§! £ne_drg_error_cube£ §H$ne_drg_error_cube$§! for §R5000§! £energy£ §H$energy$§!."
+  nedrg.140.b: "§G2§! £ne_drg_error_cube£ §H$ne_drg_error_cube_plural$§! for §R10000§! £energy£ §H$energy$§!."
+  nedrg.140.c: "§G3§! £ne_drg_error_cube£ §H$ne_drg_error_cube_plural$§! for §R15000§! £energy£ §H$energy$§!."
 ### Traits, Modifiers, Technologies, Others ###
  ## Universal Hive
   leader_universal_drone: "Universal Drone"
