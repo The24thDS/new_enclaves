@@ -1247,7 +1247,7 @@ country_event = {
 		text = nedrg.902.b.desc
 		trigger = {
 			has_any_active_ne_drg_trade_deal = no
-			NOT = { has_communications = event_target:ne_drg }
+			NOT = { has_communications = event_target:ne_drg_destroyer }
 		}
 	}
 	desc = {
