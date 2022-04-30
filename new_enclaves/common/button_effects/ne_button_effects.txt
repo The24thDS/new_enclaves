@@ -1,0 +1,67 @@
+
+#Scope type varies depending on what is selected
+# This = selected object (if planet, ship, fleet, system, ambient object, megastructure, federation, espionage operation, arc site or first contact) or player country
+# From = player country
+# Note: It's advised to check is_scope_type = planet/whatever in the allow trigger, since it's possible to confuse the scopes if multiple interfaces are open
+
+# Usage example in a .gui file:
+#	effectbuttonType = {
+#		name = button_effect_test
+#		quadTextureSprite = GFX_fleetview_destroy_fleet
+#		position = { x = 283 y = 0 }
+#		scale = 1
+#		orientation = UPPER_LEFT
+#		effect = example_button_effect
+#	}
+
+
+ne_drg_does_not_have_all_recommended_dlcs = {
+	potential = {
+		from = {
+			OR = {
+				has_ancrel = no
+				has_humanoids = no
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+	}
+}
+
+ne_drg_does_not_have_ancrel = {
+	potential = {
+		from = {
+			has_ancrel = no
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = ANCIENT_RELICS_TITLE
+		custom_tooltip = DASH_SEPARATOR
+		custom_tooltip = NE_DRG_DLC_ANCIENT_RELICS_DESC
+	}
+}
+
+ne_drg_does_not_have_humanoids = {
+	potential = {
+		from = {
+			has_humanoids = no
+		}
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = HUMANOIDS_TITLE
+		custom_tooltip = DASH_SEPARATOR
+		custom_tooltip = NE_DRG_DLC_HUMANOIDS_DESC
+	}
+}

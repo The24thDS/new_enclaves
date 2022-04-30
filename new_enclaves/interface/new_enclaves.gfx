@@ -206,4 +206,10 @@ spriteTypes = {
 		name = "GFX_text_ne_drg_error_cube"
 		textureFile = "gfx/interface/icons/text_icons/ne_drg_error_cube.dds"
 	}
+
+	spriteType = {
+		name = "GFX_ne_humanoidsspeciespack"
+		texturefile = "gfx/interface/icons/dlc/humanoids_species_pack.dds"
+		noOfFrames = 1
+	}
 }

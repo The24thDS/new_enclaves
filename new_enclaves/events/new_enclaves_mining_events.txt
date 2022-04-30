@@ -24,7 +24,7 @@ country_event = {
 	desc = nedrg.11.desc
 
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = from
@@ -35,7 +35,7 @@ country_event = {
 
 	option = {
 		name = nedrg.11.a
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -47,20 +47,20 @@ country_event = {
 
 	option = {
 		name = SCUM
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
 	}
 
 	option = {
 		name = TASTY
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
 	}
 	
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 }
 
@@ -77,7 +77,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 	force_open = yes
 
 	picture_event_data = {
@@ -108,23 +108,23 @@ country_event = {
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 
 	# Option 1: Can you help our miners? (nedrg.110)
 	option = {
 		name = nedrg.100.a
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -146,7 +146,7 @@ country_event = {
 	# Option 2: Rare Crystals Deal (nedrg.120)
 	option = {
 		name = nedrg.100.b
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -179,7 +179,7 @@ country_event = {
 		name = nedrg.100.ba
 		response_text = nedrg.100.ba.reply
 		is_dialog_only = yes
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = { has_active_ne_drg_trade_deal = yes }
 		custom_tooltip = nedrg.100.ba.tooltip
 		hidden_effect = { remove_ne_drg_trade_deal = yes }
@@ -188,7 +188,7 @@ country_event = {
 	# Option 3: MULE tech (nedrg.130)
 	option = {
 		name = nedrg.100.c
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -222,7 +222,7 @@ country_event = {
 	# Option 4: Error cubes. (nedrg.140)
 	option = {
 		name = nedrg.100.d
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -254,7 +254,7 @@ country_event = {
 	# Option 5: Rock and Stone (nedrg.101)
 	option = {
 		name = saluting2_5_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = { is_genocidal = no from = { has_government = gov_ne_mining } }
 		hidden_effect = {
 			country_event = { id = nedrg.101 }
@@ -265,7 +265,7 @@ country_event = {
 	option = {
 		name = GOODBYE
 		default_hide_option = yes
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = { is_genocidal = no }
 	}
 }
@@ -541,7 +541,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 	force_open = yes
 
 	picture_event_data = {
@@ -562,7 +562,7 @@ country_event = {
 
 	option = {
 		name = new_saluting_3_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			check_variable_arithmetic = {
 				which = ne_drg_salute_pick
@@ -576,7 +576,7 @@ country_event = {
 	}
 	option = {
 		name = saluting2_17_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			check_variable_arithmetic = {
 				which = ne_drg_salute_pick
@@ -590,7 +590,7 @@ country_event = {
 	}
 	option = {
 		name = saluting2_8_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			check_variable_arithmetic = {
 				which = ne_drg_salute_pick
@@ -604,7 +604,7 @@ country_event = {
 	}
 	option = {
 		name = rockandstonesalute_05_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			check_variable_arithmetic = {
 				which = ne_drg_salute_pick
@@ -618,7 +618,7 @@ country_event = {
 	}
 	option = {
 		name = rockandstonesalute_10_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			check_variable_arithmetic = {
 				which = ne_drg_salute_pick
@@ -632,7 +632,7 @@ country_event = {
 	}
 	option = {
 		name = saluting2_16_text
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			check_variable_arithmetic = {
 				which = ne_drg_salute_pick
@@ -648,7 +648,7 @@ country_event = {
 	# Back to Menu
 	option = {
 		name = BACK
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		hidden_effect = {
 			remove_country_flag = ne_drg_diplomacy_engaged
 			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
@@ -658,7 +658,7 @@ country_event = {
 	option = {
 		name = GOODBYE
 		default_hide_option = yes
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 }
 
@@ -670,7 +670,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_drg
@@ -698,7 +698,7 @@ country_event = {
 	option = {
 		name = nedrg.110.a
 		response_text = nedrg.110.reply
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= drg_assistance_price }
 			hidden_trigger = {
@@ -733,7 +733,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = ne_back
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		hidden_effect = {
 			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
 		}
@@ -742,7 +742,7 @@ country_event = {
 	# End
 	option = {
 		name = GOODBYE
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		default_hide_option = yes
 	}
 }
@@ -755,7 +755,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_drg
@@ -796,7 +796,7 @@ country_event = {
 	option = {
 		name = nedrg.111.a
 		response_text = nedrg.110.reply
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= drg_assistance_price }
 			hidden_trigger = {
@@ -832,7 +832,7 @@ country_event = {
 	option = {
 		name = nedrg.111.b
 		response_text = nedrg.110.reply
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= drg_extended_assistance_price }
 			hidden_trigger = {
@@ -871,7 +871,7 @@ country_event = {
 	# End
 	option = {
 		name = NO
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		default_hide_option = yes
 		hidden_effect = {
 			if = {
@@ -926,7 +926,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_drg
@@ -946,7 +946,7 @@ country_event = {
 	# 1 for 11 monthly
 	option = {
 		name = nedrg.120.a
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		response_text = drg_successful_trade
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 500 }
@@ -965,7 +965,7 @@ country_event = {
  # 2 for 22 monthly
 	option = {
 		name = nedrg.120.b
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		response_text = drg_successful_trade
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1000 }
@@ -984,7 +984,7 @@ country_event = {
  # 3 for 33 monthly
 	option = {
 		name = nedrg.120.c
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		response_text = drg_successful_trade
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 1500 }
@@ -1004,7 +1004,7 @@ country_event = {
  # Back to main menu
 	option = {
 		name = ne_back
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		hidden_effect = {
 			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
 		}
@@ -1013,7 +1013,7 @@ country_event = {
  # End
 	option = {
 		name = GOODBYE
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		default_hide_option = yes
 	}
 }
@@ -1026,7 +1026,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_drg
@@ -1046,7 +1046,7 @@ country_event = {
 	option = {
 		name = nedrg.130.a
 		response_text = nedrg.130.a.reply
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 30000 }
 			NOT = { has_policy_flag = robots_outlawed }
@@ -1067,7 +1067,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = ne_back
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		hidden_effect = {
 			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
 		}
@@ -1076,7 +1076,7 @@ country_event = {
 	# End
 	option = {
 		name = GOODBYE
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		default_hide_option = yes
 	}
 }
@@ -1089,7 +1089,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_drg
@@ -1109,7 +1109,7 @@ country_event = {
 	option = {
 		name = nedrg.140.a
 		response_text = drg_successful_trade
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
 		}
@@ -1125,7 +1125,7 @@ country_event = {
 	option = {
 		name = nedrg.140.b
 		response_text = drg_successful_trade
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 10000 }
 		}
@@ -1141,7 +1141,7 @@ country_event = {
 	option = {
 		name = nedrg.140.c
 		response_text = drg_successful_trade
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 15000 }
 		}
@@ -1157,7 +1157,7 @@ country_event = {
 	# Back to Main Menu
 	option = {
 		name = ne_back
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		hidden_effect = {
 			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
 		}
@@ -1166,7 +1166,7 @@ country_event = {
 	# End
 	option = {
 		name = GOODBYE
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		default_hide_option = yes
 	}
 }
@@ -1410,7 +1410,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 
 	picture_event_data = {
 		portrait = event_target:ne_drg
@@ -1419,7 +1419,7 @@ country_event = {
 
 	option = {
 		name = nedrg.904.a
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 }
 
@@ -1433,7 +1433,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_caravaneer_window"
+	custom_gui = "enclave_drg_window"
 	force_open = yes
 
 	picture_event_data = {
@@ -1464,24 +1464,24 @@ country_event = {
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 	}
 
 	option = {
 		name = nedrg.904.a
-		custom_gui = "enclave_caravaneer_option"
+		custom_gui = "enclave_drg_option"
 		trigger = {
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
