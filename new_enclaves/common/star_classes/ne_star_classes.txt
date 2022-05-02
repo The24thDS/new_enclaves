@@ -1,7 +1,7 @@
 # White or Blueish Star with Green Background
 sc_ne_a = {
 	class			= ne_a_star
-	planet			= { key = pc_a_star }
+	planet			= { key = pc_neutron_star }
 	spawn_odds		= 0
 	num_planets	= { min = 4 max = 10 }
 
