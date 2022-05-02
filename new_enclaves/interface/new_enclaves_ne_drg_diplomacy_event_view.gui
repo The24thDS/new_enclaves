@@ -318,7 +318,6 @@ guiTypes = {
 			name = "dlc_recommendations_text"
 			font = "cg_16b"
 			position = { x = 0 y = -92.5 }
-			maxWidth = 210
 			buttonText = "RECOMMENDED_DLCS"
 			format = left
 			effect = ne_drg_does_not_have_all_recommended_dlcs
