@@ -631,7 +631,7 @@ ship_design = {
 	ship_size = enclave_station
 
 	section = {
-		template = "station_enclave_curator_01_key"
+		template = "station_enclave_drg_01_key"
 		slot = "mid"
 
 		component = {
