@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   ne_enclave: "Enklawa"
   ne_back: "Co jeszcze mieliście do zaoferowania?"
   ### Governments ###
@@ -133,10 +133,13 @@
   nemac.110.a: "Brzmi dobrze."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
   nemac.111.name: "Pomoc Pierwotnych Maszyn"
-  nemac.111.desc: "Algorytm pomocy skompilowany, 10 lat temu został pomyślnie wykonany bez żadnych błędów. Czy chcesz uruchomić go ponownie?\n\nT/N"
-  nemac.111.a: "Tak."
-  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
+  nemac.111.desc: "The assistance algorithm compiled [this.ne_prime_expertise_duration] years ago has been executed successfully without any errors.\n\nDo you wish to run a 10 years algorithm?\n\nDo you want to order a custom [This.ne_prime_expertise_extended_duration] years algorithm?"
+  nemac.111.a: "10 years."
+  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh 10§!"
+  nemac.111.b: "[This.ne_prime_expertise_extended_duration] years."
+  nemac.111.b.reply: "§Yprime:~$ sudo bash assist.sh [This.ne_prime_expertise_extended_duration]§!"
   nemac.111.end: "Nie."
+  nemac.111.variable_opinion: "Opinion: £opinion£ §G+[This.prime_extended_expertise_opinion]§!"
   #Employ Unit
   nemac.120.name: "Rekrutuj Pierwotną Maszynę"
   nemac.120.desc: "Każda z naszych jednostek jest w pełni wyposażona w nasze protokoły wydajności, szczególnie nadająca się do zoptymalizowania pracy innych maszyn. Za ich zatrudnienie wymagana jest prowizja za zatrudnienie z góry."
