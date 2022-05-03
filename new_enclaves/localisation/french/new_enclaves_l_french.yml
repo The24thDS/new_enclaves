@@ -1,5 +1,5 @@
-﻿l_french:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Qu'avez-vous d'autre à offrir ?"
   ### Governments ###
@@ -133,10 +133,13 @@
   nemac.110.a: "Cela nous paraît bien."
   nemac.110.a.reply: "§Y<<TRAITEMENT DE LA REQUÊTE : ACHAT RÉUSSI>>§!"
   nemac.111.name: "Aide des Machines Primordiales"
-  nemac.111.desc: "L'algorithme d'assistance compilé il y a 10 ans s'est terminé avec succès sans enregistrer la moindre erreur. Souhaitez-vous le lancer à nouveau ?\n\nO/N"
-  nemac.111.a: "Oui."
-  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
+  nemac.111.desc: "The assistance algorithm compiled [this.ne_prime_expertise_duration] years ago has been executed successfully without any errors.\n\nDo you wish to run a 10 years algorithm?\n\nDo you want to order a custom [This.ne_prime_expertise_extended_duration] years algorithm?"
+  nemac.111.a: "10 years."
+  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh 10§!"
+  nemac.111.b: "[This.ne_prime_expertise_extended_duration] years."
+  nemac.111.b.reply: "§Yprime:~$ sudo bash assist.sh [This.ne_prime_expertise_extended_duration]§!"
   nemac.111.end: "Non."
+  nemac.111.variable_opinion: "Opinion: £opinion£ §G+[This.prime_extended_expertise_opinion]§!"
   #Employ Unit
   nemac.120.name: "Recruter une Machine Primordiale"
   nemac.120.desc: "Chacune de nos unités est entièrement équipée de nos protocoles de performance, spécialement adaptés pour optimiser le travail des autres machines. Des frais de maintenance sont exigés à l'avance pour leur mise à disposition."
