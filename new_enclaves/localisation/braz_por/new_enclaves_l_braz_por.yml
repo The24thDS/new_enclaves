@@ -1,5 +1,5 @@
-﻿l_braz_por:
-
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "What else did you have to offer?"
   ### Governments ###
@@ -133,10 +133,13 @@
   nemac.110.a: "Seems good to us."
   nemac.110.a.reply: "§Y<<PROCESSING PURCHASE: PURCHASE SUCCESSFUL>>§!"
   nemac.111.name: "Prime Machines Aid"
-  nemac.111.desc: "The assistance algorithm compiled 10 years ago has been executed successfully without any errors. Do you wish to run it again?\n\nY/N"
-  nemac.111.a: "Yes."
-  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh§!"
+  nemac.111.desc: "The assistance algorithm compiled [this.ne_prime_expertise_duration] years ago has been executed successfully without any errors.\n\nDo you wish to run a 10 years algorithm?\n\nDo you want to order a custom [This.ne_prime_expertise_extended_duration] years algorithm?"
+  nemac.111.a: "10 years."
+  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh 10§!"
+  nemac.111.b: "[This.ne_prime_expertise_extended_duration] years."
+  nemac.111.b.reply: "§Yprime:~$ sudo bash assist.sh [This.ne_prime_expertise_extended_duration]§!"
   nemac.111.end: "No."
+  nemac.111.variable_opinion: "Opinion: £opinion£ §G+[This.prime_extended_expertise_opinion]§!"
   #Employ Unit
   nemac.120.name: "Recruit Prime Machine"
   nemac.120.desc: "Each one of our units is fully equipped with our performance protocols, being specially suited to optimize the work of fellow machines. An upfront maintenance fee is required for their employement."
