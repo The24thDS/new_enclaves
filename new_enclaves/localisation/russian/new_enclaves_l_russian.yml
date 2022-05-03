@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   ne_enclave: "Анклав"
   ne_back: "Что еще вы мне предлагаете?"
   ### Governments ###
@@ -133,10 +133,13 @@
   nemac.110.a: "Нам это кажется хорошим."
   nemac.110.a.reply: "§Y<<ОБРАБОТКА ПОКУПКИ: ПОКУПКА ПРОШЛА УСПЕШНО>>§!"
   nemac.111.name: "Помощь Главных Машин"
-  nemac.111.desc: "Алгоритм помощи, скомпилированный 10 лет назад, был успешно реализован без каких-либо ошибок. Хотите запустить его снова?\n\nY/N"
-  nemac.111.a: "Да."
-  nemac.111.a.reply: "§Yглавный:~$ sudo bash assist.sh§!"
+  nemac.111.desc: "The assistance algorithm compiled [this.ne_prime_expertise_duration] years ago has been executed successfully without any errors.\n\nDo you wish to run a 10 years algorithm?\n\nDo you want to order a custom [This.ne_prime_expertise_extended_duration] years algorithm?"
+  nemac.111.a: "10 years."
+  nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh 10§!"
+  nemac.111.b: "[This.ne_prime_expertise_extended_duration] years."
+  nemac.111.b.reply: "§Yprime:~$ sudo bash assist.sh [This.ne_prime_expertise_extended_duration]§!"
   nemac.111.end: "Нет."
+  nemac.111.variable_opinion: "Opinion: £opinion£ §G+[This.prime_extended_expertise_opinion]§!"
   #Employ Unit
   nemac.120.name: "Вербовка Главных Машин"
   nemac.120.desc: "Каждое из наших устройств полностью оснащено нашими протоколами производительности, которые специально подходят для оптимизации работы других машин. Для их трудоустройства требуется предварительная плата за обслуживание."
