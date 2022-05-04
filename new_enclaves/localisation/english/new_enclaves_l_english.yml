@@ -66,13 +66,15 @@
   nehiv.111.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_collab_opinion]§!"
   # Consensus pheromones
   nehiv.120.name: "Consensus Pheromones"
-  nehiv.120.desc: ""Conformity techiniques"? What a strange name. We have no such things.\n\nWe do, however, have what we call "consensus pheromones". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ -5000§!"
+  nehiv.120.desc: ""Conformity techiniques"? What a strange name. We have no such things.\n\nWe do, however, have what we call "consensus pheromones". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ [This.hive_pheromones_price]§!"
   nehiv.120.a: "A small cost."
   nehiv.120.a.reply: "You have no idea of how small."
   nehiv.121.name: "Consensus Pheromones Deal"
-  nehiv.121.desc: "Today we sent the last batch of the Consensus Pheromones produced 10 years ago. I'm sure you didn't even realize they were still active - which proves how effective they were at creating harmonious and stable societies.\n\nWe can start producing another batch right now if we have the right resources. What do you think?"
+  nehiv.121.desc: "Today we sent the last batch of the Consensus Pheromones produced [this.ne_hive_pheromones_duration] years ago. I'm sure you didn't even realize they were still active - which proves how effective they were at creating harmonious and stable societies.\n\nWe can start producing another batch right now if we have the right resources. What do you think?"
   nehiv.121.a: "That would be most expedient."
   nehiv.121.a.reply: "A wise choice. You'll soon see the effects. Or, better yet, won't."
+  nehiv.121.extended: "How about a longer contract? [This.ne_hive_pheromones_extended_duration] years?"
+  nehiv.121.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_pheromones_opinion]§!"
   nehiv.121.b: "Not this time."
   # Hiring Drone
   nehiv.130.name: "Universal Drone"
