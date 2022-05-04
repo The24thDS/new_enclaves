@@ -648,7 +648,7 @@ country_event = {
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= prime_extended_expertise_price }
 			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_drg }
+				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
 		custom_tooltip = nemac.111.variable_opinion
