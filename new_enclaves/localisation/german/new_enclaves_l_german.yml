@@ -67,13 +67,15 @@ l_english:
   nehiv.111.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_collab_opinion]§!"
   #Consensus pheromones
   nehiv.120.name: "Einigkeitspheromone"
-  nehiv.120.desc: "\"Konformitätstechniken\"? Was für ein seltsamer Name. Wir haben so etwas nicht.\n\nWir haben jedoch das, was wir \"Einigkeitspheromone\" nennen. Sie wurden speziell entwickelt, um Abweichungen zu reduzieren und Harmonie unter organischen Wesen zu verbreiten.\n\nDa sie sorgfältig entwickelt werden müssen, um bei jedem Individuum des Reiches zu wirken, unabhängig von seiner Art, müsst ihr die Kosten für die Massenproduktion tragen.\n\nUm mit der Herstellung zu beginnen, benötigen wir:\n§R£energy£ -5000§!"
+  nehiv.120.desc: "\"Conformity techiniques\"? What a strange name. We have no such things.\n\nWe do, however, have what we call \"consensus pheromones\". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ [This.hive_pheromones_price]§!"
   nehiv.120.a: "Ein kleiner Preis."
   nehiv.120.a.reply: "Ihr habt keine Ahnung, wie klein."
   nehiv.121.name: "Einigkeitspheromonhandel"
-  nehiv.121.desc: "Heute haben wir die letzte Charge der vor 10 Jahren hergestellten Einigkeitspheromone verschickt. Ich bin sicher, Sie haben nicht einmal bemerkt, dass sie noch aktiv sind - was beweist, wie effektiv sie bei der Schaffung harmonischer und stabiler Gesellschaften waren.\n\nWir können sofort mit der Produktion einer weiteren Charge beginnen, wenn wir über die richtigen Ressourcen verfügen. Was denkt ihr?"
+  nehiv.121.desc: "Today we sent the last batch of the Consensus Pheromones produced [this.ne_hive_pheromones_duration] years ago. I'm sure you didn't even realize they were still active - which proves how effective they were at creating harmonious and stable societies.\n\nWe can start producing another batch right now if we have the right resources. What do you think?"
   nehiv.121.a: "Das wäre am zweckmäßigsten."
   nehiv.121.a.reply: "Eine kluge Wahl. Ihr werdet bald die Auswirkungen bemerken. Oder noch besser, nicht."
+  nehiv.121.extended: "How about a longer contract? [This.ne_hive_pheromones_extended_duration] years?"
+  nehiv.121.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_pheromones_opinion]§!"
   nehiv.121.b: "Nicht diesmal."
   #Hiring Drone
   nehiv.130.name: "Universelle Drohne"
