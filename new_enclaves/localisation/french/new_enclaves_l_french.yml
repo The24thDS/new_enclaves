@@ -67,13 +67,15 @@ l_english:
   nehiv.111.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_collab_opinion]§!"
   #Consensus pheromones
   nehiv.120.name: "Phéromones de consensus"
-  nehiv.120.desc: "\"Savoir faire en matière de conformisme\" ? Quel drôle d'idée. Nous ne faisons cela.\n\nPar contre, nous avons ce que nous appelons des \"phéromones de consensus\". Elles sont créées pour réduire la déviance et répandre l'harmonie chez les êtres organiques.\n\nDans la mesure où elles doivent être créées spécialement pour affecter chaque individu de votre empire, peu importe l'espère, nous vous demanderons de couvrir les coûts de production.\n\nPour lancer leur production, nous aurons besoin de\n§R£energy£ -5000§!"
+  nehiv.120.desc: "\"Conformity techiniques\"? What a strange name. We have no such things.\n\nWe do, however, have what we call \"consensus pheromones\". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ [This.hive_pheromones_price]§!"
   nehiv.120.a: "Un faible coût."
   nehiv.120.a.reply: "Vous n'avez même pas idée à quel point c'est insignifiant."
   nehiv.121.name: "Accord pour les Phéromones de consensus"
-  nehiv.121.desc: "Aujourd'hui, nous avons envoyé le dernier lot de Phéromones de Consensus produit il y a 10 ans. Je suis sûr que vous ne vous souveniez même pas qu'ils étaient actifs, ce qui prouve leur efficacité à créer des sociétés stables et harmonieuses.\n\nNous pouvons produire un autre lot immédiatement si vous avez les ressources pour couvrir les coûts de production. Qu'en pensez-vous ?"
+  nehiv.121.desc: "Today we sent the last batch of the Consensus Pheromones produced [this.ne_hive_pheromones_duration] years ago. I'm sure you didn't even realize they were still active - which proves how effective they were at creating harmonious and stable societies.\n\nWe can start producing another batch right now if we have the right resources. What do you think?"
   nehiv.121.a: "Ce serait très avantageux."
   nehiv.121.a.reply: "Un choix judicieux. Vous constaterez bientôt les effets. Ou plutôt, vous ne vous en rendrez même pas compte."
+  nehiv.121.extended: "How about a longer contract? [This.ne_hive_pheromones_extended_duration] years?"
+  nehiv.121.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_pheromones_opinion]§!"
   nehiv.121.b: "Pas cette fois."
   #Hiring Drone
   nehiv.130.name: "Drone Universel"
