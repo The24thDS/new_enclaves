@@ -1,5 +1,14 @@
 namespace = nehiv
 
+@HIVE_COLLAB_DURATION_DAYS = 3600
+@DEFAULT_HIVE_COLLAB_DURATION_YEARS = 10
+@HIVE_COLLAB_PRICE_PER_POP = 9.5
+@HIVE_COLLAB_MIN_PRICE = 500
+@HIVE_PHEROMONES_DURATION_DAYS = 3600
+@DEFAULT_HIVE_PHEROMONES_DURATION_YEARS = 10
+@HIVE_PHEROMONES_PRICE_PER_PLANET = 1000
+@HIVE_PHEROMONES_MIN_PRICE = 4500
+
 # nehiv.10: Port
 country_event = {
 	id = nehiv.10
@@ -344,11 +353,19 @@ country_event = {
 
 	immediate = {
 		set_country_flag = ne_hive_diplomacy_engaged
+		export_trigger_value_to_variable = { trigger = num_pops variable = hive_collab_price }
+		multiply_variable = { which = hive_collab_price value = @HIVE_COLLAB_PRICE_PER_POP }
+		change_variable = { which = hive_collab_price value = @HIVE_COLLAB_MIN_PRICE }
+		ceiling_variable = hive_collab_price
 	}
 
 	after = {
 		hidden_effect = {
 			remove_country_flag = ne_hive_diplomacy_engaged
+			if = {
+				limit = { is_variable_set = hive_collab_price }
+				clear_variable = hive_collab_price
+			}
 		}
 	}
 
@@ -356,18 +373,17 @@ country_event = {
 		name = nehiv.110.a
 		response_text = nehiv.110.a.reply
 		custom_gui = "enclave_hive_option"
-		trigger = { num_pops < 61 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 500 }
+			resource_stockpile_compare = { resource = energy value >= hive_collab_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -500 }
+		add_resource = { energy = -1 mult = hive_collab_price }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = universal_hive_collaboration
-			days = 3600
+			days = @HIVE_COLLAB_DURATION_DAYS
 		}
 		hidden_effect = {
 			event_target:ne_hive = {
@@ -380,140 +396,11 @@ country_event = {
 				who = event_target:ne_hive
 				flag = ne_hive_collaboration
 			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.110.a
-		response_text = nehiv.110.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 60
-			num_pops < 121
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
+			set_variable = {
+				which = ne_hive_collab_duration
+				value = @DEFAULT_HIVE_COLLAB_DURATION_YEARS
 			}
-		}
-		add_resource = { energy = -1000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.110.a
-		response_text = nehiv.110.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -1500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.110.a
-		response_text = nehiv.110.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -2000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.110.a
-		response_text = nehiv.110.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {	num_pops > 240 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -2500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
+			country_event = { id = nehiv.111 days = @HIVE_COLLAB_DURATION_DAYS }
 		}
 	}
 
@@ -559,29 +446,47 @@ country_event = {
 			who = event_target:ne_hive
 			flag = ne_hive_collaboration
 		}
+		# Normal duration cost calculation
+		export_trigger_value_to_variable = { trigger = num_pops variable = hive_collab_price }
+		multiply_variable = { which = hive_collab_price value = @HIVE_COLLAB_PRICE_PER_POP }
+		change_variable = { which = hive_collab_price value = @HIVE_COLLAB_MIN_PRICE }
+		ceiling_variable = hive_collab_price
+		# Extended duration calculation
+		set_variable = { which = ne_hive_collab_extended_duration value = this.ne_hive_collab_duration }
+		change_variable = { which = ne_hive_collab_extended_duration value = 5 }
+		# Extended duration cost calculation
+		set_variable = { which = hive_extended_collab_price value = this.hive_collab_price }
+		multiply_variable = { which = hive_extended_collab_price value = this.ne_hive_collab_extended_duration }
+		divide_variable = { which = hive_extended_collab_price value = @DEFAULT_HIVE_COLLAB_DURATION_YEARS }
+		multiply_variable = { which = hive_extended_collab_price value = 1.2 } # +20%
+		# Extended duration opinion calculation
+		set_variable = { which = hive_extended_collab_opinion value = this.ne_hive_collab_extended_duration }
+		multiply_variable = { which = hive_extended_collab_opinion value = 2 }
+		set_variable = { which = hive_extended_collab_opinion_count value = this.hive_extended_collab_opinion }
+		divide_variable = { which = hive_extended_collab_opinion_count value = 10 }
 	}
 
+	# For 10 years
 	option = {
 		name = nehiv.111.a
 		response_text = nehiv.111.a.reply
 		custom_gui = "enclave_hive_option"
-		trigger = { num_pops < 61 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 500 }
+			resource_stockpile_compare = { resource = energy value >= hive_collab_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -500 }
+		add_resource = { energy = -1 mult = hive_collab_price }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = universal_hive_collaboration
-			days = 3600
+			days = @HIVE_COLLAB_DURATION_DAYS
 		}
 		hidden_effect = {
 			event_target:ne_hive = {
 				add_trust = {
-					who = Root
+					who = root
 					amount = 20
 				}
 			}
@@ -589,140 +494,51 @@ country_event = {
 				who = event_target:ne_hive
 				flag = ne_hive_collaboration
 			}
-			country_event = { id = nehiv.111 days = 3600 }
+			set_variable = {
+				which = ne_hive_collab_duration
+				value = @DEFAULT_HIVE_COLLAB_DURATION_YEARS
+			}
+			country_event = { id = nehiv.111 days = @HIVE_COLLAB_DURATION_DAYS }
 		}
 	}
+
+	# Extended contract
 	option = {
-		name = nehiv.111.a
+		name = nehiv.111.b
 		response_text = nehiv.111.a.reply
 		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 60
-			num_pops < 121
-		}
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
+			resource_stockpile_compare = { resource = energy value >= hive_extended_collab_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -1000 }
-		custom_tooltip = opinion20
+		custom_tooltip = nehiv.111.variable_opinion
+		add_resource = { energy = -1 mult = hive_extended_collab_price }
 		add_modifier = {
 			modifier = universal_hive_collaboration
-			days = 3600
+			days = 360
+			time_multiplier = ne_hive_collab_extended_duration
 		}
 		hidden_effect = {
 			event_target:ne_hive = {
-				add_trust = {
-					who = Root
-					amount = 20
+				while = {
+					count = prev.hive_extended_collab_opinion_count
+					add_trust = {
+						who = root
+						amount = 10
+					}
 				}
 			}
 			set_relation_flag = {
 				who = event_target:ne_hive
 				flag = ne_hive_collaboration
 			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.111.a
-		response_text = nehiv.111.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
+			set_variable = {
+				which = ne_hive_collab_duration
+				value = this.ne_hive_collab_extended_duration
 			}
-		}
-		add_resource = { energy = -1500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.111.a
-		response_text = nehiv.111.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -2000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nehiv.111.a
-		response_text = nehiv.111.a.reply
-		custom_gui = "enclave_hive_option"
-		trigger = { num_pops > 240 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_hive }
-			}
-		}
-		add_resource = { energy = -2500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = universal_hive_collaboration
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_hive = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_hive
-				flag = ne_hive_collaboration
-			}
-			country_event = { id = nehiv.111 days = 3600 }
+			country_event = { id = nehiv.112 days = 1801 }
 		}
 	}
 
@@ -731,6 +547,27 @@ country_event = {
 		name = nehiv.111.end
 		custom_gui = "enclave_hive_option"
 		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = nehiv.112
+	hide_window = yes
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_hive }
+		exists = event_target:ne_hive
+	}
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = universal_hive_collaboration
+			}
+			country_event = { id = nehiv.112 days = 1800 }
+		}
+		else = {
+			country_event = { id = nehiv.111 }
+		}
 	}
 }
 
@@ -751,10 +588,20 @@ country_event = {
 
 	immediate = {
 		set_country_flag = ne_hive_diplomacy_engaged
+		export_trigger_value_to_variable = { trigger = num_owned_planets variable = hive_pheromones_price }
+		multiply_variable = { which = hive_pheromones_price value = @HIVE_PHEROMONES_PRICE_PER_PLANET }
+		change_variable = { which = hive_pheromones_price value = @HIVE_PHEROMONES_MIN_PRICE }
+		ceiling_variable = hive_pheromones_price
 	}
 
 	after = {
-		remove_country_flag = ne_hive_diplomacy_engaged
+		hidden_effect = {
+			remove_country_flag = ne_hive_diplomacy_engaged
+			if = {
+				limit = { is_variable_set = hive_pheromones_price }
+				clear_variable = hive_pheromones_price
+			}
+		}
 	}
 
 	# Consensus pheromones
@@ -763,23 +610,27 @@ country_event = {
 		response_text = nehiv.120.a.reply
 		custom_gui = "enclave_hive_option"
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
+			resource_stockpile_compare = { resource = energy value >= hive_pheromones_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -5000 }
+		add_resource = { energy = -1 mult = hive_pheromones_price }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = ne_hive_consensus_pheromones
-			days = 3600
+			days = @HIVE_PHEROMONES_DURATION_DAYS
 		}
 		hidden_effect = {
 			set_relation_flag = {
 				flag = ne_hive_consensus_pheromones_purchased
 				who = event_target:ne_hive
 			}
-			country_event = { id = nehiv.121 days = 3600 }
+			set_variable = {
+				which = ne_hive_pheromones_duration
+				value = @DEFAULT_HIVE_PHEROMONES_DURATION_YEARS
+			}
+			country_event = { id = nehiv.121 days = @HIVE_PHEROMONES_DURATION_DAYS }
 			event_target:ne_hive = {
 				add_trust = {
 					who = Root
@@ -826,30 +677,53 @@ country_event = {
 			who = event_target:ne_hive
 			flag = ne_hive_consensus_pheromones_purchased
 		}
+		# Normal cost calculation
+		export_trigger_value_to_variable = { trigger = num_owned_planets variable = hive_pheromones_price }
+		multiply_variable = { which = hive_pheromones_price value = @HIVE_PHEROMONES_PRICE_PER_PLANET }
+		change_variable = { which = hive_pheromones_price value = @HIVE_PHEROMONES_MIN_PRICE }
+		ceiling_variable = hive_pheromones_price
+		# Extended duration calculation
+		set_variable = { which = ne_hive_pheromones_extended_duration value = this.ne_hive_pheromones_duration }
+		change_variable = { which = ne_hive_pheromones_extended_duration value = 5 }
+		# Extended duration cost calculation
+		set_variable = { which = hive_extended_pheromones_price value = this.hive_pheromones_price }
+		multiply_variable = { which = hive_extended_pheromones_price value = this.ne_hive_pheromones_extended_duration }
+		divide_variable = { which = hive_extended_pheromones_price value = @DEFAULT_HIVE_PHEROMONES_DURATION_YEARS }
+		multiply_variable = { which = hive_extended_pheromones_price value = 1.2 } # +20%
+		# Extended duration opinion calculation
+		set_variable = { which = hive_extended_pheromones_opinion value = this.ne_hive_pheromones_extended_duration }
+		multiply_variable = { which = hive_extended_pheromones_opinion value = 2 }
+		set_variable = { which = hive_extended_pheromones_opinion_count value = this.hive_extended_pheromones_opinion }
+		divide_variable = { which = hive_extended_pheromones_opinion_count value = 10 }
 	}
 
+	# 10 years
 	option = {
 		name = nehiv.121.a
 		response_text = nehiv.121.a.reply
 		custom_gui = "enclave_hive_option"
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
+			resource_stockpile_compare = { resource = energy value >= hive_pheromones_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_hive }
 			}
 		}
-		add_resource = { energy = -5000 }
+		add_resource = { energy = -1 mult = hive_pheromones_price }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = ne_hive_consensus_pheromones
-			days = 3600
+			days = @HIVE_PHEROMONES_DURATION_DAYS
 		}
 		hidden_effect = {
 			set_relation_flag = {
 				flag = ne_hive_consensus_pheromones_purchased
 				who = event_target:ne_hive
 			}
-			country_event = { id = nehiv.121 days = 3600 }
+			set_variable = {
+				which = ne_hive_pheromones_duration
+				value = @DEFAULT_HIVE_PHEROMONES_DURATION_YEARS
+			}
+			country_event = { id = nehiv.121 days = @HIVE_PHEROMONES_DURATION_DAYS }
 			event_target:ne_hive = {
 				add_trust = {
 					who = Root
@@ -859,11 +733,73 @@ country_event = {
 		}
 	}
 
+	# Extended contract
+	option = {
+		name = nehiv.121.extended
+		response_text = nehiv.121.a.reply
+		custom_gui = "enclave_hive_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= hive_extended_pheromones_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_hive }
+			}
+		}
+		custom_tooltip = nehiv.121.variable_opinion
+		add_resource = { energy = -1 mult = hive_extended_pheromones_price }
+		custom_tooltip = nehiv.121.variable_opinion
+		add_modifier = {
+			modifier = ne_hive_consensus_pheromones
+			days = 360
+			time_multiplier = ne_hive_pheromones_extended_duration
+		}
+		hidden_effect = {
+			event_target:ne_hive = {
+				while = {
+					count = prev.hive_extended_pheromones_opinion_count
+					add_trust = {
+						who = root
+						amount = 10
+					}
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_hive
+				flag = ne_hive_consensus_pheromones_purchased
+			}
+			set_variable = {
+				which = ne_hive_pheromones_duration
+				value = this.ne_hive_pheromones_extended_duration
+			}
+			country_event = { id = nehiv.122 days = 1801 }
+		}
+	}
+
 	# Not this time
 	option = {
 		name = nehiv.121.b
 		custom_gui = "enclave_hive_option"
 		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = nehiv.122
+	hide_window = yes
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_hive }
+		exists = event_target:ne_hive
+	}
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = ne_hive_consensus_pheromones
+			}
+			country_event = { id = nehiv.122 days = 1800 }
+		}
+		else = {
+			country_event = { id = nehiv.121 }
+		}
 	}
 }
 

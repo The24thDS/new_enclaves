@@ -1,11 +1,11 @@
-version="2.5.3"
+version="2.7.0"
 tags={
 	"Diplomacy"
 	"Events"
 	"Galaxy Generation"
 	"Gameplay"
 }
-name="[3.1.*] New Enclaves"
-supported_version="3.1.*"
+name="[3.3.*] New Enclaves"
+supported_version="3.3.*"
 path="mod/new_enclaves"
 picture="thumbnail.png"

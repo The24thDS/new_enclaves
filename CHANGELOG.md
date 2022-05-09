@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/The24thDS/new_enclaves/compare/v2.6.3...v2.7.0) (2022-04-09)
+
+
+### Features
+
+* updated for Stellaris 3.2 ([768be88](https://github.com/The24thDS/new_enclaves/commit/768be88bd200497d6653f74e8db63b43b9afcc20))
+
+
+### Bug Fixes
+
+* fixed xenoist faction not recognizing my enclaves as enclaves ([33405fb](https://github.com/The24thDS/new_enclaves/commit/33405fbe5497245bd32d8d16db93dc6ca7a984cf))
+
+### [2.6.3](https://github.com/The24thDS/new_enclaves/compare/v2.6.2...v2.6.3) (2022-04-01)
+
+### [2.6.2](https://github.com/The24thDS/new_enclaves/compare/v2.6.1...v2.6.2) (2022-03-09)
+
+
+### Bug Fixes
+
+* changed Xenoist faction to award unity instead of influence ([5b5ca7f](https://github.com/The24thDS/new_enclaves/commit/5b5ca7ff71bc091bdf074ad6585749a85e33ab23))
+
+### [2.6.1](https://github.com/The24thDS/new_enclaves/compare/v2.6.0...v2.6.1) (2022-03-04)
+
+
+### Bug Fixes
+
+* updated for Stellaris 3.3 ([83e4504](https://github.com/The24thDS/new_enclaves/commit/83e450460a87ecccaad18f60d6e406afccad4716))
+
+## [2.6.0](https://github.com/The24thDS/new_enclaves/compare/v2.5.3...v2.6.0) (2021-11-24)
+
+
+### Features
+
+* updated for Stellaris 3.2 ([6eca8c3](https://github.com/The24thDS/new_enclaves/commit/6eca8c3fa27a93de6f86df1ce78df3cd7c2c23cb))
+
+
+### Bug Fixes
+
+* **setup:** fixed yml updater not updated translated files correctly ([c5a93f6](https://github.com/The24thDS/new_enclaves/commit/c5a93f6d469744cf9d312862f31a23f959512a34))
+* updated German and Polish translations with new changes ([d15a153](https://github.com/The24thDS/new_enclaves/commit/d15a153e171e82b6d2350ea46fd64f6f28fcef5c))
+
 ### [2.5.3](https://github.com/The24thDS/new_enclaves/compare/v2.5.2...v2.5.3) (2021-10-29)
 
 ### [2.5.2](https://github.com/The24thDS/new_enclaves/compare/v2.5.1...v2.5.2) (2021-10-10)
