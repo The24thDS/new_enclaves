@@ -1,0 +1,38 @@
+category = {
+	name = "Effects"
+	soundeffects = {
+		ne_saluting2_1
+		ne_saluting2_2
+		ne_saluting2_3
+		ne_saluting2_4
+		ne_saluting2_5
+		ne_saluting2_7
+		ne_saluting2_8
+		ne_saluting2_9
+		ne_saluting2_11
+		ne_saluting2_12
+		ne_saluting2_13
+		ne_saluting2_15
+		ne_saluting2_16
+		ne_saluting2_17
+		ne_saluting2_18
+		ne_saluting2_19
+		ne_rockandstonesalute_01
+		ne_rockandstonesalute_02
+		ne_rockandstonesalute_03
+		ne_rockandstonesalute_04
+		ne_rockandstonesalute_05
+		ne_rockandstonesalute_06
+		ne_rockandstonesalute_07
+		ne_rockandstonesalute_08
+		ne_rockandstonesalute_09
+		ne_rockandstonesalute_10
+		ne_new_saluting_1
+		ne_new_saluting_2
+		ne_new_saluting_3
+		ne_new_saluting_4
+		ne_new_saluting_5
+		ne_new_saluting_6
+		ne_new_saluting_7
+	}
+}

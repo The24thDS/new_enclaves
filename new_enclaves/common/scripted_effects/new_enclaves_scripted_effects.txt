@@ -56,6 +56,39 @@ create_machine_species = {
 	}
 }
 
+create_drg_species = {
+	if = {
+		limit = {
+			has_humanoids = yes
+		}
+		create_species = {
+			name = "Dwarf"
+			plural = "Dwarves"
+			adjective = "Dwarven"
+			class = "HUM"
+			portrait = "humanoid_hp_11"
+			traits = {
+				trait = trait_industrious
+				trait = trait_quick_learners
+				trait = trait_strong
+			}
+		}
+	}
+	else = {
+		create_species = {
+			name = "Manager"
+			plural = "Managers"
+			adjective = "Managerial"
+			class = "HUM"
+			portrait = "human"
+			traits = {
+				trait = trait_wasteful
+				trait = trait_weak
+			}
+		}
+	}
+}
+
 # Shroud
 remove_ne_shroud_trade_deal = {
 	if = {
@@ -91,5 +124,136 @@ remove_all_ne_shroud_trade_deal = {
 	if = {
 		limit = { has_modifier = ne_shroud_trade_deal_3 }
 		remove_modifier = ne_shroud_trade_deal_3
+	}
+}
+
+ten_power = {
+	set_variable = {
+		which = $variable$
+		value = 1.0
+	}
+	while = {
+		count = $power|1$
+		multiply_variable = { which = $variable$ value = 10 }
+	}
+}
+
+generate_random_variable_value = {
+	set_variable = {
+		which = $variable$
+		value = 0.0
+	}
+	ten_power = { variable = temp_ten_power power = $digits|1$ }
+	while = {
+		count = $digits|1$
+		random_list = {
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.0 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.0 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.1 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.1 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.2 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.2 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.3 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.3 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.4 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.4 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.5 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.5 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.6 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.6 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.7 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.7 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.8 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.8 }
+			}
+			1 = {
+				[[max_value]modifier = {
+					factor = 0
+					check_variable_arithmetic = { which = $variable$ add = 0.9 multiply = temp_ten_power value > $max_value$ }
+				}]
+				change_variable = { which = $variable$ value = 0.9 }
+			}
+		}
+		multiply_variable = { which = $variable$ value = 10 }
+		divide_variable = { which = temp_ten_power value = 10 }
+	}
+	clear_variable = temp_ten_power
+}
+
+remove_ne_drg_trade_deal = {
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_1 }
+		remove_modifier = ne_drg_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_2 }
+		remove_modifier = ne_drg_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_3 }
+		remove_modifier = ne_drg_trade_deal_3
+	}
+}
+
+remove_all_ne_drg_trade_deal = {
+	if = {
+		limit = { has_modifier = deep_rock_galactic_expertise }
+		remove_modifier = deep_rock_galactic_expertise
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_1 }
+		remove_modifier = ne_drg_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_2 }
+		remove_modifier = ne_drg_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = ne_drg_trade_deal_3 }
+		remove_modifier = ne_drg_trade_deal_3
 	}
 }

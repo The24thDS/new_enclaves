@@ -48,6 +48,22 @@ country_event = {
 	}
 }
 
+# Establish comms with Deep Rock Galactic
+country_event = {
+	id = ne_test.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_drg_country
+			}
+			establish_communications_no_message = prev
+		}
+	}
+}
+
 # Max opinion with Prime Machines
 country_event = {
 	id = ne_test.10
@@ -96,6 +112,25 @@ country_event = {
 			limit = {
 				is_country_type = ne_enclave
 				has_country_flag = ne_shroud_country
+			}
+			add_trust = {
+				amount = 100
+				who = root
+			}
+		}
+	}
+}
+
+# Max opinion with Deep Rock Galactic
+country_event = {
+	id = ne_test.13
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = ne_enclave
+				has_country_flag = ne_drg_country
 			}
 			add_trust = {
 				amount = 100

@@ -1,0 +1,15 @@
+# Turbulent Nebula 2 Green
+ambient_object = {
+	name = "ne_turbulent_nebula_2_green"
+	entity = "ne_turbulent_nebula_2_green_entity"
+	selectable = no
+	show_name = no
+}
+
+# Space Storm 2 Green
+ambient_object = {
+	name = "ne_space_storm_2_green"
+	entity = "ne_space_storm_2_green_entity"
+	selectable = no
+	show_name = no
+}

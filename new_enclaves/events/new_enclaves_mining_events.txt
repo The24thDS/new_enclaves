@@ -1,0 +1,1494 @@
+namespace = nedrg
+
+@MINING_ASSISTANCE_DURATION_DAYS = 3600
+@DEFAULT_MINING_ASSISTANCE_DURATION_YEARS = 10
+@MINING_ASSISTANCE_PRICE_PER_POP = 8.8
+@MINING_ASSISTANCE_MIN_PRICE = 500
+
+# nedrg.10: Port
+country_event = {
+	id = nedrg.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			country_event = { id = nedrg.11 }
+		}
+	}
+}
+
+# nedrg.11: DRG introduction
+country_event = {
+	id = nedrg.11
+	title = nedrg.11.name
+	desc = nedrg.11.desc
+
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_mining_room
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = nedrg.11.a
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	option = {
+		name = SCUM
+		custom_gui = "enclave_drg_option"
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+
+	option = {
+		name = TASTY
+		custom_gui = "enclave_drg_option"
+		trigger = {	has_valid_civic = civic_hive_devouring_swarm }
+	}
+	
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_drg_option"
+	}
+}
+
+# DRG Main Menu
+country_event = {
+	id = nedrg.100
+	title = nedrg.100.name
+	desc = nedrg.100.desc.a
+	desc = nedrg.100.desc.b
+	desc = nedrg.100.desc.c
+	desc = nedrg.100.desc.d
+	desc = nedrg.100.desc.e
+	desc = nedrg.100.desc.f
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = from
+		room = enclave_mining_room
+	}
+
+	trigger = {
+		from = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_drg_country
+		}
+		NOT = { has_country_flag = ne_drg_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ne_drg }
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		from = { save_event_target_as = ne_drg }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_drg_option"
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_drg_option"
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_drg_option"
+	}
+
+	# Option 1: Can you help our miners? (nedrg.110)
+	option = {
+		name = nedrg.100.a
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.a.alreadyhelping
+				NOT = { has_modifier = deep_rock_galactic_expertise }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.110 }
+		}
+	}
+
+	# Option 2: Rare Crystals Deal (nedrg.120)
+	option = {
+		name = nedrg.100.b
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.b.opinion
+				event_target:ne_drg = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nedrg.100.b.alreadyhired
+				has_active_ne_drg_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.120 }
+		}
+	}
+
+	# Option 2.1: Remove trade deal
+	option = {
+		name = nedrg.100.ba
+		response_text = nedrg.100.ba.reply
+		is_dialog_only = yes
+		custom_gui = "enclave_drg_option"
+		trigger = { has_active_ne_drg_trade_deal = yes }
+		custom_tooltip = nedrg.100.ba.tooltip
+		hidden_effect = { remove_ne_drg_trade_deal = yes }
+	}
+
+	# Option 3: MULE tech (nedrg.130)
+	option = {
+		name = nedrg.100.c
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.c.opinion
+				event_target:ne_drg = {
+					trust = {
+						who = root
+						value >= 80
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nedrg.100.c.alreadyteached
+				NOR = {
+					has_tech_option = tech_mining_utility_lift_engine
+					has_technology = tech_mining_utility_lift_engine
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.130 }
+		}
+	}
+
+	# Option 4: Error cubes. (nedrg.140)
+	option = {
+		name = nedrg.100.d
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+			has_ancrel = yes
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = nedrg.100.d.opinion
+				event_target:ne_drg = {
+					trust = {
+						who = Root
+						value >= 100
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = nedrg.100.d.alreadybought
+				NOT = { has_country_flag = recently_bought_error_cubes }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.140 }
+		}
+	}
+
+	# Option 5: Rock and Stone (nedrg.101)
+	option = {
+		name = saluting2_5_text
+		custom_gui = "enclave_drg_option"
+		trigger = { is_genocidal = no from = { has_government = gov_ne_mining } }
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+
+	# End communications
+	option = {
+		name = GOODBYE
+		default_hide_option = yes
+		custom_gui = "enclave_drg_option"
+		trigger = { is_genocidal = no }
+	}
+}
+
+# Meme event kinda
+country_event = {
+	id = nedrg.101
+	title = nedrg.101.name
+	desc = {
+		text = saluting2_1_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 0 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_1
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 0 } }
+	}
+	desc = {
+		text = saluting2_2_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 1 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_2
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 1 } }
+	}
+	desc = {
+		text = saluting2_3_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 2 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_3
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 2 } }
+	}
+	desc = {
+		text = saluting2_4_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 3 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_4
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 3 } }
+	}
+	desc = {
+		text = saluting2_5_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 4 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_5
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 4 } }
+	}
+	desc = {
+		text = saluting2_7_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 5 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_7
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 5 } }
+	}
+	desc = {
+		text = saluting2_8_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 6 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_8
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 6 } }
+	}
+	desc = {
+		text = saluting2_9_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 7 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_9
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 7 } }
+	}
+	desc = {
+		text = saluting2_11_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 8 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_11
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 8 } }
+	}
+	desc = {
+		text = saluting2_12_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 9 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_12
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 9 } }
+	}
+	desc = {
+		text = saluting2_13_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 10 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_13
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 10 } }
+	}
+	desc = {
+		text = saluting2_15_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 11 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_15
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 11 } }
+	}
+	desc = {
+		text = saluting2_16_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 12 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_16
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 12 } }
+	}
+	desc = {
+		text = saluting2_17_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 13 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_17
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 13 } }
+	}
+	desc = {
+		text = saluting2_18_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 14 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_18
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 14 } }
+	}
+	desc = {
+		text = saluting2_19_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 15 } }
+	}
+	show_sound = {
+		sound = ne_saluting2_19
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 15 } }
+	}
+	desc = {
+		text = rockandstonesalute_01_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 16 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_01
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 16 } }
+	}
+	desc = {
+		text = rockandstonesalute_02_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 17 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_02
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 17 } }
+	}
+	desc = {
+		text = rockandstonesalute_03_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 18 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_03
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 18 } }
+	}
+	desc = {
+		text = rockandstonesalute_04_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 19 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_04
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 19 } }
+	}
+	desc = {
+		text = rockandstonesalute_05_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 20 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_05
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 20 } }
+	}
+	desc = {
+		text = rockandstonesalute_06_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 21 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_06
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 21 } }
+	}
+	desc = {
+		text = rockandstonesalute_07_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 22 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_07
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 22 } }
+	}
+	desc = {
+		text = rockandstonesalute_08_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 23 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_08
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 23 } }
+	}
+	desc = {
+		text = rockandstonesalute_09_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 24 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_09
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 24 } }
+	}
+	desc = {
+		text = rockandstonesalute_10_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 25 } }
+	}
+	show_sound = {
+		sound = ne_rockandstonesalute_10
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 25 } }
+	}
+	desc = {
+		text = new_saluting_1_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 26 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_1
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 26 } }
+	}
+	desc = {
+		text = new_saluting_2_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 27 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_2
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 27 } }
+	}
+	desc = {
+		text = new_saluting_3_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 28 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_3
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 28 } }
+	}
+	desc = {
+		text = new_saluting_4_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 29 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_4
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 29 } }
+	}
+	desc = {
+		text = new_saluting_5_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 30 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_5
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 30 } }
+	}
+	desc = {
+		text = new_saluting_6_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 31 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_6
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 31 } }
+	}
+	desc = {
+		text = new_saluting_7_text
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 32 } }
+	}
+	show_sound = {
+		sound = ne_new_saluting_7
+		trigger = { check_variable = { which = ne_drg_salute_pick value = 32 } }
+	}
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		generate_random_variable_value = { variable = ne_drg_salute_pick digits = 2 max_value = 32 }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = new_saluting_3_text
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value < 3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = saluting2_17_text
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value < 3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = saluting2_8_text
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value < 3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = rockandstonesalute_05_text
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value > 2
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = rockandstonesalute_10_text
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value > 2
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+	option = {
+		name = saluting2_16_text
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			check_variable_arithmetic = {
+				which = ne_drg_salute_pick
+				modulo = 5
+				value > 2
+			}
+		}
+		hidden_effect = {
+			country_event = { id = nedrg.101 }
+		}
+	}
+
+	# Back to Menu
+	option = {
+		name = BACK
+		custom_gui = "enclave_drg_option"
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+	# End communications
+	option = {
+		name = GOODBYE
+		default_hide_option = yes
+		custom_gui = "enclave_drg_option"
+	}
+}
+
+# nedrg.110: Can you help our miners
+country_event = {
+	id = nedrg.110
+	title = nedrg.110.name
+	desc = nedrg.110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		export_trigger_value_to_variable = { trigger = num_pops variable = drg_assistance_price }
+		multiply_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_PRICE_PER_POP }
+		change_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_MIN_PRICE }
+		ceiling_variable = drg_assistance_price
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+			if = {
+				limit = { is_variable_set = drg_assistance_price }
+				clear_variable = drg_assistance_price
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.110.a
+		response_text = nedrg.110.reply
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= drg_assistance_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_drg }
+			}
+		}
+		add_resource = { energy = -1 mult = drg_assistance_price }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = deep_rock_galactic_expertise
+			days = @MINING_ASSISTANCE_DURATION_DAYS
+		}
+		hidden_effect = {
+			event_target:ne_drg = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade
+			}
+			set_variable = {
+				which = ne_drg_assistance_duration
+				value = @DEFAULT_MINING_ASSISTANCE_DURATION_YEARS
+			}
+			country_event = { id = nedrg.111 days = @MINING_ASSISTANCE_DURATION_DAYS }
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_drg_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_drg_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.111: Continue helping?
+country_event = {
+	id = nedrg.111
+	title = nedrg.111.name
+	desc = nedrg.111.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_drg }
+		exists = event_target:ne_drg
+	}
+
+	immediate = {
+		remove_relation_flag = {
+			who = event_target:ne_drg
+			flag = ne_drg_trade
+		}
+		# Normal duration cost calculation
+		export_trigger_value_to_variable = { trigger = num_pops variable = drg_assistance_price }
+		multiply_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_PRICE_PER_POP }
+		change_variable = { which = drg_assistance_price value = @MINING_ASSISTANCE_MIN_PRICE }
+		ceiling_variable = drg_assistance_price
+		# Extended duration calculation
+		set_variable = { which = ne_drg_assistance_extended_duration value = this.ne_drg_assistance_duration }
+		change_variable = { which = ne_drg_assistance_extended_duration value = 5 }
+		# Extended duration cost calculation
+		set_variable = { which = drg_extended_assistance_price value = this.drg_assistance_price }
+		multiply_variable = { which = drg_extended_assistance_price value = this.ne_drg_assistance_extended_duration }
+		divide_variable = { which = drg_extended_assistance_price value = @DEFAULT_MINING_ASSISTANCE_DURATION_YEARS }
+		multiply_variable = { which = drg_extended_assistance_price value = 1.2 } # +20%
+		# Extended duration opinion calculation
+		set_variable = { which = drg_extended_assistance_opinion value = this.ne_drg_assistance_extended_duration }
+		multiply_variable = { which = drg_extended_assistance_opinion value = 2 }
+		set_variable = { which = drg_extended_assistance_opinion_count value = this.drg_extended_assistance_opinion }
+		divide_variable = { which = drg_extended_assistance_opinion_count value = 10 }
+	}
+
+	# For 10 years
+	option = {
+		name = nedrg.111.a
+		response_text = nedrg.110.reply
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= drg_assistance_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_drg }
+			}
+		}
+		add_resource = { energy = -1 mult = drg_assistance_price }
+		custom_tooltip = opinion20
+		add_modifier = {
+			modifier = deep_rock_galactic_expertise
+			days = @MINING_ASSISTANCE_DURATION_DAYS
+		}
+		hidden_effect = {
+			event_target:ne_drg = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade
+			}
+			set_variable = {
+				which = ne_drg_assistance_duration
+				value = @DEFAULT_MINING_ASSISTANCE_DURATION_YEARS
+			}
+			country_event = { id = nedrg.111 days = @MINING_ASSISTANCE_DURATION_DAYS }
+		}
+	}
+
+	# Extended contract
+	option = {
+		name = nedrg.111.b
+		response_text = nedrg.110.reply
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= drg_extended_assistance_price }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ne_drg }
+			}
+		}
+		custom_tooltip = nedrg.111.variable_opinion
+		add_resource = { energy = -1 mult = drg_extended_assistance_price }
+		add_modifier = {
+			modifier = deep_rock_galactic_expertise
+			days = 360
+			time_multiplier = ne_drg_assistance_extended_duration
+		}
+		hidden_effect = {
+			event_target:ne_drg = {
+				while = {
+					count = prev.drg_extended_assistance_opinion_count
+					add_trust = {
+						who = root
+						amount = 10
+					}
+				}
+			}
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade
+			}
+			set_variable = {
+				which = ne_drg_assistance_duration
+				value = this.ne_drg_assistance_extended_duration
+			}
+			country_event = { id = nedrg.112 days = 1801 }
+		}
+	}
+
+	# End
+	option = {
+		name = NO
+		custom_gui = "enclave_drg_option"
+		default_hide_option = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					is_variable_set = ne_drg_assistance_duration
+				}
+				clear_variable = ne_drg_assistance_duration
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { is_variable_set = ne_drg_assistance_extended_duration }
+				clear_variable = ne_drg_assistance_extended_duration
+			}
+			if = {
+				limit = { is_variable_set = drg_assistance_price }
+				clear_variable = drg_assistance_price
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nedrg.112
+	hide_window = yes
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_drg }
+		exists = event_target:ne_drg
+	}
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = deep_rock_galactic_expertise
+			}
+			country_event = { id = nedrg.112 days = 1800 }
+		}
+		else = {
+			country_event = { id = nedrg.111 }
+		}
+	}
+}
+
+# nedrg.120: Rare Crystals
+country_event = {
+	id = nedrg.120
+	title = nedrg.120.name
+	desc = nedrg.120.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	# 1 for 11 monthly
+	option = {
+		name = nedrg.120.a
+		custom_gui = "enclave_drg_option"
+		response_text = drg_successful_trade
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 500 }
+		}
+		add_resource = { energy = -500 }
+		add_modifier = {
+			modifier = ne_drg_trade_deal_1
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade_deal
+			}
+		}
+	}
+ # 2 for 22 monthly
+	option = {
+		name = nedrg.120.b
+		custom_gui = "enclave_drg_option"
+		response_text = drg_successful_trade
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+		}
+		add_resource = { energy = -1000 }
+		add_modifier = {
+			modifier = ne_drg_trade_deal_2
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade_deal
+			}
+		}
+	}
+ # 3 for 33 monthly
+	option = {
+		name = nedrg.120.c
+		custom_gui = "enclave_drg_option"
+		response_text = drg_successful_trade
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1500 }
+		}
+		add_resource = { energy = -1500 }
+		add_modifier = {
+			modifier = ne_drg_trade_deal_3
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:ne_drg
+				flag = ne_drg_trade_deal
+			}
+		}
+	}
+
+ # Back to main menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_drg_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+ # End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_drg_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.130: MULE
+country_event = {
+	id = nedrg.130
+	title = nedrg.130.name
+	desc = nedrg.130.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nedrg.130.a
+		response_text = nedrg.130.a.reply
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 30000 }
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+		add_resource = { energy = -30000 }
+		custom_tooltip = opinion20
+		add_research_option = tech_mining_utility_lift_engine
+		hidden_effect = {
+			event_target:ne_drg = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_drg_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_drg_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.140: Error Cubes
+country_event = {
+	id = nedrg.140
+	title = nedrg.140.name
+	desc = nedrg.140.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = nedrg.140.a
+		response_text = drg_successful_trade
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+		}
+		add_resource = { energy = -5000 minor_artifacts = 5 }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = recently_bought_error_cubes
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.140.b
+		response_text = drg_successful_trade
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 10000 }
+		}
+		add_resource = { energy = -10000 minor_artifacts = 10 }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = recently_bought_error_cubes
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.140.c
+		response_text = drg_successful_trade
+		custom_gui = "enclave_drg_option"
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 15000 }
+		}
+		add_resource = { energy = -15000 minor_artifacts = 15 }
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = recently_bought_error_cubes
+				years = 5
+			}
+		}
+	}
+
+	# Back to Main Menu
+	option = {
+		name = ne_back
+		custom_gui = "enclave_drg_option"
+		hidden_effect = {
+			country_event = { id = nedrg.100 scopes = { from = event_target:ne_drg } }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_drg_option"
+		default_hide_option = yes
+	}
+}
+
+# nedrg.900: Deep Rock Galactic destroyed (HIDDEN)
+country_event = {
+	id = nedrg.900
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = ne_enclave
+		has_country_flag = ne_drg_country
+		FromFrom = {
+			is_ship_size = enclave_station
+		}
+	}
+
+	immediate = {
+		FromFrom = {
+			solar_system = { save_event_target_as = ne_drg_system }
+		}
+		From = {
+			country_event = { id = nedrg.901 }
+			save_event_target_as = ne_drg_destroyer
+		}
+		every_country = {
+			limit = {
+				has_communications = Root
+				NOT = { is_country = event_target:ne_drg_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = nedrg.902 }
+		}
+	}
+}
+
+# nedrg.901: DRG Destroyed (Destroyer)
+country_event = {
+	id = nedrg.901
+	title = nedrg.901.name
+	desc = nedrg.901.desc
+	picture = GFX_evt_space_debris
+	location = event_target:ne_drg_system
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_ne_drg
+	}
+
+	option = {
+		name = EXCELLENT
+		add_resource = {
+			engineering_research = 3000
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			large_artifact_reward = yes
+		}
+	}
+}
+
+# nedrg.902: DRG Destroyed
+country_event = {
+	id = nedrg.902
+	title = nedrg.901.name
+	desc = {
+		text = nedrg.902.a.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = no
+			has_communications = event_target:ne_drg_destroyer
+		}
+	}
+	desc = {
+		text = nedrg.902.b.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = no
+			NOT = { has_communications = event_target:ne_drg_destroyer }
+		}
+	}
+	desc = {
+		text = nedrg.902.c.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = yes
+			has_communications = event_target:ne_drg_destroyer
+		}
+	}
+	desc = {
+		text = nedrg.902.d.desc
+		trigger = {
+			has_any_active_ne_drg_trade_deal = yes
+			NOT = { has_communications = event_target:ne_drg_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:ne_drg_system
+	show_sound = event_ship_explosion
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_any_active_ne_drg_trade_deal = yes }
+			remove_all_ne_drg_trade_deal = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade_deal
+					}
+				}
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_drg_destroyer
+				modifier = opinion_destroyed_ne_drg_trade
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade
+					}
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade_deal
+					}
+				}
+				is_ai = yes
+				is_spiritualist = no
+			}
+			add_opinion_modifier = {
+				who = event_target:ne_drg_destroyer
+				modifier = opinion_destroyed_ne_drg
+			}
+		}
+	}
+
+	option = {
+		name = nedrg.902.a
+		trigger = {
+			NOR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade_deal
+				}
+			}
+		}
+	}
+	option = {
+		name = nedrg.902.b
+		trigger = {
+			OR = {
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade
+				}
+				has_relation_flag = {
+					who = From
+					flag = ne_drg_trade_deal
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_drg_trade
+				}
+			}
+			if = {
+				limit = {
+					has_relation_flag = {
+						who = From
+						flag = ne_drg_trade_deal
+					}
+				}
+				remove_relation_flag = {
+					who = From
+					flag = ne_drg_trade_deal
+				}
+			}
+		}
+	}
+}
+
+# nedrg.903: Attacked DRG (Hidden)
+country_event = {
+	id = nedrg.903
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		From = { has_country_flag = ne_drg_country }
+	}
+
+	immediate = {
+		From = {
+			save_event_target_as = ne_drg
+			add_trust = {
+				who = Root
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_ne_drg
+		if = {
+			limit = { has_any_active_ne_drg_trade_deal = yes }
+			remove_all_ne_drg_trade_deal = yes
+			country_event = { id = nedrg.904 }
+		}
+	}
+}
+
+# nedrg.904: Attacked DRG - Agreements terminated
+country_event = {
+	id = nedrg.904
+	title = nedrg.100.name
+	desc = nedrg.904.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	option = {
+		name = nedrg.904.a
+		custom_gui = "enclave_drg_option"
+	}
+}
+
+# Attacked DRG - Refuses Communications
+country_event = {
+	id = nedrg.905
+	title = nedrg.100.name
+	desc = nedrg.905a.desc
+	desc = nedrg.905b.desc
+	desc = nedrg.905c.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_drg_window"
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:ne_drg
+		room = enclave_mining_room
+	}
+
+	trigger = {
+		From = {
+			is_country_type = ne_enclave
+			has_country_flag = ne_drg_country
+		}
+		has_country_flag = attacked_ne_drg
+		NOT = { has_country_flag = ne_drg_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ne_drg_diplomacy_engaged
+		From = { save_event_target_as = ne_drg }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_drg_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		custom_gui = "enclave_drg_option"
+	}
+
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		custom_gui = "enclave_drg_option"
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+		custom_gui = "enclave_drg_option"
+	}
+
+	option = {
+		name = nedrg.904.a
+		custom_gui = "enclave_drg_option"
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		default_hide_option = yes
+	}
+}

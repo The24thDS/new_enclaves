@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ne_nebula_turbulent_2_green_mesh"
+		file = "gfx/models/effects/nebula_8.mesh"
+	
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "ne_nebula_lights_turbulent_2_green.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+}

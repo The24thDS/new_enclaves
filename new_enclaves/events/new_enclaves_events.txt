@@ -89,6 +89,9 @@ country_event = {
 					ne_machine_country = {
 						country_event = { id = nemac.10 }
 					}
+					ne_drg_country = {
+						country_event = { id = nedrg.10 }
+					}
 					default = {
 						fire_on_action = { on_action = on_ne_comms_established_no_path }
 					}
@@ -143,6 +146,9 @@ country_event = {
 			}
 			ne_machine_country = {
 				country_event = { id = nemac.10 scopes = { from = from } }
+			}
+			ne_drg_country = {
+				country_event = { id = nedrg.10 scopes = { from = from } }
 			}
 			default = {
 				fire_on_action = { on_action = on_ne_comms_established_no_path }
@@ -203,6 +209,7 @@ country_event = {
 		OR = {
 			has_active_ne_machine_trade_deal = yes
 			has_active_ne_shroud_trade_deal = yes
+			has_active_ne_drg_trade_deal = yes
 		}
 	}
 
@@ -221,6 +228,16 @@ country_event = {
 			limit = { has_active_ne_shroud_trade_deal = yes }
 			remove_ne_shroud_trade_deal = yes
 			event_target:ne_shroud_country = {
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+		if = {
+			limit = { has_active_ne_drg_trade_deal = yes }
+			remove_ne_drg_trade_deal = yes
+			event_target:ne_drg_country = {
 				add_trust = {
 					who = Root
 					amount = -20

@@ -32,6 +32,8 @@ on_custom_diplomacy = {
 		nemac.905
 		neshr.100
 		neshr.905
+		nedrg.100
+		nedrg.905
 	}
 }
 
@@ -44,6 +46,7 @@ on_entering_battle = {
 		nehiv.903
 		nemac.903
 		neshr.903
+		nedrg.903
 	}
 }
 
@@ -56,6 +59,7 @@ on_ship_destroyed_victim = {
 		nehiv.900
 		nemac.900
 		neshr.900
+		nedrg.900
 	}
 }
 

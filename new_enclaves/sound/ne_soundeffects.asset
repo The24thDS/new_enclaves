@@ -1,0 +1,363 @@
+
+soundeffect = {
+	name = ne_saluting2_1
+	sounds = {
+		sound = saluting2_1
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_2
+	sounds = {
+		sound = saluting2_2
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_3
+	sounds = {
+		sound = saluting2_3
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_4
+	sounds = {
+		sound = saluting2_4
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_5
+	sounds = {
+		sound = saluting2_5
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_7
+	sounds = {
+		sound = saluting2_7
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_8
+	sounds = {
+		sound = saluting2_8
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_9
+	sounds = {
+		sound = saluting2_9
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_11
+	sounds = {
+		sound = saluting2_11
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_12
+	sounds = {
+		sound = saluting2_12
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_13
+	sounds = {
+		sound = saluting2_13
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_15
+	sounds = {
+		sound = saluting2_15
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_16
+	sounds = {
+		sound = saluting2_16
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_17
+	sounds = {
+		sound = saluting2_17
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_18
+	sounds = {
+		sound = saluting2_18
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_saluting2_19
+	sounds = {
+		sound = saluting2_19
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_01
+	sounds = {
+		sound = rockandstonesalute_01
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_02
+	sounds = {
+		sound = rockandstonesalute_02
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_03
+	sounds = {
+		sound = rockandstonesalute_03
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_04
+	sounds = {
+		sound = rockandstonesalute_04
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_05
+	sounds = {
+		sound = rockandstonesalute_05
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_06
+	sounds = {
+		sound = rockandstonesalute_06
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_07
+	sounds = {
+		sound = rockandstonesalute_07
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_08
+	sounds = {
+		sound = rockandstonesalute_08
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_09
+	sounds = {
+		sound = rockandstonesalute_09
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_rockandstonesalute_10
+	sounds = {
+		sound = rockandstonesalute_10
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_1
+	sounds = {
+		sound = new_saluting_1
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_2
+	sounds = {
+		sound = new_saluting_2
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_3
+	sounds = {
+		sound = new_saluting_3
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_4
+	sounds = {
+		sound = new_saluting_4
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_5
+	sounds = {
+		sound = new_saluting_5
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_6
+	sounds = {
+		sound = new_saluting_6
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}
+
+soundeffect = {
+	name = ne_new_saluting_7
+	sounds = {
+		sound = new_saluting_7
+	}
+	fade_out = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.0
+}

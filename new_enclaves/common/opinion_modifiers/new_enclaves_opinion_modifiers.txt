@@ -54,3 +54,22 @@ opinion_destroyed_ne_shroud_trade = {
 		base = 2
 	}
 }
+
+opinion_destroyed_ne_drg = {
+	opinion = {
+		base = -15
+	}
+
+	decay = {
+		base = 2
+	}
+}
+opinion_destroyed_ne_drg_trade = {
+	opinion = {
+		base = -30
+	}
+
+	decay = {
+		base = 2
+	}
+}
