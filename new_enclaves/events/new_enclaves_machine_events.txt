@@ -1,5 +1,10 @@
 namespace = nemac
 
+@MACHINE_EXPERTISE_DURATION_DAYS = 3600
+@DEFAULT_MACHINE_EXPERTISE_DURATION_YEARS = 10
+@MACHINE_EXPERTISE_PRICE_PER_POP = 9
+@MACHINE_EXPERTISE_MIN_PRICE = 500
+
 # nemac.10: Port
 country_event = {
 	id = nemac.10
@@ -486,11 +491,19 @@ country_event = {
 
 	immediate = {
 		set_country_flag = ne_machine_diplomacy_engaged
+		export_trigger_value_to_variable = { trigger = num_pops variable = prime_expertise_price }
+		multiply_variable = { which = prime_expertise_price value = @MACHINE_EXPERTISE_PRICE_PER_POP }
+		change_variable = { which = prime_expertise_price value = @MACHINE_EXPERTISE_MIN_PRICE }
+		ceiling_variable = prime_expertise_price
 	}
 
 	after = {
 		hidden_effect = {
 			remove_country_flag = ne_machine_diplomacy_engaged
+			if = {
+				limit = { is_variable_set = prime_expertise_price }
+				clear_variable = prime_expertise_price
+			}
 		}
 	}
 
@@ -498,18 +511,17 @@ country_event = {
 		name = nemac.110.a
 		response_text = nemac.110.a.reply
 		custom_gui = "enclave_machine_option"
-		trigger = { num_pops < 61 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 500 }
+			resource_stockpile_compare = { resource = energy value >= prime_expertise_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -500 }
+		add_resource = { energy = -1 mult = prime_expertise_price }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = prime_machines_expertise
-			days = 3600
+			days = @MACHINE_EXPERTISE_DURATION_DAYS
 		}
 		hidden_effect = {
 			event_target:ne_machine = {
@@ -522,140 +534,11 @@ country_event = {
 				who = event_target:ne_machine
 				flag = ne_machine_trade
 			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.110.a
-		response_text = nemac.110.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = {
-			num_pops > 60
-			num_pops < 121
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
+			set_variable = {
+				which = ne_prime_expertise_duration
+				value = @DEFAULT_MACHINE_EXPERTISE_DURATION_YEARS
 			}
-		}
-		add_resource = { energy = -1000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.110.a
-		response_text = nemac.110.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
-			}
-		}
-		add_resource = { energy = -1500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.110.a
-		response_text = nemac.110.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
-			}
-		}
-		add_resource = { energy = -2000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.110.a
-		response_text = nemac.110.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = {	num_pops > 240 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
-			}
-		}
-		add_resource = { energy = -2500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
+			country_event = { id = nemac.111 days = @MACHINE_EXPERTISE_DURATION_DAYS }
 		}
 	}
 
@@ -701,29 +584,47 @@ country_event = {
 			who = event_target:ne_machine
 			flag = ne_machine_trade
 		}
+		# Normal duration cost calculation
+		export_trigger_value_to_variable = { trigger = num_pops variable = prime_expertise_price }
+		multiply_variable = { which = prime_expertise_price value = @MACHINE_EXPERTISE_PRICE_PER_POP }
+		change_variable = { which = prime_expertise_price value = @MACHINE_EXPERTISE_MIN_PRICE }
+		ceiling_variable = prime_expertise_price
+		# Extended duration calculation
+		set_variable = { which = ne_prime_expertise_extended_duration value = this.ne_prime_expertise_duration }
+		change_variable = { which = ne_prime_expertise_extended_duration value = 5 }
+		# Extended duration cost calculation
+		set_variable = { which = prime_extended_expertise_price value = this.prime_expertise_price }
+		multiply_variable = { which = prime_extended_expertise_price value = this.ne_prime_expertise_extended_duration }
+		divide_variable = { which = prime_extended_expertise_price value = @DEFAULT_MACHINE_EXPERTISE_DURATION_YEARS }
+		multiply_variable = { which = prime_extended_expertise_price value = 1.2 } # +20%
+		# Extended duration opinion calculation
+		set_variable = { which = prime_extended_expertise_opinion value = this.ne_prime_expertise_extended_duration }
+		multiply_variable = { which = prime_extended_expertise_opinion value = 2 }
+		set_variable = { which = prime_extended_expertise_opinion_count value = this.prime_extended_expertise_opinion }
+		divide_variable = { which = prime_extended_expertise_opinion_count value = 10 }
 	}
 
+	# For 10 years
 	option = {
 		name = nemac.111.a
 		response_text = nemac.111.a.reply
 		custom_gui = "enclave_machine_option"
-		trigger = { num_pops < 61 }
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 500 }
+			resource_stockpile_compare = { resource = energy value >= prime_expertise_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -500 }
+		add_resource = { energy = -1 mult = prime_expertise_price }
 		custom_tooltip = opinion20
 		add_modifier = {
 			modifier = prime_machines_expertise
-			days = 3600
+			days = @MACHINE_EXPERTISE_DURATION_DAYS
 		}
 		hidden_effect = {
 			event_target:ne_machine = {
 				add_trust = {
-					who = Root
+					who = root
 					amount = 20
 				}
 			}
@@ -731,140 +632,51 @@ country_event = {
 				who = event_target:ne_machine
 				flag = ne_machine_trade
 			}
-			country_event = { id = nemac.111 days = 3600 }
+			set_variable = {
+				which = ne_prime_expertise_duration
+				value = @DEFAULT_MACHINE_EXPERTISE_DURATION_YEARS
+			}
+			country_event = { id = nemac.111 days = @MACHINE_EXPERTISE_DURATION_DAYS }
 		}
 	}
+
+	# Extended contract
 	option = {
-		name = nemac.111.a
-		response_text = nemac.111.a.reply
+		name = nemac.111.b
+		response_text = nemac.111.b.reply
 		custom_gui = "enclave_machine_option"
-		trigger = {
-			num_pops > 60
-			num_pops < 121
-		}
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
+			resource_stockpile_compare = { resource = energy value >= prime_extended_expertise_price }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ne_machine }
 			}
 		}
-		add_resource = { energy = -1000 }
-		custom_tooltip = opinion20
+		custom_tooltip = nemac.111.variable_opinion
+		add_resource = { energy = -1 mult = prime_extended_expertise_price }
 		add_modifier = {
 			modifier = prime_machines_expertise
-			days = 3600
+			days = 360
+			time_multiplier = ne_prime_expertise_extended_duration
 		}
 		hidden_effect = {
 			event_target:ne_machine = {
-				add_trust = {
-					who = Root
-					amount = 20
+				while = {
+					count = prev.prime_extended_expertise_opinion_count
+					add_trust = {
+						who = root
+						amount = 10
+					}
 				}
 			}
 			set_relation_flag = {
 				who = event_target:ne_machine
 				flag = ne_machine_trade
 			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.111.a
-		response_text = nemac.111.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = {
-			num_pops > 120
-			num_pops < 181
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
+			set_variable = {
+				which = ne_prime_expertise_duration
+				value = this.ne_prime_expertise_extended_duration
 			}
-		}
-		add_resource = { energy = -1500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.111.a
-		response_text = nemac.111.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = {
-			num_pops > 180
-			num_pops < 241
-		}
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
-			}
-		}
-		add_resource = { energy = -2000 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
-		}
-	}
-	option = {
-		name = nemac.111.a
-		response_text = nemac.111.a.reply
-		custom_gui = "enclave_machine_option"
-		trigger = { num_pops > 240 }
-		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2500 }
-			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
-			}
-		}
-		add_resource = { energy = -2500 }
-		custom_tooltip = opinion20
-		add_modifier = {
-			modifier = prime_machines_expertise
-			days = 3600
-		}
-		hidden_effect = {
-			event_target:ne_machine = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
-			set_relation_flag = {
-				who = event_target:ne_machine
-				flag = ne_machine_trade
-			}
-			country_event = { id = nemac.111 days = 3600 }
+			country_event = { id = nemac.112 days = 1801 }
 		}
 	}
 
@@ -873,6 +685,27 @@ country_event = {
 		name = nemac.111.end
 		custom_gui = "enclave_machine_option"
 		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = nemac.112
+	hide_window = yes
+	trigger = {
+		NOT = { has_country_flag = attacked_ne_machine }
+		exists = event_target:ne_machine
+	}
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = prime_machines_expertise
+			}
+			country_event = { id = nemac.112 days = 1800 }
+		}
+		else = {
+			country_event = { id = nemac.111 }
+		}
 	}
 }
 
