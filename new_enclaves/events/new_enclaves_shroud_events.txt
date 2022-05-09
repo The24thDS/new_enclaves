@@ -28,6 +28,7 @@ country_event = {
 
 	diplomatic = yes
 	custom_gui = "enclave_shroud_window"
+	location = event_target:ne_shroud_system
 
 	picture_event_data = {
 		portrait = from
@@ -96,6 +97,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_shroud_window"
 	force_open = yes
+	location = event_target:ne_shroud_system
 
 	picture_event_data = {
 		portrait = from
@@ -348,6 +350,7 @@ country_event = {
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = "enclave_shroud_window"
+	location = event_target:ne_shroud_system
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
@@ -515,6 +518,7 @@ country_event = {
 	id = neshr.110
 	title = neshr.110.name
 	desc = neshr.110.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -600,6 +604,7 @@ country_event = {
 	id = neshr.111
 	title = neshr.111.name
 	desc = neshr.111.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -745,6 +750,7 @@ country_event = {
 	id = neshr.120
 	title = neshr.120.name
 	desc = neshr.120.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -821,6 +827,7 @@ country_event = {
 	id = neshr.121
 	title = neshr.121.name
 	desc = neshr.121.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -928,7 +935,6 @@ country_event = {
 	}
 }
 
-
 country_event = {
 	id = neshr.122
 	hide_window = yes
@@ -955,6 +961,7 @@ country_event = {
 	id = neshr.130
 	title = neshr.130.name
 	desc = neshr.130.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1114,6 +1121,7 @@ country_event = {
 	id = neshr.140
 	title = neshr.140.name
 	desc = neshr.140.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1223,6 +1231,7 @@ country_event = {
 	id = neshr.141
 	title = neshr.140.name
 	desc = neshr.141.desc
+	location = event_target:ne_shroud_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1276,9 +1285,6 @@ country_event = {
 	}
 
 	immediate = {
-		FromFrom = {
-			solar_system = { save_event_target_as = ne_shroud_system }
-		}
 		From = {
 			country_event = { id = neshr.901 }
 			save_event_target_as = ne_shroud_destroyer
@@ -1529,6 +1535,7 @@ country_event = {
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = "enclave_shroud_window"
+	location = event_target:ne_shroud_system
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
@@ -1554,6 +1561,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_shroud_window"
 	force_open = yes
+	location = event_target:ne_shroud_system
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud
@@ -1634,6 +1642,7 @@ country_event = {
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = "enclave_shroud_window"
+	location = event_target:ne_shroud_system
 
 	picture_event_data = {
 		portrait = event_target:ne_shroud

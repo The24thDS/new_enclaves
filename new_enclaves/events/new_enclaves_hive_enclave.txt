@@ -26,6 +26,7 @@ country_event = {
 	id = nehiv.11
 	title = nehiv.11.name
 	desc = nehiv.11.desc
+	location = event_target:ne_hive_system
 
 	diplomatic = yes
 	custom_gui = "enclave_hive_window"
@@ -75,6 +76,7 @@ country_event = {
 	desc = nehiv.100g.desc
 	desc = nehiv.100h.desc
 	desc = nehiv.100i.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -232,6 +234,7 @@ country_event = {
 	desc = nehiv.100g.desc
 	desc = nehiv.100h.desc
 	desc = nehiv.100i.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -341,6 +344,7 @@ country_event = {
 	id = nehiv.110
 	title = nehiv.110.name
 	desc = nehiv.110.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -426,6 +430,7 @@ country_event = {
 	id = nehiv.111
 	title = nehiv.111.name
 	desc = nehiv.111.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -576,6 +581,7 @@ country_event = {
 	id = nehiv.120
 	title = nehiv.120.name
 	desc = nehiv.120.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -662,6 +668,7 @@ country_event = {
 	id = nehiv.121
 	title = nehiv.121.name
 	desc = nehiv.121.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -808,6 +815,7 @@ country_event = {
 	id = nehiv.130
 	title = nehiv.130.name
 	desc = nehiv.130.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -897,9 +905,6 @@ country_event = {
 	}
 
 	immediate = {
-		FromFrom = {
-			solar_system = { save_event_target_as = ne_hive_system }
-		}
 		From = {
 			country_event = { id = nehiv.901 }
 			save_event_target_as = ne_hive_destroyer
@@ -923,6 +928,7 @@ country_event = {
 	picture = GFX_evt_space_debris
 	location = event_target:ne_hive_system
 	show_sound = event_ship_bridge
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 
@@ -1013,6 +1019,7 @@ country_event = {
 	picture = GFX_evt_exploding_ship
 	location = event_target:ne_hive_system
 	show_sound = event_ship_explosion
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 
@@ -1158,6 +1165,7 @@ country_event = {
 	id = nehiv.904
 	title = nehiv.100.name
 	desc = nehiv.904.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1179,6 +1187,7 @@ country_event = {
 	id = nehiv.905
 	title = nehiv.100.name
 	desc = nehiv.905a.desc
+	location = event_target:ne_hive_system
 
 	is_triggered_only = yes
 	diplomatic = yes

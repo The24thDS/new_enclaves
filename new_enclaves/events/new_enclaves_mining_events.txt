@@ -22,6 +22,7 @@ country_event = {
 	id = nedrg.11
 	title = nedrg.11.name
 	desc = nedrg.11.desc
+	location = event_target:ne_drg_system
 
 	diplomatic = yes
 	custom_gui = "enclave_drg_window"
@@ -74,6 +75,7 @@ country_event = {
 	desc = nedrg.100.desc.d
 	desc = nedrg.100.desc.e
 	desc = nedrg.100.desc.f
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -274,6 +276,7 @@ country_event = {
 country_event = {
 	id = nedrg.101
 	title = nedrg.101.name
+	location = event_target:ne_drg_system
 	desc = {
 		text = saluting2_1_text
 		trigger = { check_variable = { which = ne_drg_salute_pick value = 0 } }
@@ -667,6 +670,7 @@ country_event = {
 	id = nedrg.110
 	title = nedrg.110.name
 	desc = nedrg.110.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -752,6 +756,7 @@ country_event = {
 	id = nedrg.111
 	title = nedrg.111.name
 	desc = nedrg.111.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -923,6 +928,7 @@ country_event = {
 	id = nedrg.120
 	title = nedrg.120.name
 	desc = nedrg.120.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1023,6 +1029,7 @@ country_event = {
 	id = nedrg.130
 	title = nedrg.130.name
 	desc = nedrg.130.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1086,6 +1093,7 @@ country_event = {
 	id = nedrg.140
 	title = nedrg.140.name
 	desc = nedrg.140.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1187,9 +1195,6 @@ country_event = {
 	}
 
 	immediate = {
-		FromFrom = {
-			solar_system = { save_event_target_as = ne_drg_system }
-		}
 		From = {
 			country_event = { id = nedrg.901 }
 			save_event_target_as = ne_drg_destroyer
@@ -1213,6 +1218,7 @@ country_event = {
 	picture = GFX_evt_space_debris
 	location = event_target:ne_drg_system
 	show_sound = event_ship_bridge
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 
@@ -1267,6 +1273,7 @@ country_event = {
 	picture = GFX_evt_exploding_ship
 	location = event_target:ne_drg_system
 	show_sound = event_ship_explosion
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 
@@ -1407,6 +1414,7 @@ country_event = {
 	id = nedrg.904
 	title = nedrg.100.name
 	desc = nedrg.904.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1430,6 +1438,7 @@ country_event = {
 	desc = nedrg.905a.desc
 	desc = nedrg.905b.desc
 	desc = nedrg.905c.desc
+	location = event_target:ne_drg_system
 
 	is_triggered_only = yes
 	diplomatic = yes

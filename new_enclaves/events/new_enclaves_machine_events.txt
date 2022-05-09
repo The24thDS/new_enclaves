@@ -22,6 +22,7 @@ country_event = {
 	id = nemac.11
 	title = nemac.11.name
 	desc = nemac.11.desc
+	location = event_target:ne_machine_system
 
 	diplomatic = yes
 	custom_gui = "enclave_machine_window"
@@ -89,6 +90,7 @@ country_event = {
 	desc = nemac.100j.desc
 	desc = nemac.100k.desc
 	desc = nemac.100l.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -335,6 +337,7 @@ country_event = {
 	desc = nemac.100j.desc
 	desc = nemac.100k.desc
 	desc = nemac.100l.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -479,6 +482,7 @@ country_event = {
 	id = nemac.110
 	title = nemac.110.name
 	desc = nemac.110.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -564,6 +568,7 @@ country_event = {
 	id = nemac.111
 	title = nemac.111.name
 	desc = nemac.111.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -714,6 +719,7 @@ country_event = {
 	id = nemac.120
 	title = nemac.120.name
 	desc = nemac.120.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -814,6 +820,7 @@ country_event = {
 	id = nemac.130
 	title = nemac.130.name
 	desc = nemac.130.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -883,6 +890,7 @@ country_event = {
 	id = nemac.140
 	title = nemac.140.name
 	desc = nemac.140.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -992,6 +1000,7 @@ country_event = {
 	id = nemac.141
 	title = nemac.140.name
 	desc = nemac.141.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1045,9 +1054,6 @@ country_event = {
 	}
 
 	immediate = {
-		FromFrom = {
-			solar_system = { save_event_target_as = ne_machine_system }
-		}
 		From = {
 			country_event = { id = nemac.901 }
 			save_event_target_as = ne_machine_destroyer
@@ -1071,6 +1077,7 @@ country_event = {
 	picture = GFX_evt_space_debris
 	location = event_target:ne_machine_system
 	show_sound = event_ship_bridge
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 
@@ -1125,6 +1132,7 @@ country_event = {
 	picture = GFX_evt_exploding_ship
 	location = event_target:ne_machine_system
 	show_sound = event_ship_explosion
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 
@@ -1265,6 +1273,7 @@ country_event = {
 	id = nemac.904
 	title = nemac.100.name
 	desc = nemac.904.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1289,6 +1298,7 @@ country_event = {
 	desc = nemac.905b.desc
 	desc = nemac.905c.desc
 	desc = nemac.905d.desc
+	location = event_target:ne_machine_system
 
 	is_triggered_only = yes
 	diplomatic = yes
