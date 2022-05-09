@@ -1,4 +1,4 @@
-﻿l_default:
+﻿l_english:
   # Hive Enclave
   NAME_NEHIV_System: "Los"
   NAME_NEHIV_Star: "Los"
@@ -28,12 +28,12 @@
   NAME_NESHR_Planet_1: "Blessed"
   NAME_NESHR_Planet_2: "Sanctified"
   NAME_NESHR_Planet_3: "Rejected"
-  NAME_Saint_Ennoir:0 "Saint Ennoir"
-  NAME_Blessed_Ienois:0 "Blessed Ienois"
-  NAME_Hallowed_Lognill:0 "Hallowed Lognill"
-  NAME_Apostle_Ziesa:0 "Apostle Ziesa"
-  NAME_Kkronquts_The_Paragon:0 "Kkronquts The Paragon"
-  NAME_Angel_Iriels:0 "Angel Iriels"
+  NAME_Saint_Ennoir: "Saint Ennoir"
+  NAME_Blessed_Ienois: "Blessed Ienois"
+  NAME_Hallowed_Lognill: "Hallowed Lognill"
+  NAME_Apostle_Ziesa: "Apostle Ziesa"
+  NAME_Kkronquts_The_Paragon: "Kkronquts The Paragon"
+  NAME_Angel_Iriels: "Angel Iriels"
   format.ne_shroud.1: "$NAME_NESHR_Country$"
   # Machine Enclave
   NAME_NEMAC_Star: "Core"

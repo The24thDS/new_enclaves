@@ -914,7 +914,7 @@ country_event = {
 			event_target:ne_shroud = {
 				add_trust = {
 					who = Root
-					amount = shr_extended_festival_opinion
+					amount = prev.shr_extended_festival_opinion
 				}
 			}
 		}
