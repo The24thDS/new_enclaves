@@ -1666,14 +1666,14 @@ country_event = {
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 10000 }
 			hidden_trigger = {
-				NOT = { has_country_flag = attacked_ne_machine }
+				NOT = { has_country_flag = attacked_ne_shroud }
 			}
 		}
 		add_resource = { energy = -10000 }
 		custom_tooltip = opinion20
 		add_research_option = tech_psionic_theory
 		hidden_effect = {
-			event_target:ne_machine = {
+			event_target:ne_shroud = {
 				add_trust = {
 					who = Root
 					amount = 20
