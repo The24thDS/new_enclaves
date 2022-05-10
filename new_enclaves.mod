@@ -5,7 +5,7 @@ tags={
 	"Galaxy Generation"
 	"Gameplay"
 }
-name="[3.3.*] New Enclaves"
-supported_version="3.3.*"
+name="New Enclaves [3.4.*]"
+supported_version="3.4.*"
 path="mod/new_enclaves"
 picture="thumbnail.png"

@@ -3,5 +3,5 @@ tags={
 	"Fixes"
 }
 name="UI Overhaul Dynamic + New Enclaves"
-supported_version="3.3.*"
+supported_version="3.4.*"
 path="mod/ne+ui_overhaul_dynamic"
