@@ -316,6 +316,19 @@ country_event = {
 		hidden_effect = { remove_ne_shroud_trade_deal = yes }
 	}
 
+	# Option 6: Shroudwalker Enclave
+	option = {
+		name = neshr.100.e
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			has_communications = event_target:shroudwalker_enclave_country
+			NOT = { has_global_flag = ne_shroud_knows_of_shroudwalkers }
+		}
+		hidden_effect = {
+			country_event = { id = neshr.160 }
+		}
+	}
+
 	# End communications
 	option = {
 		name = GOODBYE
@@ -501,6 +514,18 @@ country_event = {
 		hidden_effect = { remove_ne_shroud_trade_deal = yes }
 	}
 
+	# Option 6: Shroudwalker Enclave
+	option = {
+		name = neshr.100.e
+		custom_gui = "enclave_shroud_option"
+		trigger = {
+			has_communications = event_target:shroudwalker_enclave_country
+			NOT = { has_global_flag = ne_shroud_knows_of_shroudwalkers }
+		}
+		hidden_effect = {
+			country_event = { id = neshr.160 }
+		}
+	}
 
 	# End communications
 	option = {
@@ -1696,5 +1721,157 @@ country_event = {
 		name = GOODBYE
 		custom_gui = "enclave_shroud_option"
 		default_hide_option = yes
+	}
+}
+
+# neshr.160: The Shroudwalkers
+country_event = {
+	id = neshr.160
+	title = neshr.160.name
+	desc = neshr.160.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_shroud_window"
+	location = event_target:ne_shroud_system
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud
+		room = enclave_shroud_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = neshr.160.a
+		response_text = neshr.160.a.reply
+		custom_gui = "enclave_shroud_option"
+		custom_tooltip = opinion25
+		hidden_effect = {
+			set_global_flag = ne_shroud_knows_of_shroudwalkers
+			set_country_flag = ne_informed_shroud_about_walkers
+			event_target:ne_shroud = {
+				add_trust = {
+					who = Root
+					amount = 25
+				}
+			}
+			event_target:ne_shroud = {
+				establish_communications_no_message = event_target:shroudwalker_enclave_country
+			}
+			event_target:shroudwalker_enclave_system = {
+				random_fleet_in_system = {
+					limit = { owner = { is_same_empire = event_target:shroudwalker_enclave_country } }
+					save_event_target_as = ne_shroud_target
+				}
+			}
+			create_fleet = {
+				name = "NAME_Purifier"
+				effect = {
+					set_owner = event_target:ne_shroud
+					create_ship_design = {
+						design = "NAME_Revenant"
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = "NAME_NESHR_Planet_1"
+							design = last_created_design
+						}
+					}
+					set_location = event_target:ne_shroud_system
+					set_fleet_flag = ne_shroud_purifier
+					auto_follow_fleet = {
+						target = event_target:ne_shroud_target
+						attack_fleet = yes
+					}
+				}
+			}
+		}
+	}
+
+	# Back
+	option = {
+		name = ne_back
+		custom_gui = "enclave_shroud_option"
+		hidden_effect = {
+			country_event = { id = neshr.101 }
+		}
+	}
+
+	# End
+	option = {
+		name = GOODBYE
+		custom_gui = "enclave_shroud_option"
+		default_hide_option = yes
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+country_event = {
+	id = neshr.161
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_same_empire = event_target:shroudwalker_enclave_country
+		from = { is_same_empire = event_target:ne_shroud_country }
+	}
+
+	immediate = {
+		FromFromFrom.fleet = {
+			delete_fleet = this
+		}
+		random_playable_country = {
+			limit = { has_country_flag = ne_informed_shroud_about_walkers }
+			country_event = { id = neshr.162 }
+		}
+	}
+}
+
+country_event = {
+	id = neshr.162
+	title = neshr.160.name
+	desc = neshr.162.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_shroud_window"
+	location = event_target:ne_shroud_system
+
+	picture_event_data = {
+		portrait = event_target:ne_shroud_country
+		room = enclave_shroud_room
+	}
+
+	immediate = {
+		set_country_flag = ne_shroud_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ne_shroud_diplomacy_engaged
+		}
+	}
+
+	# Back
+	option = {
+		name = neshr.162.a
+		custom_gui = "enclave_shroud_option"
+		add_resource = {
+			unity = 5000
+			sr_zro = 250
+		}
 	}
 }

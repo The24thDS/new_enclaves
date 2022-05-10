@@ -223,6 +223,7 @@
   neshr.100.da: "We wish to end our resource trade deal."
   neshr.100.da.reply: "We hope you didn't overuse the Zro. Take your time to recuperate."
   neshr.100.da.tooltip: "This will terminate our current resource trade deal with the Shroud's Children."
+  neshr.100.e: "Do you know the §H[shroudwalker_enclave_country.GetName]§!?"
  # Shroud's Children Guidance
   neshr.110.name: "Shroud's Children Guidance"
   neshr.110.desc: "Our spiritual guidance has much more practical benefits than they may seem at first glance. Although our objective is to transcend this material realm, only by having a deep understanding of physical reality one is able to conceive other levels of existence.\n\nOur sages are more than willing to teach you about the ontological secrets of the universe. Hopefully, you'll understand if we require some material assistance to accomodate our members at your empire in return."
@@ -252,6 +253,13 @@
   neshr.150.desc: "Are you ready to make the §YNext Step§!?\n\nThe only way forward is leaving this material form behind you and ascending to the ethereal realms. We can help you make the §YNext Step§! in your evolution.\n\nHowever we need a small contribution before we can transfer the details to your network. A transfer so big requires a lot of energy."
   neshr.150.a: "Of course. We will initiate the transfer right away!"
   neshr.150.a.reply: "Transfer received. Here is what you need to make the §YNext Step§!. We hope to meet you in the ethereal realms."
+ # Shroudwalkers
+  neshr.160.name: "[shroudwalker_enclave_country.GetName]"
+  neshr.160.desc: "§HWhere have you heard this name?§!\n\nThere is a story we haven't told you before. Eons ago there was a divide inside our order. A group of people started ignoring the hierarchy of the order and used their knowledge to gain power and untold riches. We initially just banished them, depriving them of access to our texts and libraries. But eventually, we had to do more...\n\nThey banded together into a new cult with one §Rsecret goal§!: to become the most powerful beings in all realms. To achieve this they started consuming the energy of the material realm, the one we both live in right now. We couldn't allow this to happen, so we acted, a swift attack destroyed them all, or so we thought.\n\n§RDon't trust§! a word of what they say, they are false prophets, evil beings set to do evil things. §YIf you know where they are, please give us the coordinates so we can save the galaxy once more!§!"
+  neshr.160.a: "They are in §B[shroudwalker_enclave_system.GetName]§!."
+  neshr.160.a.reply: "Let the Crusade begin!"
+  neshr.162.desc: "We took care of the menace that was living in §B[shroudwalker_enclave_system.GetName]§!. Here's a small gift from us for helping defend the galaxy."
+  neshr.162.a: "Thank you!"
  # Stratetic Resources
   neshr.140.name: "Strategic Resources"
   neshr.140.desc: "If you want to better attune yourself to the ethereal realms, we can provide you with some Zro. We trust you enough to know you won't use it recklessly. Remember: the difference between a medicine and poison is the dose."

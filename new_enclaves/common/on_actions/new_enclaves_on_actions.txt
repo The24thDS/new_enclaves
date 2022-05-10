@@ -59,6 +59,7 @@ on_ship_destroyed_victim = {
 		nehiv.900
 		nemac.900
 		neshr.900
+		neshr.161
 		nedrg.900
 	}
 }
