@@ -1,3 +1,31 @@
+project_id: "439204"
+base_path: "new_enclaves"
+branch: "dev"
+preserve_hierarchy: true
 files:
-  - source: /new_enclaves/localisation/english/*.yml
-    translation: /new_enclaves/localisation/%language%/new_enclaves_l_%language%.yml
+  - source: /localisation/english/*_l_english.yml
+    translation: /localisation/%language%/%file_name%_%language%.%file_extension%
+    translation_replace:
+      _english: ""
+    update_option: update_as_unapproved
+    languages_mapping:
+      language:
+        French: "french"
+        Spanish: "spanish"
+        German: "german"
+        Polish: "polish"
+        Russian: "russian"
+        "Portuguese, Brazilian": "braz_por"
+  - source: /localisation/replace/english/*_l_english.yml
+    translation: /localisation/replace/%language%/%file_name%_%language%.%file_extension%
+    translation_replace:
+      _english: ""
+    update_option: update_as_unapproved
+    languages_mapping:
+      language:
+        French: "french"
+        Spanish: "spanish"
+        German: "german"
+        Polish: "polish"
+        Russian: "russian"
+        "Portuguese, Brazilian": "braz_por"
