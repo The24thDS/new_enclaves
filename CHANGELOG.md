@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/The24thDS/new_enclaves/compare/v2.7.0...v3.0.0) (2022-05-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* added the DRG enclave (#59)
+
+### Features
+
+* added Shroudwalkers option to Shroud's Children ([4928d30](https://github.com/The24thDS/new_enclaves/commit/4928d30602c4bbebcbbca1fab32a3bc1ea66c0be))
+* added the DRG enclave ([#59](https://github.com/The24thDS/new_enclaves/issues/59)) ([6537f96](https://github.com/The24thDS/new_enclaves/commit/6537f96a0d35326b4fd8844bbdbf5df941e9e73f))
+* added Trade Time Interval Increase to Prime Machines ([31e7567](https://github.com/The24thDS/new_enclaves/commit/31e7567271ba6dcebb6a8199f4b1c3f80f721984))
+* added Trade Time Interval Increase to Shroud's Children ([517ab98](https://github.com/The24thDS/new_enclaves/commit/517ab98fd6da373aee4002bd0e2c2ce865fca609))
+* added Trade Time Interval Increase to Universal Hive ([4624a98](https://github.com/The24thDS/new_enclaves/commit/4624a98be40a94977ac877efba0618ea80cc60f3))
+* added Trade Time Interval Increase to Universal Hive's pheromones deal ([7573789](https://github.com/The24thDS/new_enclaves/commit/7573789e13ceb795b458ab8e44cbf3121b674ce3))
+* updated to Stellaris 3.4 ([eb6ddd6](https://github.com/The24thDS/new_enclaves/commit/eb6ddd62b2b8f78852d7928f90ba9925a6cd4d7e))
+
+
+### Bug Fixes
+
+* added missing focus/location to enclave windows ([495860a](https://github.com/The24thDS/new_enclaves/commit/495860a71ca9b866ddb124d855c9ede63e7a8f98))
+* fixed close and focus button not being aligned ([1e331ac](https://github.com/The24thDS/new_enclaves/commit/1e331aceabae32a86317c9b51a20c4a33cad4e93))
+* fixed Shroud's Next Step awarding opinion towards Prime Machines ([52cbb8d](https://github.com/The24thDS/new_enclaves/commit/52cbb8d316c6f8c979a5832a01a07bd47f3550b8))
+
 ## [2.7.0](https://github.com/The24thDS/new_enclaves/compare/v2.6.3...v2.7.0) (2022-04-09)
 
 
