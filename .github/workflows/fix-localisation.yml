@@ -18,7 +18,9 @@ jobs:
       with:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Fix locs
-      run: ./fix_crowdin_localisation_files.sh new_enclaves
+      run: |
+        chmod +x ./fix_crowdin_localisation_files.sh
+        ./fix_crowdin_localisation_files.sh new_enclaves
     - name: Check if there are changes
       id: changes
       uses: UnicornGlobal/has-changes-action@v1.0.11
