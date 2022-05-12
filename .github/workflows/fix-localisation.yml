@@ -21,6 +21,7 @@ jobs:
       run: |
         chmod +x ./fix_crowdin_localisation_files.sh
         ./fix_crowdin_localisation_files.sh new_enclaves
+        git config --global --add safe.directory /github/workspace
     - name: Check if there are changes
       id: changes
       uses: UnicornGlobal/has-changes-action@v1.0.11
