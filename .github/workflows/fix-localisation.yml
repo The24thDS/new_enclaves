@@ -1,8 +1,5 @@
 name: Fix localisation
 on:
-  push:
-    branches-ignore:
-      - 'master'
   workflow_dispatch
 jobs:
   cancel:
