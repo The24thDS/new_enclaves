@@ -1,4 +1,5 @@
-﻿l_spanish:
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -27,14 +28,14 @@
   ne_shroud_government_desc: "§Una orden religiosa autónoma privilegiada de los secretos de las existencias supremas.§!"
   RT_PROPHETS_SUCCESSOR: "Successor del Profeta"
   #Mining Enclave
-  civic_mining_corporation: "Mining Corporation"
+  civic_mining_corporation: "Corporación Minera"
   civic_mining_corporation_desc: ""
-  gov_ne_mining: "Mining Corporation Enclave"
-  gov_ne_mining_desc: "An independent interplanetary corporation that hires mercenaries to mine the most deadliest planets in the known galaxy."
+  gov_ne_mining: "Enclave Corporativo Minero"
+  gov_ne_mining_desc: "Una corporación interplanetaria independiente que contrata mercenarios para minar los planetas más terribles de toda la galaxia."
   gov_ne_mining_no_dlc: "$gov_ne_mining$"
   gov_ne_mining_no_dlc_desc: "$gov_ne_mining_desc$"
-  RT_LEAF_LOVER: "Leaf Lover"
-  RT_LORD_OF_DEEP: "Lord of the Deep"
+  RT_LEAF_LOVER: "Amante de la Hoja"
+  RT_LORD_OF_DEEP: "Señor de las profundidades"
   ### Diplomacy Events ###
   ## Hive Enclave
   #First Contact
@@ -67,12 +68,12 @@
   nehiv.110.a: "Lo tendrás."
   nehiv.110.a.reply: "Maravilloso. Todo por el bien del ser Universal."
   nehiv.111.name: "Asistencia Universal de la Colmena"
-  nehiv.111.desc: "The collaboration between our sociologists in the last [this.ne_hive_collab_duration] years was very fruitful, bringing happiness to the Universal Being. Should we renew our agreement?"
-  nehiv.111.a: "Yes, for 10 years."
+  nehiv.111.desc: "La colaboración entre nuestros sociólogos en los últimos [this.ne_hive_collab_duration] años ha sido muy fructífera, atrayendo felicidad para todos los seres. ¿Deberíamos renovar nuestro acuerdo?"
+  nehiv.111.a: "Si, durante 10 años."
   nehiv.111.a.reply: "Estoy seguro que el ser Universal està satisfecho, y así lo será."
-  nehiv.111.b: "We would like to sign an extended agreement for [This.ne_hive_collab_extended_duration] years."
+  nehiv.111.b: "Nos gustaría firmar un acuerdo extendido de [This.ne_hive_collab_extended_duration] años."
   nehiv.111.end: "No ahora."
-  nehiv.111.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_collab_opinion]§!"
+  nehiv.111.variable_opinion: "Opinión: £opinion£ §G+[This.hive_extended_collab_opinion]§!"
   #Consensus pheromones
   nehiv.120.name: "Feromonas del Consenso"
   nehiv.120.desc: "\"Conformity techiniques\"? What a strange name. We have no such things.\n\nWe do, however, have what we call \"consensus pheromones\". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ [This.hive_pheromones_price]§!"
@@ -451,4 +452,4 @@
   new_saluting_7_text: "By the Beard!"
   NE_DRG_DLC_ANCIENT_RELICS_DESC: "§SAncient Relics§! will unlock the option to buy £ne_drg_error_cube£ §Y$ne_drg_error_cube_plural$§! from Deep Rock Galactic."
   NE_DRG_DLC_HUMANOIDS_DESC: "§SHumanoids§! will unlock the dwarf portrait and a Rock and Stone option.\n§YThese will require a new game to show up.§!"
-  DASH_SEPARATOR: "﻿l_spanish:-----------"
+  DASH_SEPARATOR: "--------------"
