@@ -13,6 +13,10 @@ jobs:
         lfs: true
     - name: Checkout LFS objects
       run: git lfs checkout
+    - name: Fix locs
+      run: |
+        chmod +x ./fix_crowdin_localisation_files.sh
+        ./fix_crowdin_localisation_files.sh new_enclaves
     - name: Archive New Enclaves
       uses: thedoctor0/zip-release@master
       with:
