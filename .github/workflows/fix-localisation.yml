@@ -1,5 +1,8 @@
 name: Fix localisation
-on: workflow_dispatch
+on:
+  push:
+    branches-ignore:
+      - "master"
 jobs:
   cancel:
     name: "Cancel Previous Runs"
