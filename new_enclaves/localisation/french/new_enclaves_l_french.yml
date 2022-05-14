@@ -55,7 +55,7 @@
   #Main Menu - Options
   nehiv.100.a: "Pouvez-vous aider nos sociologues ?"
   nehiv.100.a.alreadyhelping: "La Conscience Universelle renforce déjà nos recherches sociétales."
-  nehiv.100.b: "Nous sommes intéressés par votre savoir faire en matière de... \"conformisme\"."
+  nehiv.100.b: 'Nous sommes intéressés par votre savoir faire en matière de... "conformisme".'
   nehiv.100.b.opinion: "§YConscience Universelle§! doit avoir :\n£opinion£ Opinion +50"
   nehiv.100.b.alreadyhired: "Les Phéromones de Consensus fournis par la Conscience Universelle sont déjà en cours d'utilisation."
   nehiv.100.c: "Notre propre Conscience pourrait utiliser l'un de vos drones."
@@ -451,4 +451,4 @@
   new_saluting_7_text: "By the Beard!"
   NE_DRG_DLC_ANCIENT_RELICS_DESC: "§SAncient Relics§! will unlock the option to buy £ne_drg_error_cube£ §Y$ne_drg_error_cube_plural$§! from Deep Rock Galactic."
   NE_DRG_DLC_HUMANOIDS_DESC: "§SHumanoids§! will unlock the dwarf portrait and a Rock and Stone option.\n§YThese will require a new game to show up.§!"
-  DASH_SEPARATOR: "﻿l_french:-----------"
+  DASH_SEPARATOR: "--------------"

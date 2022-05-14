@@ -55,7 +55,7 @@
   #Main Menu - Options
   nehiv.100.a: "Können Sie unseren Soziologen helfen?"
   nehiv.100.a.alreadyhelping: "Der universelle Schwarm erhöht bereits unsere Sozialforschung."
-  nehiv.100.b: "Wir sind an euren \"Konformitätstechniken\" interessiert."
+  nehiv.100.b: 'Wir sind an euren "Konformitätstechniken" interessiert.'
   nehiv.100.b.opinion: "Der §Yuniverselle Schwarm§! muss\n£opinion£ Meinung +50 haben"
   nehiv.100.b.alreadyhired: "Wir verwenden bereits die vom universellen Schwarm bereitgestellten Einigkeitspheromone."
   nehiv.100.c: "Unser eigener Schwarm könnte eine ihrer Drohnen gebrauchen."
@@ -451,4 +451,4 @@
   new_saluting_7_text: "By the Beard!"
   NE_DRG_DLC_ANCIENT_RELICS_DESC: "§SAncient Relics§! will unlock the option to buy £ne_drg_error_cube£ §Y$ne_drg_error_cube_plural$§! from Deep Rock Galactic."
   NE_DRG_DLC_HUMANOIDS_DESC: "§SHumanoids§! will unlock the dwarf portrait and a Rock and Stone option.\n§YThese will require a new game to show up.§!"
-  DASH_SEPARATOR: "﻿l_german:-----------"
+  DASH_SEPARATOR: "--------------"

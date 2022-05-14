@@ -55,7 +55,7 @@
   #Main Menu - Options
   nehiv.100.a: "¿Podéis ayudar a los sociólogos?"
   nehiv.100.a.alreadyhelping: "La Colmena Universal ya está impulsando nuestra investigación en sociedad."
-  nehiv.100.b: "Estamos interesados en sus... técnicas de \"conformidad\"."
+  nehiv.100.b: 'Estamos interesados en sus... técnicas de "conformidad".'
   nehiv.100.b.opinion: "Requiere §YColmena Universal§! para obtener:\n£opinion£ Opinión +50"
   nehiv.100.b.alreadyhired: "Ya estamos utilizando las Feromonas del Consenso proporcionadas por la Colmena Universal."
   nehiv.100.c: "Nuestra propia colmena podría usar uno de sus drones."
@@ -451,4 +451,4 @@
   new_saluting_7_text: "By the Beard!"
   NE_DRG_DLC_ANCIENT_RELICS_DESC: "§SAncient Relics§! will unlock the option to buy £ne_drg_error_cube£ §Y$ne_drg_error_cube_plural$§! from Deep Rock Galactic."
   NE_DRG_DLC_HUMANOIDS_DESC: "§SHumanoids§! will unlock the dwarf portrait and a Rock and Stone option.\n§YThese will require a new game to show up.§!"
-  DASH_SEPARATOR: "﻿l_spanish:-----------"
+  DASH_SEPARATOR: "--------------"
