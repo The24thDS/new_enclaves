@@ -1,4 +1,5 @@
-﻿l_spanish:
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "¿Qué más tenéis por ofrecer?"
   ### Governments ###
@@ -55,7 +56,7 @@
   #Main Menu - Options
   nehiv.100.a: "¿Podéis ayudar a los sociólogos?"
   nehiv.100.a.alreadyhelping: "La Colmena Universal ya está impulsando nuestra investigación en sociedad."
-  nehiv.100.b: 'Estamos interesados en sus... técnicas de "conformidad".'
+  nehiv.100.b: "Estamos interesados en sus... técnicas de \"conformidad\"."
   nehiv.100.b.opinion: "Requiere §YColmena Universal§! para obtener:\n£opinion£ Opinión +50"
   nehiv.100.b.alreadyhired: "Ya estamos utilizando las Feromonas del Consenso proporcionadas por la Colmena Universal."
   nehiv.100.c: "Nuestra propia colmena podría usar uno de sus drones."
@@ -75,15 +76,15 @@
   nehiv.111.variable_opinion: "Opinión: £opinion£ §G+[This.hive_extended_collab_opinion]§!"
   #Consensus pheromones
   nehiv.120.name: "Feromonas del Consenso"
-  nehiv.120.desc: "\"Conformity techiniques\"? What a strange name. We have no such things.\n\nWe do, however, have what we call \"consensus pheromones\". They are specially engineered to reduce deviance and spread harmony among organic beings.\n\nSince they have to be meticulously engineered to affect every individual of your empire, no matter what species, we will require you to cover the costs to mass produce them.\n\nTo start manufacturing them we'll require:\n§R£energy£ [This.hive_pheromones_price]§!"
+  nehiv.120.desc: "¿Técnicas de conformidad? Que nombre extraño. No tenemos esas cosas.\n\nSin embargo, tenemos lo que llamamos \"feromonas de consenso\". Están especialmente diseñados para reducir la desviación y difundir la armonía entre los seres orgánicos.\n\nPuesto que tienen que ser meticulosamente diseñados para afectar a cada uno de los individuos de tu imperio, sin importar qué especie sea, le pediremos que cubra los costos de producción masiva.\n\nPara empezar a fabricarlos, necesitaremos:\n§R£energy£ [This.hive_pheromones_price]§!"
   nehiv.120.a: "Un pequeño coste."
   nehiv.120.a.reply: "No tienes ni idea de lo pequeño que es."
   nehiv.121.name: "Oferta de Feromonas del Consenso"
-  nehiv.121.desc: "Today we sent the last batch of the Consensus Pheromones produced [this.ne_hive_pheromones_duration] years ago. I'm sure you didn't even realize they were still active - which proves how effective they were at creating harmonious and stable societies.\n\nWe can start producing another batch right now if we have the right resources. What do you think?"
+  nehiv.121.desc: "Hoy enviamos el último lote de Feromonas Consenso producido hace [this.ne_hive_pheromones_duration] años. Estoy seguro de que ni siquiera se dieron cuenta de que seguían activos - lo que demuestra lo eficaz que eran en la creación de sociedades armoniosas y estables.\n\nPodemos empezar a producir otro lote ahora mismo si tenemos los recursos adecuados. ¿Qué opinas?"
   nehiv.121.a: "Eso sería lo más conveniente."
   nehiv.121.a.reply: "Sabia elección. Pronto verás los efectos. O mejor aún, no."
-  nehiv.121.extended: "How about a longer contract? [This.ne_hive_pheromones_extended_duration] years?"
-  nehiv.121.variable_opinion: "Opinion: £opinion£ §G+[This.hive_extended_pheromones_opinion]§!"
+  nehiv.121.extended: "¿Qué tal un contrato más largo?¿ [This.ne_hive_pheromones_extended_duration] años?"
+  nehiv.121.variable_opinion: "Opinión: £opinion£ §G+[This.hive_extended_pheromones_opinion]§!"
   nehiv.121.b: "No en este momento."
   #Hiring Drone
   nehiv.130.name: "Dron Universal"
@@ -146,12 +147,12 @@
   nemac.110.a.reply: "§Y<<PROCESANDO COMPRA: COMPRA COMPLETADA>>§!"
   nemac.111.name: "Ayuda de Máquina Prima"
   nemac.111.desc: "The assistance algorithm compiled [this.ne_prime_expertise_duration] years ago has been executed successfully without any errors.\n\nDo you wish to run a 10 years algorithm?\n\nDo you want to order a custom [This.ne_prime_expertise_extended_duration] years algorithm?"
-  nemac.111.a: "10 years."
+  nemac.111.a: "10 años."
   nemac.111.a.reply: "§Yprime:~$ sudo bash assist.sh 10§!"
-  nemac.111.b: "[This.ne_prime_expertise_extended_duration] years."
+  nemac.111.b: "[This.ne_prime_expertise_extended_duration] años."
   nemac.111.b.reply: "§Yprime:~$ sudo bash assist.sh [This.ne_prime_expertise_extended_duration]§!"
   nemac.111.end: "No."
-  nemac.111.variable_opinion: "Opinion: £opinion£ §G+[This.prime_extended_expertise_opinion]§!"
+  nemac.111.variable_opinion: "Opinión: £opinion£ §G+[This.prime_extended_expertise_opinion]§!"
   #Employ Unit
   nemac.120.name: "Reclutar maquina prima"
   nemac.120.desc: "Cada una de nuestras unidades está totalmente equipada con nuestros protocolos de rendimiento, siendo especialmente aptos para optimizar el trabajo de otras máquinas. Se requiere una tasa de mantenimiento por adelantado para su trabajo."
@@ -223,7 +224,7 @@
   neshr.100.da: "Queremos poner fin a nuestro acuerdo de comercio de recursos."
   neshr.100.da.reply: "Esperamos que no hayas abusado del Zro. Tómense su tiempo para recuperarse."
   neshr.100.da.tooltip: "Esto pondrá fin a nuestro actual acuerdo de comercio de recursos con los Hijos del Velo."
-  neshr.100.e: "Do you know the §H[shroudwalker_enclave_country.GetName]§!?"
+  neshr.100.e: "¿Conoces el §H[shroudwalker_enclave_country.GetName]§!?"
   #Shroud's Children Guidance
   neshr.110.name: "Orientación de los Hijos del Velo"
   neshr.110.desc: "Nuestra orientación espiritual tiene muchos más beneficios prácticos de los que pueden parecer a primera vista. Aunque nuestro objetivo es trascender este reino material, sólo teniendo una comprensión profunda de la realidad física uno es capaz de concebir otros niveles de existencia.\n\nNuestros sabios están más que dispuestos a enseñarte sobre los secretos ontológicos del universo. Esperemos que entienda si necesitamos ayuda material para alojar a nuestros miembros en su imperio a cambio."
@@ -257,9 +258,9 @@
   neshr.160.name: "[shroudwalker_enclave_country.GetName]"
   neshr.160.desc: "§HWhere have you heard this name?§!\n\nThere is a story we haven't told you before. Eons ago there was a divide inside our order. A group of people started ignoring the hierarchy of the order and used their knowledge to gain power and untold riches. We initially just banished them, depriving them of access to our texts and libraries. But eventually, we had to do more...\n\nThey banded together into a new cult with one §Rsecret goal§!: to become the most powerful beings in all realms. To achieve this they started consuming the energy of the material realm, the one we both live in right now. We couldn't allow this to happen, so we acted, a swift attack destroyed them all, or so we thought.\n\n§RDon't trust§! a word of what they say, they are false prophets, evil beings set to do evil things. §YIf you know where they are, please give us the coordinates so we can save the galaxy once more!§!"
   neshr.160.a: "They are in §B[shroudwalker_enclave_system.GetName]§!."
-  neshr.160.a.reply: "Let the Crusade begin!"
+  neshr.160.a.reply: "¡Que comience la Cruzada!"
   neshr.162.desc: "We took care of the menace that was living in §B[shroudwalker_enclave_system.GetName]§!. Here's a small gift from us for helping defend the galaxy."
-  neshr.162.a: "Thank you!"
+  neshr.162.a: "¡Muchas gracias!"
   #Stratetic Resources
   neshr.140.name: "Recursos Estratégicos"
   neshr.140.desc: "Si quieres adaptarte mejor a los reinos etéreos, podemos proporcionarte un poco de Zro. Recuerde que la diferencia entre un medicamento y el veneno es la dosis."
@@ -288,14 +289,14 @@
   neshr.905c.desc: "La realidad física no es más que una ilusión. ¿Has venido a liberarnos de ella?"
   neshr.905d.desc: "Tu violenta naturaleza es sólo otro resultado de tu ser atado al reino material."
   ## DRG Enclave
-  ne_drg_error_cube: "Error Cube"
-  ne_drg_error_cube_plural: "Error Cubes"
+  ne_drg_error_cube: "Cubo de Error"
+  ne_drg_error_cube_plural: "Cubos de Errores"
   #First Contact
-  nedrg.11.name: "First Contact With [From.GetName]"
+  nedrg.11.name: "Primer contacto con [From.GetName]"
   nedrg.11.desc: "We are Deep Rock Galactic. And you are our customer.\n\nDeep Rock Galactic is the best interplanetary mining corporation in the known galaxy and the only one that's willing to take a high risk for a even higher reward. Our specialty - the most dangerous planets in the galaxy.\n\nYou've discovered one of our most profitable digging sites, §HHoxess - 04§!. This planet is very rich in precious minerals like §BMorkite§! or §MBittergem§! as well as artifacts called §YERR://23Y%/§!. However, dangerous creatures lurk down there, and in order to protect our interests we equip our employees with heavy weapons to eliminate these creatures.\n\nOur employees drop from §HSpace Rig 17§! inside the planet on a daily basis, completing mining, salvage and elimination missions to bring back resources that you can buy. We only wish to provide you with our goods and services."
   nedrg.11.a: "Well met."
   #Main Menu
-  nedrg.100.name: "Deep Rock Galactic"
+  nedrg.100.name: "La Roca de las profundidades Galáctica"
   nedrg.100.desc.a: "Welcome to §HSpace Rig 17§!!\n\nCan I get you an §SOily Oaf Brew§! while we talk business?"
   nedrg.100.desc.b: "This is Deep Rock Galactic. We are fighting a wave of glyphids so be quick!"
   nedrg.100.desc.c: "This rival company just appeared out of nowhere and it's are using machines to exploit our planet. Cowards!\n\nAnyway, how can Deep Rock Galactic help you today?"
@@ -410,7 +411,7 @@
   opinion_destroyed_ne_shroud: "Enclave del Velo destruido"
   opinion_destroyed_ne_shroud_trade: "Destrucción del enclave del Velo en la que teníamos tratos vigentes"
   station_enclave_curator_01_key: "Enclave Estación Curador"
-  NE_VERSION: "New Enclaves v3.0.1"
+  NE_VERSION: "New Enclaves v2.7.0"
   sc_ne_a: "$pc_neutron_star$"
   sc_ne_a_desc: "$pc_neutron_star_desc$"
   ## DRG
