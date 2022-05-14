@@ -8,8 +8,8 @@ ls $MOD_LOCATION/localisation | grep -v 'english\|replace' | while read language
   echo "  Fixing $language localisation files"
   for file in $MOD_LOCATION/localisation/$language/*l_$language.yml; do
     echo "    Fixing $file"
-    sed '/l_english:/d' -i "$file"
-    sed "s/---/\xEF\xBB\xBFl_$language:/" -i "$file"
+    sed '/^l_english:/d' -i "$file"
+    sed "s/^---/\xEF\xBB\xBFl_$language:/" -i "$file"
   done
   echo "  DONE Fixing $language localisation files"
 done
@@ -21,8 +21,8 @@ ls $MOD_LOCATION/localisation/replace | grep -v 'english' | while read language;
   echo "  Fixing $language localisation/replace files"
   for file in $MOD_LOCATION/localisation/replace/$language/*l_$language.yml; do
     echo "    Fixing $file"
-    sed '/l_english:/d' -i "$file"
-    sed "s/---/\xEF\xBB\xBFl_$language:/" -i "$file"
+    sed '/^l_english:/d' -i "$file"
+    sed "s/^---/\xEF\xBB\xBFl_$language:/" -i "$file"
   done
   echo "  DONE Fixing $language localisation/replace files"
 done
