@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/The24thDS/new_enclaves/compare/v3.0.0-hotfix...v3.0.1) (2022-05-14)
+
+
+### Bug Fixes
+
+* **locs:** fixed dash separator containing unwanted characters ([8053292](https://github.com/The24thDS/new_enclaves/commit/8053292b11e3865372b0878af6eeaf4fd3e7e66d))
+
 ## [3.0.0](https://github.com/The24thDS/new_enclaves/compare/v2.7.0...v3.0.0) (2022-05-12)
 
 
