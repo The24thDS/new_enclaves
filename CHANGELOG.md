@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/The24thDS/new_enclaves/compare/v3.0.1...v3.0.2) (2022-06-21)
+
+
+### Bug Fixes
+
+* updated xenoist factions to 3.4.4 ([ee85539](https://github.com/The24thDS/new_enclaves/commit/ee8553996ff1a281ca17150c216913fed790e0b3))
+
 ### [3.0.1](https://github.com/The24thDS/new_enclaves/compare/v3.0.0-hotfix...v3.0.1) (2022-05-14)
 
 
