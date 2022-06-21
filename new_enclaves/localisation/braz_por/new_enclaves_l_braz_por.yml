@@ -55,7 +55,7 @@
   #Main Menu - Options
   nehiv.100.a: "Can you help our sociologists?"
   nehiv.100.a.alreadyhelping: "The Universal Hive is already boosting our Society Research."
-  nehiv.100.b: 'We are interested in your... "conformity" techniques.'
+  nehiv.100.b: "We are interested in your... \"conformity\" techniques."
   nehiv.100.b.opinion: "Requires the §YUniversal Hive§! to have:\n£opinion£ Opinion +50"
   nehiv.100.b.alreadyhired: "We're already using the Consensus Pheromones provided by the Universal Hive."
   nehiv.100.c: "Our own hive could use one of your drones."

@@ -55,7 +55,7 @@
   #Main Menu - Options
   nehiv.100.a: "Pouvez-vous aider nos sociologues ?"
   nehiv.100.a.alreadyhelping: "La Conscience Universelle renforce déjà nos recherches sociétales."
-  nehiv.100.b: 'Nous sommes intéressés par votre savoir faire en matière de... "conformisme".'
+  nehiv.100.b: "Nous sommes intéressés par votre savoir faire en matière de... \"conformisme\"."
   nehiv.100.b.opinion: "§YConscience Universelle§! doit avoir :\n£opinion£ Opinion +50"
   nehiv.100.b.alreadyhired: "Les Phéromones de Consensus fournis par la Conscience Universelle sont déjà en cours d'utilisation."
   nehiv.100.c: "Notre propre Conscience pourrait utiliser l'un de vos drones."
@@ -410,7 +410,7 @@
   opinion_destroyed_ne_shroud: "Enclave Voilée détruite"
   opinion_destroyed_ne_shroud_trade: "Enclave Voilée avec laquelle nous avions des accords commerciaux détruite"
   station_enclave_curator_01_key: "Station de l'Enclave des Curateurs"
-  NE_VERSION: "New Enclaves v3.0.1"
+  NE_VERSION: "New Enclaves v2.7.0"
   sc_ne_a: "$pc_neutron_star$"
   sc_ne_a_desc: "$pc_neutron_star_desc$"
   ## DRG
