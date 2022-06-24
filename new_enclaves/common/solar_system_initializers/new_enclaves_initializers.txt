@@ -1,7 +1,7 @@
 @base_moon_distance = 10
 ### NEW ENCLAVES ###
 # Hive: Dark Green, turquoise, circle
-ne_hive_init = {
+ne_hive_init_01 = {
 	name = "NAME_NEHIV_System"
 	class = "sc_m_giant"
 	usage = misc_system_init
@@ -14,7 +14,11 @@ ne_hive_init = {
 		radius = 290
 	}
 	usage_odds = {
-		base = 100
+		base = 0
+		modifier = {
+			has_leviathans = yes
+			add = 100
+		}
 		modifier = {
 			factor = 0
 			is_fe_cluster = yes
@@ -46,87 +50,7 @@ ne_hive_init = {
 		size = 20
 		has_ring = no
 		init_effect = {
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:ne_hive_country
-					}
-				}
-				create_species = {
-					name = random
-					class = random_non_machine
-					portrait = random
-					traits = random
-				}
-				create_country = {
-					name = "NAME_NEHIV_Country"
-					type = ne_enclave
-					authority = "auth_hive_mind"
-					civics = {
-						civic = civic_ancient_hive
-					}
-					species = last_created_species
-					flag = {
-						icon = {
-							category = "enclaves"
-							file = "ne_flag_hive.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "circle.dds"
-						}
-						colors = {
-							"dark_green"
-							"turquoise"
-							"null"
-							"null"
-						}
-					}
-					ethos = {
-						ethic = ethic_gestalt_consciousness
-					}
-					ignore_initial_colony_error = yes
-				}
-				last_created_country = {
-					set_country_flag = ne_hive_country
-					set_country_flag = ne_country
-					set_graphical_culture = mammalian_01
-					save_global_event_target_as = ne_hive_country
-					create_fleet = {
-						name = "NAME_NEHIV_Fleet"
-						settings = {
-							spawn_debris = no
-						}
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_NEHIV_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								angle = random
-								distance = 15
-							}
-							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
-						}
-					}
-					create_leader = {
-						class = ruler
-						species = last_created_species
-						name = random
-						skill = 5
-					}
-					set_leader = last_created_leader
-				}
-				solar_system = {
-					save_global_event_target_as = ne_hive_system
-				}
-			}
+			ne_spawn_hive_enclave = yes
 		}
 	}
 	planet = {
@@ -274,6 +198,262 @@ ne_hive_init = {
 		orbit_distance = 0
 		orbit_angle = -80
 		size = 5
+		has_ring = no
+	}
+}
+
+ne_hive_init_02 = {
+	name = "NAME_NEHIV_System_2"
+	class = "sc_g"
+	usage = misc_system_init
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 160
+	}
+	usage_odds = {
+		base = 0
+		modifier = {
+			has_leviathans = yes
+			add = 100
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	scaled_spawn_chance = 12	# scales by galaxy size (1000 stars = 10x base)
+	flags = {
+		ne_hive_system
+		ne_enclave
+	}
+	planet = {
+		name = "NAME_NEHIV_Star_2"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Anehta"
+		class = "pc_molten"
+		orbit_distance = 90
+		orbit_angle = 260
+		size = 15
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Ahpla"
+		class = "pc_molten"
+		orbit_distance = 20
+		orbit_angle = 50
+		size = 13
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_System_2"
+		class = pc_ocean
+		orbit_distance = 20
+		orbit_angle = random
+		size = 20
+		has_ring = no
+		init_effect = {
+			ne_spawn_hive_enclave = yes
+		}
+		change_orbit = 6
+		moon = {
+			name = "NAME_NEHIV_Sitnalta"
+			class = "pc_barren"
+			size = 6
+			orbit_distance = 10
+			orbit_angle = 110
+			has_ring = no
+		}
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Naerok"
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = -160
+		size = 35
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Resiak"
+		class = random_non_ideal
+		orbit_distance = 30
+		orbit_angle = random
+		size = 20
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Trebron"
+		class = random_non_colonizable
+		orbit_distance = 15
+		orbit_angle = random
+		size = 11
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Ker"
+		class = random_non_ideal
+		orbit_distance = 15
+		orbit_angle = random
+		size = 16
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NEHIV_Sedna"
+		class = random_non_colonizable
+		orbit_distance = 15
+		orbit_angle = random
+		size = 13
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+}
+
+ne_hive_init_03 = {
+	name = "NAME_NEHIV_System_3"
+	class = sc_ne_a
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+		modifier = {
+			has_leviathans = yes
+			add = 100
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	scaled_spawn_chance = 12	# scales by galaxy size (1000 stars = 10x base)
+	flags = {
+		ne_hive_system
+		ne_enclave
+	}
+	planet = {
+		name = "NAME_NEHIV_System_3"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 15
+		has_ring = no
+	}
+	planet = {
+		class = rl_unhabitable_planets
+		count = {
+			min = 2
+			max = 4
+		}
+		orbit_distance = {
+			min = 40
+			max = 60
+		}
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 11
+			max = 22
+		}
+		has_ring = no
+	}
+	planet = {
+		class = pc_toxic
+		orbit_distance = 30
+		orbit_angle = random
+		size = 20
+		has_ring = no
+		init_effect = {
+			ne_spawn_hive_enclave = yes
+		}
+	}
+	planet = {
+		class = rl_unhabitable_planets
+		count = {
+			min = 1
+			max = 3
+		}
+		orbit_distance = {
+			min = 20
+			max = 150
+		}
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		size = {
+			min = 11
+			max = 22
+		}
 		has_ring = no
 	}
 }
