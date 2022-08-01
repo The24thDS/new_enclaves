@@ -1,9 +1,10 @@
-﻿l_spanish:
+---
+l_english:
   #Hive Enclave
   NAME_NEHIV_System: "Los"
   NAME_NEHIV_Star: "Los"
   NAME_NEHIV_Htrae: "Htrae"
-  NAME_NEHIV_Country: "Universal Hive"
+  NAME_NEHIV_Country: "Colmena Universal"
   NAME_NEHIV_Retipuj: "Retipuj"
   NAME_NEHIV_Oi: "Oi"
   NAME_NEHIV_Aporue: "Aporue"
@@ -14,10 +15,10 @@
   NAME_NEHIV_Enutpen: "Enutpen"
   NAME_NEHIV_Sunaru: "Suranu"
   NAME_NEHIV_Notirt: "Notirt"
-  NAME_NEHIV_Fleet: "Universal Queen"
-  NAME_NEHIV_Enclave_Station: "Hive Enclave Station"
+  NAME_NEHIV_Fleet: "Reina Colmena"
+  NAME_NEHIV_Enclave_Station: "Estación de Enclave de Colmena"
   NAME_NEHIV_Srma: "Sram"
-  NAME_Faceless: "Faceless"
+  NAME_Faceless: "Sincara"
   format.ne_hive.1: "$NAME_NEHIV_Country$"
   #Shroud Enclave
   NAME_NESHR_System: "Harbinger"
