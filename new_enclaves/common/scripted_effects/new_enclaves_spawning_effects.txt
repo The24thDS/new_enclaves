@@ -144,6 +144,87 @@ ne_spawn_machine_enclave = {
 	}
 }
 
+ne_spawn_shroud_enclave = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:ne_shroud_country
+			}
+		}
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			traits = {
+				trait = trait_psionic
+				trait = trait_venerable
+			}
+			effect = {
+				save_event_target_as = shourd_species
+			}
+		}
+		create_country = {
+			name = "NAME_NESHR_Country"
+			type = ne_enclave
+			authority = "auth_oligarchic"
+			civics = {
+				civic = civic_priesthood_of_the_cycle
+			}
+			species = event_target:shourd_species
+			flag = {
+				icon = {
+					category = "enclaves"
+					file = "ne_flag_shroud.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "stripes.dds"
+				}
+				colors = {
+					"indigo"
+					"burgundy"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_fanatic_spiritualist
+				ethic = ethic_pacifist
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = ne_shroud_country
+				set_country_flag = ne_country
+				set_graphical_culture = mammalian_01
+				save_global_event_target_as = ne_shroud_country
+				create_ne_station = {
+					NETYPE = NESHR
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:shourd_species
+					name = random
+					skill = 5
+					effect = {
+						save_event_target_as = shroud_leader
+					}
+				}
+				set_leader = event_target:shroud_leader
+			}
+		}
+		solar_system = {
+			save_global_event_target_as = ne_shroud_system
+		}
+	}
+	else = {
+		event_target:ne_shroud_country = {
+			create_ne_station = {
+				NETYPE = NESHR
+			}
+		}
+	}
+}
+
 create_ne_station = {
 	create_fleet = {
 		name = NAME_$NETYPE$_Fleet

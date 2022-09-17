@@ -812,12 +812,16 @@ ne_machine_init_03 = {
 }
 
 # Spiritualists
-ne_shroud_init = {
+ne_shroud_init_01 = {
 	name = "NAME_NESHR_System"
 	class = sc_black_hole
 	usage = misc_system_init
 	usage_odds = {
-		base = 100
+		base = 0
+		modifier = {
+			add = 100
+			has_leviathans = yes
+		}
 		modifier = {
 			factor = 0
 			is_fe_cluster = yes
@@ -849,91 +853,7 @@ ne_shroud_init = {
 		size = 25
 		has_ring = no
 		init_effect = {
-			if = {
-				limit = {
-					NOT = {
-						exists = event_target:ne_shroud_country
-					}
-				}
-				create_species = {
-					name = random
-					class = random_non_machine
-					portrait = random
-					traits = {
-						trait = trait_psionic
-						trait = trait_venerable
-					}
-				}
-				create_country = {
-					name = "NAME_NESHR_Country"
-					type = ne_enclave
-					authority = "auth_oligarchic"
-					civics = {
-						civic = civic_priesthood_of_the_cycle
-					}
-					species = last_created_species
-					flag = {
-						icon = {
-							category = "enclaves"
-							file = "ne_flag_shroud.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "stripes.dds"
-						}
-						colors = {
-							"indigo"
-							"burgundy"
-							"null"
-							"null"
-						}
-					}
-					ethos = {
-						ethic = ethic_fanatic_spiritualist
-						ethic = ethic_pacifist
-					}
-					ignore_initial_colony_error = yes
-				}
-				last_created_country = {
-					set_country_flag = ne_shroud_country
-					set_country_flag = ne_country
-					set_graphical_culture = mammalian_01
-					save_global_event_target_as = ne_shroud_country
-					create_fleet = {
-						name = "NAME_NESHR_Fleet"
-						settings = {
-							spawn_debris = no
-						}
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_NESHR_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								angle = random
-								distance = 10
-							}
-							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
-						}
-					}
-					create_leader = {
-						class = ruler
-						species = last_created_species
-						name = random
-						skill = 5
-					}
-					set_leader = last_created_leader
-				}
-				solar_system = {
-					save_global_event_target_as = ne_shroud_system
-				}
-			}
+			ne_spawn_shroud_enclave = yes
 		}
 	}
 	planet = {
@@ -946,6 +866,130 @@ ne_shroud_init = {
 	}
 	planet = {
 		name = "NAME_NESHR_Planet_3"
+		class = "pc_broken"
+		orbit_distance = 40
+		orbit_angle = 2
+		size = 15
+		has_ring = no
+	}
+}
+
+ne_shroud_init_02 = {
+	name = "NAME_NESHR_Star_2"
+	class = sc_black_hole
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+		modifier = {
+			add = 100
+			has_leviathans = yes
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	scaled_spawn_chance = 12
+	flags = {
+		ne_shroud_system
+		ne_enclave
+	}
+	planet = {
+		name = "NAME_NESHR_Star_2"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NESHR_Planet_6"
+		class = "pc_shielded"
+		orbit_distance = 40
+		orbit_angle = 2
+		size = 20
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NESHR_Planet_7"
+		class = "pc_shrouded"
+		orbit_distance = 40
+		orbit_angle = 90
+		size = 25
+		has_ring = no
+		init_effect = {
+			ne_spawn_shroud_enclave = yes
+		}
+	}
+	planet = {
+		name = "NAME_NESHR_Planet_5"
+		class = "pc_broken"
+		orbit_distance = 40
+		orbit_angle = 2
+		size = 15
+		has_ring = no
+	}
+}
+
+ne_shroud_init_03 = {
+	name = "NAME_NESHR_Star_3"
+	class = sc_black_hole
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+		modifier = {
+			add = 100
+			has_leviathans = yes
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	scaled_spawn_chance = 12
+	flags = {
+		ne_shroud_system
+		ne_enclave
+	}
+	planet = {
+		name = "NAME_NESHR_Star_3"
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NESHR_Planet_8"
+		class = "pc_shielded"
+		orbit_distance = 40
+		orbit_angle = 2
+		size = 20
+		has_ring = no
+	}
+	planet = {
+		name = "NAME_NESHR_Planet_9"
+		class = "pc_shrouded"
+		orbit_distance = 40
+		orbit_angle = 90
+		size = 25
+		has_ring = no
+		init_effect = {
+			ne_spawn_shroud_enclave = yes
+		}
+	}
+	planet = {
+		name = "NAME_NESHR_Planet_4"
 		class = "pc_broken"
 		orbit_distance = 40
 		orbit_angle = 2
