@@ -49,6 +49,8 @@
   format.ne_shroud.1: "$NAME_NESHR_Country$"
   # Machine Enclave
   NAME_NEMAC_Star: "Core"
+  NAME_NEMAC_Star_2: "Main Bus"
+  NAME_NEMAC_Star_3: "Counter"
   NAME_NEMAC_Country: "Prime Machines"
   NAME_NEMAC_Fleet: "Interface"
   NAME_NEMAC_Enclave_Station: "Machine Enclave Station"
