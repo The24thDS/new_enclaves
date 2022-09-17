@@ -410,7 +410,7 @@ ne_hive_init_03 = {
 		class = rl_unhabitable_planets
 		count = {
 			min = 2
-			max = 4
+			max = 3
 		}
 		orbit_distance = {
 			min = 40
@@ -440,7 +440,7 @@ ne_hive_init_03 = {
 		class = rl_unhabitable_planets
 		count = {
 			min = 1
-			max = 3
+			max = 2
 		}
 		orbit_distance = {
 			min = 20
