@@ -1,10 +1,10 @@
 #######################
-## Fix for enclaves not making contact after 300 days
+## Fix for enclaves not making contact after 2-3 years
 #######################
 
 namespace = ne_leviathans
 
-# Enclaves make contact after 300 days
+# Enclaves make contact after 2-3 years
 country_event = {
 	id = ne_leviathans.97
 	hide_window = yes
