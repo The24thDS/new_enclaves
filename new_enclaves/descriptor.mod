@@ -5,7 +5,7 @@ tags={
 	"Galaxy Generation"
 	"Gameplay"
 }
-name="New Enclaves [3.4.*]"
+name="New Enclaves [3.5.*]"
 picture="thumbnail.png"
-supported_version="3.4.*"
+supported_version="3.5.*"
 remote_file_id="2356224372"
