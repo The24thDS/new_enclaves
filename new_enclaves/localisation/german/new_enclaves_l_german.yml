@@ -410,7 +410,7 @@
   opinion_destroyed_ne_shroud: "Zerstörte Schwarm-Enklave"
   opinion_destroyed_ne_shroud_trade: "Zerstörte Schwarm-Enklave, mit der wir Geschäfte machten"
   station_enclave_curator_01_key: "Kurator Station Enklave"
-  NE_VERSION: "New Enclaves v3.0.2"
+  NE_VERSION: "New Enclaves v3.1.0"
   sc_ne_a: "$pc_neutron_star$"
   sc_ne_a_desc: "$pc_neutron_star_desc$"
   ## DRG

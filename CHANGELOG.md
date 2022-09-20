@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/The24thDS/new_enclaves/compare/v3.0.2...v3.1.0) (2022-09-20)
+
+
+### Features
+
+* added korean and japanese locs ([25866ea](https://github.com/The24thDS/new_enclaves/commit/25866ea2ddade9cfbbc732482393101ac9a99965))
+* added two more systems for DRG ([c24c12e](https://github.com/The24thDS/new_enclaves/commit/c24c12e92887bbb8b011ca4473e2cf1a80672ed4))
+* added two more systems for Prime Machines ([57053ac](https://github.com/The24thDS/new_enclaves/commit/57053ac9b554ed3e9a5b5d55c4faa3745dfd5724))
+* added two more systems for Shroud Childrens ([e3a4d1a](https://github.com/The24thDS/new_enclaves/commit/e3a4d1ab3a5708f25d88eb45137b59eb3856a93f))
+* added two more systems for the Universal Hive ([1ebc695](https://github.com/The24thDS/new_enclaves/commit/1ebc69525812c310749249d50e40138c1a27591a))
+
+
+### Bug Fixes
+
+* updated vanilla files ([6087172](https://github.com/The24thDS/new_enclaves/commit/6087172fb2cc21bc9314708f3a2e4bf6afdf2996))
+
 ### [3.0.2](https://github.com/The24thDS/new_enclaves/compare/v3.0.1...v3.0.2) (2022-06-21)
 
 
