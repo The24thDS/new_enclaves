@@ -1,0 +1,357 @@
+ne_spawn_hive_enclave = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:ne_hive_country
+			}
+		}
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			traits = random
+			effect = {
+				save_event_target_as = hive_species
+			}
+		}
+		create_country = {
+			name = "NAME_NEHIV_Country"
+			type = ne_enclave
+			authority = "auth_hive_mind"
+			civics = {
+				civic = civic_ancient_hive
+			}
+			species = event_target:hive_species
+			flag = {
+				icon = {
+					category = "enclaves"
+					file = "ne_flag_hive.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"dark_green"
+					"turquoise"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_gestalt_consciousness
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = ne_hive_country
+				set_country_flag = ne_country
+				set_graphical_culture = mammalian_01
+				save_global_event_target_as = ne_hive_country
+				create_ne_station = {
+					NETYPE = NEHIV
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:hive_species
+					name = random
+					skill = 5
+					effect = {
+						save_event_target_as = hive_leader
+					}
+				}
+				set_leader = event_target:hive_leader
+			}
+		}
+		solar_system = {
+			save_global_event_target_as = ne_hive_system
+		}
+	}
+	else = {
+		event_target:ne_hive_country = {
+			create_ne_station = {
+				NETYPE = NEHIV
+			}
+		}
+	}
+}
+
+ne_spawn_machine_enclave = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:ne_machine_country
+			}
+		}
+		create_prime_machines_species = yes
+		create_country = {
+			name = "NAME_NEMAC_Country"
+			type = ne_enclave
+			authority = "auth_machine_intelligence"
+			civics = {
+				civic = civic_autonomous_node
+			}
+			species = last_created_species
+			flag = {
+				icon = {
+					category = "enclaves"
+					file = "ne_flag_machine.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "sinus.dds"
+				}
+				colors = {
+					"red_orange"
+					"grey"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_gestalt_consciousness
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = ne_machine_country
+				set_country_flag = ne_country
+				set_graphical_culture = mammalian_01
+				save_global_event_target_as = ne_machine_country
+				create_ne_station = {
+					NETYPE = NEMAC
+				}
+				create_leader = {
+					class = ruler
+					species = this.species
+					name = random
+					skill = 5
+					effect = {
+						save_event_target_as = machine_leader
+					}
+				}
+				set_leader = event_target:machine_leader
+			}
+		}
+		solar_system = {
+			save_global_event_target_as = ne_machine_system
+		}
+	}
+	else = {
+		event_target:ne_machine_country = {
+			create_ne_station = {
+				NETYPE = NEMAC
+			}
+		}
+	}
+}
+
+ne_spawn_shroud_enclave = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:ne_shroud_country
+			}
+		}
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			traits = {
+				trait = trait_psionic
+				trait = trait_venerable
+			}
+			effect = {
+				save_event_target_as = shourd_species
+			}
+		}
+		create_country = {
+			name = "NAME_NESHR_Country"
+			type = ne_enclave
+			authority = "auth_oligarchic"
+			civics = {
+				civic = civic_priesthood_of_the_cycle
+			}
+			species = event_target:shourd_species
+			flag = {
+				icon = {
+					category = "enclaves"
+					file = "ne_flag_shroud.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "stripes.dds"
+				}
+				colors = {
+					"indigo"
+					"burgundy"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_fanatic_spiritualist
+				ethic = ethic_pacifist
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = ne_shroud_country
+				set_country_flag = ne_country
+				set_graphical_culture = mammalian_01
+				save_global_event_target_as = ne_shroud_country
+				create_ne_station = {
+					NETYPE = NESHR
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:shourd_species
+					name = random
+					skill = 5
+					effect = {
+						save_event_target_as = shroud_leader
+					}
+				}
+				set_leader = event_target:shroud_leader
+			}
+		}
+		solar_system = {
+			save_global_event_target_as = ne_shroud_system
+		}
+	}
+	else = {
+		event_target:ne_shroud_country = {
+			create_ne_station = {
+				NETYPE = NESHR
+			}
+		}
+	}
+}
+
+ne_spawn_drg_enclave = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:ne_drg_country
+			}
+		}
+		create_drg_species = yes
+		create_country = {
+			name = "NAME_NEDRG_Country"
+			type = ne_enclave
+			authority = auth_oligarchic
+			civics = {
+				civic = civic_mining_corporation
+			}
+			species = last_created_species
+			flag = {
+				icon = {
+					category = "enclaves"
+					file = "ne_flag_mining.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "new_dawn.dds"
+				}
+				colors = {
+					"dark_green"
+					"brown"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_materialist
+				ethic = ethic_militarist
+				ethic = ethic_xenophobe
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = ne_drg_country
+				set_country_flag = ne_country
+				set_graphical_culture = mammalian_01
+				save_global_event_target_as = ne_drg_country
+				create_ne_station = {
+					NETYPE = NEDRG
+					SHIP_NAME = NAME_NEDRG_Fleet
+				}
+				create_leader = {
+					class = ruler
+					species = last_created_species
+					gender = male
+					effect = {
+						if = {
+							limit = {
+								has_humanoids = yes
+							}
+							set_name = "Karl"
+							set_skill = 6
+						}
+						else = {
+							set_name = "Mission Control"
+							set_skill = 1
+						}
+						save_event_target_as = drg_leader
+					}
+				}
+				set_leader = event_target:drg_leader
+			}
+		}
+		solar_system = {
+			save_global_event_target_as = ne_drg_system
+		}
+	}
+	else = {
+		event_target:ne_drg_country = {
+			random_list = {
+				1 = {
+					modifier = {
+						factor = 0
+						has_country_flag = ne_drg_fleet_2_created
+					}
+					create_ne_station = {
+						NETYPE = NEDRG
+						SHIP_NAME = NAME_NEDRG_Fleet_2
+						FLEET_NAME_COUNT = "_2"
+					}
+					set_country_flag = ne_drg_fleet_2_created
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						has_country_flag = ne_drg_fleet_3_created
+					}
+					create_ne_station = {
+						NETYPE = NEDRG
+						SHIP_NAME = NAME_NEDRG_Fleet_3
+						FLEET_NAME_COUNT = "_3"
+					}
+					set_country_flag = ne_drg_fleet_3_created
+				}
+			}
+		}
+	}
+}
+
+create_ne_station = {
+	create_fleet = {
+		name = NAME_$NETYPE$_Fleet$FLEET_NAME_COUNT$
+		settings = {
+			spawn_debris = no
+		}
+		effect = {
+			set_owner = prev
+			create_ship = {
+				name = $SHIP_NAME|random$
+				design = NAME_$NETYPE$_Enclave_Station
+				graphical_culture = prev
+			}
+			set_location = {
+				target = prevprev
+				angle = random
+				distance = 15
+			}
+			save_event_target_as = CustomCapital
+			prev = {
+				set_custom_capital_location = event_target:CustomCapital
+			}
+		}
+	}
+}

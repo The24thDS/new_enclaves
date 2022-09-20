@@ -16,6 +16,8 @@ files:
         Polish: "polish"
         Russian: "russian"
         "Portuguese, Brazilian": "braz_por"
+        Korean: "korean"
+        Japanese: "japanese"
   - source: /localisation/replace/english/*_l_english.yml
     translation: /localisation/replace/%language%/%file_name%_%language%.%file_extension%
     translation_replace:
@@ -29,3 +31,5 @@ files:
         Polish: "polish"
         Russian: "russian"
         "Portuguese, Brazilian": "braz_por"
+        Korean: "korean"
+        Japanese: "japanese"

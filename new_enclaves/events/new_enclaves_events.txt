@@ -21,7 +21,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_fleet = {
+		every_controlled_fleet = {
 			limit = {
 				exists = solar_system
 				solar_system = {
@@ -45,7 +45,7 @@ country_event = {
 	}
 }
 
-# ne.13: New Enclave makes contact after 300 days
+# ne.13: New Enclave makes contact after 2-3 years
 country_event = {
 	id = ne.13
 	hide_window = yes
