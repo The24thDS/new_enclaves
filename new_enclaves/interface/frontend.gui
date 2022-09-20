@@ -69,6 +69,7 @@ guiTypes = {
 
 			@links_y = -55
 			
+			
 			buttonType =	{
 				name = "privacy"
 				quadTextureSprite = "GFX_front_menu_privacy"
@@ -88,7 +89,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_front_menu_homepage"
 				position = { x= 360 y = @links_y  }
 				pdx_tooltip = "HOMEPAGE"
-				web_link="https://www.paradoxplaza.com/stellaris"
+				web_link="https://www.paradoxinteractive.com/games/stellaris"
 			}
 		
 			buttonType =	{
@@ -208,7 +209,6 @@ guiTypes = {
 				maxHeight = 20
 				fixedSize = yes
 				format = left
-				tooltip = "JENKINS_BUILD_NUMBER"
 			}
 			instantTextBoxType = {
 				name = "version"
