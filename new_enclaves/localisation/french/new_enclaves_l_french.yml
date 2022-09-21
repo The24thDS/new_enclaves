@@ -1,4 +1,5 @@
-﻿l_french:
+---
+l_english:
   ne_enclave: "Enclave"
   ne_back: "Qu'avez-vous d'autre à offrir ?"
   ### Governments ###
@@ -410,7 +411,7 @@
   opinion_destroyed_ne_shroud: "Enclave Voilée détruite"
   opinion_destroyed_ne_shroud_trade: "Enclave Voilée avec laquelle nous avions des accords commerciaux détruite"
   station_enclave_curator_01_key: "Station de l'Enclave des Curateurs"
-  NE_VERSION: "New Enclaves v3.1.0"
+  NE_VERSION: "New Enclaves v2.7.0"
   sc_ne_a: "$pc_neutron_star$"
   sc_ne_a_desc: "$pc_neutron_star_desc$"
   ## DRG
