@@ -410,7 +410,7 @@
   opinion_destroyed_ne_shroud: "Enclave del Velo destruido"
   opinion_destroyed_ne_shroud_trade: "Destrucción del enclave del Velo en la que teníamos tratos vigentes"
   station_enclave_curator_01_key: "Enclave Estación Curador"
-  NE_VERSION: "New Enclaves v3.1.0"
+  NE_VERSION: "New Enclaves v2.7.0"
   sc_ne_a: "$pc_neutron_star$"
   sc_ne_a_desc: "$pc_neutron_star_desc$"
   ## DRG
